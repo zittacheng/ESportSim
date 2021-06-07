@@ -9,7 +9,9 @@ namespace ESP
         public Vector2 WindowPosition;
         public UIWindow CurrentWindow;
         [Space]
-        public UIWindow W_Schedule;
+        public UIWindow W_Day;
+        public UIWindow W_Night;
+        public UIWindow_Wait W_Wait;
         public UIWindow_Result W_Result;
 
         // Start is called before the first frame update
@@ -45,7 +47,13 @@ namespace ESP
 
         public UIWindow ActiveWindow(string Key)
         {
-            if (Key == "Result")
+            if (Key == "Day")
+                return ActiveWindow(W_Day);
+            else if (Key == "Night")
+                return ActiveWindow(W_Night);
+            else if (Key == "Wait")
+                return ActiveWindow(W_Wait);
+            else if (Key == "Result")
                 return ActiveWindow(W_Result);
             return null;
         }

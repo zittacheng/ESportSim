@@ -9,7 +9,7 @@ namespace ESP
         public string Name;
         public string DisplayName;
         [Space]
-        public List<EventStep> Steps;
+        public List<GameObject> Steps;
         public EventStep CurrentStep;
         public int CurrentIndex = -1;
         public bool Active;
@@ -36,10 +36,11 @@ namespace ESP
         public void ActiveStep(int Index)
         {
             if (Index >= Steps.Count)
+            {
+                EndEvent();
                 return;
-            if (!Steps[Index])
-                return;
-            CurrentStep = Steps[Index];
+            }
+            CurrentStep = Steps[Index].GetComponent<EventStep>();
             CurrentStep.OnEffect();
         }
 
@@ -56,6 +57,11 @@ namespace ESP
                 return;
             CurrentIndex++;
             ActiveStep(CurrentIndex);
+        }
+
+        public void EndEvent()
+        {
+            ThreadControl.Main.EndEvent();
         }
 
         public void OnEnd()

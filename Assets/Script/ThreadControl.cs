@@ -8,17 +8,54 @@ namespace ESP
         public static ThreadControl Main;
         public List<Event> Thread;
         public Event CurrentEvent;
+        public int TimeIndex = 1;
 
         // Start is called before the first frame update
         public void Start()
         {
-
+            // Temp
+            ProcessAdvance();
         }
 
         // Update is called once per frame
         public void Update()
         {
             EventUpdate();
+        }
+
+        public void ProcessAdvance()
+        {
+            Thread.Clear();
+            if (TimeIndex == -1)
+            {
+                TimeIndex = 0;
+                UIControl.Main.ActiveWindow("Day");
+            }
+            else if (TimeIndex == 1)
+            {
+                TimeIndex = 0;
+                UIControl.Main.ActiveWindow("Day");
+                // Temp
+                KeyBase.Main.ChangeKey("Energy", KeyBase.Main.GetKey("EnergyRecovery"));
+            }
+            else if (TimeIndex == 0)
+            {
+                TimeIndex = 1;
+                UIControl.Main.ActiveWindow("Night");
+            }
+        }
+
+        public void GetCost(out float TimeCost, out float EnergyCost, out float CoinCost)
+        {
+            TimeCost = 0;
+            EnergyCost = 0;
+            CoinCost = 0;
+            for (int i = Thread.Count - 1; i >= 0; i--)
+            {
+                TimeCost += Thread[i].GetKey("TimeCost");
+                EnergyCost += Thread[i].GetKey("EnergyCost");
+                CoinCost += Thread[i].GetKey("CoinCost");
+            }
         }
 
         public void AddEvent(Event E)
@@ -32,6 +69,18 @@ namespace ESP
                 Thread.RemoveAt(Index);
         }
 
+        public bool CanAddEvent(Event E)
+        {
+            GetCost(out float TC, out float EC, out float CC);
+            if (E.HasKey("TimeCost") && TC + E.GetKey("TimeCost") > KeyBase.Main.GetKey("Time"))
+                return false;
+            if (E.HasKey("EnergyCost") && EC + E.GetKey("EnergyCost") > KeyBase.Main.GetKey("Energy"))
+                return false;
+            if (E.HasKey("CoinCost") && CC + E.GetKey("CoinCost") > KeyBase.Main.GetKey("Coin"))
+                return false;
+            return true;
+        }
+
         public void StartProcess()
         {
             if (!CanStartProcess())
@@ -43,13 +92,20 @@ namespace ESP
         {
             if (Thread.Count <= 0)
                 return false;
-            return true;
+            GetCost(out float TC, out float EC, out float CC);
+            return TC <= KeyBase.Main.GetKey("Time") && EC <= KeyBase.Main.GetKey("Energy") && CC <= KeyBase.Main.GetKey("Coin");
         }
 
         public void EventUpdate()
         {
             if (GetCurrentEvent())
                 GetCurrentEvent().EffectUpdate(Time.deltaTime);
+        }
+
+        public void NextStep()
+        {
+            if (GetCurrentEvent())
+                GetCurrentEvent().NextStep();
         }
 
         public void NextEventProcess()
@@ -60,6 +116,8 @@ namespace ESP
                 Thread.RemoveAt(0);
                 StartEvent(E);
             }
+            else
+                ProcessAdvance();
         }
 
         public void StartEvent(Event E)

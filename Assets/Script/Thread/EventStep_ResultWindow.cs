@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ESP
 {
-    public class EventStep_Window_Result : EventStep {
+    public class EventStep_ResultWindow : EventStep {
         [TextArea] public string Description;
         [TextArea] public string Result;
 

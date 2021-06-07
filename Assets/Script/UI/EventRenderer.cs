@@ -42,10 +42,16 @@ namespace ESP
         {
             if (!GetTarget())
                 return;
-            if (Interaction == ERIT.Add)
+            if (Interaction == ERIT.Add && ThreadControl.Main.CanAddEvent(GetTarget()))
                 ThreadControl.Main.AddEvent(GetTarget());
             else if (Interaction == ERIT.Remove)
                 ThreadControl.Main.RemoveEvent(TargetIndex);
+            else if (Interaction == ERIT.Confirm && ThreadControl.Main.CanAddEvent(GetTarget()))
+            {
+                ThreadControl.Main.AddEvent(GetTarget());
+                UIControl.Main.CloseWindow();
+                ThreadControl.Main.StartProcess();
+            }
         }
 
         public Event GetTarget()
@@ -61,6 +67,7 @@ namespace ESP
     public enum ERIT
     {
         Add,
-        Remove
+        Remove,
+        Confirm
     }
 }

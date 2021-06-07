@@ -5,9 +5,8 @@ using TMPro;
 
 namespace ESP
 {
-    public class UIWindow_Result : UIWindow {
+    public class UIWindow_Wait : UIWindow {
         public TextMeshPro DescriptionText;
-        public TextMeshPro ResultText;
 
     }
 }

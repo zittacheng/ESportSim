@@ -1,0 +1,44 @@
+            //-------------------------------------------------------------------------------
+            // Stats
+
+            // "Time": Maximum time each turn
+            // "Energy": Current energy
+            // "Coin": Current coin
+
+            // "StreamPoint": Current skill point (stream aspect)
+            // "GamePoint": Current skill point (game aspect)
+            // "Level": Current level
+            // "Exp": Current experience point
+
+            // "Coordination": Current level of coordination (affected role: 0, 4)
+            // "Perception": Current level of perception (affected role: 2, 4)
+            // "Global": Current level of global skill (affected role: 1, 2, 4)
+            // "Waveclear": Current level of waveclear (affected role: 0, 3)
+            // "Micro": Current level of micro (affected role: 1, 2, 3)
+            // "Sustain": Current level of sustain (affected role: 0, 1, 3)
+
+            //-------------------------------------------------------------------------------
+            // On Event
+
+            // "TimeCost": Time cost for the event
+            // "EnergyCost": Energy cost for the event
+            // "CoinCost": Coin cost for the event
+
+            //-------------------------------------------------------------------------------
+            // On EventStep_ResourceChange
+
+            // "EnergyChange": Energy change
+            // "CoinChange": Coin change
+            // "StreamPointChange": Skill point change (stream aspect)
+            // "GamePointChange": Skill point change (game aspect)
+            // "ExpChange": Exp change
+
+            //-------------------------------------------------------------------------------
+            // For EventStep_Game
+
+            // "RoleIndex": Role selected
+            // "OpponentLevel": Performance level for the opponent
+            // "MatchResult": Recorded match result (1 = win)
+            // "KillResult": Recorded kill count
+            // "DeathResult": Recorded death count
+            // "AssistResult": Recorded assist count

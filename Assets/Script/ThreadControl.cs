@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ADV;
 
 namespace ESP
 {
@@ -8,6 +9,8 @@ namespace ESP
         public static ThreadControl Main;
         public List<Event> Thread;
         public Event CurrentEvent;
+        [HideInInspector] public bool Active;
+        [Space]
         public int TimeIndex = 1;
 
         // Start is called before the first frame update
@@ -29,19 +32,19 @@ namespace ESP
             if (TimeIndex == -1)
             {
                 TimeIndex = 0;
-                UIControl.Main.ActiveWindow("Day");
+                SubUIControl.Main.ActiveWindow("Day");
             }
             else if (TimeIndex == 1)
             {
                 TimeIndex = 0;
-                UIControl.Main.ActiveWindow("Day");
+                SubUIControl.Main.ActiveWindow("Day");
                 // Temp
                 KeyBase.Main.ChangeKey("Energy", KeyBase.Main.GetKey("EnergyRecovery"));
             }
             else if (TimeIndex == 0)
             {
                 TimeIndex = 1;
-                UIControl.Main.ActiveWindow("Night");
+                SubUIControl.Main.ActiveWindow("Night");
             }
         }
 
@@ -81,10 +84,22 @@ namespace ESP
             return true;
         }
 
+        public float GetTimeCost(int EndIndex)
+        {
+            float a = 0;
+            for (int i = 0; i < Thread.Count && i < EndIndex; i++)
+            {
+                if (Thread[i])
+                    a += Thread[i].GetKey("TimeCost");
+            }
+            return a;
+        }
+
         public void StartProcess()
         {
             if (!CanStartProcess())
                 return;
+            Active = true;
             NextEventProcess();
         }
 
@@ -94,6 +109,32 @@ namespace ESP
                 return false;
             GetCost(out float TC, out float EC, out float CC);
             return TC <= KeyBase.Main.GetKey("Time") && EC <= KeyBase.Main.GetKey("Energy") && CC <= KeyBase.Main.GetKey("Coin");
+        }
+
+        public void NextEventProcess()
+        {
+            if (Thread.Count > 0)
+            {
+                Event E = Thread[0];
+                Thread.RemoveAt(0);
+                StartEvent(E);
+            }
+            else
+                EndProcess();
+        }
+
+        public void EndProcess()
+        {
+            Active = false;
+            ProcessAdvance();
+        }
+
+        public void StartEvent(Event E)
+        {
+            if (!E)
+                return;
+            CurrentEvent = E;
+            E.Effect();
         }
 
         public void EventUpdate()
@@ -106,26 +147,6 @@ namespace ESP
         {
             if (GetCurrentEvent())
                 GetCurrentEvent().NextStep();
-        }
-
-        public void NextEventProcess()
-        {
-            if (Thread.Count > 0)
-            {
-                Event E = Thread[0];
-                Thread.RemoveAt(0);
-                StartEvent(E);
-            }
-            else
-                ProcessAdvance();
-        }
-
-        public void StartEvent(Event E)
-        {
-            if (!E)
-                return;
-            CurrentEvent = E;
-            E.Effect();
         }
 
         public void EndEvent()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ADV;
 
 namespace ESP
 {
@@ -8,7 +9,7 @@ namespace ESP
 
         public override void Effect()
         {
-            UIControl.Main.CloseWindow();
+            SubUIControl.Main.CloseWindow();
         }
     }
 }

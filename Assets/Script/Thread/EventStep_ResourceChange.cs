@@ -9,15 +9,16 @@ namespace ESP
         public override void OnEffect()
         {
             if (HasKey("EnergyChange"))
-                KeyBase.Main.ChangeKey("Energy", GetKey("EnergyChange"));
+                GlobalControl.Main.ChangeEnergy(GetKey("EnergyChange"));
             if (HasKey("CoinChange"))
-                KeyBase.Main.ChangeKey("Coin", GetKey("CoinChange"));
+                GlobalControl.Main.ChangeCoin(GetKey("CoinChange"));
             if (HasKey("StreamPointChange"))
-                KeyBase.Main.ChangeKey("StreamPoint", GetKey("StreamPointChange"));
+                GlobalControl.Main.ChangeStreamPoint(GetKey("StreamPointChange"));
             if (HasKey("GamePointChange"))
-                KeyBase.Main.ChangeKey("GamePoint", GetKey("GamePointChange"));
-            if (HasKey("GeneralPointChange"))
-                KeyBase.Main.ChangeKey("GeneralPoint", GetKey("GeneralPointChange"));
+                GlobalControl.Main.ChangeGamePoint(GetKey("GamePointChange"));
+            if (HasKey("ExpChange"))
+                GlobalControl.Main.ChangeExp(GetKey("ExpChange"));
+
             ThreadControl.Main.NextStep();
         }
     }

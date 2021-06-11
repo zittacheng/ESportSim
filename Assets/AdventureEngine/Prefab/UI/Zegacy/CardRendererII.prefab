@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3334739335020339044
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 261977871696658860, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 781668615422554023, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869606416620745606, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729111473466921012, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_text
+      value: Skeleton 50/50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729111473466921012, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558957659842394242, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1c1eb4a3de0192f49a93d08a5ccadf24, type: 2}
+    - target: {fileID: 7654391705034955326, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066067, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: Side
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066068, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066068, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066068, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066068, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066068, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066068, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066068, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066068, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066068, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066068, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066068, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078070287382066069, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}
+      propertyPath: m_Name
+      value: CardRendererII
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c4fcfe45f8d3f5f468970591a11ac971, type: 3}

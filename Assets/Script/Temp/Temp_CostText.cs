@@ -6,9 +6,10 @@ using TMPro;
 namespace ESP
 {
     public class Temp_CostText : MonoBehaviour {
-        public TextMeshPro TimeText;
         public TextMeshPro EnergyText;
         public TextMeshPro CoinText;
+        public GameObject EnergySprite;
+        public GameObject CoinSprite;
 
         // Start is called before the first frame update
         void Start()
@@ -20,9 +21,27 @@ namespace ESP
         void Update()
         {
             ThreadControl.Main.GetCost(out float TC, out float EC, out float CC);
-            TimeText.text = "Time Cost: " + TC;
-            EnergyText.text = "Stamina Cost: " + EC;
-            CoinText.text = "Coin Cost: " + CC;
+            if (EC > 0)
+            {
+                EnergySprite.SetActive(true);
+                EnergyText.text = "-" + EC;
+            }
+            else
+            {
+                EnergySprite.SetActive(false);
+                EnergyText.text = "";
+            }
+            
+            if (CC > 0)
+            {
+                CoinSprite.SetActive(true);
+                CoinText.text = "-" + CC;
+            }
+            else
+            {
+                CoinSprite.SetActive(false);
+                CoinText.text = "";
+            }
         }
     }
 }

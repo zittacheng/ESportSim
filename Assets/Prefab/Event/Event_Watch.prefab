@@ -47,7 +47,7 @@ MonoBehaviour:
   Description: Finished
   Result: 'SP-Stream +1
 
-    SP-General +1'
+    Exp +1'
 --- !u!1 &4737416121686674767
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,4 +289,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - StreamPointChange[1
-  - GeneralPointChange[1
+  - ExpChange[1

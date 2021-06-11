@@ -106,7 +106,7 @@ MonoBehaviour:
   Description: Finished
   Result: 'Stamina +6
 
-    SP-General +1'
+    Exp +1'
 --- !u!1 &5232712998606258663
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,4 +286,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - EnergyChange[6
-  - GeneralPointChange[1
+  - ExpChange[1

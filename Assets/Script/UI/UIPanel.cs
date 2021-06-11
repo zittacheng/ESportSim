@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace THAN
+namespace ESP
 {
     public class UIPanel : MonoBehaviour {
         public GameObject AnimBase;

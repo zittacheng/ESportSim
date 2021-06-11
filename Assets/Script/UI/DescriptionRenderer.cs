@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace THAN
+namespace ESP
 {
     public class StatusRenderer : MonoBehaviour {
         public static StatusRenderer Main;

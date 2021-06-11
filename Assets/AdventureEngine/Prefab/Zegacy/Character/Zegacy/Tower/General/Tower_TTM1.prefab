@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3567199843572630765
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1490876834770338938, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876834770338938, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876834770338938, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876834770338938, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876834770338938, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876834770338938, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876834770338938, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876834770338938, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876834770338938, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876834770338938, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876834770338938, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876834770338940, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: m_Name
+      value: Tower_TTM1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490876835504978526, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: Keys.Array.data[0]
+      value: Mode[2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958944502677651103, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 24df69bfdc88be1488cd2c205b42b7bb, type: 3}
+    - target: {fileID: 1958944502677651103, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: Name
+      value: 'Target: Front'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958944502677651103, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: Description
+      value: This tower is targeting enemy at the front
+      objectReference: {fileID: 0}
+    - target: {fileID: 7716883896040445435, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}
+      propertyPath: NewSkill
+      value: 
+      objectReference: {fileID: 3980703817113828706, guid: 68abaa22552363a42a606308230231aa, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6eeb5165042ec1046976f9d535490d6e, type: 3}

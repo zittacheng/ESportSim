@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6322318492994587105
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3380598434017469079, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: NewSkill
+      value: 
+      objectReference: {fileID: 3015695996709635330, guid: d1644f19623be9a4baf5c11306afa7a8, type: 3}
+    - target: {fileID: 4247500880773535788, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: Name
+      value: CubeLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247500880773535788, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: AddKey
+      value: CubeLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634452301652380438, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: LevelKey
+      value: CubeLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138509250233466221, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: Keys.Array.data[0]
+      value: Level[10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419075546852073953, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: Keys.Array.data[1]
+      value: Cost[1050
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716290597162263033, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 167870524735eda4fa937e0b93e9f8b1, type: 3}
+    - target: {fileID: 6716290597162263033, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: Name
+      value: 'Upgrade: Cube'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716290597162263033, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: AddKey
+      value: CubeUpgrade_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716290597162263033, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: Description
+      value: 'Upgrade the path to spawn more Cubes
+
+        [Current level: 4 per
+        wave]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842972961999411338, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_Name
+      value: Path_CubeUpgrade_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812320723433212009, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812320723433212009, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812320723433212009, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812320723433212009, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812320723433212009, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812320723433212009, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812320723433212009, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812320723433212009, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812320723433212009, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812320723433212009, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812320723433212009, guid: b3491850d8743ab46bdb89266575b54f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3491850d8743ab46bdb89266575b54f, type: 3}

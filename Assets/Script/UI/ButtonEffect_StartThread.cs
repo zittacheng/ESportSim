@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ADV;
 
 namespace ESP
 {
@@ -10,7 +11,7 @@ namespace ESP
         {
             if (!ThreadControl.Main.CanStartProcess())
                 return;
-            UIControl.Main.CloseWindow();
+            SubUIControl.Main.CloseWindow();
             ThreadControl.Main.StartProcess();
         }
     }

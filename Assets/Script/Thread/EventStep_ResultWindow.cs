@@ -10,7 +10,7 @@ namespace ESP
 
         public override void OnEffect()
         {
-            UIWindow W = UIControl.Main.ActiveWindow("Result");
+            UIWindow W = SubUIControl.Main.ActiveWindow("Result");
             UIWindow_Result R = (UIWindow_Result)W;
             R.DescriptionText.text = Description;
             R.ResultText.text = Result;

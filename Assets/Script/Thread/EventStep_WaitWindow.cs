@@ -11,7 +11,7 @@ namespace ESP
 
         public override void OnEffect()
         {
-            UIWindow W = UIControl.Main.ActiveWindow("Wait");
+            UIWindow W = SubUIControl.Main.ActiveWindow("Wait");
             UIWindow_Wait Win = (UIWindow_Wait)W;
             Win.DescriptionText.text = Description;
             CurrentDelay = Delay;
@@ -22,7 +22,7 @@ namespace ESP
             CurrentDelay -= Value;
             if (CurrentDelay <= 0)
             {
-                UIControl.Main.CloseWindow();
+                SubUIControl.Main.CloseWindow();
                 ThreadControl.Main.NextStep();
             }
         }

@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - GeneralPointChange[1
+  - ExpChange[1
 --- !u!1 &2826525885762753447
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,4 +286,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KB: {fileID: 0}
   Description: Finished
-  Result: SP-General +1
+  Result: Exp +1

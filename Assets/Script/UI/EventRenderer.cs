@@ -49,7 +49,7 @@ namespace ESP
             else if (Interaction == ERIT.Confirm && ThreadControl.Main.CanAddEvent(GetTarget()))
             {
                 ThreadControl.Main.AddEvent(GetTarget());
-                UIControl.Main.CloseWindow();
+                SubUIControl.Main.CloseWindow();
                 ThreadControl.Main.StartProcess();
             }
         }

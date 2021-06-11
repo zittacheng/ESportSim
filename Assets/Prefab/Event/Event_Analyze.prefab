@@ -47,7 +47,7 @@ MonoBehaviour:
   Description: Finished
   Result: 'SP-Game +1
 
-    SP-General +1'
+    Exp +1'
 --- !u!1 &4942938737801684612
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - GamePointChange[1
-  - GeneralPointChange[1
+  - ExpChange[1
 --- !u!1 &6641019352081270996
 GameObject:
   m_ObjectHideFlags: 0

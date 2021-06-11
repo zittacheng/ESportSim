@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ADV;
 
 namespace ESP
 {
@@ -8,7 +9,8 @@ namespace ESP
         public GlobalControl GC;
         public ThreadControl TC;
         public UIControl UIC;
-        public Cursor MainCursor;
+        public SubUIControl SUIC;
+        public ADV.Cursor MainCursor;
         public KeyBase MainKey;
 
         public void Awake()
@@ -16,7 +18,8 @@ namespace ESP
             GlobalControl.Main = GC;
             ThreadControl.Main = TC;
             UIControl.Main = UIC;
-            Cursor.Main = MainCursor;
+            SubUIControl.Main = SUIC;
+            ADV.Cursor.Main = MainCursor;
             KeyBase.Main = MainKey;
         }
 

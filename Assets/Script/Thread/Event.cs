@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ADV;
 
 namespace ESP
 {
@@ -41,6 +42,14 @@ namespace ESP
                 return;
             }
             CurrentStep = Steps[Index].GetComponent<EventStep>();
+            CurrentStep.OnEffect();
+        }
+
+        public void ActiveStep(EventStep Step)
+        {
+            if (!Step)
+                return;
+            CurrentStep = Step;
             CurrentStep.OnEffect();
         }
 

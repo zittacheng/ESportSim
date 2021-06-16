@@ -68,7 +68,7 @@ namespace ADV
                 CountText.text = RS.GetKey("Count").ToString();
 
             if (CostText)
-                CostText.text = "Cost: " + S.GetKey("Cost").ToString();
+                CostText.text = S.GetKey("Cost").ToString();
 
             if (SelectionBase)
                 SelectionBase.SetActive(CombatControl.Main.SelectingItemRenderer == this);

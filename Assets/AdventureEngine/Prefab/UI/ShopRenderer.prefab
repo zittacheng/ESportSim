@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -5.48}
+  m_AnchoredPosition: {x: 0, y: -0.31}
   m_SizeDelta: {x: 12, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &4730609688689244753
@@ -108,8 +108,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4282524696
+  m_fontColor: {r: 0.09411766, g: 0.14117648, b: 0.25882354, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -426,7 +426,7 @@ MonoBehaviour:
   ExitEffects: []
   CursorRangeX: {x: -2.12, y: 2.12}
   CursorRangeY: {x: -1.73, y: 1.73}
-  Source: {fileID: 0}
+  CR: {fileID: 0}
   ItemPrefab: {fileID: 0}
   Index: -1
   NameText: {fileID: 7256559831638690648}
@@ -468,8 +468,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2.819999}
-  m_SizeDelta: {x: 12, y: 4}
+  m_AnchoredPosition: {x: 0, y: -4.0483027}
+  m_SizeDelta: {x: 8, y: 4.4042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7256559831638690655
 MeshRenderer:
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.4
+  m_fontSize: 22
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -568,7 +568,7 @@ MonoBehaviour:
   m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}

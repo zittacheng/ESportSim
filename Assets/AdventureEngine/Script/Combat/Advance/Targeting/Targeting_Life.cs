@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace ADV
 {
-    public class Targeting_Assassin : Targeting {
+    public class Targeting_Life : Targeting {
 
         public override Card FindTarget(Card Source)
         {
             List<Card> Cards = CombatControl.Main.Cards;
-            float MaxLife = 9999;
+            float Life = -9999;
             List<Card> Targets = new List<Card>();
             for (int i = Cards.Count - 1; i >= 0; i--)
             {
@@ -19,14 +19,14 @@ namespace ADV
                     continue;
                 if (Cards[i].GetKey("Untargeted") == 1)
                     continue;
-                float a = Cards[i].GetMaxLife();
-                if (a < MaxLife)
+                float a = Cards[i].GetLife();
+                if (a > Life)
                 {
-                    MaxLife = a;
+                    Life = a;
                     Targets.Clear();
                     Targets.Add(Cards[i]);
                 }
-                else if (a == MaxLife)
+                else if (a == Life)
                     Targets.Add(Cards[i]);
             }
 
@@ -54,7 +54,7 @@ namespace ADV
 
         public override bool CheckTarget(Card Source, Card Target)
         {
-            return Source.GetSide() != Target.GetSide();
+            return FindTarget(Source) == Target;
         }
     }
 }

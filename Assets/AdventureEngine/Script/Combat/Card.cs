@@ -43,7 +43,7 @@ namespace ADV
         public List<Mark_Skill> RenderSkills;
         [HideInInspector] public List<Mark_Status> RenderStatus;
         public List<Signal> WaitingSignals;
-        [HideInInspector] public float GlobalCoolDown;
+        public float GlobalCoolDown;
         [HideInInspector] public float MaxGCD;
 
         public void Awake()
@@ -123,22 +123,17 @@ namespace ADV
             }
 
             TimePassed(Value);
-            GlobalCoolDown -= Time.deltaTime;
+            GlobalCoolDown -= Value * GetAttackSpeedScale();
             if (CurrentCast)
                 ChangeKey("CCT", Value);
             if (GetKey("TurnDelay") > 0)
                 ChangeKey("TurnDelay", -Value);
-            float CurrentPriority = -1;
             foreach (Mark_Skill Skill in Skills)
             {
                 if (!Skill)
                     continue;
                 if (Skill.GetKey("Auto") != 1)
                     continue;
-                if (Skill.GetKey("AutoPriority") > CurrentPriority)
-                {
-                    CurrentPriority = Skill.GetKey("AutoPriority");
-                }
                 Skill.TryUse();
             }
             if (CurrentCast && GetKey("CCT") >= GetKey("MCT") && CurrentCast.GetKey("HoldCast") <= 0)

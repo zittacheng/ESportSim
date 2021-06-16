@@ -201,7 +201,7 @@ MonoBehaviour:
   - StartOfCombat[1
   - Item[1
   - Count[1
-  - Cost[1
+  - Cost[100
 --- !u!114 &6726063298081405198
 MonoBehaviour:
   m_ObjectHideFlags: 0

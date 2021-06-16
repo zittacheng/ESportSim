@@ -24,6 +24,10 @@ namespace ADV
                     if (HasKey(s))
                         AddKeys.Add(KeyBase.Compose(s, GetKey(s)));
                 SetKey("CCD", GetKey("CoolDown"));
+                AddKeys.Add(KeyBase.Compose("TargetPositionX", Source.GetPosition().x));
+                AddKeys.Add(KeyBase.Compose("TargetPositionY", Source.GetPosition().y));
+                if (HasKey("ItemCount"))
+                    AddKeys.Add(KeyBase.Compose("ItemCount", GetKey("ItemCount")));
                 for (int i = 0; i < Signals.Count; i++)
                     Source.SendSignal(Signals[i], AddKeys, Source);
             }

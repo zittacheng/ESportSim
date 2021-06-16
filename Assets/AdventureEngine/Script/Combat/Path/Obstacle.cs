@@ -15,7 +15,7 @@ namespace ADV
             IniPoints();
             IniLines();
             IniDistances();
-            MapControl.Main.AddObstacle(this);
+            PathControl.Main.AddObstacle(this);
         }
 
         public void IniPoints()
@@ -71,7 +71,7 @@ namespace ADV
                 Vector2 PointII = L.PointII;
                 PointI += (PointI - PointII).normalized * 0.1f;
                 PointII += (PointII - PointI).normalized * 0.1f;
-                if (MapControl.Colliding(StartPoint, EndPoint, PointI, PointII, out Contact))
+                if (PathControl.Colliding(StartPoint, EndPoint, PointI, PointII, out Contact))
                 {
                     ContactLines.Add(L);
                     ContactPoints.Add(Contact);

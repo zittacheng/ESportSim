@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
+  - Render[1
   - Auto[1
   - ManaCost[1
 --- !u!1 &7854502139769471356
@@ -194,6 +195,7 @@ MonoBehaviour:
   - {fileID: 8295955939083719001}
   - {fileID: 6143127433549929758}
   - {fileID: 8522304936277125554}
+  InheritKeys: []
 --- !u!114 &5624565782482846646
 MonoBehaviour:
   m_ObjectHideFlags: 0

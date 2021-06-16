@@ -5,8 +5,8 @@ using UnityEngine;
 namespace ADV
 {
     public class Signal_AddStatus : Signal {
-        public List<GameObject> StatusPrefabs;
         public List<string> InheritKeys;
+        public List<GameObject> StatusPrefabs;
 
         public override void EndEffect()
         {

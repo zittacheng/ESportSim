@@ -28,12 +28,20 @@ namespace ADV
             SelectionUpdate();
             if (Input.GetMouseButtonDown(0))
                 Interact();
+            if (Input.GetMouseButtonUp(0))
+                UnInteract();
         }
 
         public void Interact()
         {
             for (int i = SelectingButtons.Count - 1; i >= 0; i--)
-                SelectingButtons[i].Effect();
+                SelectingButtons[i].MouseDownEffect();
+        }
+
+        public void UnInteract()
+        {
+            for (int i = SelectingButtons.Count - 1; i >= 0; i--)
+                SelectingButtons[i].MouseUpEffect();
         }
 
         public void PositionUpdate()
@@ -45,12 +53,20 @@ namespace ADV
 
         public void SelectionUpdate()
         {
-            SelectingButtons.Clear();
+            for (int i = SelectingButtons.Count - 1; i >= 0; i--)
+            {
+                if (!SelectingButtons[i].InRange())
+                {
+                    SelectingButtons[i].MouseExitEffect();
+                    SelectingButtons.RemoveAt(i);
+                }
+            }
             for (int i = UIControl.Main.Buttons.Count - 1; i >= 0; i--)
             {
                 UIButton B = UIControl.Main.Buttons[i];
-                if (B.InRange())
+                if (!SelectingButtons.Contains(B) && B.InRange())
                 {
+                    B.MouseEnterEffect();
                     SelectingButtons.Add(B);
                     break;
                 }

@@ -8,7 +8,7 @@ namespace ADV
 
         public override void EndEffect()
         {
-            if (!Target || Target.AlreadyDead || (GetKey("CombatActive") > 0 && !Target.CombatActive()))
+            if (!Target || (GetKey("CombatActive") > 0 && !Target.CombatActive()))
                 return;
             Target.Death();
             base.EndEffect();

@@ -6,6 +6,7 @@ namespace ADV
 {
     public class Signal_CreateMedium_Hitscan : Signal {
         public GameObject MediumPrefab;
+        public List<string> InheritKeys;
 
         public override void EndEffect()
         {
@@ -13,8 +14,11 @@ namespace ADV
             Medium M = G.GetComponent<Medium>();
             M.SetKey("PositionX", GetKey("TargetPositionX"));
             M.SetKey("PositionY", GetKey("TargetPositionY"));
-            if (HasKey("Range"))
-                M.SetKey("Range", GetKey("Range"));
+            foreach (string s in InheritKeys)
+            {
+                if (HasKey(s))
+                    M.SetKey(s, GetKey(s));
+            }
             M.Ini(Source, null);
             base.EndEffect();
         }

@@ -6,6 +6,9 @@ namespace ADV
 {
     public class UIButton : MonoBehaviour {
         public List<ButtonEffect> Effects;
+        public List<ButtonEffect> UpEffects;
+        public List<ButtonEffect> EnterEffects;
+        public List<ButtonEffect> ExitEffects;
 
         public void Awake()
         {
@@ -34,9 +37,27 @@ namespace ADV
             return false;
         }
 
-        public void Effect()
+        public virtual void MouseDownEffect()
         {
             foreach (ButtonEffect BE in Effects)
+                BE.Effect();
+        }
+
+        public virtual void MouseUpEffect()
+        {
+            foreach (ButtonEffect BE in UpEffects)
+                BE.Effect();
+        }
+
+        public virtual void MouseEnterEffect()
+        {
+            foreach (ButtonEffect BE in EnterEffects)
+                BE.Effect();
+        }
+
+        public virtual void MouseExitEffect()
+        {
+            foreach (ButtonEffect BE in ExitEffects)
                 BE.Effect();
         }
     }

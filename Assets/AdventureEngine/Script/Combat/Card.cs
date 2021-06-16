@@ -23,8 +23,8 @@ namespace ADV
         [HideInInspector] public Card CastTarget;
         [HideInInspector] public Vector2 CastPosition;
         [Space]
-        [HideInInspector] public GameObject IniMovement;
         public GameObject IniTargeting;
+        [HideInInspector] public GameObject IniMovement;
         [HideInInspector] public List<GameObject> CollisionPoints;
         [HideInInspector] public GameObject TargetingTrigger;
         [HideInInspector] public Movement movement;
@@ -40,7 +40,7 @@ namespace ADV
         [Space]
         public List<Mark_Skill> Skills;
         public List<Mark_Status> Status;
-        [HideInInspector] public List<Mark_Skill> RenderSkills;
+        public List<Mark_Skill> RenderSkills;
         [HideInInspector] public List<Mark_Status> RenderStatus;
         public List<Signal> WaitingSignals;
         [HideInInspector] public float GlobalCoolDown;
@@ -82,6 +82,8 @@ namespace ADV
             GetTargeting();
             GetMovement();
             GetPathFinder();
+            if (Position.x == 0 && Position.y == 0)
+                Position = transform.position;
             if (GetAnim())
             {
                 GetAnim().SetPosition(GetPosition());
@@ -103,9 +105,7 @@ namespace ADV
         // Start is called before the first frame update
         void Start()
         {
-            /*if (GetPathFinder())
-                GetPathFinder().PathUpdate(GetPosition(), GetTarget().GetPosition());*/
-            CombatControl.Main.AddCard(this);
+
         }
 
         // Update is called once per frame
@@ -116,9 +116,8 @@ namespace ADV
 
         public void CombatUpdate(float Value)
         {
-            if (Value < 0)
+            if (!CombatControl.Main.InCombat)
             {
-                // Game Inactive
                 CurrentTarget = null;
                 return;
             }
@@ -127,6 +126,8 @@ namespace ADV
             GlobalCoolDown -= Time.deltaTime;
             if (CurrentCast)
                 ChangeKey("CCT", Value);
+            if (GetKey("TurnDelay") > 0)
+                ChangeKey("TurnDelay", -Value);
             float CurrentPriority = -1;
             foreach (Mark_Skill Skill in Skills)
             {
@@ -172,6 +173,56 @@ namespace ADV
                     GetPathFinder().PathUpdate(GetPosition(), GetPosition());
             }
             DeathUpdate();
+        }
+
+        public void StartOfTurn()
+        {
+            SetKey("TurnDelay", 0.1f);
+        }
+
+        public void EndOfTurn()
+        {
+
+        }
+
+        public void StartOfCombat()
+        {
+            for (int i = Skills.Count - 1; i >= 0; i--)
+            {
+                if (Skills[i])
+                    Skills[i].StartOfCombat();
+            }
+            for (int i = Status.Count - 1; i >= 0; i--)
+                Status[i].StartOfCombat();
+
+            foreach (Mark_Skill Skill in Skills)
+            {
+                if (!Skill)
+                    continue;
+                if (Skill.GetKey("StartOfCombat") != 1)
+                    continue;
+                Skill.TryUse();
+            }
+        }
+
+        public void EndOfCombat()
+        {
+            for (int i = Skills.Count - 1; i >= 0; i--)
+            {
+                if (Skills[i])
+                    Skills[i].EndOfCombat();
+            }
+            for (int i = Status.Count - 1; i >= 0; i--)
+                Status[i].EndOfCombat();
+
+            foreach (Mark_Skill Skill in Skills)
+            {
+                if (!Skill)
+                    continue;
+                if (Skill.GetKey("EndOfCombat") != 1)
+                    continue;
+                Skill.TryUse();
+            }
         }
 
         public void UseSkill(Mark_Skill Skill, Card Target)
@@ -308,7 +359,8 @@ namespace ADV
             if (!S)
                 return;
             S.Source.ReturnSignal(S);
-            S.Source.ConfirmSignal(S);
+            if (S.Target)
+                S.Target.ConfirmSignal(S);
             Destroy(S.gameObject, 5);
         }
 
@@ -447,13 +499,12 @@ namespace ADV
 
         public bool MovementCollisionCheck(Vector2 Ori, Vector2 Target, out Vector2 Contact)
         {
-            Contact = new Vector2(Mathf.Infinity, Mathf.Infinity);
-            if (!MapControl.Main.CanMove(Ori, Target, out Contact))
+            if (!PathControl.Main.CanMove(Ori, Target, out Contact))
                 return true;
             foreach (GameObject G in CollisionPoints)
             {
                 Vector2 Add = (Vector2)G.transform.position - (Vector2)transform.position;
-                if (!MapControl.Main.CanMove(Ori + Add, Target + Add, out Contact))
+                if (!PathControl.Main.CanMove(Ori + Add, Target + Add, out Contact))
                     return true;
             }
             return false;
@@ -467,10 +518,10 @@ namespace ADV
             List<Vector2> points = new List<Vector2>();
             for (int i = 0; i + 1 < CollisionPoints.Count; i++)
             {
-                if (MapControl.Colliding(CollisionPoints[i].transform.position, CollisionPoints[i + 1].transform.position, Ori, Target, out Contact))
+                if (PathControl.Colliding(CollisionPoints[i].transform.position, CollisionPoints[i + 1].transform.position, Ori, Target, out Contact))
                     points.Add(Contact);
             }
-            if (MapControl.Colliding(CollisionPoints[CollisionPoints.Count - 1].transform.position, CollisionPoints[0].transform.position, Ori, Target, out Contact))
+            if (PathControl.Colliding(CollisionPoints[CollisionPoints.Count - 1].transform.position, CollisionPoints[0].transform.position, Ori, Target, out Contact))
                 points.Add(Contact);
             if (points.Count <= 0)
                 return false;
@@ -566,6 +617,7 @@ namespace ADV
 
         public void Revive()
         {
+            ChangeLife(GetMaxLife() * 2f);
             if (!AlreadyDead)
                 return;
 
@@ -656,46 +708,6 @@ namespace ADV
         public float GetMaxGCD()
         {
             return MaxGCD;
-        }
-
-        public void StartOfCombat()
-        {
-            for (int i = Skills.Count - 1; i >= 0; i--)
-            {
-                if (Skills[i])
-                    Skills[i].StartOfCombat();
-            }
-            for (int i = Status.Count - 1; i >= 0; i--)
-                Status[i].StartOfCombat();
-
-            foreach (Mark_Skill Skill in Skills)
-            {
-                if (!Skill)
-                    continue;
-                if (Skill.GetKey("StartOfCombat") != 1)
-                    continue;
-                Skill.TryUse();
-            }
-        }
-
-        public void EndOfCombat()
-        {
-            for (int i = Skills.Count - 1; i >= 0; i--)
-            {
-                if (Skills[i])
-                    Skills[i].EndOfCombat();
-            }
-            for (int i = Status.Count - 1; i >= 0; i--)
-                Status[i].EndOfCombat();
-
-            foreach (Mark_Skill Skill in Skills)
-            {
-                if (!Skill)
-                    continue;
-                if (Skill.GetKey("EndOfCombat") != 1)
-                    continue;
-                Skill.TryUse();
-            }
         }
 
         public void OutputSignal(Signal S)
@@ -861,7 +873,7 @@ namespace ADV
             {
                 if (!Skills[i])
                     RenderSkills.Add(null);
-                else if (Skills[i].GetKey("Render") != 0 && (Skills[i].CanUse() || Skills[i].GetKey("HiddenII") > 0))
+                else if (Skills[i].GetKey("Render") != 0)
                     RenderSkills.Add(Skills[i]);
             }
         }

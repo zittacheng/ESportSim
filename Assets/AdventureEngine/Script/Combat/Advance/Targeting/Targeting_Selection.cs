@@ -13,7 +13,7 @@ namespace ADV
                 return null;
             if (HasKey("Range") && (C.GetPosition() - Source.GetPosition()).magnitude > GetKey("Range"))
                 return null;
-            if (GetKey("CanSee") > 0 && !MapControl.Main.CanSee(Source.GetPosition(), C.GetPosition()))
+            if (GetKey("CanSee") > 0 && !PathControl.Main.CanSee(Source.GetPosition(), C.GetPosition()))
                 return null;
             else if (C == Source && GetKey("TargetSelf") > 0)
                 return C;

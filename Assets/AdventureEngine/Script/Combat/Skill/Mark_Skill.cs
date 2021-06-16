@@ -171,7 +171,8 @@ namespace ADV
         public virtual bool CanUse()
         {
             return (!HasKey("CoolDown") || GetKey("CCD") <= 0) && (!HasKey("Count") || GetKey("Count") > 0 || GetKey("Consumed") == 0) && GetKey("Passive") == 0
-                && Source && Source.CardActive() && ConditionPass() && (!HasKey("ManaCost") || Source.PassValue("Mana") >= GetKey("ManaCost"));
+                && Source && Source.CardActive() && ConditionPass() && (!HasKey("ManaCost") || Source.PassValue("Mana") >= GetKey("ManaCost"))
+                && (GetKey("IgnoreStun") == 1 || Source.PassValue("Stunned", 0) == 0);
         }
 
         public virtual bool CanUse(Card Target)
@@ -248,6 +249,7 @@ namespace ADV
             // "ASCD": Whether cool down should be affected by attack speed
             // "Count": Current count
             // "Consumed": Whether the item count is consumed on use
+            // "Cost": Coin cost of the item
             // "IgnoreStack": Whether the item should ignore stacking
             // "Passive": Whether the skill is passive
             // "Permanent": Whether the skill cannot be replaced
@@ -255,6 +257,8 @@ namespace ADV
             // "HiddenII": Whether not to put into RenderSkills list when inactive
             // "Auto": Whether the skill will automatically be used
             // "AutoPriority": The priority for use
+            // "Stunned": Whether the source is stunned
+            // "IgnoreStun": Whether the skill can be used while stunned
             // "Positional": Whether the skill use positional targeting
             // "CastTime": Max cast time
             // "HoldCast": Whether the skill should not be used instantly after cast

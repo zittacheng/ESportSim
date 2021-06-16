@@ -182,6 +182,7 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   Signals:
   - {fileID: 153390116209571145}
   - {fileID: 2246462143843442019}
@@ -249,9 +250,9 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   StatusPrefabs:
   - {fileID: 4014532233520806435}
-  InheritKeys: []
 --- !u!114 &1570137983546061665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +317,7 @@ MonoBehaviour:
   Source: {fileID: 0}
   Target: {fileID: 0}
   MediumPrefab: {fileID: 1269523199315408661}
+  InheritKeys: []
 --- !u!114 &5361613247276884710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
+  - Render[1
   - Auto[1
   - ManaCost[1
 --- !u!1 &9205836643393358762

@@ -6,15 +6,30 @@ namespace ADV
 {
     public class CombatControl : MonoBehaviour {
         public static CombatControl Main;
-        public float TimeScale = -1;
+        public float TimeScale = 1;
+        public int CurrentTurn;
+        public bool InCombat;
+        public bool Waiting;
         [Space]
+        public float Coin;
+        [Space]
+        public Card CurrentMC;
+        public List<Card> MCs;
         public Card SelectingCard;
+        public Card HoldingCard;
+        public Mark_Skill SelectingItem;
+        public ItemRenderer SelectingItemRenderer;
         public Mark SelectingMark;
-        public Vector2 SelectingPosition;
+        [HideInInspector] public Vector2 SelectingPosition;
         [Space]
+        public List<Card> Cores;
+        public List<Card> FriendlyCards;
+        public List<Card> EnemyCards;
         public List<Card> Cards;
         [HideInInspector] public List<Card> DeathCards;
         public List<Medium> Mediums;
+        [Space]
+        public float DefaultLevel = 1;
 
         public void Awake()
         {
@@ -30,21 +45,87 @@ namespace ADV
         // Update is called once per frame
         void Update()
         {
-            // Temp
-            if (Input.GetKeyDown(KeyCode.S) && TimeScale == -1)
+            PartyListUpdate();
+        }
+
+        public void PartyListUpdate()
+        {
+            List<Card> TempI = new List<Card>();
+            for (int i = FriendlyCards.Count - 1; i >= 0; i--)
+                TempI.Add(FriendlyCards[i]);
+            FriendlyCards.Clear();
+            while (TempI.Count > 0)
             {
-                StartOfCombat();
-                TimeScale = 1;
+                float a = -99999f;
+                Card Temp = null;
+                for (int i = TempI.Count - 1; i >= 0; i--)
+                {
+                    if (TempI[i].GetPosition().y > a)
+                    {
+                        a = TempI[i].GetPosition().y;
+                        Temp = TempI[i];
+                    }
+                }
+                FriendlyCards.Add(Temp);
+                TempI.Remove(Temp);
             }
+
+            // Temp Aggro
+            for (int i = 0; i < FriendlyCards.Count; i++)
+                FriendlyCards[i].Aggro = i * -0.1f + 10;
+        }
+
+        public void AddItem(GameObject ItemPrefab, float CoinChange)
+        {
+            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
+            ChangeCoin(CoinChange);
+            foreach (Card C in MCs)
+                C.AddSkill(S);
+        }
+
+        public void RemoveItem(GameObject ItemPrefab, float CoinChange)
+        {
+            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
+            ChangeCoin(CoinChange);
+            foreach (Card C in MCs)
+                C.RemoveSkill(S.GetID(), 1);
+        }
+
+        public void ChangeCoin(float Value)
+        {
+            Coin += Value;
+        }
+
+        public bool CanStartCombat()
+        {
+            return Waiting;
         }
 
         public void StartOfCombat()
         {
+            Waiting = false;
+            CurrentTurn++;
+
+            // UI
+            SelectingItem = null;
+            SelectingItemRenderer = null;
+
+            // Ini CardList
+            Cards.Clear();
+            foreach (Card C in FriendlyCards)
+                Cards.Add(C);
+            foreach (Card C in EnemyCards)
+                Cards.Add(C);
+
+            InCombat = true;
             for (int i = Cards.Count - 1; i >= 0; i--)
             {
                 if (Cards[i].CombatActive())
                     Cards[i].StartOfCombat();
             }
+
+            // Process
+            StartCoroutine("CombatProcessIE");
         }
 
         public void EndOfCombat()
@@ -54,16 +135,82 @@ namespace ADV
                 if (Cards[i].CombatActive())
                     Cards[i].EndOfCombat();
             }
+        }
+
+        public void ResetMedium()
+        {
             for (int i = Mediums.Count - 1; i >= 0; i--)
                 Mediums[i].EndEffect();
+        }
+
+        public IEnumerator CombatProcessIE()
+        {
+            float a = 0;
+            while (!VictoryCheck(a, out int Result))
+            {
+                a += CombatTime();
+                yield return 0;
+            }
+            yield return new WaitForSeconds(2f);
+            InCombat = false;
+            EndOfCombat();
+            yield return new WaitForSeconds(2f);
+            ResetMedium();
+            Revive();
+            Waiting = true;
+
+            // Coin
+            EndOfCombatCoinChange();
+        }
+
+        public void EndOfCombatCoinChange()
+        {
+            float l = DefaultLevel;
+            if (KeyBase.Main)
+                l = KeyBase.Main.GetKey("Level");
+            float CC = (1 + (1 + 0.1f * l) * CurrentTurn) * 10;
+            ChangeCoin(CC);
+        }
+
+        public bool VictoryCheck(float CurrentTime, out int Result)
+        {
+            bool Victory = true;
+            bool Defeat = true;
+            for (int i = 0; i < FriendlyCards.Count; i++)
+            {
+                if (FriendlyCards[i].CombatActive())
+                    Defeat = false;
+            }
+            for (int i = 0; i < EnemyCards.Count; i++)
+            {
+                if (EnemyCards[i].CombatActive())
+                    Victory = false;
+            }
+
+            if (Victory && !Defeat)
+            {
+                Result = 1;
+                return true;
+            }
+            else if (Defeat)
+            {
+                Result = -1;
+                return true;
+            }
+            else if (CurrentTime >= 240f)
+            {
+                Result = 0;
+                return true;
+            }
+            Result = 0;
+            return false;
         }
 
         public void Revive()
         {
             for (int i = Cards.Count - 1; i >= 0; i--)
             {
-                if (!Cards[i].CombatActive())
-                    Cards[i].Revive();
+                Cards[i].Revive();
             }
         }
 

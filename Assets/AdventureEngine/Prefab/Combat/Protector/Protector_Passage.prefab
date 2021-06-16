@@ -80,7 +80,6 @@ MonoBehaviour:
   Name: Protector_Status_ManaLock
   RenderName: 
   Description: 
-  AddKey: 
   Icon: {fileID: 0}
 --- !u!1 &710851545215831652
 GameObject:
@@ -250,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
+  - Render[1
   - Auto[1
   - ManaCost[1
 --- !u!1 &1460976085737304891
@@ -361,9 +361,9 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   StatusPrefabs:
   - {fileID: 4546494691917079924}
-  InheritKeys: []
 --- !u!114 &2117922400894594102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +493,7 @@ MonoBehaviour:
   Source: {fileID: 0}
   Target: {fileID: 0}
   MediumPrefab: {fileID: 7918157555490617990}
+  InheritKeys: []
 --- !u!114 &7288877321224560249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,9 +557,9 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   StatusPrefabs:
   - {fileID: 93071858291692330}
-  InheritKeys: []
 --- !u!114 &7365860007012269393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,9 +623,9 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   StatusPrefabs:
   - {fileID: 6221637378047509949}
-  InheritKeys: []
 --- !u!114 &5849780999512124993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,6 +787,7 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   Signals:
   - {fileID: 1694222574433649204}
   - {fileID: 6855516894719831597}

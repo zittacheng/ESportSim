@@ -5,16 +5,18 @@ using UnityEngine;
 namespace ADV
 {
     public class CharacterAnim : MonoBehaviour {
+        public Card Source;
         public Animator Anim;
         public GameObject Pivot;
         public float RotationSpeed;
         [HideInInspector] public Vector2 TargetDirection;
         public bool IgnorePositionChange;
-        [HideInInspector] public SpriteRenderer CERenderer;
-        [HideInInspector] public AnimationCurve CECurve;
-        [HideInInspector] public float CurrentCETime;
-        [HideInInspector] public float MaxCETime;
-        [HideInInspector] public GameObject Selection;
+        [Space]
+        [HideInInspector] public Vector2 OriPosition;
+        [HideInInspector] public Vector2 TargetPosition;
+        [HideInInspector] public float TargetDelay;
+        [HideInInspector] public float CurrentDelay;
+        [HideInInspector] public bool Moving;
 
         // Start is called before the first frame update
         void Start()
@@ -25,20 +27,69 @@ namespace ADV
         // Update is called once per frame
         void Update()
         {
-            RotationUpdate();
-            ColorEffectUpdate();
+            if (!CombatControl.Main.Waiting && CombatControl.Main.HoldingCard == Source)
+                MouseUp();
+
+            if (CombatControl.Main.HoldingCard == Source)
+            {
+                ForcePosition(Cursor.Main.GetPosition());
+                return;
+            }
+            else if (Moving)
+            {
+                if ((TargetPosition - OriPosition).magnitude <= 0.01f)
+                    Moving = false;
+                else
+                {
+                    CurrentDelay += Time.deltaTime;
+                    Vector2 Position = TargetPosition;
+                    if (CurrentDelay >= TargetDelay)
+                        Moving = false;
+                    else
+                        Position = OriPosition + (TargetPosition - OriPosition) * (CurrentDelay / TargetDelay);
+                    Source.SetPosition(Position);
+                }
+            }
+
+            if (Source.GetSide() == 0 && CombatControl.Main.FriendlyCards.Contains(Source))
+            {
+                if (CombatControl.Main.HoldingCard != Source)
+                    SetMovement(UIControl.Main.GetFriendlySlotPosition(CombatControl.Main.FriendlyCards.IndexOf(Source)), 0.1f);
+            }
+            else if (Source.GetSide() == 1 && CombatControl.Main.EnemyCards.Contains(Source))
+                SetMovement(UIControl.Main.GetEnemySlotPosition(CombatControl.Main.EnemyCards.IndexOf(Source)), 0.1f);
         }
 
-        public void OnSelect()
+        public void MouseDown()
         {
-            if (Selection)
-                Selection.SetActive(true);
+            if (!CombatControl.Main.Waiting)
+                return;
+            if (Source.GetSide() != 0 || !CombatControl.Main.FriendlyCards.Contains(Source))
+                return;
+            CombatControl.Main.HoldingCard = Source;
         }
 
-        public void OnDeselect()
+        public void MouseUp()
         {
-            if (Selection)
-                Selection.SetActive(false);
+            CombatControl.Main.HoldingCard = null;
+        }
+
+        public void ForcePosition(Vector2 Position)
+        {
+            if (Moving)
+                Moving = false;
+            Source.SetPosition(Position);
+        }
+
+        public void SetMovement(Vector2 Target, float Delay)
+        {
+            /*if (Moving)
+                return;*/
+            Moving = true;
+            TargetPosition = Target;
+            CurrentDelay = 0;
+            TargetDelay = Delay;
+            OriPosition = Source.GetPosition();
         }
 
         public void SetPosition(Vector2 Value)
@@ -159,42 +210,6 @@ namespace ADV
                     return 1;
                 }
             }
-        }
-
-        public void ColorEffectUpdate()
-        {
-            if (!CERenderer || MaxCETime < 0)
-                return;
-            CurrentCETime += Time.deltaTime;
-            if (MaxCETime > 0 && CurrentCETime >= MaxCETime)
-            {
-                StopColorEffect();
-                return;
-            }
-            float a = CurrentCETime / MaxCETime;
-            if (a < 0)
-                a = 0;
-            else if (a > 1)
-                a = 1;
-            CERenderer.color = new Color(CERenderer.color.r, CERenderer.color.g, CERenderer.color.b, CECurve.Evaluate(a));
-        }
-
-        public void ColorEffect(Color C)
-        {
-            if (!CERenderer)
-                return;
-            if (MaxCETime > 0)
-                StopColorEffect();
-            CurrentCETime = 0;
-            MaxCETime = 0.5f;
-            CERenderer.color = new Color(C.r, C.g, C.b, 1);
-        }
-
-        public void StopColorEffect()
-        {
-            CERenderer.color = new Color(CERenderer.color.r, CERenderer.color.g, CERenderer.color.b, 0);
-            CurrentCETime = 0;
-            MaxCETime = -1;
         }
 
         public void Death()

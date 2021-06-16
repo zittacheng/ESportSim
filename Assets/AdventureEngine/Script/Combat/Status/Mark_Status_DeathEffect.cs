@@ -14,6 +14,8 @@ namespace ADV
             List<string> AddKeys = new List<string>();
             foreach (string s in KB.Keys)
                 AddKeys.Add(s);
+            if (HasKey("ItemCount"))
+                AddKeys.Add(KeyBase.Compose("ItemCount", GetKey("ItemCount")));
             for (int i = 0; i < DeathSignals.Count; i++)
                 Source.SendSignal(DeathSignals[i], AddKeys, Source);
             base.Death();

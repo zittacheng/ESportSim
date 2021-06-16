@@ -20,6 +20,11 @@ namespace ADV
         {
             if (Key == "Mana")
                 return GetKey("Mana") / GetKey("MaxMana");
+            else if (Key == "ManaChange")
+            {
+                ChangeKey("Mana", Value * GetKey("MaxMana"));
+                return Value;
+            }
             return base.PassValue(Key, Value);
         }
 

@@ -8,7 +8,7 @@ namespace ADV
         public static StaticAssign Main;
         public CombatControl CC;
         public UIControl UC;
-        public MapControl MPC;
+        public PathControl MPC;
         public Cursor MainCursor;
         [Space]
         public GameObject EffectLine;
@@ -27,8 +27,8 @@ namespace ADV
             else if (UC)
                 Destroy(UC.gameObject);
 
-            if (!MapControl.Main)
-                MapControl.Main = MPC;
+            if (!PathControl.Main)
+                PathControl.Main = MPC;
             else if (MPC)
                 Destroy(MPC.gameObject);
 

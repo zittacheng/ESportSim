@@ -24,23 +24,23 @@ namespace ADV
         {
             if (Path.Count > 0 && (Position - Path[0]).magnitude <= 0.1f)
                 Path.RemoveAt(0);
-            if (Delay > 0 || MapControl.Main.PathFindLock)
+            if (Delay > 0 || PathControl.Main.PathFindLock)
                 return;
             Delay = Random.Range(0.5f, 1.5f);
-            MapControl.Main.PathFindLock = true;
+            PathControl.Main.PathFindLock = true;
             Path.Clear();
-            if (MapControl.Main.CanSee(Position, Target))
+            if (PathControl.Main.CanSee(Position, Target))
             {
                 //RenderPath(Position, Target);
                 return;
             }
-            List<Vector2> P = MapControl.Main.GeneratePath(MapControl.Main.ApproxTile(Position), MapControl.Main.ApproxTile(Target));
+            List<Vector2> P = PathControl.Main.GeneratePath(PathControl.Main.ApproxTile(Position), PathControl.Main.ApproxTile(Target));
             if (P == null)
                 return;
             P.Add(Target);
             for (int i = 0; i + 1 < P.Count; i++)
             {
-                if (MapControl.Main.CanSee(Position, P[i]) && MapControl.Main.CanSee(Position, P[i + 1]))
+                if (PathControl.Main.CanSee(Position, P[i]) && PathControl.Main.CanSee(Position, P[i + 1]))
                 {
                     P.RemoveAt(i);
                     i--;
@@ -50,7 +50,7 @@ namespace ADV
             {
                 for (int j = i + 1; j + 1 < P.Count; j++)
                 {
-                    if (MapControl.Main.CanSee(P[i], P[j]) && MapControl.Main.CanSee(P[i], P[j + 1]))
+                    if (PathControl.Main.CanSee(P[i], P[j]) && PathControl.Main.CanSee(P[i], P[j + 1]))
                     {
                         P.RemoveAt(j);
                         j--;

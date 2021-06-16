@@ -6,6 +6,7 @@ namespace ADV
 {
     public class Signal_CreateMedium_Explosion : Signal {
         public GameObject MediumPrefab;
+        public List<string> InheritKeys;
 
         public override void EndEffect()
         {
@@ -23,6 +24,11 @@ namespace ADV
             }
             if (HasKey("Range"))
                 M.SetKey("Range", GetKey("Range"));
+            foreach (string s in InheritKeys)
+            {
+                if (HasKey(s))
+                    M.SetKey(s, GetKey(s));
+            }
             M.Ini(Source, Target);
             base.EndEffect();
         }

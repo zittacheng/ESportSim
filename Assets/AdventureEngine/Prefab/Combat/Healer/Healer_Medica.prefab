@@ -144,10 +144,10 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
-  StatusPrefabs:
-  - {fileID: 4450497947210782938}
   InheritKeys:
   - Heal
+  StatusPrefabs:
+  - {fileID: 4450497947210782938}
 --- !u!114 &2287656722134339992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
+  - Render[1
   - Auto[1
   - ManaCost[1
 --- !u!1 &2999153854663816289
@@ -377,7 +378,6 @@ MonoBehaviour:
   Name: Healer_Status_Medica
   RenderName: + Medica
   Description: 
-  AddKey: 
   Icon: {fileID: 0}
 --- !u!1 &3092891703455524369
 GameObject:
@@ -523,7 +523,6 @@ MonoBehaviour:
   Name: Healer_Status_Medica
   RenderName: + Medica
   Description: 
-  AddKey: 
   Icon: {fileID: 0}
 --- !u!1 &4968247766447415581
 GameObject:
@@ -575,6 +574,7 @@ MonoBehaviour:
   Source: {fileID: 0}
   Target: {fileID: 0}
   MediumPrefab: {fileID: 8014664339928106792}
+  InheritKeys: []
 --- !u!114 &7492995644987909079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,10 +638,10 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
-  StatusPrefabs:
-  - {fileID: 2999153854663816289}
   InheritKeys:
   - Heal
+  StatusPrefabs:
+  - {fileID: 2999153854663816289}
 --- !u!114 &6049922318691455983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,6 +805,7 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   Signals:
   - {fileID: 1538026468571938714}
   - {fileID: 6771316881652896643}

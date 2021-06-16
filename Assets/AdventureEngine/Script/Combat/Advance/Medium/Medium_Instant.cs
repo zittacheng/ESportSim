@@ -8,7 +8,7 @@ namespace ADV
 
         public override void EffectUpdate(float Value)
         {
-            if (!Target || !Target.CardActive())
+            if (!Target)
             {
                 SetKey("Delay", 0);
                 Effect(null);

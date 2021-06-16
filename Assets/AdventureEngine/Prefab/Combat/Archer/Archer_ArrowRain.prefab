@@ -375,6 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
+  - Render[1
   - Auto[1
   - ManaCost[1
 --- !u!114 &-361500265171441453
@@ -393,7 +394,6 @@ MonoBehaviour:
   Name: 
   RenderName: 
   Description: 
-  AddKey: 
   Icon: {fileID: 0}
 --- !u!1 &2582712600694144924
 GameObject:
@@ -513,6 +513,7 @@ MonoBehaviour:
   Source: {fileID: 0}
   Target: {fileID: 0}
   MediumPrefab: {fileID: 6581531918407060222}
+  InheritKeys: []
 --- !u!114 &2838067175839856619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,6 +641,7 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   Signals:
   - {fileID: 796926386141145594}
 --- !u!114 &1597930901832293862
@@ -655,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Delay[0.45
+  - Delay[0.1
 --- !u!1 &4933174363600057356
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,6 +790,7 @@ MonoBehaviour:
   Source: {fileID: 0}
   Target: {fileID: 0}
   MediumPrefab: {fileID: 4590389753989659651}
+  InheritKeys: []
 --- !u!114 &2728608563687259368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,6 +856,7 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   Signals:
   - {fileID: 4241054313584567538}
   - {fileID: 148210225384186274}
@@ -923,6 +927,7 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   Signals:
   - {fileID: 2582712600694144924}
 --- !u!114 &1062775437384465807
@@ -938,7 +943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Delay[0.45
+  - Delay[0.1
 --- !u!1 &8249832026834051355
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,6 +994,7 @@ MonoBehaviour:
   Source: {fileID: 0}
   Target: {fileID: 0}
   MediumPrefab: {fileID: 6464432661720696622}
+  InheritKeys: []
 --- !u!114 &5869314391024985041
 MonoBehaviour:
   m_ObjectHideFlags: 0

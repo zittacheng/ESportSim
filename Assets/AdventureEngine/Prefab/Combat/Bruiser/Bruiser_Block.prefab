@@ -81,7 +81,6 @@ MonoBehaviour:
   Name: Bruiser_Status_Block
   RenderName: + Block
   Description: 
-  AddKey: 
   Icon: {fileID: 0}
 --- !u!1 &1484415085908263653
 GameObject:
@@ -162,7 +161,6 @@ MonoBehaviour:
   Name: Bruiser_Status_ManaLock
   RenderName: 
   Description: 
-  AddKey: 
   Icon: {fileID: 0}
 --- !u!1 &2592350037793829251
 GameObject:
@@ -214,11 +212,11 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys:
+  - Shield
   StatusPrefabs:
   - {fileID: 820378880934254275}
   - {fileID: 1484415085908263653}
-  InheritKeys:
-  - Shield
 --- !u!114 &2962992351386083201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
+  - Render[1
   - Auto[1
   - ManaCost[1
 --- !u!1 &6043666491201548160

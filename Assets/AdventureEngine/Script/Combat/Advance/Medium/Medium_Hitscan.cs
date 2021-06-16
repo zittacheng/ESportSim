@@ -47,7 +47,7 @@ namespace ADV
                     continue;
                 All.Add(C);
             }
-            bool CanHit = MapControl.Main.CanHit(O, T, out Vector2 TC);
+            bool CanHit = PathControl.Main.CanHit(O, T, out Vector2 TC);
             if (!CanHit)
                 T = TC;
             Hit = !CanHit;

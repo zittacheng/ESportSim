@@ -37,7 +37,7 @@ namespace ADV
 
         public override bool CheckTarget(Card Source, Card Target)
         {
-            return Source.GetSide() != Target.GetSide();
+            return FindTarget(Source) == Target;
         }
     }
 }

@@ -55,6 +55,8 @@ namespace ADV
             List<string> AddKeys = new List<string>();
             AddKeys.Add(KeyBase.Compose("TargetPositionX", GetKey("PositionX")));
             AddKeys.Add(KeyBase.Compose("TargetPositionY", GetKey("PositionY")));
+            if (HasKey("ItemCount"))
+                AddKeys.Add(KeyBase.Compose("ItemCount", GetKey("ItemCount")));
             foreach (GameObject G in SubSignals)
                 Source.SendSignal(G, AddKeys, Target);
         }

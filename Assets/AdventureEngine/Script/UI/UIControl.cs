@@ -7,6 +7,8 @@ namespace ADV
     public class UIControl : MonoBehaviour {
         public static UIControl Main;
         [HideInInspector] public List<UIButton> Buttons;
+        public List<Vector2> FriendlySlotPositions;
+        public List<Vector2> EnemySlotPositions;
 
         public void AddButton(UIButton B)
         {
@@ -24,6 +26,16 @@ namespace ADV
         void Update()
         {
 
+        }
+
+        public Vector2 GetFriendlySlotPosition(int Index)
+        {
+            return FriendlySlotPositions[Index];
+        }
+
+        public Vector2 GetEnemySlotPosition(int Index)
+        {
+            return EnemySlotPositions[Index];
         }
     }
 }

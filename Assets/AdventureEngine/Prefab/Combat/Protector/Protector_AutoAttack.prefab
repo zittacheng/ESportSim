@@ -74,7 +74,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  NewCurve: 1
+  OverrideCurve: 0
 --- !u!114 &880631950082629042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +344,7 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   Signals:
   - {fileID: 3133034055059732834}
 --- !u!114 &5314285613909380637
@@ -359,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Delay[0.01
+  - Delay[0.25
 --- !u!1 &8849621879436109797
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +411,7 @@ MonoBehaviour:
   Source: {fileID: 0}
   Target: {fileID: 0}
   MediumPrefab: {fileID: 5844302272964477392}
+  InheritKeys: []
 --- !u!114 &6475781427419161903
 MonoBehaviour:
   m_ObjectHideFlags: 0

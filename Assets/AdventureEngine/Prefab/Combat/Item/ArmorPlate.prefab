@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 2551488005156438566}
-  Info: {fileID: 0}
+  Info: {fileID: 2551488005156438564}
   Source: {fileID: 0}
   MainSignals:
   - {fileID: 2551488005202339102}
@@ -70,9 +70,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
+  - Render[1
+  - CanStack[1
   - StartOfCombat[1
   - Item[1
   - Count[1
+  - Cost[30
 --- !u!114 &2551488005156438564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,10 +142,10 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
-  StatusPrefabs:
-  - {fileID: 2551488006609895469}
   InheritKeys:
   - Shield
+  StatusPrefabs:
+  - {fileID: 2551488006609895469}
 --- !u!114 &2551488005202339100
 MonoBehaviour:
   m_ObjectHideFlags: 0

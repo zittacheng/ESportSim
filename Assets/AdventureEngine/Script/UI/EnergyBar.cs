@@ -49,7 +49,7 @@ namespace ADV
                     SR.enabled = true;
             }
             Main.transform.localScale = new Vector3(a, 1, 1);
-            Right.transform.localPosition = new Vector3(RightPositionRange.x + (RightPositionRange.y - RightPositionRange.x) * a, 0, 0);
+            Right.transform.localPosition = new Vector3(RightPositionRange.x + (RightPositionRange.y - RightPositionRange.x) * a, 0, Right.transform.localPosition.z);
         }
 
         public void ApplyColor()

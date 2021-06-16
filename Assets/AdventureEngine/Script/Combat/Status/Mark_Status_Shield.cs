@@ -11,21 +11,27 @@ namespace ADV
         {
             if (LifeChange >= 0)
                 return LifeChange;
-
             if (GetKey("Shield") > -LifeChange)
             {
                 ChangeKey("Shield", LifeChange);
                 return 0;
             }
-
             Break();
             return LifeChange + GetKey("Shield");
         }
 
         public virtual void Break()
         {
+            List<string> AddKeys = new List<string>();
+            if (Source)
+            {
+                AddKeys.Add(KeyBase.Compose("TargetPositionX", Source.GetPosition().x));
+                AddKeys.Add(KeyBase.Compose("TargetPositionY", Source.GetPosition().y));
+            }
+            if (HasKey("ItemCount"))
+                AddKeys.Add(KeyBase.Compose("ItemCount", GetKey("ItemCount")));
             for (int i = 0; i < BreakSignals.Count; i++)
-                Source.SendSignal(BreakSignals[i], new List<string>(), Source);
+                Source.SendSignal(BreakSignals[i], AddKeys, Source);
             Source.RemoveStatus(this);
         }
 

@@ -6,6 +6,7 @@ namespace ADV
 {
     public class Medium : Mark {
         [HideInInspector] public Card Target;
+        public List<string> InheritKeys;
         public List<GameObject> Signals;
 
         public virtual void Ini(Card S, Card T)
@@ -28,7 +29,7 @@ namespace ADV
 
         public override void TimePassed(float Value)
         {
-            if (GetKey("AlreadyDead") != 1 && Source && Source.CardActive())
+            if (GetKey("AlreadyDead") != 1 && Source)
                 EffectUpdate(Value);
             else
                 InterruptEffect();
@@ -52,6 +53,11 @@ namespace ADV
             List<string> AddKeys = new List<string>();
             AddKeys.Add(KeyBase.Compose("TargetPositionX", GetKey("PositionX")));
             AddKeys.Add(KeyBase.Compose("TargetPositionY", GetKey("PositionY")));
+            foreach (string s in InheritKeys)
+            {
+                if (HasKey(s))
+                    AddKeys.Add(KeyBase.Compose(s, GetKey(s)));
+            }
             foreach (GameObject G in Signals)
                 Source.SendSignal(G, AddKeys, Target);
         }

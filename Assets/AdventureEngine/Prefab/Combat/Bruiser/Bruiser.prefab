@@ -93,14 +93,14 @@ PrefabInstance:
       objectReference: {fileID: 1694133658143401318}
     - target: {fileID: 1751504212642397397, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: IniSkills.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1751504212642397397, guid: 15fac57be78d37d4388580773e345feb, type: 3}
-      propertyPath: IniSkills.Array.data[0]
+      propertyPath: IniSkills.Array.data[1]
       value: 
       objectReference: {fileID: 7144450996714718986}
     - target: {fileID: 1751504212642397397, guid: 15fac57be78d37d4388580773e345feb, type: 3}
-      propertyPath: IniSkills.Array.data[1]
+      propertyPath: IniSkills.Array.data[2]
       value: 
       objectReference: {fileID: 255367172497488336}
     - target: {fileID: 1751504212642397402, guid: 15fac57be78d37d4388580773e345feb, type: 3}

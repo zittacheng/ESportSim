@@ -29,8 +29,25 @@ namespace ADV
                 else if (a == MaxLife)
                     Targets.Add(Cards[i]);
             }
-            if (Targets.Count > 0)
-                return Targets[Random.Range(0, Targets.Count)];
+
+            if (Targets.Count > 1)
+            {
+                float Aggro = -9999;
+                Card Temp = null;
+                for (int i = Cards.Count - 1; i >= 0; i--)
+                {
+                    if (Cards[i].GetAggro() >= Aggro)
+                    {
+                        Aggro = Cards[i].GetAggro();
+                        Temp = Cards[i];
+                    }
+                }
+                return Temp;
+            }
+            else if (Targets.Count > 0)
+            {
+                return Targets[0];
+            }
             else
                 return null;
         }

@@ -861,6 +861,13 @@ namespace ADV
                 RemoveSkill(Index);
         }
 
+        public void SoftRemoveSkill(Mark_Skill M)
+        {
+            if (!M || !Skills.Contains(M))
+                return;
+            M.SetKey("Render", 0);
+        }
+
         public void UpdateRenderSkills()
         {
             RenderSkills = new List<Mark_Skill>();

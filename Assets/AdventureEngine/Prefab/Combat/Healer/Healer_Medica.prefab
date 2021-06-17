@@ -362,6 +362,7 @@ MonoBehaviour:
   Keys:
   - Duration[10
   - Render[1
+  - Buff[1
 --- !u!114 &6251221911479738872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,6 +508,7 @@ MonoBehaviour:
   Keys:
   - Duration[10
   - Render[1
+  - Buff[1
 --- !u!114 &4266244446552208844
 MonoBehaviour:
   m_ObjectHideFlags: 0

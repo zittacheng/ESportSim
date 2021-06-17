@@ -352,8 +352,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
+  - Render[1
   - Duration[3
   - IgnoreStack[1
+  - Debuff[1
 --- !u!114 &2087736560274010905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: 
   Name: Item_Status_Molten
-  RenderName: 
+  RenderName: '-  Molten'
   Description: 
   Icon: {fileID: 0}

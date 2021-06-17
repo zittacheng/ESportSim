@@ -60,7 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Keys: []
+  Keys:
+  - Render[1
+  - Buff[1
 --- !u!114 &1438897807535974578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: 
   Name: FireMage_Status_FireAttackReady
-  RenderName: 
+  RenderName: + Focused
   Description: 
   Icon: {fileID: 0}
 --- !u!1 &5989877705274393310

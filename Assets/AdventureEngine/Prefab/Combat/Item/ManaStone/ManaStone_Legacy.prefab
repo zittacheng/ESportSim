@@ -298,5 +298,5 @@ MonoBehaviour:
   Key: 
   Name: Item_ManaStone
   RenderName: Blue Tearstone Ring
-  Description: 
+  Description: Description
   Icon: {fileID: 0}

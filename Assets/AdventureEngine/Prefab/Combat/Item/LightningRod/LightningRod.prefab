@@ -157,7 +157,7 @@ MonoBehaviour:
   Key: 
   Name: Item_LightningRod
   RenderName: Lightning Rod
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &4038134380275391982
 GameObject:

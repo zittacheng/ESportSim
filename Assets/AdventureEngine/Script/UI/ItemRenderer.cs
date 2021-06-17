@@ -15,6 +15,8 @@ namespace ADV
         public TextMeshPro CostText;
         public GameObject SelectionBase;
         public SpriteRenderer ItemSprite;
+        public GameObject PanelPivot;
+        public PanelDirection PDirection;
 
         public override void Update()
         {
@@ -113,6 +115,30 @@ namespace ADV
                 return;
             Interact();
             base.MouseDownEffect();
+        }
+
+        public override void MouseEnterEffect()
+        {
+            if (!GetItem())
+            {
+                UIControl.Main.ItemPanel.Render(new Vector2(), 0, null);
+                return;
+            }
+            Mark_Skill S = GetItem().GetComponent<Mark_Skill>();
+            if (!S || !S.GetInfo())
+            {
+                UIControl.Main.ItemPanel.Render(new Vector2(), 0, null);
+                return;
+            }
+
+            UIControl.Main.ItemPanel.Render(PanelPivot.transform.position, PDirection, S.GetInfo());
+            base.MouseEnterEffect();
+        }
+
+        public override void MouseExitEffect()
+        {
+            UIControl.Main.ItemPanel.Render(new Vector2(), 0, null);
+            base.MouseExitEffect();
         }
     }
 }

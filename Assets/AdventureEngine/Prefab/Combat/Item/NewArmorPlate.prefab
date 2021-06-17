@@ -215,9 +215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 
-  Name: Item_ArmorPlate
-  RenderName: Rusted Armor Plate
-  Description: 
+  Name: Item_NewArmorPlate
+  RenderName: New Armor Plate
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &6807392005454684842
 GameObject:

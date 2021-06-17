@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 9141202851424813070}
-  Info: {fileID: 0}
+  Info: {fileID: 9141202851424813068}
   Source: {fileID: 0}
   MainSignals: []
   Targetings:
@@ -150,5 +150,5 @@ MonoBehaviour:
   Key: 
   Name: Item_ManaStone
   RenderName: Blue Tearstone Ring
-  Description: 
+  Description: Description
   Icon: {fileID: 0}

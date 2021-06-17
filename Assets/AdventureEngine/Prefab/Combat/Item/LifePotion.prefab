@@ -353,7 +353,7 @@ MonoBehaviour:
   Key: 
   Name: Item_LifePotion
   RenderName: Recovery Potion
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &8136487416909133632
 GameObject:

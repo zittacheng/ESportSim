@@ -150,7 +150,7 @@ MonoBehaviour:
   Key: 
   Name: Item_Trigger_Guillotine
   RenderName: 
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &1816606566844051188
 GameObject:

@@ -150,7 +150,7 @@ MonoBehaviour:
   Key: 
   Name: Item_MoltenCore
   RenderName: Molten Core
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &4171548468293020353
 GameObject:

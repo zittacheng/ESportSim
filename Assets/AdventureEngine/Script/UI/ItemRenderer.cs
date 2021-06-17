@@ -6,7 +6,6 @@ using TMPro;
 namespace ADV
 {
     public class ItemRenderer : UIButton_Square {
-        //public Card Source;
         public CardRenderer CR;
         public GameObject ItemPrefab;
         public int Index;
@@ -107,6 +106,9 @@ namespace ADV
                 CombatControl.Main.SelectingItem = null;
                 CombatControl.Main.SelectingItemRenderer = null;
             }
+
+            CombatControl.Main.SelectingSwitch = null;
+            CombatControl.Main.SelectingCard = null;
         }
 
         public override void MouseDownEffect()

@@ -24,6 +24,8 @@ namespace ADV
         public TextMeshPro DamageText;
         public TextMeshPro AttackSpeedText;
         public TextMeshPro RecoverySpeedText;
+        public GameObject MainSprite;
+        public GameObject MCSprite;
         public List<StatusRenderer> StatusRenderers;
 
         public override void Render()
@@ -59,6 +61,20 @@ namespace ADV
                 SetActive(true);
             else
                 SetActive(false);
+
+            if (MCSprite && MainSprite)
+            {
+                if (GetTarget() == CombatControl.Main.GetCurrentMC())
+                {
+                    MCSprite.SetActive(true);
+                    MainSprite.SetActive(false);
+                }
+                else
+                {
+                    MCSprite.SetActive(false);
+                    MainSprite.SetActive(true);
+                }
+            }
 
             if (NameText)
             {

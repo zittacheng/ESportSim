@@ -123,8 +123,8 @@ namespace ADV
             // UI
             SelectingItem = null;
             SelectingItemRenderer = null;
-            CombatControl.Main.SelectingSwitch = null;
-            CombatControl.Main.SelectingCard = null;
+            SelectingSwitch = null;
+            SelectingCard = null;
 
             // Ini CardList
             Cards.Clear();
@@ -137,7 +137,10 @@ namespace ADV
             for (int i = Cards.Count - 1; i >= 0; i--)
             {
                 if (Cards[i].CombatActive())
+                {
+                    Cards[i].CurrentTarget = null;
                     Cards[i].StartOfCombat();
+                }
             }
 
             // Process

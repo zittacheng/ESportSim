@@ -15,7 +15,11 @@ namespace ADV
                 float Chance = GetChance();
                 if (S.HasKey("ProcChance"))
                     Chance *= S.GetKey("ProcChance");
-                TryTrigger(S.Target, Chance, new List<string> { KeyBase.Compose("TriggerValue", S.GetKey("Damage")) });
+                List<string> AddKeys = new List<string>();
+                AddKeys.Add(KeyBase.Compose("TriggerValue", S.GetKey("Damage")));
+                if (HasKey("AddDuration"))
+                    AddKeys.Add(KeyBase.Compose("Duration", GetAddDuration()));
+                TryTrigger(S.Target, Chance, AddKeys);
             }
             base.ReturnSignal(S);
         }
@@ -32,10 +36,22 @@ namespace ADV
             return a;
         }
 
+        public virtual float GetAddDuration()
+        {
+            float d = 0;
+            if (HasKey("AddDuration"))
+                d += GetKey("AddDuration");
+            if (HasKey("ItemCount") && HasKey("AddDurationMod"))
+                d += GetKey("AddDurationMod") * GetKey("ItemCount");
+            return d;
+        }
+
         public override void CommonKeys()
         {
             // "Chance": Trigger chance
             // "ChanceMod": Chance change per stack
+            // "AddDuration": Inherit duration (if status effect)
+            // "AddDurationMod": Inherit duration change per stack
             // "ItemCountScaling": Whether the proc chance should scale with "ItemCount"
             base.CommonKeys();
         }

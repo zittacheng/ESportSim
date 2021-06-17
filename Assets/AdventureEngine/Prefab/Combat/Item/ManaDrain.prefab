@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 3022775752138530021}
-  Info: {fileID: 0}
+  Info: {fileID: 3022775752138530023}
   Source: {fileID: 0}
   MainSignals:
   - {fileID: 3022775752159787997}
@@ -150,7 +150,7 @@ MonoBehaviour:
   Key: 
   Name: Item_ManaDrain
   RenderName: Silent Sheath
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &3022775752159787997
 GameObject:

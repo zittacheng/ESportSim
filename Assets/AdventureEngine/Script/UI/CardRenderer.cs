@@ -14,6 +14,8 @@ namespace ADV
         public TextMeshPro NameText;
         public int LifeRenderDirection;
         public EnergyBar LifeBar;
+        public EnergyBar ShieldBar;
+        public EnergyBar AddShieldBar;
         public EnergyBar ManaBar;
         public TextMeshPro LifeText;
         public TextMeshPro LifeTextII;
@@ -117,10 +119,32 @@ namespace ADV
             string s = "";
             for (int i = 0; i < a; i++)
                 s += "-";
-            //LifeBar.text = s;
 
             if (LifeBar)
                 LifeBar.Render(GetTarget().GetLife() / GetTarget().GetMaxLife());
+
+            if (ShieldBar && AddShieldBar)
+            {
+                float h = GetTarget().PassValue("Shield");
+                if (h > 0)
+                {
+                    float h2 = (GetTarget().GetLife() + h) / GetTarget().GetMaxLife();
+                    float h3 = 0;
+                    if (h2 > 1)
+                    {
+                        h3 = h2 - 1;
+                        h2 = 1;
+                    }
+                    ShieldBar.Render(h2);
+                    AddShieldBar.Render(h3);
+                }
+                else
+                {
+                    ShieldBar.Render(0);
+                    AddShieldBar.Render(0);
+                }
+            }
+
             if (ManaBar)
                 ManaBar.Render(GetTarget().PassValue("Mana"));
             if (DamageText)

@@ -217,7 +217,7 @@ MonoBehaviour:
   Key: 
   Name: Item_LifeStealRing
   RenderName: Leeching Sheath
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1001 &9011839211907753741
 PrefabInstance:

@@ -377,6 +377,7 @@ MonoBehaviour:
   AvoidedKeys:
   - LightningRod
   SourceConditions: []
+  TargetConditions: []
   MainSignals:
   - {fileID: 5385085728434483092}
 --- !u!114 &6987003698776851041
@@ -408,7 +409,7 @@ MonoBehaviour:
   Key: 
   Name: Item_Trigger_LightningRod
   RenderName: 
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &7021295669105314209
 GameObject:

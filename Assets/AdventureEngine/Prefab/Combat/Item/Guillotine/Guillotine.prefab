@@ -157,7 +157,7 @@ MonoBehaviour:
   Key: 
   Name: Item_Guillotine
   RenderName: Old Guillotine
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &5155911324903518156
 GameObject:

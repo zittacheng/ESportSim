@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 3938590745875650161}
-  Info: {fileID: 0}
+  Info: {fileID: 3938590745875650163}
   Source: {fileID: 0}
   MainSignals: []
   Targetings:
@@ -148,5 +148,5 @@ MonoBehaviour:
   Key: 
   Name: Item_SpectralBlade
   RenderName: Spectral Dagger
-  Description: 
+  Description: Description
   Icon: {fileID: 0}

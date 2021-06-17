@@ -434,6 +434,8 @@ MonoBehaviour:
   CostText: {fileID: 7256559830863800220}
   SelectionBase: {fileID: 1363361366565340148}
   ItemSprite: {fileID: 7256559831710921123}
+  PanelPivot: {fileID: 7256559831609427900}
+  PDirection: 2
 --- !u!1 &7256559831638690650
 GameObject:
   m_ObjectHideFlags: 0

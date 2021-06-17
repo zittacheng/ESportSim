@@ -217,7 +217,7 @@ MonoBehaviour:
   Key: 
   Name: Item_Flashlight
   RenderName: Irradiant Flashlight
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1001 &2624859565816484949
 PrefabInstance:

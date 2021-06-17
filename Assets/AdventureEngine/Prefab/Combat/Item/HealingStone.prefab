@@ -90,7 +90,7 @@ MonoBehaviour:
   Key: 
   Name: Item_HealingStone
   RenderName: Rejuvenation Stone
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &5841243741231780071
 GameObject:

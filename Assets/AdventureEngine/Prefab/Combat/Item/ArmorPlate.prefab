@@ -91,7 +91,7 @@ MonoBehaviour:
   Key: 
   Name: Item_ArmorPlate
   RenderName: Rusted Armor Plate
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &2551488005202339102
 GameObject:

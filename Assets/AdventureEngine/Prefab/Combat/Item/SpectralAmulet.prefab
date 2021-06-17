@@ -153,7 +153,7 @@ MonoBehaviour:
   Key: 
   Name: Item_SpectralAmulet
   RenderName: Spectral Amulet
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &5564235326517548701
 GameObject:

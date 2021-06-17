@@ -250,7 +250,8 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
-  InheritKeys: []
+  InheritKeys:
+  - Duration
   StatusPrefabs:
   - {fileID: 4014532233520806435}
 --- !u!114 &1570137983546061665
@@ -267,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Target[1
+  - Duration[10
 --- !u!1 &3265352365490227640
 GameObject:
   m_ObjectHideFlags: 0

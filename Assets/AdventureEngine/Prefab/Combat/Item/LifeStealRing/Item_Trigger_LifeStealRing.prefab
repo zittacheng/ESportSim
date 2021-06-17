@@ -122,6 +122,7 @@ MonoBehaviour:
   AvoidedKeys:
   - LightningRod
   SourceConditions: []
+  TargetConditions: []
   MainSignals:
   - {fileID: 1451487175231562283}
 --- !u!114 &4497354184127270878
@@ -153,7 +154,7 @@ MonoBehaviour:
   Key: 
   Name: Item_Trigger_LifeStealRing
   RenderName: 
-  Description: 
+  Description: Description
   Icon: {fileID: 0}
 --- !u!1 &4607105594315785246
 GameObject:

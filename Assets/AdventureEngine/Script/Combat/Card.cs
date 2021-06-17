@@ -915,6 +915,16 @@ namespace ADV
             return RenderStatus[Index];
         }
 
+        public Mark_Status GetStatus(string Key)
+        {
+            for (int i = Status.Count - 1; i >= 0; i--)
+            {
+                if (Status[i] && Status[i].GetInfo() && Status[i].GetInfo().GetID() == Key)
+                    return Status[i];
+            }
+            return null;
+        }
+
         public Mark_Status AddStatus(Mark_Status M)
         {
             return AddStatus(M, new List<string>());

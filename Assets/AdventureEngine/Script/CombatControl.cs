@@ -13,10 +13,11 @@ namespace ADV
         [Space]
         public float Coin;
         [Space]
-        public Card SelectingCard;
         public Card HoldingCard;
         public Mark_Skill SelectingItem;
         public ItemRenderer SelectingItemRenderer;
+        public Card SelectingCard;
+        public SwitchRenderer SelectingSwitch;
         public Mark SelectingMark;
         [HideInInspector] public Vector2 SelectingPosition;
         [Space]
@@ -122,6 +123,8 @@ namespace ADV
             // UI
             SelectingItem = null;
             SelectingItemRenderer = null;
+            CombatControl.Main.SelectingSwitch = null;
+            CombatControl.Main.SelectingCard = null;
 
             // Ini CardList
             Cards.Clear();
@@ -288,6 +291,16 @@ namespace ADV
             Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
             foreach (Card C in Group.Cards)
                 C.RemoveSkill(S.GetID(), 1);
+        }
+
+        public void ConsumeItem(GameObject ItemPrefab, CardGroup Group, Card Source, float Count)
+        {
+            if (!Group)
+                return;
+            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
+            foreach (Card C in Group.Cards)
+                if (C != Source)
+                    C.RemoveSkill(S.GetID(), (int)Count);
         }
 
         public Card GetCurrentMC()

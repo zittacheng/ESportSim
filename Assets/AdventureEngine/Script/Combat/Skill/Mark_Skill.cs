@@ -144,6 +144,8 @@ namespace ADV
             if (HasKey("Count") && GetKey("Consumed") == 1)
             {
                 ChangeKey("Count", -1);
+                if (Source.GetGroup())
+                    CombatControl.Main.ConsumeItem(gameObject, Source.GetGroup(), Source, 1);
                 if (GetKey("Count") <= 0)
                     Source.SoftRemoveSkill(this);
             }

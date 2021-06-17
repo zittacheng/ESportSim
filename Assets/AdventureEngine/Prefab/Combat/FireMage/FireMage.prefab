@@ -343,6 +343,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3392334995814197352, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: Name
+      value: FireMage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392334995814197352, guid: 15fac57be78d37d4388580773e345feb, type: 3}
+      propertyPath: RenderName
       value: Fire Mage
       objectReference: {fileID: 0}
     m_RemovedComponents: []

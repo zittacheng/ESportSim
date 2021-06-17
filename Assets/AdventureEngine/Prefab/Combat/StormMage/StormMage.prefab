@@ -281,7 +281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3392334995814197352, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: Name
-      value: Storm
+      value: StormMage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392334995814197352, guid: 15fac57be78d37d4388580773e345feb, type: 3}
+      propertyPath: RenderName
+      value: Storm Mage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15fac57be78d37d4388580773e345feb, type: 3}

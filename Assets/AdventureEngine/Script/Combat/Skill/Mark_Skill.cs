@@ -142,7 +142,11 @@ namespace ADV
                     SetKey("CCD", GetKey("CoolDown"));
             }
             if (HasKey("Count") && GetKey("Consumed") == 1)
+            {
                 ChangeKey("Count", -1);
+                if (GetKey("Count") <= 0)
+                    Source.SoftRemoveSkill(this);
+            }
             if (HasKey("GCD"))
                 Source.SetGCD(GetKey("GCD"));
         }

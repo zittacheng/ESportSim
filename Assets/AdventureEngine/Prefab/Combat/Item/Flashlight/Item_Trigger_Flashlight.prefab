@@ -129,7 +129,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
+  - Render[1
   - Duration[2
+  - Debuff[1
 --- !u!114 &4650252270602546644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: 
   Name: Item_Status_FlahslightStun
-  RenderName: 
+  RenderName: '-  Stunned'
   Description: 
   Icon: {fileID: 0}
 --- !u!1 &6372058836136381518
@@ -200,6 +202,7 @@ MonoBehaviour:
   - AutoAttackHit
   AvoidedKeys: []
   SourceConditions: []
+  TargetConditions: []
   MainSignals:
   - {fileID: 8224524994013553076}
 --- !u!114 &6372058836136381505

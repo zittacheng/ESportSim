@@ -52,6 +52,13 @@ namespace ADV
                 SetKey("CCD", GetKey("CoolDown"));
         }
 
+        public override void EndOfCombat()
+        {
+            if (HasKey("MaxTriggerCount"))
+                SetKey("TriggerCount", GetKey("MaxTriggerCount"));
+            base.EndOfCombat();
+        }
+
         public virtual bool CanTrigger()
         {
             if (HasKey("TriggerCount") && GetKey("TriggerCount") <= 0)
@@ -84,6 +91,7 @@ namespace ADV
             // "CoolDown": Original cool down
             // "CCD": Current cool down
             // "TriggerCount": Remaining trigger count
+            // "MaxTriggerCount": Original trigger count
             base.CommonKeys();
         }
     }

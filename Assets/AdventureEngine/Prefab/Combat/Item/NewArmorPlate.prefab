@@ -354,6 +354,7 @@ MonoBehaviour:
   Keys:
   - Render[1
   - Shield[0
+  - Buff[1
 --- !u!114 &6807392006186436501
 MonoBehaviour:
   m_ObjectHideFlags: 0

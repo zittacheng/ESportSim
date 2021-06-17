@@ -44,14 +44,13 @@ namespace ADV
             {
                 if (DefeatPrefabs.Count <= 0)
                 {
-
                     if (NextUnit)
                         NextUnit.Execute(Source, Victory);
                     return;
                 }
                 else
                 {
-                    GameObject G = DefeatPrefabs[Random.Range(0, VictoryPrefabs.Count)];
+                    GameObject G = DefeatPrefabs[Random.Range(0, DefeatPrefabs.Count)];
                     CombatControl.Main.AddItem(G, Source);
                     if (NextUnit)
                         NextUnit.Execute(Source, Victory);

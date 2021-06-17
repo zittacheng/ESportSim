@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ADV
 {
     public class AIControl : MonoBehaviour {
-        public Card Source;
+        public CardGroup Source;
         public List<AIControlUnit> Units;
 
         // Start is called before the first frame update

@@ -13,14 +13,15 @@ namespace ADV
         [Space]
         public float Coin;
         [Space]
-        public Card CurrentMC;
-        public List<Card> MCs;
         public Card SelectingCard;
         public Card HoldingCard;
         public Mark_Skill SelectingItem;
         public ItemRenderer SelectingItemRenderer;
         public Mark SelectingMark;
         [HideInInspector] public Vector2 SelectingPosition;
+        [Space]
+        public CardGroup MCGroup;
+        public List<CardGroup> Groups;
         [Space]
         public List<Card> Cores;
         public List<Card> FriendlyCards;
@@ -39,6 +40,7 @@ namespace ADV
         // Start is called before the first frame update
         void Start()
         {
+            GroupIni();
             // Temp
             EndOfCombatAIProcess(0);
         }
@@ -49,6 +51,24 @@ namespace ADV
             if (Waiting)
                 PartyListUpdate();
             AggroUpdate();
+        }
+
+        public void GroupIni()
+        {
+            for (int i = 0; i < Groups.Count; i++)
+            {
+                Groups[i].Ini();
+                if (Groups[i].Side == 0)
+                {
+                    FriendlyCards.Add(Groups[i].GetCurrentCard());
+                    Groups[i].GetCurrentCard().GetAnim().ForcePosition(UIControl.Main.GetFriendlySlotPosition(FriendlyCards.IndexOf(Groups[i].GetCurrentCard())));
+                }
+                else if (Groups[i].Side == 1)
+                {
+                    EnemyCards.Add(Groups[i].GetCurrentCard());
+                    Groups[i].GetCurrentCard().GetAnim().ForcePosition(UIControl.Main.GetEnemySlotPosition(EnemyCards.IndexOf(Groups[i].GetCurrentCard())));
+                }
+            }
         }
 
         public void PartyListUpdate()
@@ -82,34 +102,6 @@ namespace ADV
                 FriendlyCards[i].Aggro = i * -0.1f + 10;
             for (int i = 0; i < EnemyCards.Count; i++)
                 EnemyCards[i].Aggro = i * -0.1f + 10;
-        }
-
-        public void AddItem(GameObject ItemPrefab, float CoinChange)
-        {
-            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
-            ChangeCoin(CoinChange);
-            foreach (Card C in MCs)
-                C.AddSkill(S);
-        }
-
-        public void RemoveItem(GameObject ItemPrefab, float CoinChange)
-        {
-            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
-            ChangeCoin(CoinChange);
-            foreach (Card C in MCs)
-                C.RemoveSkill(S.GetID(), 1);
-        }
-
-        public void AddItem(GameObject ItemPrefab, Card Target)
-        {
-            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
-            Target.AddSkill(S);
-        }
-
-        public void RemoveItem(GameObject ItemPrefab, Card Target)
-        {
-            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
-            Target.RemoveSkill(S.GetID(), 1);
         }
 
         public void ChangeCoin(float Value)
@@ -197,24 +189,23 @@ namespace ADV
 
         public void EndOfCombatAIProcess(int Result)
         {
-            for (int i = 0; i < FriendlyCards.Count; i++)
+            for (int i = 0; i < Groups.Count; i++)
             {
-                if (FriendlyCards[i] && FriendlyCards[i].GetComponent<AIControl>())
+                if (!Groups[i] || !Groups[i].GetAIControl())
+                    continue;
+                if (Groups[i].Side == 0)
                 {
                     if (Result == 1)
-                        FriendlyCards[i].GetComponent<AIControl>().Execute(CurrentTurn, true);
+                        Groups[i].GetAIControl().Execute(CurrentTurn, true);
                     else
-                        FriendlyCards[i].GetComponent<AIControl>().Execute(CurrentTurn, false);
+                        Groups[i].GetAIControl().Execute(CurrentTurn, false);
                 }
-            }
-            for (int i = 0; i < EnemyCards.Count; i++)
-            {
-                if (EnemyCards[i] && EnemyCards[i].GetComponent<AIControl>())
+                else if (Groups[i].Side == 1)
                 {
                     if (Result == -1)
-                        EnemyCards[i].GetComponent<AIControl>().Execute(CurrentTurn, true);
+                        Groups[i].GetAIControl().Execute(CurrentTurn, true);
                     else
-                        EnemyCards[i].GetComponent<AIControl>().Execute(CurrentTurn, false);
+                        Groups[i].GetAIControl().Execute(CurrentTurn, false);
                 }
             }
         }
@@ -259,6 +250,49 @@ namespace ADV
             {
                 Cards[i].Revive();
             }
+        }
+
+        public void AddItem(GameObject ItemPrefab, float CoinChange, CardGroup Group)
+        {
+            if (!Group)
+                return;
+            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
+            ChangeCoin(CoinChange);
+            foreach (Card C in Group.Cards)
+                C.AddSkill(S);
+        }
+
+        public void RemoveItem(GameObject ItemPrefab, float CoinChange, CardGroup Group)
+        {
+            if (!Group)
+                return;
+            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
+            ChangeCoin(CoinChange);
+            foreach (Card C in Group.Cards)
+                C.RemoveSkill(S.GetID(), 1);
+        }
+
+        public void AddItem(GameObject ItemPrefab, CardGroup Group)
+        {
+            if (!Group)
+                return;
+            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
+            foreach (Card C in Group.Cards)
+                C.AddSkill(S);
+        }
+
+        public void RemoveItem(GameObject ItemPrefab, CardGroup Group)
+        {
+            if (!Group)
+                return;
+            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
+            foreach (Card C in Group.Cards)
+                C.RemoveSkill(S.GetID(), 1);
+        }
+
+        public Card GetCurrentMC()
+        {
+            return MCGroup.GetCurrentCard();
         }
 
         public List<Card> GetCards()

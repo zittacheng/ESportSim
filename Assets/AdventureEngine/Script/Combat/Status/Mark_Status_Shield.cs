@@ -41,6 +41,13 @@ namespace ADV
                 SetKey("Shield", M.GetKey("Shield"));
         }
 
+        public override float PassValue(string Key, float Value)
+        {
+            if (Key == "Shield")
+                return Value + GetKey("Shield");
+            return base.PassValue(Key, Value);
+        }
+
         public override void CommonKeys()
         {
             // "Shield": Remaining shield amount

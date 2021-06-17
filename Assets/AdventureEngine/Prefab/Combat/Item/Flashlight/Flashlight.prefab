@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[1
+  - CanStack[1
   - StartOfCombat[1
   - Item[1
   - Count[1

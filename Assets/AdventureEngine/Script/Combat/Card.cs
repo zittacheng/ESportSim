@@ -116,7 +116,7 @@ namespace ADV
 
         public void CombatUpdate(float Value)
         {
-            if (!CombatControl.Main.InCombat)
+            if (!CombatControl.Main.InCombat || !CombatControl.Main.Cards.Contains(this))
             {
                 CurrentTarget = null;
                 return;
@@ -1025,6 +1025,14 @@ namespace ADV
                 return;
             AddMovements.Remove(M);
             Destroy(M.gameObject);
+        }
+
+        public CardGroup GetGroup()
+        {
+            foreach (CardGroup CG in CombatControl.Main.Groups)
+                if (CG.Cards.Contains(this))
+                    return CG;
+            return null;
         }
 
         public PathFinder GetPathFinder()

@@ -7,6 +7,8 @@ namespace ADV
     public class AIControlUnit : MonoBehaviour {
         public List<GameObject> VictoryPrefabs;
         public List<GameObject> DefeatPrefabs;
+        public List<string> VictoryCards;
+        public List<string> DefeatCards;
         public AIControlUnit NextUnit;
 
         // Start is called before the first frame update
@@ -21,10 +23,16 @@ namespace ADV
 
         }
 
-        public void Execute(Card Source, bool Victory)
+        public void Execute(CardGroup Source, bool Victory)
         {
             if (Victory)
             {
+                if (VictoryCards.Count > 0)
+                {
+                    string s = VictoryCards[Random.Range(0, VictoryCards.Count)];
+                    Source.SwitchCard(s);
+                }
+
                 if (VictoryPrefabs.Count <= 0)
                 {
                     if (NextUnit)
@@ -42,6 +50,12 @@ namespace ADV
             }
             else
             {
+                if (DefeatCards.Count > 0)
+                {
+                    string s = DefeatCards[Random.Range(0, DefeatCards.Count)];
+                    Source.SwitchCard(s);
+                }
+
                 if (DefeatPrefabs.Count <= 0)
                 {
                     if (NextUnit)

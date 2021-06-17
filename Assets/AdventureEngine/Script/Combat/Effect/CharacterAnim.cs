@@ -51,13 +51,23 @@ namespace ADV
                 }
             }
 
-            if (Source.GetSide() == 0 && CombatControl.Main.FriendlyCards.Contains(Source))
+            if (Source.GetSide() == 0 && Source.GetGroup())
             {
-                if (CombatControl.Main.HoldingCard != Source)
-                    SetMovement(UIControl.Main.GetFriendlySlotPosition(CombatControl.Main.FriendlyCards.IndexOf(Source)), 0.1f);
+                if (CombatControl.Main.FriendlyCards.Contains(Source))
+                {
+                    if (CombatControl.Main.HoldingCard != Source)
+                        SetMovement(UIControl.Main.GetFriendlySlotPosition(CombatControl.Main.FriendlyCards.IndexOf(Source)), 0.1f);
+                }
+                else
+                    ForcePosition(new Vector2(-300, -300));
             }
-            else if (Source.GetSide() == 1 && CombatControl.Main.EnemyCards.Contains(Source))
-                SetMovement(UIControl.Main.GetEnemySlotPosition(CombatControl.Main.EnemyCards.IndexOf(Source)), 0.1f);
+            else if (Source.GetSide() == 1 && Source.GetGroup())
+            {
+                if (CombatControl.Main.EnemyCards.Contains(Source))
+                    SetMovement(UIControl.Main.GetEnemySlotPosition(CombatControl.Main.EnemyCards.IndexOf(Source)), 0.1f);
+                else
+                    ForcePosition(new Vector2(-300, -300));
+            }
         }
 
         public void MouseDown()

@@ -25,7 +25,7 @@ namespace ADV
         public Card GetTarget()
         {
             if (!CR)
-                return CombatControl.Main.CurrentMC;
+                return CombatControl.Main.GetCurrentMC();
             return CR.GetTarget();
         }
 

@@ -19,7 +19,14 @@ namespace ADV
                     continue;
                 if (Cards[i].GetKey("Untargeted") == 1)
                     continue;
-                //for (int i = Cards[i].Status)
+                bool HasDebuff = false;
+                for (int j = Cards[i].Status.Count - 1; j >= 0; j--)
+                {
+                    if (Cards[i].Status[j] && Cards[i].Status[j].GetKey("Debuff") == 1)
+                        HasDebuff = true;
+                }
+                if (!HasDebuff)
+                    continue;
                 float a = Cards[i].GetAggro();
                 if (a > Aggro)
                 {

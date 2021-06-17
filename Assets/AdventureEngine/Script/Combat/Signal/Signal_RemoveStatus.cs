@@ -11,12 +11,13 @@ namespace ADV
 
         public override void InputMark(Mark M)
         {
-            /*bool Trigger = true;
+            bool Trigger = false;
             foreach (string s in TriggerKeys)
-                if (!M.HasKey(s))
-                    Trigger = false;
+                if (M.GetKey(s) != 0)
+                    Trigger = true;
             if (Trigger)
-                RemovingStatus.Add(M.GetComponent<Mark_Status>());*/
+                RemovingStatus.Add(M.GetComponent<Mark_Status>());
+
             if (StatusKeys.Contains(M.GetID()))
                 RemovingStatus.Add(M.GetComponent<Mark_Status>());
             base.InputMark(M);

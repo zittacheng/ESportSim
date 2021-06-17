@@ -69,7 +69,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 481921073594682556, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: Keys.Array.data[3]
-      value: MaxMana[8
+      value: MaxMana[5
       objectReference: {fileID: 0}
     - target: {fileID: 1751504212642397397, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: Life

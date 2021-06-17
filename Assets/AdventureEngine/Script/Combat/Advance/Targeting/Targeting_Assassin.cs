@@ -30,7 +30,7 @@ namespace ADV
                     Targets.Add(Cards[i]);
             }
 
-            if (Targets.Count > 1)
+            /*if (Targets.Count > 1)
             {
                 float Aggro = -9999;
                 Card Temp = null;
@@ -43,8 +43,8 @@ namespace ADV
                     }
                 }
                 return Temp;
-            }
-            else if (Targets.Count > 0)
+            }*/
+            if (Targets.Count > 0)
             {
                 return Targets[0];
             }

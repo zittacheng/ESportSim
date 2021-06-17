@@ -179,7 +179,7 @@ namespace ADV
             Revive();
             Waiting = true;
 
-            // Coin
+            // Coin && AI
             EndOfCombatCoinChange();
             EndOfCombatAIProcess(Result);
         }

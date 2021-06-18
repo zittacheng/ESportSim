@@ -7,6 +7,7 @@ namespace ADV
     public class AIControlUnit_General : AIControlUnit {
         public List<GameObject> VictoryPrefabs;
         public List<GameObject> DefeatPrefabs;
+        [Space]
         public List<string> VictoryCards;
         public List<string> DefeatCards;
 
@@ -24,27 +25,31 @@ namespace ADV
 
         public override void Execute(CardGroup Source, bool Victory)
         {
+            // Item
+            if (Victory)
+            {
+                if (VictoryPrefabs.Count > 0)
+                {
+                    GameObject G = VictoryPrefabs[Random.Range(0, VictoryPrefabs.Count)];
+                    CombatControl.Main.AddItem(G, Source);
+                }
+            }
+            else
+            {
+                if (DefeatPrefabs.Count > 0)
+                {
+                    GameObject G = DefeatPrefabs[Random.Range(0, DefeatPrefabs.Count)];
+                    CombatControl.Main.AddItem(G, Source);
+                }
+            }
+
+            // Hero
             if (Victory)
             {
                 if (VictoryCards.Count > 0)
                 {
                     string s = VictoryCards[Random.Range(0, VictoryCards.Count)];
                     Source.SwitchCard(s);
-                }
-
-                if (VictoryPrefabs.Count <= 0)
-                {
-                    if (NextUnit)
-                        NextUnit.Execute(Source, Victory);
-                    return;
-                }
-                else
-                {
-                    GameObject G = VictoryPrefabs[Random.Range(0, VictoryPrefabs.Count)];
-                    CombatControl.Main.AddItem(G, Source);
-                    if (NextUnit)
-                        NextUnit.Execute(Source, Victory);
-                    return;
                 }
             }
             else
@@ -54,22 +59,9 @@ namespace ADV
                     string s = DefeatCards[Random.Range(0, DefeatCards.Count)];
                     Source.SwitchCard(s);
                 }
-
-                if (DefeatPrefabs.Count <= 0)
-                {
-                    if (NextUnit)
-                        NextUnit.Execute(Source, Victory);
-                    return;
-                }
-                else
-                {
-                    GameObject G = DefeatPrefabs[Random.Range(0, DefeatPrefabs.Count)];
-                    CombatControl.Main.AddItem(G, Source);
-                    if (NextUnit)
-                        NextUnit.Execute(Source, Victory);
-                    return;
-                }
             }
+
+            base.Execute(Source, Victory);
         }
     }
 }

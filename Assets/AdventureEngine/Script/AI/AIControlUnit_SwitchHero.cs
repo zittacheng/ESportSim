@@ -5,17 +5,13 @@ using UnityEngine;
 namespace ADV
 {
     public class AIControlUnit_SwitchHero : AIControlUnit {
+        public string Target;
 
-        // Start is called before the first frame update
-        void Start()
+        public override void Execute(CardGroup Source, bool Victory)
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            string s = Target;
+            Source.SwitchCard(s);
+            base.Execute(Source, Victory);
         }
     }
 }

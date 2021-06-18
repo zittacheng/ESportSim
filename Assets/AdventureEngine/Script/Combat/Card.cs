@@ -968,10 +968,10 @@ namespace ADV
 
         public void UpdateRenderStatus()
         {
-            RenderStatus = new List<Mark_Status>();
+            RenderStatus.Clear();
             for (int i = 0; i < Status.Count; i++)
             {
-                if (Status[i].GetKey("Render") != 0)
+                if (Status[i] && Status[i].GetKey("Render") != 0 && (!Status[i].HasKey("Count") || Status[i].GetKey("Count") > 0))
                     RenderStatus.Add(Status[i]);
             }
         }

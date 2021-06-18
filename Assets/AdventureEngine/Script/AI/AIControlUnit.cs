@@ -21,7 +21,8 @@ namespace ADV
 
         public virtual void Execute(CardGroup Source, bool Victory)
         {
-
+            if (NextUnit)
+                NextUnit.Execute(Source, Victory);
         }
     }
 }

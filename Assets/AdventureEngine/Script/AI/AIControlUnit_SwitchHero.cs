@@ -9,6 +9,8 @@ namespace ADV
 
         public override void Execute(CardGroup Source, bool Victory)
         {
+            if (Target == "")
+                return;
             string s = Target;
             Source.SwitchCard(s);
             base.Execute(Source, Victory);

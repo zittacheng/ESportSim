@@ -6,6 +6,13 @@ namespace ADV
 {
     public class Signal_AddShield : Signal_AddStatus {
 
+        public override void StartEffect()
+        {
+            if (HasKey("Shield"))
+                SetKey("Shield", GetShieldValue());
+            base.StartEffect();
+        }
+
         public override void EndEffect()
         {
             List<string> AddKeys = new List<string>();
@@ -14,7 +21,7 @@ namespace ADV
                 if (HasKey(s))
                 {
                     if (s == "Shield")
-                        AddKeys.Add(KeyBase.Compose(s, GetShieldValue()));
+                        AddKeys.Add(KeyBase.Compose(s, GetKey("Shield")));
                     else
                         AddKeys.Add(KeyBase.Compose(s, GetKey(s)));
                 }

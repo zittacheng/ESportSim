@@ -68,7 +68,7 @@ namespace ADV
         {
             if (!CanUse())
                 return false;
-            if (!Target || !Target.CardActive())
+            if (!Target || (!Target.CardActive() && GetKey("IgnoreDeath") == 0))
                 return false;
             if (!AddTryCondition())
                 return false;
@@ -275,6 +275,7 @@ namespace ADV
             // "ManaCost": Mana cost (0 ~ 1)
             // "StartOfCombat": Whether the skill should be used at the start of combat
             // "EndOfCombat": Whether the skill should be used at the end of combat
+            // "IgnoreDeath": Whether the skill can be used on dead target
             base.CommonKeys();
         }
     }

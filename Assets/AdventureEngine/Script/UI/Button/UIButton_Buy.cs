@@ -10,11 +10,20 @@ namespace ADV
         public override void MouseDownEffect()
         {
             if (Buy && CanSwitch())
+            {
+                UndoControl.Main.NewUnit(null, null, 0, CombatControl.Main.GetCurrentMC().GetInfo().GetID());
                 CombatControl.Main.MCGroup.SwitchCard(CombatControl.Main.SelectingCard.GetInfo().GetID());
+            }
             else if (Buy && CanBuy())
+            {
+                UndoControl.Main.NewUnit(null, CombatControl.Main.SelectingItem.gameObject, CombatControl.Main.SelectingItem.GetKey("Cost"), "");
                 CombatControl.Main.AddItem(CombatControl.Main.SelectingItem.gameObject, -CombatControl.Main.SelectingItem.GetKey("Cost"), CombatControl.Main.MCGroup);
+            }
             else if (!Buy && CanSell())
+            {
+                UndoControl.Main.NewUnit(CombatControl.Main.SelectingItem.gameObject, null, -CombatControl.Main.SelectingItem.GetKey("Cost") * 0.4f, "");
                 CombatControl.Main.RemoveItem(CombatControl.Main.SelectingItem.gameObject, CombatControl.Main.SelectingItem.GetKey("Cost") * 0.4f, CombatControl.Main.MCGroup);
+            }
             base.MouseDownEffect();
         }
 

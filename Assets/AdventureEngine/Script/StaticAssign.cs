@@ -9,6 +9,7 @@ namespace ADV
         public CombatControl CC;
         public UIControl UC;
         public PathControl MPC;
+        public UndoControl UDC;
         public Cursor MainCursor;
         [Space]
         public GameObject EffectLine;
@@ -36,6 +37,11 @@ namespace ADV
                 Cursor.Main = MainCursor;
             else if (MainCursor)
                 Destroy(MainCursor.gameObject);
+
+            if (!UndoControl.Main)
+                UndoControl.Main = UDC;
+            else if (UDC)
+                Destroy(UDC.gameObject);
         }
 
         // Start is called before the first frame update

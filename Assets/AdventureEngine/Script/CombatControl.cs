@@ -260,7 +260,7 @@ namespace ADV
 
         public void AddItem(GameObject ItemPrefab, float CoinChange, CardGroup Group)
         {
-            if (!Group)
+            if (!Group || !ItemPrefab)
                 return;
             Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
             ChangeCoin(CoinChange);
@@ -270,7 +270,7 @@ namespace ADV
 
         public void RemoveItem(GameObject ItemPrefab, float CoinChange, CardGroup Group)
         {
-            if (!Group)
+            if (!Group || !ItemPrefab)
                 return;
             Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
             ChangeCoin(CoinChange);
@@ -280,7 +280,7 @@ namespace ADV
 
         public void AddItem(GameObject ItemPrefab, CardGroup Group)
         {
-            if (!Group)
+            if (!Group || !ItemPrefab)
                 return;
             Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
             foreach (Card C in Group.Cards)
@@ -289,7 +289,7 @@ namespace ADV
 
         public void RemoveItem(GameObject ItemPrefab, CardGroup Group)
         {
-            if (!Group)
+            if (!Group || !ItemPrefab)
                 return;
             Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
             foreach (Card C in Group.Cards)

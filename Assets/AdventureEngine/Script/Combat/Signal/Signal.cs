@@ -172,6 +172,7 @@ namespace ADV
             // "Delay": The delay before the signal is resolved
             // "TargetPositionX": Target position X
             // "TargetPositionY": Target position Y
+            // "AbilityPowerScaling": Whether the signal should be affected by ability power mod
         }
     }
 }

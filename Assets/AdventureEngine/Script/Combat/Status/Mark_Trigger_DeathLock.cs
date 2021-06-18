@@ -6,11 +6,6 @@ namespace ADV
 {
     public class Mark_Trigger_DeathLock : Mark_Trigger {
 
-        public void Effect()
-        {
-
-        }
-
         public override void CommonKeys()
         {
             // "Chance": Trigger chance

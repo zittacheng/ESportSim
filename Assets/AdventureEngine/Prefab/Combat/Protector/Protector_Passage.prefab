@@ -361,7 +361,8 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
-  InheritKeys: []
+  InheritKeys:
+  - DamageMod
   StatusPrefabs:
   - {fileID: 4546494691917079924}
 --- !u!114 &2117922400894594102
@@ -378,6 +379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Target[1
+  - DamageMod[0.5
+  - AbilityPowerScaling[1
 --- !u!1 &2897806904674229183
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +626,8 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
-  InheritKeys: []
+  InheritKeys:
+  - DamageMod
   StatusPrefabs:
   - {fileID: 6221637378047509949}
 --- !u!114 &5849780999512124993
@@ -640,6 +644,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Target[1
+  - DamageMod[0.5
+  - AbilityPowerScaling[1
 --- !u!1 &6784730324829879129
 GameObject:
   m_ObjectHideFlags: 0

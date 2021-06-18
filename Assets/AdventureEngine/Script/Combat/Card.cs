@@ -612,7 +612,7 @@ namespace ADV
 
         public void Revive()
         {
-            ChangeLife(GetMaxLife() * 2f);
+            Life = GetMaxLife();
             if (!AlreadyDead)
                 return;
 
@@ -631,8 +631,22 @@ namespace ADV
         {
             float V = Value;
             for (int i = Status.Count - 1; i >= 0; i--)
+            {
+                if (!Status[i])
+                    continue;
                 if (Status[i].GetComponent<Mark_Status_Shield>())
                     V = Status[i].GetComponent<Mark_Status_Shield>().ProcessLifeChange(V);
+                else if (Status[i].GetComponent<Mark_Trigger_DeathLock>())
+                {
+                    Mark_Trigger_DeathLock DeathLock = Status[i].GetComponent<Mark_Trigger_DeathLock>();
+                    if (DeathLock.CanTrigger() && V + Life <= 0)
+                    {
+                        DeathLock.TryTrigger(this, 1, new List<string>());
+                        Life = 0.1f;
+                        V = 0;
+                    }
+                }
+            }
             if (Life + V > GetMaxLife())
                 V = GetMaxLife() - Life;
             Life += V;
@@ -786,7 +800,7 @@ namespace ADV
             G.transform.parent = transform;
             Mark_Skill S = G.GetComponent<Mark_Skill>();
             S.Source = this;
-            if (S.HasKey("Count") && S.GetInfo() && !S.HasKey("IgnoreStack"))
+            if (S.HasKey("Count") && S.GetInfo() && !S.HasKey("IgnoreStack") && S.GetKey("CanStack") == 1)
             {
                 for (int i = Skills.Count - 1; i >= 0; i--)
                 {

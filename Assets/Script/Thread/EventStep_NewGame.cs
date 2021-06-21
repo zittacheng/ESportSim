@@ -12,7 +12,6 @@ namespace ESP
         public int CurrentState = -1;
         public int Result;
         public bool Inied = false;
-        public string CombatScene;
         [Space]
         public GameObject VictoryStep;
         public GameObject LoseStep;
@@ -21,7 +20,7 @@ namespace ESP
         {
             Inied = false;
             CurrentState = -1;
-            UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(CombatScene, UnityEngine.SceneManagement.LoadSceneMode.Additive);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("CombatScene");
             Result = -1;
         }
 
@@ -66,7 +65,7 @@ namespace ESP
                 CurrentState = -1;
                 CurrentDelay = 0;
 
-                UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(CombatScene);
+                //UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(CombatScene);
 
                 if (Result == 0)
                     ThreadControl.Main.GetCurrentEvent().ActiveStep(LoseStep.GetComponent<EventStep>());

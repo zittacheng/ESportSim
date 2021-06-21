@@ -1,53 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2629662170715086835
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 208038707768690730}
-  - component: {fileID: 7728907520239627308}
-  m_Layer: 0
-  m_Name: Step_Result
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &208038707768690730
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2629662170715086835}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6282133636770940653}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7728907520239627308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2629662170715086835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bb2b4eeef517d48a0d5679c3b3c55b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KB: {fileID: 0}
-  Description: Finished
-  Result: 'SP-Stream +1
-
-    Coin +10'
 --- !u!1 &6282133636523295456
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +78,6 @@ Transform:
   m_Children:
   - {fileID: 1755968695700361355}
   - {fileID: 6282133636523295459}
-  - {fileID: 208038707768690730}
   - {fileID: 9183720545590697081}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -149,7 +100,6 @@ MonoBehaviour:
   Steps:
   - {fileID: 8608407310911518798}
   - {fileID: 6282133636523295456}
-  - {fileID: 2629662170715086835}
   - {fileID: 8054212577688999454}
   CurrentStep: {fileID: 0}
   CurrentIndex: -1
@@ -167,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - EnergyCost[2
+  - EnergyCost[6
   - TimeCost[2
 --- !u!1 &8054212577688999454
 GameObject:
@@ -178,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9183720545590697081}
-  - component: {fileID: 1838981851265845064}
+  - component: {fileID: 8057074987606593246}
   - component: {fileID: 9190570367227395218}
   m_Layer: 0
   m_Name: Step_Resource
@@ -199,9 +149,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6282133636770940653}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1838981851265845064
+--- !u!114 &8057074987606593246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,10 +160,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8054212577688999454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66d8d4a7812456b4fac9dc5e86c6aa8e, type: 3}
+  m_Script: {fileID: 11500000, guid: 86da0ebb4ffe3a246a941ec6d3aba68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 0}
+  Description: Finished
+  Result: 'Coin +*CoinChange*
+
+    Exp +*ExpChange*
+
+    Fans +*PopulationChange*'
 --- !u!114 &9190570367227395218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,8 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - StreamPointChange[1
-  - CoinChange[10
+  - ExpChange[10
+  - CoinChange[500
+  - PopulationChange[10
+  - MinPopulationChange[1
+  - MaxPopulationChange[3
 --- !u!1 &8608407310911518798
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,4 +246,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - EnergyChange[-2
+  - EnergyChange[-6

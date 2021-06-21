@@ -32,6 +32,7 @@ namespace ADV
         public List<Medium> Mediums;
         [Space]
         public float DefaultLevel = 1;
+        public bool EndGame;
 
         public void Awake()
         {
@@ -41,6 +42,8 @@ namespace ADV
         // Start is called before the first frame update
         void Start()
         {
+            DefaultLevel = KeyBase.Main.GetKey("Level");
+
             GroupIni();
             // Temp
             EndOfCombatAIProcess(0);
@@ -176,6 +179,13 @@ namespace ADV
             EndOfCombat();
             yield return new WaitForSeconds(2f);
             ResetMedium();
+
+            if (SecondVictoryCheck(out int ResultII) && EndGame)
+            {
+                StartCoroutine(EndGameProcess(ResultII));
+                yield break;
+            }
+
             Revive();
             Waiting = true;
 
@@ -248,6 +258,32 @@ namespace ADV
             }
             Result = 0;
             return false;
+        }
+
+        public bool SecondVictoryCheck(out int Result)
+        {
+            for (int i = 0; i < Cores.Count; i++)
+            {
+                if (Cores[i].GetLife() <= 0 && Cores[i].GetSide() == 0)
+                {
+                    Result = -1;
+                    return true;
+                }
+                else if (Cores[i].GetLife() <= 0 && Cores[i].GetSide() == 1)
+                {
+                    Result = 1;
+                    return true;
+                }
+            }
+            Result = 0;
+            return false;
+        }
+
+        public IEnumerator EndGameProcess(int Result)
+        {
+            KeyBase.Main.SetKey("LastResult", Result);
+            yield return new WaitForSeconds(0.5f);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
         }
 
         public void Revive()

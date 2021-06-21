@@ -61,9 +61,9 @@ namespace ADV
                     SelectingButtons.RemoveAt(i);
                 }
             }
-            for (int i = UIControl.Main.Buttons.Count - 1; i >= 0; i--)
+            for (int i = ButtonControl.Main.Buttons.Count - 1; i >= 0; i--)
             {
-                UIButton B = UIControl.Main.Buttons[i];
+                UIButton B = ButtonControl.Main.Buttons[i];
                 if (!SelectingButtons.Contains(B) && B.InRange())
                 {
                     B.MouseEnterEffect();

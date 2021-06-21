@@ -8,8 +8,10 @@ namespace ESP
     public class StaticAssign : MonoBehaviour {
         public GlobalControl GC;
         public ThreadControl TC;
+        public LevelControl LC;
         public UIControl UIC;
         public SubUIControl SUIC;
+        public ButtonControl BC;
         public ADV.Cursor MainCursor;
         public KeyBase MainKey;
 
@@ -17,10 +19,19 @@ namespace ESP
         {
             GlobalControl.Main = GC;
             ThreadControl.Main = TC;
+            LevelControl.Main = LC;
             UIControl.Main = UIC;
             SubUIControl.Main = SUIC;
+            ButtonControl.Main = BC;
             ADV.Cursor.Main = MainCursor;
-            KeyBase.Main = MainKey;
+
+            if (!KeyBase.Main)
+            {
+                KeyBase.Main = MainKey;
+                DontDestroyOnLoad(MainKey.gameObject);
+            }
+            else
+                Destroy(MainKey);
         }
 
         // Start is called before the first frame update

@@ -164,7 +164,7 @@ namespace ADV
             if (ManaBar)
                 ManaBar.Render(GetTarget().PassValue("Mana"));
             if (DamageText)
-                DamageText.text = GetTarget().GetBaseDamage().ToString();
+                DamageText.text = ((int)GetTarget().GetBaseDamage()).ToString();
             if (AttackSpeedText)
                 AttackSpeedText.text = GetTarget().PassValue("AttackSpeed", 1).ToString();
             if (RecoverySpeedText)

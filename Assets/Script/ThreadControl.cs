@@ -16,8 +16,7 @@ namespace ESP
         // Start is called before the first frame update
         public void Start()
         {
-            // Temp
-            ProcessAdvance();
+
         }
 
         // Update is called once per frame

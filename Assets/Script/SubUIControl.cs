@@ -15,6 +15,8 @@ namespace ESP
         public UIWindow W_Night;
         public UIWindow_Wait W_Wait;
         public UIWindow_Result W_Result;
+        public UIWindow_Result W_HeroResult;
+        public UIWindow_Result W_GameResult;
 
         public void AddButton(UIButton B)
         {
@@ -63,6 +65,10 @@ namespace ESP
                 return ActiveWindow(W_Wait);
             else if (Key == "Result")
                 return ActiveWindow(W_Result);
+            else if (Key == "HeroResult")
+                return ActiveWindow(W_HeroResult);
+            else if (Key == "GameResult")
+                return ActiveWindow(W_GameResult);
             return null;
         }
 

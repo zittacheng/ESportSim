@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ESP;
 
 namespace ADV
 {
@@ -12,7 +13,7 @@ namespace ADV
 
         public void Awake()
         {
-            UIControl.Main.AddButton(this);
+            ButtonControl.Main.AddButton(this);
         }
 
         // Start is called before the first frame update

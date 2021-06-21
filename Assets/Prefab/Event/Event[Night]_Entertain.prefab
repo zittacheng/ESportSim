@@ -1,51 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2576184033942660347
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 386470018817962786}
-  - component: {fileID: 7853299209117914916}
-  m_Layer: 0
-  m_Name: Step_Result
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &386470018817962786
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2576184033942660347}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5805281993653353957}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7853299209117914916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2576184033942660347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bb2b4eeef517d48a0d5679c3b3c55b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KB: {fileID: 0}
-  Description: Finished
-  Result: Stamina +6
 --- !u!1 &4913003824985728432
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - CoinChange[-10
+  - CoinChange[-100
 --- !u!1 &5805281993364027880
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +137,6 @@ Transform:
   m_Children:
   - {fileID: 1544395560236798284}
   - {fileID: 5805281993364027883}
-  - {fileID: 386470018817962786}
   - {fileID: 8704683305247565681}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -206,7 +159,6 @@ MonoBehaviour:
   Steps:
   - {fileID: 4913003824985728432}
   - {fileID: 5805281993364027880}
-  - {fileID: 2576184033942660347}
   - {fileID: 7527856797807078678}
   CurrentStep: {fileID: 0}
   CurrentIndex: -1
@@ -224,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - CoinCost[10
+  - CoinCost[100
 --- !u!1 &7527856797807078678
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8704683305247565681}
-  - component: {fileID: 2178473611381800000}
+  - component: {fileID: 5067478971541243105}
   - component: {fileID: 8661945435893516186}
   m_Layer: 0
   m_Name: Step_Resource
@@ -255,9 +207,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5805281993653353957}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2178473611381800000
+--- !u!114 &5067478971541243105
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,10 +218,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7527856797807078678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66d8d4a7812456b4fac9dc5e86c6aa8e, type: 3}
+  m_Script: {fileID: 11500000, guid: 86da0ebb4ffe3a246a941ec6d3aba68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 0}
+  Description: Finished
+  Result: 'Stamina +*EnergyChange*
+
+    Exp +*ExpChange*'
 --- !u!114 &8661945435893516186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,3 +240,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - EnergyChange[6
+  - ExpChange[4

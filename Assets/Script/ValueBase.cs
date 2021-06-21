@@ -20,12 +20,56 @@ namespace ESP
 
         public static float GetLevel(float Exp)
         {
-            return 1;
+            if (Exp < 20)
+                return 1;
+            else if (Exp < 60)
+                return 2;
+            else if (Exp < 120)
+                return 3;
+            else if (Exp < 200)
+                return 4;
+            else if (Exp < 350)
+                return 5;
+            else if (Exp < 530)
+                return 6;
+            else if (Exp < 740)
+                return 7;
+            else if (Exp < 980)
+                return 8;
+            else if (Exp < 1340)
+                return 9;
+            else if (Exp < 1740)
+                return 10;
+            else if (Exp < 2180)
+                return 11;
+            else
+                return 12;
         }
 
         public static float GetMaxExp(float Level)
         {
             return 99999f;
+        }
+
+        public static float GetHeroLevelGain(float Level)
+        {
+            return 4 + Level * 2;
+        }
+
+        public static float GetDamageGain(float Level)
+        {
+            int TrueLevel = 0;
+            for (int i = 0; i <= Level; i++)
+                TrueLevel += i;
+            return TrueLevel * 0.0012f;
+        }
+
+        public static float GetLifeGain(float Level)
+        {
+            int TrueLevel = 0;
+            for (int i = 0; i <= Level; i++)
+                TrueLevel += i;
+            return TrueLevel * 0.01f;
         }
     }
 }

@@ -661,8 +661,7 @@ namespace ADV
         public void ChangeMaxLife(float Value)
         {
             MaxLife += Value;
-            if (Life > MaxLife)
-                Life = MaxLife;
+            Life = MaxLife;
             SetKey("Life", Life);
             SetKey("MaxLife", MaxLife);
         }

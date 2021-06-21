@@ -78,7 +78,7 @@ Transform:
   m_Children:
   - {fileID: 6732603088858729235}
   - {fileID: 1306019346710223227}
-  - {fileID: 5175318722380288946}
+  - {fileID: 5078214935236657275}
   - {fileID: 4198014296729421793}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   Steps:
   - {fileID: 3622655758722917334}
   - {fileID: 1306019346710223224}
-  - {fileID: 7011850773528249451}
+  - {fileID: 2353319153189791863}
   - {fileID: 3096006239844339078}
   CurrentStep: {fileID: 0}
   CurrentIndex: -1
@@ -119,8 +119,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - EnergyCost[4
+  - EnergyCost[8
   - TimeCost[2
+--- !u!1 &2353319153189791863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5078214935236657275}
+  - component: {fileID: 1153519670962833602}
+  - component: {fileID: 4276629770635502998}
+  m_Layer: 0
+  m_Name: Step_Hero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5078214935236657275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353319153189791863}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1306019346898853237}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1153519670962833602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353319153189791863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e332997b2527c254cb52a565ecdbf4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KB: {fileID: 0}
+  Description: Finished
+  Result: 'Hero skill level: *OriLevel* > *CurrentLevel*'
+  HeroKey: 
+--- !u!114 &4276629770635502998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353319153189791863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Keys: []
 --- !u!1 &3096006239844339078
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4198014296729421793}
-  - component: {fileID: 6679989088640376016}
+  - component: {fileID: 5144628854409891983}
   - component: {fileID: 4231696866403919626}
   m_Layer: 0
   m_Name: Step_Resource
@@ -153,7 +214,7 @@ Transform:
   m_Father: {fileID: 1306019346898853237}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6679989088640376016
+--- !u!114 &5144628854409891983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,10 +223,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3096006239844339078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66d8d4a7812456b4fac9dc5e86c6aa8e, type: 3}
+  m_Script: {fileID: 11500000, guid: 86da0ebb4ffe3a246a941ec6d3aba68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 0}
+  Description: Finished
+  Result: Exp +*ExpChange*
 --- !u!114 &4231696866403919626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - GamePointChange[1
+  - ExpChange[12
 --- !u!1 &3622655758722917334
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,49 +302,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - EnergyChange[-4
---- !u!1 &7011850773528249451
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5175318722380288946}
-  - component: {fileID: 3347281317674366900}
-  m_Layer: 0
-  m_Name: Step_Result
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5175318722380288946
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011850773528249451}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1306019346898853237}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3347281317674366900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011850773528249451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bb2b4eeef517d48a0d5679c3b3c55b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KB: {fileID: 0}
-  Description: Finished
-  Result: SP-Game +1

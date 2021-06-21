@@ -11,7 +11,15 @@ namespace ESP
         // Start is called before the first frame update
         public void Start()
         {
+            IniProcess();
+        }
 
+        public void IniProcess()
+        {
+            if (KeyBase.Main.GetKey("LastResult") == 0)
+                ThreadControl.Main.ProcessAdvance();
+            else
+                LevelControl.Main.ResultProcess();
         }
 
         // Update is called once per frame
@@ -30,6 +38,17 @@ namespace ESP
             KeyBase.Main.ChangeKey("Coin", Value);
         }
 
+        public void ChangeExp(float Value)
+        {
+            KeyBase.Main.ChangeKey("Exp", Value);
+            KeyBase.Main.SetKey("Level", ValueBase.GetLevel(KeyBase.Main.GetKey("Exp")));
+        }
+
+        public void ChangePopulation(float Value)
+        {
+            KeyBase.Main.ChangeKey("Population", Value);
+        }
+
         public void ChangeStreamPoint(float Value)
         {
             KeyBase.Main.ChangeKey("StreamPoint", Value);
@@ -38,12 +57,6 @@ namespace ESP
         public void ChangeGamePoint(float Value)
         {
             KeyBase.Main.ChangeKey("GamePoint", Value);
-        }
-
-        public void ChangeExp(float Value)
-        {
-            KeyBase.Main.ChangeKey("Exp", Value);
-            KeyBase.Main.SetKey("Level", ValueBase.GetLevel(KeyBase.Main.GetKey("Exp")));
         }
     }
 }

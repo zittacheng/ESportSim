@@ -8,7 +8,7 @@ namespace ADV
 
         public override float GetHealValue(float Base)
         {
-            return base.GetHealValue(Base) * GetKey("TriggerValue") * GetKey("HealMod");
+            return base.GetHealValue(Base) * GetKey("TriggerValue") * GetKey("TriggerValueMod");
         }
 
         public override void CommonKeys()

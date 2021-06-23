@@ -35,6 +35,8 @@ namespace ADV
             }
             if (HasKey("ItemCount"))
                 AddKeys.Add(KeyBase.Compose("ItemCount", GetKey("ItemCount")));
+            for (int i = 0; i < Keys.Count; i++)
+                AddKeys.Add(Keys[i]);
             foreach (GameObject G in MainSignals)
                 Source.SendSignal(G, AddKeys, Target);
 

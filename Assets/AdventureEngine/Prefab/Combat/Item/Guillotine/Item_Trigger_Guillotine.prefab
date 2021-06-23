@@ -347,5 +347,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Positive[1
-  - MinLife[0
-  - MaxLife[0.1
+  - MinLifeRate[0
+  - MaxLifeRate[0.1

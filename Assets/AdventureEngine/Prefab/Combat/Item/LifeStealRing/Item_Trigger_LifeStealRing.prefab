@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5103453849498448899}
-  - component: {fileID: 9077695066612059211}
+  - component: {fileID: 5980559416369371596}
   - component: {fileID: 3974993155387957473}
   m_Layer: 0
   m_Name: CreateMedium
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 4497354184127270864}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9077695066612059211
+--- !u!114 &5980559416369371596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1451487175231562283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60dc493dc594ec749a94f8a6d68af3c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 04c905dbdc1613f4d9823de312ca07cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 3974993155387957473}
@@ -117,10 +117,8 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   RequiredKeys:
-  - MainHit
   - AutoAttackHit
-  AvoidedKeys:
-  - LightningRod
+  AvoidedKeys: []
   SourceConditions: []
   TargetConditions: []
   MainSignals:
@@ -138,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Chance[0.2
+  - Chance[1
 --- !u!114 &4497354184127270877
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -54,7 +54,7 @@ namespace ESP
             }
         }
 
-        public Event GetTarget()
+        public virtual Event GetTarget()
         {
             if (Target)
                 return Target;

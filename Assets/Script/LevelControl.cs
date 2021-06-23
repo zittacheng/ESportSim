@@ -9,6 +9,10 @@ namespace ESP
         public static LevelControl Main;
         public Event TempVictoryEvent;
         public Event TempDefeatEvent;
+        public Event RankVictoryEvent;
+        public Event RankDefeatEvent;
+        public List<Event> Levels;
+        public Event CurrentLevel;
 
         // Start is called before the first frame update
         void Start()
@@ -24,16 +28,42 @@ namespace ESP
 
         public void ResultProcess()
         {
-            if (KeyBase.Main.GetKey("LastResult") == 1)
+            if (KeyBase.Main.HasKey("LastLevelIndex"))
+                CurrentLevel = Levels[(int)KeyBase.Main.GetKey("LastLevelIndex")];
+            if (KeyBase.Main.GetKey("RankGameActive") == 0)
             {
-                ThreadControl.Main.AddEvent(TempVictoryEvent);
-                ThreadControl.Main.StartProcess();
+                if (KeyBase.Main.GetKey("LastResult") == 1)
+                {
+                    ThreadControl.Main.AddEvent(TempVictoryEvent);
+                    ThreadControl.Main.StartProcess();
+                }
+                else if (KeyBase.Main.GetKey("LastResult") == -1)
+                {
+                    ThreadControl.Main.AddEvent(TempDefeatEvent);
+                    ThreadControl.Main.StartProcess();
+                }
             }
-            else if (KeyBase.Main.GetKey("LastResult") == -1)
+            else
             {
-                ThreadControl.Main.AddEvent(TempDefeatEvent);
-                ThreadControl.Main.StartProcess();
+                if (KeyBase.Main.GetKey("LastResult") == 1)
+                {
+                    ThreadControl.Main.AddEvent(RankVictoryEvent);
+                    ThreadControl.Main.StartProcess();
+                }
+                else if (KeyBase.Main.GetKey("LastResult") == -1)
+                {
+                    ThreadControl.Main.AddEvent(RankDefeatEvent);
+                    ThreadControl.Main.StartProcess();
+                }
             }
+        }
+
+        public void NextLevel()
+        {
+            int Index = Levels.IndexOf(CurrentLevel) + 1;
+            if (Index < 0 || Index >= Levels.Count)
+                return;
+            CurrentLevel = Levels[Index];
         }
     }
 }

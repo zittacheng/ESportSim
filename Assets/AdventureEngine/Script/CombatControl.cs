@@ -36,7 +36,16 @@ namespace ADV
 
         public void Awake()
         {
-
+            if (InfoBase.Main && InfoBase.Main.Groups.Count > 0)
+            {
+                Groups = new List<CardGroup>();
+                Groups.Add(MCGroup);
+                for (int i = 0; i < 5; i++)
+                {
+                    GameObject G = Instantiate(InfoBase.Main.Groups[i]);
+                    Groups.Add(G.GetComponent<CardGroup>());
+                }
+            }
         }
 
         // Start is called before the first frame update
@@ -366,6 +375,11 @@ namespace ADV
                 Temp.Add(Cards[i]);
             }
             return Temp;
+        }
+
+        public bool CardInCombat(Card C)
+        {
+            return Cards.Contains(C);
         }
 
         public void AddCard(Card C)

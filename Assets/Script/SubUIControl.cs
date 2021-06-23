@@ -74,7 +74,10 @@ namespace ESP
 
         public void CloseWindow()
         {
+            if (!CurrentWindow)
+                return;
             CurrentWindow.transform.position = new Vector3(0, -100, CurrentWindow.transform.position.z);
+            CurrentWindow = null;
         }
     }
 }

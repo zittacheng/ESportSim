@@ -28,6 +28,12 @@ namespace ESP
             
         }
 
+        public void NewDay()
+        {
+            KeyBase.Main.SetKey("Energy", KeyBase.Main.GetKey("MaxEnergy"));
+            KeyBase.Main.ChangeKey("Day", 1);
+        }
+
         public void ChangeEnergy(float Value)
         {
             KeyBase.Main.ChangeKey("Energy", Value);
@@ -49,14 +55,9 @@ namespace ESP
             KeyBase.Main.ChangeKey("Population", Value);
         }
 
-        public void ChangeStreamPoint(float Value)
+        public void ChangeRank(float Value)
         {
-            KeyBase.Main.ChangeKey("StreamPoint", Value);
-        }
-
-        public void ChangeGamePoint(float Value)
-        {
-            KeyBase.Main.ChangeKey("GamePoint", Value);
+            KeyBase.Main.ChangeKey("Rank", Value);
         }
     }
 }

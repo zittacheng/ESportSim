@@ -116,7 +116,7 @@ namespace ADV
 
         public void CombatUpdate(float Value)
         {
-            if (!CombatControl.Main.InCombat || !CombatControl.Main.Cards.Contains(this))
+            if (!CombatControl.Main.InCombat || !CombatControl.Main.CardInCombat(this))
             {
                 CurrentTarget = null;
                 return;

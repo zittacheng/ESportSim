@@ -28,7 +28,7 @@ namespace ESP
         public void ProcessAdvance()
         {
             Thread.Clear();
-            if (TimeIndex == -1)
+            /*if (TimeIndex == -1)
             {
                 TimeIndex = 0;
                 SubUIControl.Main.ActiveWindow("Day");
@@ -44,7 +44,7 @@ namespace ESP
             {
                 TimeIndex = 1;
                 SubUIControl.Main.ActiveWindow("Night");
-            }
+            }*/
         }
 
         public void GetCost(out float TimeCost, out float EnergyCost, out float CoinCost)
@@ -79,6 +79,8 @@ namespace ESP
             if (E.HasKey("EnergyCost") && EC + E.GetKey("EnergyCost") > KeyBase.Main.GetKey("Energy"))
                 return false;
             if (E.HasKey("CoinCost") && CC + E.GetKey("CoinCost") > KeyBase.Main.GetKey("Coin"))
+                return false;
+            if (E.HasKey("Rank") && KeyBase.Main.GetKey("Rank") < E.GetKey("Rank"))
                 return false;
             return true;
         }

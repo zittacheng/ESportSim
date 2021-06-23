@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - EnergyCost[8
+  - EnergyCost[6
   - TimeCost[2
 --- !u!1 &2353319153189791863
 GameObject:
@@ -301,4 +301,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - EnergyChange[-4
+  - EnergyChange[-6

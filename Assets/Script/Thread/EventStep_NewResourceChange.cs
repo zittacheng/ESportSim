@@ -44,13 +44,16 @@ namespace ESP
                 pc += (int)Random.Range(GetKey("MinPopulationChange"), GetKey("MaxPopulationChange"));
                 GlobalControl.Main.ChangePopulation(pc);
             }
-            
-            if (HasKey("StreamPointChange"))
-                GlobalControl.Main.ChangeStreamPoint(GetKey("StreamPointChange"));
-            if (HasKey("GamePointChange"))
-                GlobalControl.Main.ChangeGamePoint(GetKey("GamePointChange"));
 
-            rt = ProcessText(rt, ec, expc, cc, pc);
+            float rc = 0;
+            if (HasKey("RankChange") || HasKey("MaxRankChange") || HasKey("MinRankChange"))
+            {
+                rc = GetKey("RankChange");
+                rc += (int)Random.Range(GetKey("MinRankChange"), GetKey("MaxRankChange"));
+                GlobalControl.Main.ChangeRank(rc);
+            }
+
+            rt = ProcessText(rt, ec, expc, cc, pc, rc);
 
             UIWindow W = SubUIControl.Main.ActiveWindow("Result");
             UIWindow_Result R = (UIWindow_Result)W;
@@ -58,7 +61,7 @@ namespace ESP
             R.ResultText.text = rt;
         }
 
-        public string ProcessText(string Ori, float EC, float EXPC, float CC, float PC)
+        public string ProcessText(string Ori, float EC, float EXPC, float CC, float PC, float RC)
         {
             string C = "";
             string S = Ori;
@@ -80,6 +83,8 @@ namespace ESP
                     C += CC;
                 else if (Key == "PopulationChange")
                     C += PC;
+                else if (Key == "RankChange")
+                    C += RC;
                 else
                     C += Key;
             }

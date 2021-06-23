@@ -795,6 +795,8 @@ namespace ADV
         {
             if (Index >= Skills.Count)
                 return;
+            if (M.HasKey("Count") && M.GetKey("CanStack") == 0 && GetSkill(M.GetID(), out _))
+                return;
             GameObject G = Instantiate(M.gameObject);
             G.transform.parent = transform;
             Mark_Skill S = G.GetComponent<Mark_Skill>();

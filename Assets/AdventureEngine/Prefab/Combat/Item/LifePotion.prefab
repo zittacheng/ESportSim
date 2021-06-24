@@ -418,4 +418,4 @@ MonoBehaviour:
   Keys:
   - Target[1
   - Heal[0
-  - MaxLifeRate[0.5
+  - MaxLifeRate[0.3

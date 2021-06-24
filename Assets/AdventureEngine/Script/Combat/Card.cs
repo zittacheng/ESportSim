@@ -390,10 +390,15 @@ namespace ADV
         public void TimePassed(float Value)
         {
             for (int i = Status.Count - 1; i >= 0; i--)
-                Status[i].TimePassed(Value);
+            {
+                if (i < Status.Count && Status[i])
+                    Status[i].TimePassed(Value);
+            }
             for (int i = Skills.Count - 1; i >= 0; i--)
-                if (Skills[i])
+            {
+                if (i < Skills.Count && Skills[i])
                     Skills[i].TimePassed(Value);
+            }
         }
 
         public void InvokeSkill(string ID)

@@ -19,8 +19,10 @@ namespace ADV
                 if (S.HasKey(s))
                     T = false;
             foreach (GameObject G in SourceConditions)
-                if (!G.AddComponent<Condition>().Pass(Source))
+            {
+                if (!G.GetComponent<Condition>().Pass(Source))
                     T = false;
+            }
             return T;
         }
     }

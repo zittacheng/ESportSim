@@ -60,6 +60,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys: []
+--- !u!1001 &1360393331002759485
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2543168958873167400}
+    m_Modifications:
+    - target: {fileID: 3419905059020761038, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_Name
+      value: Bruiser_ShieldMitigation
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812545666154495599, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812545666154495599, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812545666154495599, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812545666154495599, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812545666154495599, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812545666154495599, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812545666154495599, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812545666154495599, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812545666154495599, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812545666154495599, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812545666154495599, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+--- !u!1 &4437425583424847603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3419905059020761038, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+  m_PrefabInstance: {fileID: 1360393331002759485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4253000572643186002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96,6 +158,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1751504212642397397, guid: 15fac57be78d37d4388580773e345feb, type: 3}
+      propertyPath: IniStatus.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751504212642397397, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: IniSkills.Array.data[1]
       value: 
       objectReference: {fileID: 7144450996714718986}
@@ -103,6 +169,10 @@ PrefabInstance:
       propertyPath: IniSkills.Array.data[2]
       value: 
       objectReference: {fileID: 255367172497488336}
+    - target: {fileID: 1751504212642397397, guid: 15fac57be78d37d4388580773e345feb, type: 3}
+      propertyPath: IniStatus.Array.data[2]
+      value: 
+      objectReference: {fileID: 4437425583424847603}
     - target: {fileID: 1751504212642397402, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: m_Name
       value: Bruiser

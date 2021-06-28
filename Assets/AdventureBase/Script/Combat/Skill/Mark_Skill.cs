@@ -146,8 +146,9 @@ namespace ADV
                 ChangeKey("Count", -1);
                 if (Source.GetGroup())
                     CombatControl.Main.ConsumeItem(gameObject, Source.GetGroup(), Source, 1);
-                if (GetKey("Count") <= 0)
-                    Source.SoftRemoveSkill(this);
+                Source.UpdateRenderSkills();
+                /*if (GetKey("Count") <= 0)
+                    Source.RemoveSkill(this);*/
             }
             if (HasKey("GCD"))
                 Source.SetGCD(GetKey("GCD"));

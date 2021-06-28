@@ -17,7 +17,13 @@ namespace ADV
         // Update is called once per frame
         void Update()
         {
-            CoinText.text = CombatControl.Main.Coin.ToString();
+            if (CombatControl.Main.SelectintGroup)
+            {
+                AIControl_Friendly AF = (AIControl_Friendly)CombatControl.Main.SelectintGroup.GetAIControl();
+                CoinText.text = ((int)AF.Coin).ToString();
+            }
+            if (!CombatControl.Main.SelectintGroup)
+                CoinText.text = ((int)CombatControl.Main.Coin).ToString();
         }
     }
 }

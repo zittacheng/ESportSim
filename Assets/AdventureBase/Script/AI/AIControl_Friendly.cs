@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ADV
 {
     public class AIControl_Friendly : AIControl_CoinBased {
-        public List<AIControlUnit> Units;
+        [Space]
         public bool CanSell = true;
         public bool CanBuy = true;
         public bool CanSwitch = true;
@@ -22,23 +22,11 @@ namespace ADV
 
         }
 
-        public override void CoinGain(int CurrentTurn, bool Victory)
-        {
-            base.CoinGain(CurrentTurn, Victory);
-        }
-
         public override void ExecuteII(int CurrentTurn, bool Victory)
         {
             CanSell = true;
             CanBuy = true;
             CanSwitch = true;
-
-            if (CurrentTurn >= Units.Count)
-                return;
-            if (!Units[CurrentTurn])
-                return;
-            Units[CurrentTurn].Execute(Source, Victory);
-            
             base.ExecuteII(CurrentTurn, Victory);
         }
 
@@ -47,10 +35,10 @@ namespace ADV
             return 0.2f;
         }
 
-        public void TrySwitch(string Key, out bool Denied)
+        public void ForceSwitch(string Key, out bool Denied)
         {
             Denied = false;
-            if (Source.GetCurrentCard() && Source.GetCurrentCard().GetInfo().GetID() == Key)
+            if ((Source.GetCurrentCard() && Source.GetCurrentCard().GetInfo().GetID() == Key) || SwitchCount <= 0)
                 return;
             if (Random.Range(0.001f, 0.999f) <= GetDeniedRate())
             {
@@ -58,10 +46,11 @@ namespace ADV
                 CanSwitch = false;
                 return;
             }
+            SwitchCount--;
             Source.SwitchCard(Key);
         }
 
-        public void TrySell(GameObject Target, out bool Denied)
+        public void ForceSell(GameObject Target, out bool Denied)
         {
             Denied = false;
             if (!Target)
@@ -76,7 +65,7 @@ namespace ADV
             CombatControl.Main.RemoveItem(Target, Source);
         }
 
-        public void TryBuy(GameObject Target, out bool Denied)
+        public void ForceBuy(GameObject Target, out bool Denied)
         {
             Denied = false;
             if (!Target || Coin < Target.GetComponent<Mark>().GetKey("Cost"))

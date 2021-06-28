@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ESP;
 
 namespace ADV
 {
@@ -210,8 +211,7 @@ namespace ADV
             float l = DefaultLevel;
             if (KeyBase.Main)
                 l = KeyBase.Main.GetKey("Level");
-            float CC = (1 + (1 + 0.1f * l) * CurrentTurn) * 10;
-            ChangeCoin(CC);
+            ChangeCoin(ValueBase.GetCoinGain(l, CurrentTurn));
         }
 
         public void EndOfCombatAIProcess(int Result)

@@ -257,6 +257,14 @@ PrefabInstance:
       propertyPath: Keys.Array.data[3]
       value: MaxMana[20
       objectReference: {fileID: 0}
+    - target: {fileID: 1751504212433822317, guid: 15fac57be78d37d4388580773e345feb, type: 3}
+      propertyPath: Keys.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751504212433822317, guid: 15fac57be78d37d4388580773e345feb, type: 3}
+      propertyPath: Keys.Array.data[1]
+      value: DPS[1
+      objectReference: {fileID: 0}
     - target: {fileID: 1751504212642397397, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: Life
       value: 225

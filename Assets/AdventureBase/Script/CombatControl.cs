@@ -19,6 +19,7 @@ namespace ADV
         public Card SelectingCard;
         public SwitchRenderer SelectingSwitch;
         public Mark SelectingMark;
+        public CardGroup SelectintGroup;
         [HideInInspector] public Vector2 SelectingPosition;
         [Space]
         public CardGroup MCGroup;
@@ -52,7 +53,6 @@ namespace ADV
         void Start()
         {
             DefaultLevel = KeyBase.Main.GetKey("Level");
-
             GroupIni();
             // Temp
             EndOfCombatAIProcess(0);
@@ -137,6 +137,7 @@ namespace ADV
             SelectingItemRenderer = null;
             SelectingSwitch = null;
             SelectingCard = null;
+            SelectintGroup = null;
 
             // Ini CardList
             Cards.Clear();
@@ -157,6 +158,7 @@ namespace ADV
 
             // Process
             StartCoroutine("CombatProcessIE");
+            UndoControl.Main.Clear();
         }
 
         public void EndOfCombat()
@@ -307,20 +309,16 @@ namespace ADV
         {
             if (!Group || !ItemPrefab)
                 return;
-            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
             ChangeCoin(CoinChange);
-            foreach (Card C in Group.Cards)
-                C.AddSkill(S);
+            AddItem(ItemPrefab, Group);
         }
 
         public void RemoveItem(GameObject ItemPrefab, float CoinChange, CardGroup Group)
         {
             if (!Group || !ItemPrefab)
                 return;
-            Mark_Skill S = ItemPrefab.GetComponent<Mark_Skill>();
             ChangeCoin(CoinChange);
-            foreach (Card C in Group.Cards)
-                C.RemoveSkill(S.GetID(), 1);
+            RemoveItem(ItemPrefab, Group);
         }
 
         public void AddItem(GameObject ItemPrefab, CardGroup Group)

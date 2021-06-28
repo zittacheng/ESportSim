@@ -840,6 +840,7 @@ namespace ADV
         {
             int n = GetNextSkillIndex();
             AddSkill(M, n);
+            UpdateRenderSkills();
         }
 
         public int GetNextSkillIndex()
@@ -879,13 +880,7 @@ namespace ADV
                 M.ChangeKey("Count", -Count);
             else
                 RemoveSkill(Index);
-        }
-
-        public void SoftRemoveSkill(Mark_Skill M)
-        {
-            if (!M || !Skills.Contains(M))
-                return;
-            M.SetKey("Render", 0);
+            UpdateRenderSkills();
         }
 
         public void UpdateRenderSkills()
@@ -893,6 +888,8 @@ namespace ADV
             RenderSkills = new List<Mark_Skill>();
             for (int i = 0; i < Skills.Count; i++)
             {
+                if (Skills[i] && Skills[i].HasKey("Count") && Skills[i].GetKey("Count") <= 0)
+                    continue;
                 if (!Skills[i])
                     RenderSkills.Add(null);
                 else if (Skills[i].GetKey("Render") != 0)

@@ -34,11 +34,11 @@ namespace ADV
                 if (!AF)
                     return;
                 if (Buy && CanSwitch(CG))
-                    AF.TrySwitch(CombatControl.Main.SelectingCard.GetInfo().GetID(), out _);
+                    AF.ForceSwitch(CombatControl.Main.SelectingCard.GetInfo().GetID(), out _);
                 else if (Buy && CanBuy(CG))
-                    AF.TryBuy(CombatControl.Main.SelectingItem.gameObject, out _);
+                    AF.ForceBuy(CombatControl.Main.SelectingItem.gameObject, out _);
                 else if (!Buy && CanSell(CG))
-                    AF.TrySell(CombatControl.Main.SelectingItem.gameObject, out _);
+                    AF.ForceSell(CombatControl.Main.SelectingItem.gameObject, out _);
             }
             base.MouseDownEffect();
         }

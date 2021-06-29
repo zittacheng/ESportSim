@@ -71,5 +71,28 @@ namespace ESP
                 TrueLevel += i;
             return TrueLevel * 0.01f;
         }
+
+        public static float GetCoinGain(float Level, int Turn)
+        {
+            float l = Level;
+            return (1 + (1 + 0.1f * l) * Turn) * 10;
+        }
+
+        public static float GetEnemyCoinLevel(float HeroLevel)
+        {
+            if (HeroLevel < 3)
+                return 0;
+            if (HeroLevel < 7.9f)
+                return 1;
+            if (HeroLevel < 19)
+                return 2;
+            if (HeroLevel < 25)
+                return 3;
+            if (HeroLevel < 33)
+                return 4;
+            if (HeroLevel < 50)
+                return 5;
+            return 6;
+        }
     }
 }

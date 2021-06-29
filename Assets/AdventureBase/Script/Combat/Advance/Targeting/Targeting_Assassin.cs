@@ -30,21 +30,21 @@ namespace ADV
                     Targets.Add(Cards[i]);
             }
 
-            /*if (Targets.Count > 1)
+            if (Targets.Count > 1)
             {
                 float Aggro = -9999;
                 Card Temp = null;
-                for (int i = Cards.Count - 1; i >= 0; i--)
+                for (int i = Targets.Count - 1; i >= 0; i--)
                 {
-                    if (Cards[i].GetAggro() >= Aggro)
+                    if (Targets[i].GetAggro() >= Aggro)
                     {
-                        Aggro = Cards[i].GetAggro();
-                        Temp = Cards[i];
+                        Aggro = Targets[i].GetAggro();
+                        Temp = Targets[i];
                     }
                 }
                 return Temp;
-            }*/
-            if (Targets.Count > 0)
+            }
+            else if (Targets.Count > 0)
             {
                 return Targets[0];
             }

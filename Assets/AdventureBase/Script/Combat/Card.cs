@@ -704,7 +704,7 @@ namespace ADV
 
         public int GetSide()
         {
-            return (int)PassValue("Side", Side);
+            return Side;
         }
 
         public void SetGCD(float Value)

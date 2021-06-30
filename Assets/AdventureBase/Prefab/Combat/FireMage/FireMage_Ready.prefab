@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Render[1
+  - MainSkill[1
   - Auto[1
   - ManaCost[1
   - IgnoreGCD[1

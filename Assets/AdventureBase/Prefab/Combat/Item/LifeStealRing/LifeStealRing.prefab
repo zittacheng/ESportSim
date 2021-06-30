@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 6726063298081405196}
-  Info: {fileID: 0}
+  Info: {fileID: 6726063298081405198}
   Source: {fileID: 0}
   MainSignals:
   - {fileID: 6726063298035015220}
@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[1
+  - General[1
   - StartOfCombat[1
   - Item[1
   - Count[1
@@ -218,7 +219,7 @@ MonoBehaviour:
   Name: Item_LifeStealRing
   RenderName: Leeching Sheath
   Description: Description
-  Icon: {fileID: 0}
+  Icon: {fileID: 1801263428120863714, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1001 &9011839211907753741
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -134,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[1
+  - General[1
   - StartOfCombat[1
   - Item[1
   - Count[1
@@ -154,7 +155,7 @@ MonoBehaviour:
   Name: Item_SpectralAmulet
   RenderName: Spectral Amulet
   Description: Description
-  Icon: {fileID: 0}
+  Icon: {fileID: -6099050445329199328, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1 &5564235326517548701
 GameObject:
   m_ObjectHideFlags: 0

@@ -251,7 +251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2311150468499902108}
-  - component: {fileID: 2311150468499902109}
+  - component: {fileID: 1553960956674647064}
   - component: {fileID: 2311150468499902110}
   m_Layer: 0
   m_Name: Targeting
@@ -274,7 +274,7 @@ Transform:
   m_Father: {fileID: 2311150468546741496}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2311150468499902109
+--- !u!114 &1553960956674647064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2311150468499902099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d54ebd33410d4c34a8ecee002a0d4b04, type: 3}
+  m_Script: {fileID: 11500000, guid: bdb1098b248101b45a20815e22cce921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 2311150468499902110}
@@ -301,8 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Keys:
-  - TargetEnemies[1
+  Keys: []
 --- !u!1 &2311150468546741503
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Render[1
+  - MainSkill[1
   - Auto[1
   - ManaCost[1
 --- !u!114 &-361500265171441453
@@ -391,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 
-  Name: 
+  Name: Archer_ArrowRain
   RenderName: 
   Description: 
   Icon: {fileID: 0}

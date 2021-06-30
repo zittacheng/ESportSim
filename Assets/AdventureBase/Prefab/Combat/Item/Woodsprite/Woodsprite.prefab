@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[1
+  - General[1
   - StartOfCombat[1
   - Item[1
   - Count[1
@@ -218,7 +219,7 @@ MonoBehaviour:
   Name: Item_Woodsprite
   RenderName: Ancient Woodsprite
   Description: Description
-  Icon: {fileID: 0}
+  Icon: {fileID: 4337684191699249041, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1001 &2011298844882935319
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -192,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[1
+  - General[1
   - StartOfCombat[1
   - Item[1
   - Count[1
@@ -212,7 +213,7 @@ MonoBehaviour:
   Name: Item_SupportRing
   RenderName: Support Ring
   Description: Description
-  Icon: {fileID: 0}
+  Icon: {fileID: -5971942374765049077, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1 &3123716715179575102
 GameObject:
   m_ObjectHideFlags: 0

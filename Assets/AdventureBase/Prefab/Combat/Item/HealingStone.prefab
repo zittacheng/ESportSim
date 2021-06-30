@@ -71,6 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[1
+  - General[1
   - StartOfCombat[1
   - Item[1
   - Count[1
@@ -91,7 +92,7 @@ MonoBehaviour:
   Name: Item_HealingStone
   RenderName: Rejuvenation Stone
   Description: Description
-  Icon: {fileID: 0}
+  Icon: {fileID: 4337684191699249041, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1 &5841243741231780071
 GameObject:
   m_ObjectHideFlags: 0

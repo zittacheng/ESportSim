@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Source: {fileID: 810280603160133392}
   Coin: 10
+  SwitchCount: 3
   Units:
   - {fileID: 1562081438418206262}
   - {fileID: 3935604669704105978}
@@ -315,7 +316,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2767154009939377292, guid: 679ddc1297f4ec042bd5b05a6bf7c808, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2767154009939377292, guid: 679ddc1297f4ec042bd5b05a6bf7c808, type: 3}
       propertyPath: m_LocalRotation.x

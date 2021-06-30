@@ -276,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Auto[1
+  - General[1
   - Render[1
   - IgnoreDeath[1
   - IgnoreGCD[1
@@ -300,7 +301,7 @@ MonoBehaviour:
   Name: Item_Raise
   RenderName: Necromancy Ring
   Description: Description
-  Icon: {fileID: 0}
+  Icon: {fileID: -2821042892349479055, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1 &1839146593340440450
 GameObject:
   m_ObjectHideFlags: 0

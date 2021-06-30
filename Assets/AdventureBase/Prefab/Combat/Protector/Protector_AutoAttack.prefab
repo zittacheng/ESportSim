@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2936274018722891874}
-  - component: {fileID: 2936274018722891875}
+  - component: {fileID: 229431091260919084}
   - component: {fileID: 2936274018722891872}
   m_Layer: 0
   m_Name: Targeting
@@ -124,7 +124,7 @@ Transform:
   m_Father: {fileID: 2936274018777498118}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2936274018722891875
+--- !u!114 &229431091260919084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2936274018722891885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d54ebd33410d4c34a8ecee002a0d4b04, type: 3}
+  m_Script: {fileID: 11500000, guid: bdb1098b248101b45a20815e22cce921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 2936274018722891872}
@@ -151,8 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Keys:
-  - TargetEnemies[1
+  Keys: []
 --- !u!1 &2936274018777498113
 GameObject:
   m_ObjectHideFlags: 0

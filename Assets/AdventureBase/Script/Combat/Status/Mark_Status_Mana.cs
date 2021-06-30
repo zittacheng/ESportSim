@@ -25,6 +25,11 @@ namespace ADV
                 ChangeKey("Mana", Value * GetKey("MaxMana"));
                 return Value;
             }
+            else if (Key == "MaxManaChange")
+            {
+                SetKey("MaxMana", Value);
+                return Value;
+            }
             return base.PassValue(Key, Value);
         }
 

@@ -50,6 +50,7 @@ MonoBehaviour:
   Source: {fileID: 0}
   Target: {fileID: 0}
   MediumPrefab: {fileID: 2856183032584488040}
+  InheritKeys: []
 --- !u!114 &3415569391446139031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +180,7 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   Signals:
   - {fileID: 6756199308178324698}
   - {fileID: 1893401312822134180}
@@ -273,7 +275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6775576645703290330}
-  - component: {fileID: 6775576645703290331}
+  - component: {fileID: 5001370415880271389}
   - component: {fileID: 6775576645703290328}
   m_Layer: 0
   m_Name: Targeting
@@ -296,7 +298,7 @@ Transform:
   m_Father: {fileID: 6775576645757372350}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6775576645703290331
+--- !u!114 &5001370415880271389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,7 +307,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6775576645703290325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d54ebd33410d4c34a8ecee002a0d4b04, type: 3}
+  m_Script: {fileID: 11500000, guid: bdb1098b248101b45a20815e22cce921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 6775576645703290328}
@@ -323,8 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Keys:
-  - TargetEnemies[1
+  Keys: []
 --- !u!1 &6775576645757372345
 GameObject:
   m_ObjectHideFlags: 0

@@ -803,7 +803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8447895678408597043
 Transform:
   m_ObjectHideFlags: 0
@@ -993,7 +993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2429400592045984493
 Transform:
   m_ObjectHideFlags: 0
@@ -1765,7 +1765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7454534227456491732
 Transform:
   m_ObjectHideFlags: 0
@@ -2502,7 +2502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2804944920307760612
 Transform:
   m_ObjectHideFlags: 0
@@ -4366,6 +4366,7 @@ MonoBehaviour:
   Side: 0
   Index: 0
   DefaultTarget: {fileID: 0}
+  Follow: 0
   AnimBase: {fileID: 7914272502403052246}
   NameText: {fileID: 7914272501406152192}
   LifeRenderDirection: -1
@@ -4373,7 +4374,6 @@ MonoBehaviour:
   DamageBar: {fileID: 6504926343806494454}
   DamageBarDelay: 0
   ShieldBar: {fileID: 5975150786347596260}
-  AddShieldBar: {fileID: 44901627383534225}
   ManaBar: {fileID: 8808412165606292398}
   LifeText: {fileID: 1960306419180550223}
   LifeTextII: {fileID: 4505954135184538900}

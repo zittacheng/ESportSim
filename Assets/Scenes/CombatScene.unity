@@ -461,7 +461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7914272502828492644, guid: a1b15aaa66842e04dadec50504b38b23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -54.52
+      value: -48
       objectReference: {fileID: 0}
     - target: {fileID: 7914272502828492644, guid: a1b15aaa66842e04dadec50504b38b23, type: 3}
       propertyPath: m_LocalPosition.y
@@ -778,6 +778,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165737906}
     m_Modifications:
+    - target: {fileID: 323701056258020222, guid: 22c963d65951c81418d8919d8faf2f69, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2103536344192209868, guid: 22c963d65951c81418d8919d8faf2f69, type: 3}
       propertyPath: m_Name
       value: NewRenderer (5)
@@ -2346,7 +2350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8153774172820452462, guid: ae44236ebbb3523449de5ddc2e344579, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 54.52
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 8153774172820452462, guid: ae44236ebbb3523449de5ddc2e344579, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6509,7 +6513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1094430769
 Transform:
   m_ObjectHideFlags: 0
@@ -10682,6 +10686,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165737906}
     m_Modifications:
+    - target: {fileID: 2395546381959224754, guid: 0fcde508b1a583549965e4a9f5d52fd3, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4067304564556569856, guid: 0fcde508b1a583549965e4a9f5d52fd3, type: 3}
       propertyPath: m_Name
       value: NewRenderer (2)
@@ -10736,6 +10744,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165737906}
     m_Modifications:
+    - target: {fileID: 323701056258020222, guid: 22c963d65951c81418d8919d8faf2f69, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2103536344192209868, guid: 22c963d65951c81418d8919d8faf2f69, type: 3}
       propertyPath: m_Name
       value: NewRenderer (4)
@@ -11041,6 +11053,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165737906}
     m_Modifications:
+    - target: {fileID: 2395546381959224754, guid: 0fcde508b1a583549965e4a9f5d52fd3, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4067304564556569856, guid: 0fcde508b1a583549965e4a9f5d52fd3, type: 3}
       propertyPath: m_Name
       value: NewRenderer (1)
@@ -12232,7 +12248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3139513701854230066, guid: caa173e8d6adc86428d244e94b2f0dee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.5
+      value: 67.8
       objectReference: {fileID: 0}
     - target: {fileID: 3139513701854230066, guid: caa173e8d6adc86428d244e94b2f0dee, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12450,7 +12466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8153774172820452462, guid: ae44236ebbb3523449de5ddc2e344579, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 54.52
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 8153774172820452462, guid: ae44236ebbb3523449de5ddc2e344579, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12484,7 +12500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2655203807412367960, guid: 9772c25d2fbe2c842a8204537fee549d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.5
+      value: -67.8
       objectReference: {fileID: 0}
     - target: {fileID: 2655203807412367960, guid: 9772c25d2fbe2c842a8204537fee549d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12548,6 +12564,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165737906}
     m_Modifications:
+    - target: {fileID: 323701056258020222, guid: 22c963d65951c81418d8919d8faf2f69, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2103536344192209868, guid: 22c963d65951c81418d8919d8faf2f69, type: 3}
       propertyPath: m_Name
       value: NewRenderer (3)
@@ -12687,6 +12707,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 165737906}
     m_Modifications:
+    - target: {fileID: 2395546381959224754, guid: 0fcde508b1a583549965e4a9f5d52fd3, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4067304564556569856, guid: 0fcde508b1a583549965e4a9f5d52fd3, type: 3}
       propertyPath: m_Name
       value: NewRenderer (0)
@@ -12901,7 +12925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7914272502828492644, guid: a1b15aaa66842e04dadec50504b38b23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -54.52
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 7914272502828492644, guid: a1b15aaa66842e04dadec50504b38b23, type: 3}
       propertyPath: m_LocalPosition.y

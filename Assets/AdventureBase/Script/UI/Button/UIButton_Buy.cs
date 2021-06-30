@@ -11,7 +11,7 @@ namespace ADV
         {
             if (!CombatControl.Main.SelectintGroup)
             {
-                if (Buy && CanSwitch())
+                if (Buy && CanSwitch() && CombatControl.Main.MCGroup.CanSwitch(CombatControl.Main.SelectingSwitch.Key))
                 {
                     UndoControl.Main.NewUnit(null, null, 0, CombatControl.Main.GetCurrentMC().GetInfo().GetID());
                     CombatControl.Main.MCGroup.SwitchCard(CombatControl.Main.SelectingSwitch.Key);
@@ -33,8 +33,8 @@ namespace ADV
                 AIControl_Friendly AF = (AIControl_Friendly)CG.GetAIControl();
                 if (!AF)
                     return;
-                if (Buy && CanSwitch(CG))
-                    AF.ForceSwitch(CombatControl.Main.SelectingCard.GetInfo().GetID(), out _);
+                if (Buy && CanSwitch(CG) && CG.CanSwitch(CombatControl.Main.SelectingSwitch.Key))
+                    AF.ForceSwitch(CombatControl.Main.SelectingSwitch.Key, out _);
                 else if (Buy && CanBuy(CG))
                     AF.ForceBuy(CombatControl.Main.SelectingItem.gameObject, out _);
                 else if (!Buy && CanSell(CG))

@@ -14,13 +14,14 @@ namespace ADV
         {
             foreach (Card C in Cards)
                 C.Side = Side;
+            if (StartKey != "")
+                SwitchCard(StartKey);
         }
 
         // Start is called before the first frame update
         void Start()
         {
-            if (StartKey != "")
-                SwitchCard(StartKey);
+
         }
 
         // Update is called once per frame
@@ -37,6 +38,21 @@ namespace ADV
         public AIControl GetAIControl()
         {
             return GetComponent<AIControl>();
+        }
+
+        public bool CanSwitch(string Key)
+        {
+            for (int i = 0; i < CombatControl.Main.FriendlyCards.Count; i++)
+            {
+                if (CombatControl.Main.FriendlyCards[i].GetInfo().GetID() == Key && CombatControl.Main.FriendlyCards[i].GetSide() == Side)
+                    return false;
+            }
+            for (int i = 0; i < CombatControl.Main.EnemyCards.Count; i++)
+            {
+                if (CombatControl.Main.EnemyCards[i].GetInfo().GetID() == Key && CombatControl.Main.EnemyCards[i].GetSide() == Side)
+                    return false;
+            }
+            return true;
         }
 
         public void SwitchCard(string Key)

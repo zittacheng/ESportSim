@@ -196,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[1
+  - General[1
   - CanStack[1
   - IgnoreGCD[1
   - Auto[1
@@ -219,7 +220,7 @@ MonoBehaviour:
   Name: Item_NewArmorPlate
   RenderName: New Armor Plate
   Description: Description
-  Icon: {fileID: 0}
+  Icon: {fileID: -488721925442295091, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1 &6807392005454684842
 GameObject:
   m_ObjectHideFlags: 0

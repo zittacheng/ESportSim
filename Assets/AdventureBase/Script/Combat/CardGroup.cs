@@ -7,6 +7,7 @@ namespace ADV
     public class CardGroup : MonoBehaviour {
         public List<Card> Cards;
         public Card CurrentCard;
+        public string StartKey;
         public int Side;
 
         public void Ini()
@@ -18,7 +19,8 @@ namespace ADV
         // Start is called before the first frame update
         void Start()
         {
-
+            if (StartKey != "")
+                SwitchCard(StartKey);
         }
 
         // Update is called once per frame
@@ -38,6 +40,20 @@ namespace ADV
         }
 
         public void SwitchCard(string Key)
+        {
+            print("TrySwitch: " + Key);
+            HeroInfo HI = null;
+            foreach (HeroInfo Info in GetComponentsInChildren<HeroInfo>())
+            {
+                if (Info.HeroKey == Key)
+                    HI = Info;
+            }
+            if (!HI)
+                return;
+            HI.SwitchHero(GetCurrentCard());
+        }
+
+        public void SwitchCard_Legacy(string Key)
         {
             Card C = GetCard(Key);
             if (!C || !CurrentCard)

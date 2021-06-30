@@ -14,7 +14,7 @@ namespace ADV
                 if (Buy && CanSwitch())
                 {
                     UndoControl.Main.NewUnit(null, null, 0, CombatControl.Main.GetCurrentMC().GetInfo().GetID());
-                    CombatControl.Main.MCGroup.SwitchCard(CombatControl.Main.SelectingCard.GetInfo().GetID());
+                    CombatControl.Main.MCGroup.SwitchCard(CombatControl.Main.SelectingSwitch.Key);
                 }
                 else if (Buy && CanBuy())
                 {
@@ -65,8 +65,7 @@ namespace ADV
         {
             if (!CombatControl.Main.Waiting)
                 return false;
-            Card C = CombatControl.Main.SelectingCard;
-            return C && CombatControl.Main.GetCurrentMC() != C;
+            return CombatControl.Main.SelectingSwitch && CombatControl.Main.GetCurrentMC().GetInfo().GetID() != CombatControl.Main.SelectingSwitch.Key;
         }
 
         public bool CanBuy(CardGroup CG)

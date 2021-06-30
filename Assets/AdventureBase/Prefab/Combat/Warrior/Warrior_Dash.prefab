@@ -402,7 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6020289358765113552}
-  - component: {fileID: 2846091288788652881}
+  - component: {fileID: 452009003172365274}
   - component: {fileID: 6020289358765113554}
   m_Layer: 0
   m_Name: Targeting
@@ -425,7 +425,7 @@ Transform:
   m_Father: {fileID: 6020289358846528180}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2846091288788652881
+--- !u!114 &452009003172365274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6020289358765113567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d54ebd33410d4c34a8ecee002a0d4b04, type: 3}
+  m_Script: {fileID: 11500000, guid: bdb1098b248101b45a20815e22cce921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 6020289358765113554}
@@ -528,7 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Render[1
+  - MainSkill[1
   - Auto[1
   - ManaCost[1
 --- !u!1 &7018276836241376966

@@ -1,0 +1,577 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1520025688603937628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4549636597109555071}
+  - component: {fileID: 8303901384516015363}
+  m_Layer: 0
+  m_Name: Protector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4549636597109555071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520025688603937628}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8303901384516015363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520025688603937628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 0
+  HeroKey: Protector
+  Role: 3
+  MaxLife: 150
+  MaxMana: 10
+  BaseDamage: 8
+  SkillPrefabs:
+  - {fileID: 2936274018777498113, guid: 7eb4db9d12a48e240bebe597aa716484, type: 3}
+  - {fileID: 1460976085656713559, guid: 2fc3de05cf24c094ea502f7fc5700606, type: 3}
+  StatusPrefabs: []
+--- !u!1 &1680820432713410745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4775830000604040073}
+  - component: {fileID: 7287644909693216273}
+  m_Layer: 0
+  m_Name: Arbalest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4775830000604040073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680820432713410745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7287644909693216273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680820432713410745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 0
+  HeroKey: Arbalest
+  Role: 2
+  MaxLife: 180
+  MaxMana: 10
+  BaseDamage: 18
+  SkillPrefabs:
+  - {fileID: 1824244562930013287, guid: ec5f02b74d8e66543adf6ab5c5118ebb, type: 3}
+  - {fileID: 3185336771806163838, guid: 31cb46bffbbb2d446a9247c39fac6554, type: 3}
+  StatusPrefabs: []
+--- !u!1 &2014011744949792513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6053687224098578395}
+  - component: {fileID: 517064631259703923}
+  m_Layer: 0
+  m_Name: Archer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6053687224098578395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014011744949792513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &517064631259703923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014011744949792513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 0
+  HeroKey: Archer
+  Role: 2
+  MaxLife: 225
+  MaxMana: 10
+  BaseDamage: 10
+  SkillPrefabs:
+  - {fileID: 1114703784706263794, guid: 915ac26f3a363284192e04aa73343a85, type: 3}
+  - {fileID: 2311150468546741503, guid: 84a6936e2fc3bf44191d7a52bc8655ae, type: 3}
+  StatusPrefabs: []
+--- !u!1 &2492159111894066961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5965827645600187590}
+  m_Layer: 0
+  m_Name: HeroInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5965827645600187590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2492159111894066961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4775830000604040073}
+  - {fileID: 6053687224098578395}
+  - {fileID: 5307154407162713370}
+  - {fileID: 1302562236395116799}
+  - {fileID: 4086443400974060313}
+  - {fileID: 4549636597109555071}
+  - {fileID: 2162363018254759547}
+  - {fileID: 5901973397690644759}
+  - {fileID: 4751699210901255399}
+  - {fileID: 5110608932119546342}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2732475599109519725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5307154407162713370}
+  - component: {fileID: 268282683285544933}
+  m_Layer: 0
+  m_Name: Assassin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5307154407162713370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2732475599109519725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &268282683285544933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2732475599109519725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 0
+  HeroKey: Assassin
+  Role: 2
+  MaxLife: 180
+  MaxMana: 16
+  BaseDamage: 6
+  SkillPrefabs:
+  - {fileID: 2082819345655060567, guid: 3cc630c8a7a6db34aadeeee8e539b849, type: 3}
+  - {fileID: 8001633551913863436, guid: afc5338745d10c746889dbefb360e853, type: 3}
+  StatusPrefabs: []
+--- !u!1 &3882471854962215359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1302562236395116799}
+  - component: {fileID: 3825331883415121979}
+  m_Layer: 0
+  m_Name: Bruiser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1302562236395116799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882471854962215359}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3825331883415121979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882471854962215359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 0
+  HeroKey: Bruiser
+  Role: 1
+  MaxLife: 300
+  MaxMana: 5
+  BaseDamage: 8
+  SkillPrefabs:
+  - {fileID: 6775576645757372345, guid: 50a759f77ec259b4abf8fae4e9fc842d, type: 3}
+  - {fileID: 6043666491145004524, guid: 51b4b279cdaf3e341aa5fccb0beacdde, type: 3}
+  StatusPrefabs:
+  - {fileID: 3419905059020761038, guid: fbe87fbc4d6e4db4bb89e9f0d92b2060, type: 3}
+--- !u!1 &4035526508345487423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4751699210901255399}
+  - component: {fileID: 7342228183472137833}
+  m_Layer: 0
+  m_Name: FireMage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4751699210901255399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4035526508345487423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7342228183472137833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4035526508345487423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 0
+  HeroKey: FireMage
+  Role: 2
+  MaxLife: 225
+  MaxMana: 4
+  BaseDamage: 10
+  SkillPrefabs:
+  - {fileID: 6201478761380047384, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
+  - {fileID: 6441293287966430658, guid: 5a55e687e07f2564dbfcf9e211097f87, type: 3}
+  - {fileID: 8030137170227943138, guid: 91e9a46e4cfa0d249a5f86b6c55d4514, type: 3}
+  StatusPrefabs: []
+--- !u!1 &5887619888747559942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5901973397690644759}
+  - component: {fileID: 1642911136428247785}
+  m_Layer: 0
+  m_Name: Warrior
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5901973397690644759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5887619888747559942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1642911136428247785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5887619888747559942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 0
+  HeroKey: Warrior
+  Role: 1
+  MaxLife: 300
+  MaxMana: 4
+  BaseDamage: 8
+  SkillPrefabs:
+  - {fileID: 6813880737445857639, guid: ebada3e6fb70f2849a42c9193b602adb, type: 3}
+  - {fileID: 6020289358846528179, guid: 59bb6e22666a070439a8f70cc280826a, type: 3}
+  - {fileID: 4059318798756482038, guid: df106d33f12c7a74289e06bfe306d507, type: 3}
+  StatusPrefabs: []
+--- !u!1 &7600238813687412649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5110608932119546342}
+  - component: {fileID: 7993680742129145920}
+  m_Layer: 0
+  m_Name: Tank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5110608932119546342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7600238813687412649}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7993680742129145920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7600238813687412649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 0
+  HeroKey: Tank
+  Role: 1
+  MaxLife: 200
+  MaxMana: 8
+  BaseDamage: 6
+  SkillPrefabs:
+  - {fileID: 1385262713847904442, guid: 11073a49f38f20c42bfeb20a8ff5a344, type: 3}
+  - {fileID: 4427448403399022496, guid: 1c890d0051801e74c8412c842ad10c3b, type: 3}
+  StatusPrefabs:
+  - {fileID: 7899868299452530553, guid: 18aa8daa80c2bbf4a85cbabfaf586f5a, type: 3}
+--- !u!1 &8731227442661269151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2162363018254759547}
+  - component: {fileID: 1404351376454715895}
+  m_Layer: 0
+  m_Name: StormMage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2162363018254759547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731227442661269151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1404351376454715895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731227442661269151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 0
+  HeroKey: StormMage
+  Role: 2
+  MaxLife: 150
+  MaxMana: 45
+  BaseDamage: 15
+  SkillPrefabs:
+  - {fileID: 9099198494967899734, guid: b5c4abe32c2798448b433b2b94dd77bf, type: 3}
+  - {fileID: 4570974999403308184, guid: 4ee9226fb71c21e41915704508f1526c, type: 3}
+  StatusPrefabs: []
+--- !u!1 &8748096562217026633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4086443400974060313}
+  - component: {fileID: 7182454426969553164}
+  m_Layer: 0
+  m_Name: Healer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4086443400974060313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8748096562217026633}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7182454426969553164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8748096562217026633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 0
+  HeroKey: Healer
+  Role: 3
+  MaxLife: 200
+  MaxMana: 15
+  BaseDamage: 8
+  SkillPrefabs:
+  - {fileID: 1310520441963826179, guid: e57c6b67947c3044f845aa3ebccf7ea2, type: 3}
+  - {fileID: 7581098848965138371, guid: 99cbbbe117c33b64bb1b8ebff9fb76c4, type: 3}
+  - {fileID: 8664919224328996716, guid: bfebb51e44391144f9530695393eabb6, type: 3}
+  StatusPrefabs: []

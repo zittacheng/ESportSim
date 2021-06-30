@@ -5,12 +5,12 @@ using UnityEngine;
 namespace ADV
 {
     public class AIControlUnit_RolePass : AIControlUnit {
-        public string RequiredKey;
+        public int RequiredRole;
         public AIControlUnit AddUnit;
 
         public override void Execute(CardGroup Source, bool Victory)
         {
-            if (Source.GetCurrentCard().GetKey(RequiredKey) == 1)
+            if (Source.GetCurrentCard().GetKey("Role") == RequiredRole)
             {
                 if (AddUnit)
                     AddUnit.Execute(Source, Victory);

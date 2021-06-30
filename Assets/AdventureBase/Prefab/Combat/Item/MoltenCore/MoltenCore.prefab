@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[1
+  - General[1
   - StartOfCombat[1
   - Item[1
   - Count[1
@@ -151,7 +152,7 @@ MonoBehaviour:
   Name: Item_MoltenCore
   RenderName: Molten Core
   Description: Description
-  Icon: {fileID: 0}
+  Icon: {fileID: 2029542551908640097, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1 &4171548468293020353
 GameObject:
   m_ObjectHideFlags: 0

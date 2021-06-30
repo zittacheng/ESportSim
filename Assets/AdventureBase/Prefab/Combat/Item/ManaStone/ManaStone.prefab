@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[1
+  - General[1
   - CanStack[1
   - BaseRecoveryMod[0.1
   - RecoveryMod[0.2
@@ -151,4 +152,4 @@ MonoBehaviour:
   Name: Item_ManaStone
   RenderName: Blue Tearstone Ring
   Description: Description
-  Icon: {fileID: 0}
+  Icon: {fileID: -5971942374765049077, guid: 39102f92b8807304989dc06a1bf86073, type: 3}

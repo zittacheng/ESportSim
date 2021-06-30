@@ -13,6 +13,7 @@ namespace ADV
         [Space]
         public List<SpriteRenderer> SRs;
         public Color MainColor;
+        [HideInInspector] public float CurrentValue;
 
         public void Awake()
         {
@@ -31,8 +32,9 @@ namespace ADV
 
         }
 
-        public void Render(float Value)
+        public virtual void Render(float Value)
         {
+            CurrentValue = Value;
             float a = Value;
             if (a < 0)
                 a = 0;
@@ -49,10 +51,11 @@ namespace ADV
                     SR.enabled = true;
             }
             Main.transform.localScale = new Vector3(a, 1, 1);
-            Right.transform.localPosition = new Vector3(RightPositionRange.x + (RightPositionRange.y - RightPositionRange.x) * a, 0, Right.transform.localPosition.z);
+            Right.transform.localPosition = new Vector3(RightPositionRange.x + (RightPositionRange.y - RightPositionRange.x) * a, 
+                Right.transform.localPosition.y, Right.transform.localPosition.z);
         }
 
-        public void ApplyColor()
+        public virtual void ApplyColor()
         {
             foreach (SpriteRenderer SR in SRs)
                 SR.color = MainColor;

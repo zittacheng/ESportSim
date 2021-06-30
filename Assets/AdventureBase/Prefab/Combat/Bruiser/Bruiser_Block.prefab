@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Render[1
+  - MainSkill[1
   - Auto[1
   - ManaCost[1
 --- !u!1 &6043666491201548160

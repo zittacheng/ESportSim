@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 880139005021862714}
-  RequiredKey: Tank
+  RequiredRole: 1
   AddUnit: {fileID: 8318261380054158955}
 --- !u!114 &880139005021862714
 MonoBehaviour:
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 3982870827691864645}
-  RequiredKey: DPS
+  RequiredRole: 2
   AddUnit: {fileID: 6166736609503112753}
 --- !u!114 &3982870827691864645
 MonoBehaviour:
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 0}
-  RequiredKey: Healer
+  RequiredRole: 3
   AddUnit: {fileID: 4105437932501952389}
 --- !u!1 &243064474784324017
 GameObject:
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 2987787426983069605}
-  RequiredKey: Tank
+  RequiredRole: 1
   AddUnit: {fileID: 6614941782692260500}
 --- !u!114 &2987787426983069605
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 2525773438403888464}
-  RequiredKey: DPS
+  RequiredRole: 2
   AddUnit: {fileID: 2294273692955177809}
 --- !u!114 &2525773438403888464
 MonoBehaviour:
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 0}
-  RequiredKey: Healer
+  RequiredRole: 3
   AddUnit: {fileID: 2940022802749196393}
 --- !u!1 &255675737015217578
 GameObject:
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 6377276374644197759}
-  RequiredKey: Tank
+  RequiredRole: 1
   AddUnit: {fileID: 8905623581790188460}
 --- !u!114 &6377276374644197759
 MonoBehaviour:
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 7128076346875026423}
-  RequiredKey: DPS
+  RequiredRole: 2
   AddUnit: {fileID: 4973183773036575474}
 --- !u!114 &7128076346875026423
 MonoBehaviour:
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 0}
-  RequiredKey: Healer
+  RequiredRole: 3
   AddUnit: {fileID: 64550170228350241}
 --- !u!1 &536927369592863756
 GameObject:
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 7032873778647695938}
-  RequiredKey: Tank
+  RequiredRole: 1
   AddUnit: {fileID: 1848786791553044926}
 --- !u!114 &7032873778647695938
 MonoBehaviour:
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 1750484376035685487}
-  RequiredKey: DPS
+  RequiredRole: 2
   AddUnit: {fileID: 1950059001596631663}
 --- !u!114 &1750484376035685487
 MonoBehaviour:
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 0}
-  RequiredKey: Healer
+  RequiredRole: 3
   AddUnit: {fileID: 5985147563651400287}
 --- !u!1 &876726404626842256
 GameObject:
@@ -480,16 +480,12 @@ MonoBehaviour:
   NextUnit: {fileID: 0}
   Chance: 0.2
   Keys:
-  - Arbalest
   - Archer
   - Assassin
   - Bruiser
-  - FireMage
   - Healer
-  - Protector
   - StormMage
   - Tank
-  - Warrior
 --- !u!1 &969786570944203765
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,16 +552,12 @@ MonoBehaviour:
   NextUnit: {fileID: 0}
   Chance: 0.2
   Keys:
-  - Arbalest
   - Archer
   - Assassin
   - Bruiser
-  - FireMage
   - Healer
-  - Protector
   - StormMage
   - Tank
-  - Warrior
 --- !u!1 &1122513471327215025
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,16 +569,7 @@ GameObject:
   - component: {fileID: 6160510640450208838}
   - component: {fileID: 5713464172098665874}
   - component: {fileID: 898220323867906536}
-  - component: {fileID: 8626681414056458420}
-  - component: {fileID: 6806616415397215835}
-  - component: {fileID: 6058531340143996082}
-  - component: {fileID: 4569835099029096906}
-  - component: {fileID: 3958608988952908058}
-  - component: {fileID: 4391140365118126451}
-  - component: {fileID: 1886327143437442294}
-  - component: {fileID: 4924181307678239489}
-  - component: {fileID: 2604800202025259495}
-  - component: {fileID: 6698491320605566725}
+  - component: {fileID: 5444092359345966241}
   m_Layer: 0
   m_Name: ' (0)'
   m_TagString: Untagged
@@ -623,16 +606,7 @@ MonoBehaviour:
   NextUnit: {fileID: 898220323867906536}
   VictoryUnits: []
   DefeatUnits:
-  - {fileID: 8626681414056458420}
-  - {fileID: 6806616415397215835}
-  - {fileID: 6058531340143996082}
-  - {fileID: 4569835099029096906}
-  - {fileID: 3958608988952908058}
-  - {fileID: 4391140365118126451}
-  - {fileID: 1886327143437442294}
-  - {fileID: 4924181307678239489}
-  - {fileID: 2604800202025259495}
-  - {fileID: 6698491320605566725}
+  - {fileID: 5444092359345966241}
 --- !u!114 &898220323867906536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,7 +622,7 @@ MonoBehaviour:
   NextUnit: {fileID: 0}
   List:
   - {fileID: 7426802692359653066, guid: 6a8afb657fbaea24c9ec749eff85b3e7, type: 3}
---- !u!114 &8626681414056458420
+--- !u!114 &5444092359345966241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -657,137 +631,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1122513471327215025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc128a6f9de7e48a9c15ff3c3edd81, type: 3}
+  m_Script: {fileID: 11500000, guid: 78d847c2bbc8b3e4f88be0633f459a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 0}
-  Target: Archer
---- !u!114 &6806616415397215835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122513471327215025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc128a6f9de7e48a9c15ff3c3edd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextUnit: {fileID: 0}
-  Target: Arbalest
---- !u!114 &6058531340143996082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122513471327215025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc128a6f9de7e48a9c15ff3c3edd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextUnit: {fileID: 0}
-  Target: Assassin
---- !u!114 &4569835099029096906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122513471327215025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc128a6f9de7e48a9c15ff3c3edd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextUnit: {fileID: 0}
-  Target: Bruiser
---- !u!114 &3958608988952908058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122513471327215025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc128a6f9de7e48a9c15ff3c3edd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextUnit: {fileID: 0}
-  Target: Healer
---- !u!114 &4391140365118126451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122513471327215025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc128a6f9de7e48a9c15ff3c3edd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextUnit: {fileID: 0}
-  Target: Protector
---- !u!114 &1886327143437442294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122513471327215025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc128a6f9de7e48a9c15ff3c3edd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextUnit: {fileID: 0}
-  Target: StormMage
---- !u!114 &4924181307678239489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122513471327215025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc128a6f9de7e48a9c15ff3c3edd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextUnit: {fileID: 0}
-  Target: Warrior
---- !u!114 &2604800202025259495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122513471327215025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc128a6f9de7e48a9c15ff3c3edd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextUnit: {fileID: 0}
-  Target: FireMage
---- !u!114 &6698491320605566725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122513471327215025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cc128a6f9de7e48a9c15ff3c3edd81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextUnit: {fileID: 0}
-  Target: Tank
+  Chance: 1
+  Keys:
+  - Archer
+  - Assassin
+  - Bruiser
+  - Healer
+  - StormMage
+  - Tank
 --- !u!1 &1164565451388938273
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,7 +828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 2230360578238414562}
-  RequiredKey: Tank
+  RequiredRole: 1
   AddUnit: {fileID: 1316465822644751417}
 --- !u!114 &2230360578238414562
 MonoBehaviour:
@@ -988,7 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 8291186494978054065}
-  RequiredKey: DPS
+  RequiredRole: 2
   AddUnit: {fileID: 5312010626782905755}
 --- !u!114 &8291186494978054065
 MonoBehaviour:
@@ -1003,7 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 0}
-  RequiredKey: Healer
+  RequiredRole: 3
   AddUnit: {fileID: 6358478713180107207}
 --- !u!1 &1686269699859290542
 GameObject:
@@ -1054,7 +909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 3311032345036559753}
-  RequiredKey: Tank
+  RequiredRole: 1
   AddUnit: {fileID: 8639222208998332167}
 --- !u!114 &3311032345036559753
 MonoBehaviour:
@@ -1069,7 +924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 7106592344668549410}
-  RequiredKey: DPS
+  RequiredRole: 2
   AddUnit: {fileID: 3165039439410885656}
 --- !u!114 &7106592344668549410
 MonoBehaviour:
@@ -1084,7 +939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 0}
-  RequiredKey: Healer
+  RequiredRole: 3
   AddUnit: {fileID: 2013414221567863549}
 --- !u!1 &1973494638634509130
 GameObject:
@@ -1376,16 +1231,12 @@ MonoBehaviour:
   NextUnit: {fileID: 0}
   Chance: 0.2
   Keys:
-  - Arbalest
   - Archer
   - Assassin
   - Bruiser
-  - FireMage
   - Healer
-  - Protector
   - StormMage
   - Tank
-  - Warrior
 --- !u!1 &3648589055885437611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,16 +1433,12 @@ MonoBehaviour:
   NextUnit: {fileID: 0}
   Chance: 0.2
   Keys:
-  - Arbalest
   - Archer
   - Assassin
   - Bruiser
-  - FireMage
   - Healer
-  - Protector
   - StormMage
   - Tank
-  - Warrior
 --- !u!1 &4262358616985560848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,7 +1554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 3898534130610717068}
-  RequiredKey: Tank
+  RequiredRole: 1
   AddUnit: {fileID: 909135705333503584}
 --- !u!114 &3898534130610717068
 MonoBehaviour:
@@ -1722,7 +1569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 7844368455741025722}
-  RequiredKey: DPS
+  RequiredRole: 2
   AddUnit: {fileID: 1683069314410314995}
 --- !u!114 &7844368455741025722
 MonoBehaviour:
@@ -1737,7 +1584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 0}
-  RequiredKey: Healer
+  RequiredRole: 3
   AddUnit: {fileID: 4718949718686979092}
 --- !u!1 &4358737717262122660
 GameObject:
@@ -2164,7 +2011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 6936975118588598705}
-  RequiredKey: Tank
+  RequiredRole: 1
   AddUnit: {fileID: 6813819247737602386}
 --- !u!114 &6936975118588598705
 MonoBehaviour:
@@ -2179,7 +2026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 4470938941633136967}
-  RequiredKey: DPS
+  RequiredRole: 2
   AddUnit: {fileID: 7689596786865395784}
 --- !u!114 &4470938941633136967
 MonoBehaviour:
@@ -2194,7 +2041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 0}
-  RequiredKey: Healer
+  RequiredRole: 3
   AddUnit: {fileID: 7916632218195320673}
 --- !u!1 &5384723893007820552
 GameObject:
@@ -2510,7 +2357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 2803244156491815579}
-  RequiredKey: Tank
+  RequiredRole: 1
   AddUnit: {fileID: 3989682381709385740}
 --- !u!114 &2803244156491815579
 MonoBehaviour:
@@ -2525,7 +2372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 3196931635518034278}
-  RequiredKey: DPS
+  RequiredRole: 2
   AddUnit: {fileID: 3940786362335751120}
 --- !u!114 &3196931635518034278
 MonoBehaviour:
@@ -2540,7 +2387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 0}
-  RequiredKey: Healer
+  RequiredRole: 3
   AddUnit: {fileID: 883627544498929671}
 --- !u!1 &6745484123653603304
 GameObject:
@@ -2759,7 +2606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 7610368238160109989}
-  RequiredKey: Tank
+  RequiredRole: 1
   AddUnit: {fileID: 5813867158879702884}
 --- !u!114 &7610368238160109989
 MonoBehaviour:
@@ -2774,7 +2621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 1914222528114203400}
-  RequiredKey: DPS
+  RequiredRole: 2
   AddUnit: {fileID: 408767152198973005}
 --- !u!114 &1914222528114203400
 MonoBehaviour:
@@ -2789,7 +2636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextUnit: {fileID: 0}
-  RequiredKey: Healer
+  RequiredRole: 3
   AddUnit: {fileID: 406563943865812739}
 --- !u!1 &7243611627386550359
 GameObject:
@@ -3081,16 +2928,12 @@ MonoBehaviour:
   NextUnit: {fileID: 0}
   Chance: 0.2
   Keys:
-  - Arbalest
   - Archer
   - Assassin
   - Bruiser
-  - FireMage
   - Healer
-  - Protector
   - StormMage
   - Tank
-  - Warrior
 --- !u!1 &8618758670930891621
 GameObject:
   m_ObjectHideFlags: 0

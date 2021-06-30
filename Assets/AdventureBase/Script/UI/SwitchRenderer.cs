@@ -14,7 +14,8 @@ namespace ADV
 
         public override void Update()
         {
-            Render();
+            //Render();
+            SelectionBase.SetActive(CombatControl.Main.SelectingSwitch == this);
             base.Update();
         }
 
@@ -46,7 +47,7 @@ namespace ADV
         {
             if (CombatControl.Main.SelectingItemRenderer != this)
             {
-                if (!GetTarget() || !CombatControl.Main.Waiting)
+                if (!CombatControl.Main.Waiting)
                     return false;
                 return true;
             }

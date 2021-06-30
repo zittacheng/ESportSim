@@ -134,6 +134,8 @@ namespace ADV
                     continue;
                 if (Skill.GetKey("Auto") != 1)
                     continue;
+                if (Skill.GetKey("Disabled") == 1)
+                    continue;
                 Skill.TryUse();
             }
             if (CurrentCast && GetKey("CCT") >= GetKey("MCT") && CurrentCast.GetKey("HoldCast") <= 0)
@@ -196,6 +198,8 @@ namespace ADV
                     continue;
                 if (Skill.GetKey("StartOfCombat") != 1)
                     continue;
+                if (Skill.GetKey("Disabled") == 1)
+                    continue;
                 Skill.TryUse();
             }
         }
@@ -204,17 +208,22 @@ namespace ADV
         {
             for (int i = Skills.Count - 1; i >= 0; i--)
             {
-                if (Skills[i])
+                if (Skills[i] && Skills[i].GetKey("Disabled") == 0)
                     Skills[i].EndOfCombat();
             }
             for (int i = Status.Count - 1; i >= 0; i--)
-                Status[i].EndOfCombat();
+            {
+                if (Status[i] && Status[i].GetKey("Disabled") == 0)
+                    Status[i].EndOfCombat();
+            }
 
             foreach (Mark_Skill Skill in Skills)
             {
                 if (!Skill)
                     continue;
                 if (Skill.GetKey("EndOfCombat") != 1)
+                    continue;
+                if (Skill.GetKey("Disabled") == 1)
                     continue;
                 Skill.TryUse();
             }
@@ -368,10 +377,17 @@ namespace ADV
         {
             float V = Value;
             for (int i = Status.Count - 1; i >= 0; i--)
+            {
+                if (!Status[i] || Status[i].GetKey("Disabled") == 1)
+                    continue;
                 V = Status[i].PassValue(Key, V);
+            }
             for (int i = Skills.Count - 1; i >= 0; i--)
-                if (Skills[i])
-                    V = Skills[i].PassValue(Key, V);
+            {
+                if (!Skills[i] || Skills[i].GetKey("Disabled") == 1)
+                    continue;
+                V = Skills[i].PassValue(Key, V);
+            }
             return FinalPassValue(Key, V);
         }
 
@@ -391,12 +407,12 @@ namespace ADV
         {
             for (int i = Status.Count - 1; i >= 0; i--)
             {
-                if (i < Status.Count && Status[i])
+                if (i < Status.Count && Status[i] && Status[i].GetKey("Disabled") == 0)
                     Status[i].TimePassed(Value);
             }
             for (int i = Skills.Count - 1; i >= 0; i--)
             {
-                if (i < Skills.Count && Skills[i])
+                if (i < Skills.Count && Skills[i] && Skills[i].GetKey("Disabled") == 0)
                     Skills[i].TimePassed(Value);
             }
         }
@@ -405,7 +421,7 @@ namespace ADV
         {
             for (int i = Skills.Count - 1; i >= 0; i--)
             {
-                if (!Skills[i])
+                if (!Skills[i] || Skills[i].GetKey("Disabled") == 1)
                     continue;
                 if (Skills[i].GetID() == ID)
                     Skills[i].TryUse();
@@ -665,7 +681,12 @@ namespace ADV
 
         public void ChangeMaxLife(float Value)
         {
-            MaxLife += Value;
+            SetMaxLife(GetMaxLife() + Value);
+        }
+
+        public void SetMaxLife(float Value)
+        {
+            MaxLife = Value;
             Life = MaxLife;
             SetKey("Life", Life);
             SetKey("MaxLife", MaxLife);
@@ -676,15 +697,20 @@ namespace ADV
             return BaseDamage;
         }
 
+        public void ChangeBaseDamage(float Value)
+        {
+            SetBaseDamage(GetBaseDamage() + Value);
+        }
+
+        public void SetBaseDamage(float Value)
+        {
+            BaseDamage = Value;
+            SetKey("BaseDamage", BaseDamage);
+        }
+
         public float GetAggro()
         {
             return Aggro;
-        }
-
-        public void ChangeBaseDamage(float Value)
-        {
-            BaseDamage += Value;
-            SetKey("BaseDamage", BaseDamage);
         }
 
         public float GetAttackSpeedScale()

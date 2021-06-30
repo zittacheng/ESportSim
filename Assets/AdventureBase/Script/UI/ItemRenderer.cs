@@ -14,6 +14,8 @@ namespace ADV
         public TextMeshPro CostText;
         public GameObject SelectionBase;
         public SpriteRenderer ItemSprite;
+        public float Alpha = 1;
+        [Space]
         public GameObject PanelPivot;
         public PanelDirection PDirection;
 
@@ -45,6 +47,13 @@ namespace ADV
             Mark_Skill S = null;
             if (GetItem())
                 S = GetItem().GetComponent<Mark_Skill>();
+
+            if (Alpha < 1 && CombatControl.Main.SelectingItemRenderer == this)
+            {
+                CombatControl.Main.SelectingItem = null;
+                CombatControl.Main.SelectingItemRenderer = null;
+            }
+
             if (!C || !S)
             {
                 if (NameText)
@@ -61,25 +70,46 @@ namespace ADV
             }
 
             if (NameText)
+            {
                 NameText.text = S.GetName();
+                NameText.color = new Color(NameText.color.r, NameText.color.g, NameText.color.b, Alpha);
+            }
 
             Mark_Skill RS = GetTarget().GetSkill(S.GetID(), out _);
 
-            if (CountText && RS)
-                CountText.text = RS.GetKey("Count").ToString();
+            if (CountText)
+            {
+                if (RS)
+                    CountText.text = RS.GetKey("Count").ToString();
+                CountText.color = new Color(CountText.color.r, CountText.color.g, CountText.color.b, Alpha);
+            }
 
             if (CostText)
+            {
                 CostText.text = S.GetKey("Cost").ToString();
+                CostText.color = new Color(CostText.color.r, CostText.color.g, CostText.color.b, Alpha);
+            }
 
             if (SelectionBase)
                 SelectionBase.SetActive(CombatControl.Main.SelectingItemRenderer == this);
 
             if (ItemSprite)
+            {
                 ItemSprite.gameObject.SetActive(true);
+                if (RS)
+                    ItemSprite.sprite = RS.GetIcon();
+                else if (S)
+                    ItemSprite.sprite = S.GetIcon();
+                else
+                    ItemSprite.sprite = null;
+                ItemSprite.color = new Color(ItemSprite.color.r, ItemSprite.color.g, ItemSprite.color.b, Alpha);
+            }
         }
 
         public bool CanInteract()
         {
+            if (Alpha < 1)
+                return false;
             if (CombatControl.Main.SelectingItemRenderer != this)
             {
                 if (!GetTarget() || !GetItem() || !CombatControl.Main.Waiting)
@@ -121,6 +151,8 @@ namespace ADV
 
         public override void MouseEnterEffect()
         {
+            if (Alpha <= 0)
+                return;
             if (!GetItem())
             {
                 UIControl.Main.ItemPanel.Render(new Vector2(), 0, null);

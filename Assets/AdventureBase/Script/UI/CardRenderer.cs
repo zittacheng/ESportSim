@@ -10,13 +10,18 @@ namespace ADV
         public int Side;
         public int Index;
         public Card DefaultTarget;
+        public bool Follow;
         public GameObject AnimBase;
         public TextMeshPro NameText;
         public int LifeRenderDirection;
         public EnergyBar LifeBar;
+        [Space]
+        public EnergyBar DamageBar;
+        public float DamageBarDelay;
+        [Space]
         public EnergyBar ShieldBar;
-        public EnergyBar AddShieldBar;
         public EnergyBar ManaBar;
+        [Space]
         public TextMeshPro LifeText;
         public TextMeshPro LifeTextII;
         public TextMeshPro ManaText;
@@ -31,10 +36,15 @@ namespace ADV
         public override void Render()
         {
             if (GetTarget())
+            {
                 SetActive(true);
+                if (Follow)
+                    transform.position = new Vector3(GetTarget().GetPosition().x, GetTarget().GetPosition().y, transform.position.z);
+            }
             else
                 SetActive(false);
             MainRender();
+            DamageBarUpdate();
             foreach (StatusRenderer SR in StatusRenderers)
                 SR.RealUpdate(GetTarget());
             base.Render();
@@ -136,39 +146,80 @@ namespace ADV
             for (int i = 0; i < a; i++)
                 s += "-";
 
+            float next = GetTarget().GetLife() / GetTarget().GetMaxLife();
+            float current = 0;
             if (LifeBar)
-                LifeBar.Render(GetTarget().GetLife() / GetTarget().GetMaxLife());
+                current = LifeBar.CurrentValue;
 
-            if (ShieldBar && AddShieldBar)
+            if (ShieldBar)
             {
                 float h = GetTarget().PassValue("Shield");
                 if (h > 0)
                 {
                     float h2 = (GetTarget().GetLife() + h) / GetTarget().GetMaxLife();
-                    float h3 = 0;
                     if (h2 > 1)
                     {
-                        h3 = h2 - 1;
-                        h2 = 1;
+                        ShieldBar.Render(1);
+                        next = GetTarget().GetLife() / (GetTarget().GetLife() + h);
                     }
-                    ShieldBar.Render(h2);
-                    AddShieldBar.Render(h3);
+                    else
+                        ShieldBar.Render(h2);
                 }
                 else
-                {
                     ShieldBar.Render(0);
-                    AddShieldBar.Render(0);
-                }
+            }
+
+            if (LifeBar)
+                LifeBar.Render(next);
+
+            if (DamageBar && next < current && /*DamageBar.CurrentValue <= LifeBar.CurrentValue*/ DamageBarDelay <= 0)
+            {
+                DamageBar.Render(current);
+                DamageBarDelay = 0.1f;
             }
 
             if (ManaBar)
                 ManaBar.Render(GetTarget().PassValue("Mana"));
+
             if (DamageText)
-                DamageText.text = ((int)GetTarget().GetBaseDamage()).ToString();
+            {
+                float d = (int)GetTarget().GetBaseDamage();
+                DamageText.text = d.ToString();
+            }
+
             if (AttackSpeedText)
-                AttackSpeedText.text = GetTarget().PassValue("AttackSpeed", 1).ToString();
+            {
+                //float aS = ((int)(GetTarget().PassValue("AttackSpeed", 1) / 0.1f)) / 10f;
+                float aS = GetTarget().PassValue("AttackSpeed", 1);
+                AttackSpeedText.text = aS.ToString();
+            }
+
             if (RecoverySpeedText)
-                RecoverySpeedText.text = GetTarget().PassValue("ManaRecovery", 1).ToString();
+            {
+                //float rS = ((int)(GetTarget().PassValue("ManaRecovery", 1) / 0.1f)) / 10f;
+                float rS = GetTarget().PassValue("ManaRecovery", 1);
+                RecoverySpeedText.text = rS.ToString();
+            }
+        }
+
+        public void DamageBarUpdate()
+        {
+            if (!DamageBar)
+                return;
+
+            if (DamageBarDelay > 0)
+            {
+                DamageBarDelay -= Time.deltaTime;
+                return;
+            }
+
+            if (DamageBar.CurrentValue <= LifeBar.CurrentValue)
+            {
+                DamageBar.Render(0);
+                return;
+            }
+
+            DamageBar.Render(DamageBar.CurrentValue - 0.5f * Time.deltaTime);
         }
 
         public void SetActive(bool Value)

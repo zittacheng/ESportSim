@@ -15,7 +15,11 @@ namespace ADV
                 if (Source.GetAIControl() && Source.GetAIControl().GetComponent<AIControl_CoinBased>())
                 {
                     AIControl_CoinBased AC = (AIControl_CoinBased)Source.GetAIControl();
-                    AC.Switch(Keys[Random.Range(0, Keys.Count)]);
+                    List<string> NewKeys = new List<string>();
+                    foreach (string s in Keys)
+                        if (Source.CanSwitch(s))
+                            NewKeys.Add(s);
+                    AC.Switch(NewKeys[Random.Range(0, NewKeys.Count)]);
                 }
             }
             base.Execute(Source, Victory);

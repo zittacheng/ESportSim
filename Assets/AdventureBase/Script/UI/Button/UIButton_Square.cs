@@ -16,12 +16,12 @@ namespace ADV
 
         public Vector2 GetCursorRangeX()
         {
-            return new Vector2(CursorRangeX.x + GetPosition().x, CursorRangeX.y + GetPosition().x);
+            return new Vector2(CursorRangeX.x * transform.lossyScale.x + GetPosition().x, CursorRangeX.y * transform.lossyScale.x + GetPosition().x);
         }
 
         public Vector2 GetCursorRangeY()
         {
-            return new Vector2(CursorRangeY.x + GetPosition().y, CursorRangeY.y + GetPosition().y);
+            return new Vector2(CursorRangeY.x * transform.lossyScale.y + GetPosition().y, CursorRangeY.y * transform.lossyScale.y + GetPosition().y);
         }
     }
 }

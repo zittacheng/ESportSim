@@ -10,7 +10,7 @@ namespace ADV
         public override bool InRange()
         {
             Vector2 P = Cursor.Main.GetPosition();
-            return (P - GetPosition()).magnitude <= CursorRange;
+            return (P - GetPosition()).magnitude <= CursorRange * transform.lossyScale.x;
         }
     }
 }

@@ -30,7 +30,6 @@ namespace ADV
                 float x = PositionRange.x + (i + 1) * D;
                 if (Scales.Count <= i)
                 {
-                    print(i + "     " + (i + 1) % 5);
                     if ((i + 1) % 5 == 0)
                     {
                         GameObject G = Instantiate(ScalePrefab, transform);

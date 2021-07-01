@@ -7,6 +7,7 @@ namespace ESP
 {
     public class EventRenderer : MonoBehaviour {
         public GameObject AnimBase;
+        public GameObject EmptyBase;
         public TextMeshPro NameText;
         public Event Target;
         public int TargetIndex = -1;
@@ -29,12 +30,18 @@ namespace ESP
             if (!GetTarget())
             {
                 NameText.text = "";
-                AnimBase.SetActive(false);
+                if (AnimBase)
+                    AnimBase.SetActive(false);
+                if (EmptyBase)
+                    EmptyBase.SetActive(true);
             }
             else
             {
                 NameText.text = GetTarget().GetDisplayName();
-                AnimBase.SetActive(true);
+                if (AnimBase)
+                    AnimBase.SetActive(true);
+                if (EmptyBase)
+                    EmptyBase.SetActive(false);
             }
         }
 

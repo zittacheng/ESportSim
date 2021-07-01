@@ -17,9 +17,13 @@ namespace ESP
         public void IniProcess()
         {
             if (KeyBase.Main.GetKey("LastResult") == 0)
-                ThreadControl.Main.ProcessAdvance();
+            {
+                //ThreadControl.Main.ProcessAdvance();
+            }
             else
+            {
                 LevelControl.Main.ResultProcess();
+            }
         }
 
         // Update is called once per frame

@@ -3979,7 +3979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b31da23fc5f924ab35da77d8fbd4f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeScale: 1
+  TimeScale: 3
   CurrentTurn: 0
   InCombat: 0
   Waiting: 1

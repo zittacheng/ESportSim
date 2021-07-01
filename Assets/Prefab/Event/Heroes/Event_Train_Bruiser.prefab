@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: Name
       value: Train_Bruiser
       objectReference: {fileID: 0}
+    - target: {fileID: 1306019346898853236, guid: c0d5a909c53c6ee47a2f9c59ebc17325, type: 3}
+      propertyPath: DisplayName
+      value: Bruiser
+      objectReference: {fileID: 0}
     - target: {fileID: 1306019346898853237, guid: c0d5a909c53c6ee47a2f9c59ebc17325, type: 3}
       propertyPath: m_RootOrder
       value: 0

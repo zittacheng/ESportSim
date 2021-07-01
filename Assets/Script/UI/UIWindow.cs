@@ -18,5 +18,10 @@ namespace ESP
         {
 
         }
+
+        public virtual void OnOpen()
+        {
+
+        }
     }
 }

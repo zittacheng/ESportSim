@@ -1694,6 +1694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Anim: {fileID: 1026850763838747702}
+  LastState: 0
 --- !u!1 &6171289502519444799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,7 +2547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6171289503476071318
 Transform:
   m_ObjectHideFlags: 0
@@ -2805,7 +2806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6171289503754931220
 Transform:
   m_ObjectHideFlags: 0
@@ -3002,7 +3003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6171289504361005179
 Transform:
   m_ObjectHideFlags: 0

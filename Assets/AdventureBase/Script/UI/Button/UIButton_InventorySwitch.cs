@@ -12,8 +12,8 @@ namespace ADV
 
         public override void MouseDownEffect()
         {
-            Target.transform.position = new Vector3(TargetPosition.x, TargetPosition.y, Target.transform.position.z);
-            Ori.transform.position = new Vector3(OriPosition.x, OriPosition.y, Ori.transform.position.z);
+            Target.transform.localPosition = new Vector3(TargetPosition.x, TargetPosition.y, Target.transform.localPosition.z);
+            Ori.transform.localPosition = new Vector3(OriPosition.x, OriPosition.y, Ori.transform.localPosition.z);
             if (Ori.GetComponent<Inventory>())
                 Ori.GetComponent<Inventory>().StartIndex = 0;
             base.MouseDownEffect();

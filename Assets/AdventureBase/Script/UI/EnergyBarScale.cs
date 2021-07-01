@@ -6,6 +6,7 @@ namespace ADV
 {
     public class EnergyBarScale : MonoBehaviour {
         public GameObject ScalePrefab;
+        public GameObject ScalePrefabII;
         public Vector2 PositionRange;
         public List<GameObject> Scales;
 
@@ -23,13 +24,28 @@ namespace ADV
 
         public void Render(int Count)
         {
-            for (int i = 0; i < Count && i < Scales.Count; i++)
+            for (int i = 0; i < Count || i < Scales.Count; i++)
             {
                 float D = (PositionRange.y - PositionRange.x) / (Count + 1);
                 float x = PositionRange.x + (i + 1) * D;
-                if (Scales.Count >= i)
-                    Scales.Add(Instantiate(ScalePrefab));
-                Scales[i].transform.localPosition = new Vector3(x, 0, 0);
+                if (Scales.Count <= i)
+                {
+                    print(i + "     " + (i + 1) % 5);
+                    if ((i + 1) % 5 == 0)
+                    {
+                        GameObject G = Instantiate(ScalePrefab, transform);
+                        G.SetActive(true);
+                        Scales.Add(G);
+                    }
+                    else
+                    {
+                        GameObject G = Instantiate(ScalePrefabII, transform);
+                        G.SetActive(true);
+                        Scales.Add(G);
+                    }
+                }
+                if (Scales[i])
+                    Scales[i].transform.localPosition = new Vector3(x, 0, 0);
                 if (i >= Count && Scales[i])
                     Destroy(Scales[i]);
             }

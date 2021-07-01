@@ -15,6 +15,7 @@ namespace ADV
         public TextMeshPro NameText;
         public int LifeRenderDirection;
         public EnergyBar LifeBar;
+        public EnergyBarScale LifeBarScale;
         [Space]
         public EnergyBar DamageBar;
         public float DamageBarDelay;
@@ -151,9 +152,10 @@ namespace ADV
             if (LifeBar)
                 current = LifeBar.CurrentValue;
 
+            float h = 0;
             if (ShieldBar)
             {
-                float h = GetTarget().PassValue("Shield");
+                h = GetTarget().PassValue("Shield");
                 if (h > 0)
                 {
                     float h2 = (GetTarget().GetLife() + h) / GetTarget().GetMaxLife();
@@ -172,6 +174,14 @@ namespace ADV
             if (LifeBar)
                 LifeBar.Render(next);
 
+            if (LifeBarScale)
+            {
+                float max = GetTarget().GetMaxLife();
+                if (GetTarget().GetLife() + h > max)
+                    max = GetTarget().GetLife() + h;
+                max = (((int)(max / 10)) / 5) * 5 - 1;
+                LifeBarScale.Render((int)max);
+            }
             if (DamageBar && next < current && /*DamageBar.CurrentValue <= LifeBar.CurrentValue*/ DamageBarDelay <= 0)
             {
                 DamageBar.Render(current);

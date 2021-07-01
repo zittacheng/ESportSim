@@ -34,12 +34,12 @@ namespace ESP
             {
                 if (KeyBase.Main.GetKey("LastResult") == 1)
                 {
-                    ThreadControl.Main.AddEvent(TempVictoryEvent);
+                    ThreadControl.Main.ForceEvent(TempVictoryEvent);
                     ThreadControl.Main.StartProcess();
                 }
                 else if (KeyBase.Main.GetKey("LastResult") == -1)
                 {
-                    ThreadControl.Main.AddEvent(TempDefeatEvent);
+                    ThreadControl.Main.ForceEvent(TempDefeatEvent);
                     ThreadControl.Main.StartProcess();
                 }
             }
@@ -47,12 +47,12 @@ namespace ESP
             {
                 if (KeyBase.Main.GetKey("LastResult") == 1)
                 {
-                    ThreadControl.Main.AddEvent(RankVictoryEvent);
+                    ThreadControl.Main.ForceEvent(RankVictoryEvent);
                     ThreadControl.Main.StartProcess();
                 }
                 else if (KeyBase.Main.GetKey("LastResult") == -1)
                 {
-                    ThreadControl.Main.AddEvent(RankDefeatEvent);
+                    ThreadControl.Main.ForceEvent(RankDefeatEvent);
                     ThreadControl.Main.StartProcess();
                 }
             }

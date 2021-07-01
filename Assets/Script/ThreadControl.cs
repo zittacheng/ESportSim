@@ -9,7 +9,8 @@ namespace ESP
         public static ThreadControl Main;
         public List<Event> Thread;
         public Event CurrentEvent;
-        [HideInInspector] public bool Active;
+        public int MaxCount;
+        public bool Active;
         [Space]
         public int TimeIndex = 1;
 
@@ -27,7 +28,10 @@ namespace ESP
 
         public void ProcessAdvance()
         {
+            for (int i = Thread.Count - 1; i >= 0; i--)
+                RemoveEvent(i);
             Thread.Clear();
+            GlobalControl.Main.NewDay();
             /*if (TimeIndex == -1)
             {
                 TimeIndex = 0;
@@ -62,17 +66,24 @@ namespace ESP
 
         public void AddEvent(Event E)
         {
+            GameObject G = Instantiate(E.gameObject, transform);
+            E = G.GetComponent<Event>();
             Thread.Add(E);
         }
 
         public void RemoveEvent(int Index)
         {
+            Event E = Thread[Index];
+            if (E)
+                Destroy(E.gameObject);
             if (Index >= 0 && Index < Thread.Count)
                 Thread.RemoveAt(Index);
         }
 
         public bool CanAddEvent(Event E)
         {
+            if (Thread.Count >= MaxCount)
+                return false;
             GetCost(out float TC, out float EC, out float CC);
             if (E.HasKey("TimeCost") && TC + E.GetKey("TimeCost") > KeyBase.Main.GetKey("Time"))
                 return false;
@@ -83,6 +94,19 @@ namespace ESP
             if (E.HasKey("Rank") && KeyBase.Main.GetKey("Rank") < E.GetKey("Rank"))
                 return false;
             return true;
+        }
+
+        public void ForceEvent(Event E)
+        {
+            GameObject G = Instantiate(E.gameObject, transform);
+            E = G.GetComponent<Event>();
+            Thread.Add(null);
+            for (int i = Thread.Count - 2; i >= 0; i--)
+            {
+                Thread[i + 1] = Thread[i];
+            }
+            if (Thread.Count > 0)
+                Thread[0] = E;
         }
 
         public float GetTimeCost(int EndIndex)
@@ -155,6 +179,8 @@ namespace ESP
             if (!GetCurrentEvent())
                 return;
             GetCurrentEvent().OnEnd();
+            if (CurrentEvent)
+                Destroy(CurrentEvent.gameObject);
             CurrentEvent = null;
             NextEventProcess();
         }

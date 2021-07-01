@@ -52,6 +52,7 @@ namespace ESP
         {
             W.transform.position = new Vector3(WindowPosition.x, WindowPosition.y, W.transform.position.z);
             CurrentWindow = W;
+            W.OnOpen();
             return W;
         }
 

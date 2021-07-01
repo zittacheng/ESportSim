@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KB: {fileID: 0}
   Name: Stream(General)
-  DisplayName: Stream (General)
+  DisplayName: Stream
   Steps:
   - {fileID: 8608407310911518798}
   - {fileID: 6282133636523295456}

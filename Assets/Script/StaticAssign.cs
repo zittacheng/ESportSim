@@ -18,12 +18,19 @@ namespace ESP
         public void Awake()
         {
             GlobalControl.Main = GC;
-            ThreadControl.Main = TC;
             LevelControl.Main = LC;
             UIControl.Main = UIC;
             SubUIControl.Main = SUIC;
             ButtonControl.Main = BC;
             ADV.Cursor.Main = MainCursor;
+
+            if (!ThreadControl.Main)
+            {
+                ThreadControl.Main = TC;
+                DontDestroyOnLoad(TC.gameObject);
+            }
+            else
+                Destroy(TC);
 
             if (!KeyBase.Main)
             {

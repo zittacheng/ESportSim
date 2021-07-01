@@ -130,7 +130,7 @@ namespace ESP
 
         public bool CanStartProcess()
         {
-            if (Thread.Count <= 0)
+            if (Thread.Count <= 0 || Thread.Count < MaxCount)
                 return false;
             GetCost(out float TC, out float EC, out float CC);
             return TC <= KeyBase.Main.GetKey("Time") && EC <= KeyBase.Main.GetKey("Energy") && CC <= KeyBase.Main.GetKey("Coin");

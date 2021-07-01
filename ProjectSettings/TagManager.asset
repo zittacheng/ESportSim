@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DrawControl
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: LeftCoreBar
+    uniqueID: 4238367475
+    locked: 0
+  - name: RightCoreBar
+    uniqueID: 3992421813
     locked: 0

@@ -118,7 +118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - EnergyCost[2
   - TimeCost[1
 --- !u!1 &5594669262533319985
 GameObject:
@@ -224,8 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Keys:
-  - EnergyChange[-2
+  Keys: []
 --- !u!1 &8452292116792183247
 GameObject:
   m_ObjectHideFlags: 0

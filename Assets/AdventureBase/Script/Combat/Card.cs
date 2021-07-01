@@ -112,6 +112,7 @@ namespace ADV
         public void Update()
         {
             CombatUpdate(CombatControl.Main.CombatTime());
+            UpdateRenderSkills();
         }
 
         public void CombatUpdate(float Value)

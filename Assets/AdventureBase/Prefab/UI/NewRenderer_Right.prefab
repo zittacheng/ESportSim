@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -427431359598372447, guid: d0da1410a3ce56b4784659e64ae0a05b, type: 3}
+    - target: {fileID: 4357643745359484049, guid: 0fcde508b1a583549965e4a9f5d52fd3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.66
+      objectReference: {fileID: 0}
     - target: {fileID: 4745146544701377700, guid: 0fcde508b1a583549965e4a9f5d52fd3, type: 3}
       propertyPath: PDirection
       value: 0
@@ -299,5 +303,9 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 8744542186020400379, guid: 0fcde508b1a583549965e4a9f5d52fd3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6748246769679584804, guid: db6d5fba45f3fad4f95821fc253c1121, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fcde508b1a583549965e4a9f5d52fd3, type: 3}

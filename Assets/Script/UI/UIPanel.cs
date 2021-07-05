@@ -29,6 +29,18 @@ namespace ESP
             SetSize(new Vector2(Right - Left, Up - Down));
         }
 
+        public void Render_Local(float Left, float Right, float Up, float Down)
+        {
+            Left += transform.position.x;
+            Right += transform.position.x;
+            Up += transform.position.y;
+            Down += transform.position.y;
+            float x = Left + (Right - Left) * 0.5f;
+            float y = Down + (Up - Down) * 0.5f;
+            SetPosition(new Vector2(x, y));
+            SetSize(new Vector2(Right - Left, Up - Down));
+        }
+
         public void SetPosition(Vector2 Position)
         {
             transform.position = new Vector3(Position.x, Position.y, transform.position.z);

@@ -1,14 +1,13 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LNF
+namespace ESP
 {
     public class ConversationChoice : MonoBehaviour {
-        public Conversation CV;
-        public SentenceGroup NextGroup;
-        public string Content;
-        public bool OneTime = true;
+        [TextArea] public string Content;
+        public List<ConversationCondition> Conditions;
+        public List<Sentence> NewSentences;
 
         // Start is called before the first frame update
         void Start()
@@ -22,10 +21,32 @@ namespace LNF
 
         }
 
-        public void OnTrigger()
+        public bool Active(Conversation CV)
         {
-            if (OneTime)
-                CV.Choices.Remove(this);
+            bool Temp = true;
+            foreach (ConversationCondition CC in Conditions)
+            {
+                if (!CC.Pass(CV))
+                    Temp = false;
+            }
+            return Temp;
+        }
+
+        public virtual void TimePassed()
+        {
+
+        }
+
+        public virtual void Effect(Conversation CV)
+        {
+            for (int i = 0; i < NewSentences.Count; i++)
+                CV.AddSentence(NewSentences[i]);
+            CV.UpdateLastContent();
+        }
+
+        public string GetContent()
+        {
+            return Content;
         }
     }
 }

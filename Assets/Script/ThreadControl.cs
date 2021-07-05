@@ -128,6 +128,12 @@ namespace ESP
             NextEventProcess();
         }
 
+        public void ForceProcess()
+        {
+            Active = true;
+            NextEventProcess();
+        }
+
         public bool CanStartProcess()
         {
             if (Thread.Count <= 0 || Thread.Count < MaxCount)

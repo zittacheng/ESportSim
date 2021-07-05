@@ -1,14 +1,14 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LNF
+namespace ESP
 {
     public class Sentence : MonoBehaviour {
-        public bool StartReturn;
-        public float StartDelay;
-        public float OverrideSpeed = -1;
+        public SentenceRenderType RenderType;
         [TextArea] public string Content;
+        public List<ConversationCondition> Conditions;
+        public List<ConversationChoice> Choices;
 
         // Start is called before the first frame update
         void Start()
@@ -21,5 +21,35 @@ namespace LNF
         {
 
         }
+
+        public string GetContent()
+        {
+            return Content;
+        }
+
+        public void TimePassed()
+        {
+            for (int i = 0; i < Conditions.Count; i++)
+                Conditions[i].TimePassed();
+            for (int i = 0; i < Choices.Count; i++)
+                Choices[i].TimePassed();
+        }
+
+        public bool Active (Conversation CV)
+        {
+            bool Temp = true;
+            foreach (ConversationCondition CC in Conditions)
+            {
+                if (!CC.Pass(CV))
+                    Temp = false;
+            }
+            return Temp;
+        }
+    }
+
+    public enum SentenceRenderType
+    {
+        Left,
+        Right,
     }
 }

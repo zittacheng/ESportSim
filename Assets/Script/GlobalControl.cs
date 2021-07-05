@@ -9,7 +9,7 @@ namespace ESP
         public static GlobalControl Main;
 
         // Start is called before the first frame update
-        public void Start()
+        public void Awake()
         {
             IniProcess();
         }
@@ -18,12 +18,12 @@ namespace ESP
         {
             if (KeyBase.Main.GetKey("LastResult") == 0)
             {
+                // Temp
+                NewDay();
                 //ThreadControl.Main.ProcessAdvance();
             }
             else
-            {
                 LevelControl.Main.ResultProcess();
-            }
         }
 
         // Update is called once per frame
@@ -36,6 +36,7 @@ namespace ESP
         {
             KeyBase.Main.SetKey("Energy", KeyBase.Main.GetKey("MaxEnergy"));
             KeyBase.Main.ChangeKey("Day", 1);
+            ConversationControl.Main.TimePassed();
         }
 
         public void ChangeEnergy(float Value)

@@ -14,6 +14,7 @@ namespace ADV
         public TextMeshPro CostText;
         public GameObject SelectionBase;
         public SpriteRenderer ItemSprite;
+        public SpriteRenderer EmptySprite;
         public float Alpha = 1;
         [Space]
         public GameObject PanelPivot;
@@ -66,6 +67,11 @@ namespace ADV
                     ItemSprite.gameObject.SetActive(false);
                 if (SelectionBase)
                     SelectionBase.SetActive(false);
+                if (EmptySprite)
+                {
+                    EmptySprite.gameObject.SetActive(true);
+                    EmptySprite.color = new Color(EmptySprite.color.r, EmptySprite.color.g, EmptySprite.color.b, Alpha);
+                }
                 return;
             }
 
@@ -104,6 +110,9 @@ namespace ADV
                     ItemSprite.sprite = null;
                 ItemSprite.color = new Color(ItemSprite.color.r, ItemSprite.color.g, ItemSprite.color.b, Alpha);
             }
+
+            if (EmptySprite)
+                EmptySprite.gameObject.SetActive(false);
         }
 
         public bool CanInteract()

@@ -1,0 +1,792 @@
+fileFormatVersion: 2
+guid: 2e27ea1a4e528db47949eac188b6c8ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4493241165880530164
+    second: CVP_Reference
+  - first:
+      213: -7292536693248074931
+    second: CVP_Button
+  - first:
+      213: -2045405143146049273
+    second: CVP_Close
+  - first:
+      213: 4611078926936927744
+    second: CVP_BubbleSpike_Left
+  - first:
+      213: 897987733461399752
+    second: CVP_Bubble_Left_4
+  - first:
+      213: 3671779448093503870
+    second: CVP_Bubble_Right_8
+  - first:
+      213: -5782838931335490677
+    second: CVP_BubbleSpike_Right
+  - first:
+      213: 2144051582774528157
+    second: CVP_Main
+  - first:
+      213: -427454668665363160
+    second: CVP_Main
+  - first:
+      213: 1172825729898340667
+    second: CVR_Selection
+  - first:
+      213: 1853762655528641408
+    second: CVP_Choice_Active
+  - first:
+      213: -1086399789635409712
+    second: CVP_Choice_Selection
+  - first:
+      213: 2181547952049998619
+    second: CVP_Bubble_Left_8
+  - first:
+      213: 683746435023843656
+    second: CVP_Bubble_Left_4
+  - first:
+      213: -4450514410932194435
+    second: CVP_Bubble_Left_4
+  - first:
+      213: 8080432401409403453
+    second: CVP_Bubble_Left_4
+  - first:
+      213: -8132159289666449367
+    second: CVP_Bubble_Left_5
+  - first:
+      213: 871913949767271815
+    second: CVP_Bubble_Left_6
+  - first:
+      213: 1979757038099072210
+    second: CVP_Bubble_Left_7
+  - first:
+      213: -2694363681547005297
+    second: CVP_Bubble_Left_0
+  - first:
+      213: 320862950147789888
+    second: CVP_Bubble_Right_1
+  - first:
+      213: -6018176711814577133
+    second: CVP_Bubble_Right_2
+  - first:
+      213: -5595443974722815109
+    second: CVP_Bubble_Right_3
+  - first:
+      213: -5375367229957417629
+    second: CVP_Bubble_Right_4
+  - first:
+      213: -2989136694477527493
+    second: CVP_Bubble_Right_5
+  - first:
+      213: 8381659634886927692
+    second: CVP_Bubble_Right_6
+  - first:
+      213: 1713154633121142892
+    second: CVP_Bubble_Right_7
+  - first:
+      213: 803320547889178725
+    second: CVP_Bubble_Right_0
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CVP_Reference
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1585
+        width: 1533
+        height: 685
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b678147fcc4a1c0800000000000000
+      internalID: -4493241165880530164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Button
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 1150
+        width: 181
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b5277d384bbca90800000000000000
+      internalID: -7292536693248074931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Close
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 1092
+        width: 72
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701d50dfbd24d93e0800000000000000
+      internalID: -2045405143146049273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_BubbleSpike_Left
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 1076
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e6d5f7ad7ddff30800000000000000
+      internalID: 4611078926936927744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Left_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1107
+        width: 306
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8ff99f51b467c00800000000000000
+      internalID: 897987733461399752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Right_8
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 1106
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71713144f7c4f230800000000000000
+      internalID: 3671779448093503870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_BubbleSpike_Right
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1076
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83d27871aa3fbfa0800000000000000
+      internalID: -5782838931335490677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVR_Active
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 833
+        width: 412
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98c36b0e8331cd10800000000000000
+      internalID: 2144051582774528157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Main
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 300
+        width: 1545
+        height: 696
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8256e9c5e30611af0800000000000000
+      internalID: -427454668665363160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVR_Selection
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 696
+        width: 412
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31670699c6b64010800000000000000
+      internalID: 1172825729898340667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Choice_Active
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 185
+        width: 356
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0836ba44053e9b910800000000000000
+      internalID: 1853762655528641408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Choice_Selection
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 60
+        width: 356
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8e8b6b5255ce0f0800000000000000
+      internalID: -1086399789635409712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Left_8
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1107
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bcb66dd4a664e10800000000000000
+      internalID: 2181547952049998619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Left_2
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 1107
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841390092c72d7900800000000000000
+      internalID: 683746435023843656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Left_3
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 1064
+        width: 17
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7331ac19b89c32c0800000000000000
+      internalID: -4450514410932194435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Left_4
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 1048
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a60950576732070800000000000000
+      internalID: 8080432401409403453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Left_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1048
+        width: 306
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920d98a4634c42f80800000000000000
+      internalID: -8132159289666449367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Left_6
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1048
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78506922e19a91c00800000000000000
+      internalID: 871913949767271815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Left_7
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1064
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d489757982897b10800000000000000
+      internalID: 1979757038099072210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Left_0
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1064
+        width: 306
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f825da9c182bb9ad0800000000000000
+      internalID: -2694363681547005297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Right_1
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 1106
+        width: 306
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0449425372fe37400800000000000000
+      internalID: 320862950147789888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Right_2
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1106
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31483c09a242b7ca0800000000000000
+      internalID: -6018176711814577133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Right_3
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1063
+        width: 17
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bfb06d95df852b0800000000000000
+      internalID: -5595443974722815109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Right_4
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 1047
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365dc19fbfbd665b0800000000000000
+      internalID: -5375367229957417629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Right_5
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 1047
+        width: 306
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36e49473047486d0800000000000000
+      internalID: -2989136694477527493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Right_6
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 1047
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c456aada703a15470800000000000000
+      internalID: 8381659634886927692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Right_7
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 1063
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c681088ef0956c710800000000000000
+      internalID: 1713154633121142892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CVP_Bubble_Right_0
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 1063
+        width: 306
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568e4b938c7f52b00800000000000000
+      internalID: 803320547889178725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

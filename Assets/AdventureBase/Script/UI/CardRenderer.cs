@@ -192,24 +192,13 @@ namespace ADV
                 ManaBar.Render(GetTarget().PassValue("Mana"));
 
             if (DamageText)
-            {
-                float d = (int)GetTarget().GetBaseDamage();
-                DamageText.text = d.ToString();
-            }
+                DamageText.text = StatToText(GetTarget().GetBaseDamage());
 
             if (AttackSpeedText)
-            {
-                //float aS = ((int)(GetTarget().PassValue("AttackSpeed", 1) / 0.1f)) / 10f;
-                float aS = GetTarget().PassValue("AttackSpeed", 1);
-                AttackSpeedText.text = aS.ToString();
-            }
+                AttackSpeedText.text = StatToText(GetTarget().PassValue("AttackSpeed", 1));
 
             if (RecoverySpeedText)
-            {
-                //float rS = ((int)(GetTarget().PassValue("ManaRecovery", 1) / 0.1f)) / 10f;
-                float rS = GetTarget().PassValue("ManaRecovery", 1);
-                RecoverySpeedText.text = rS.ToString();
-            }
+                RecoverySpeedText.text = StatToText(GetTarget().PassValue("ManaRecovery", 1));
         }
 
         public void DamageBarUpdate()
@@ -230,6 +219,14 @@ namespace ADV
             }
 
             DamageBar.Render(DamageBar.CurrentValue - 0.5f * Time.deltaTime);
+        }
+
+        public string StatToText(float Stat)
+        {
+            float Temp = ((int)(Stat / 0.1f)) / 10f + 0.1f;
+            if (Temp < 10 && Temp % 1 == 0)
+                return Temp + ".0";
+            return Temp.ToString();
         }
 
         public void SetActive(bool Value)

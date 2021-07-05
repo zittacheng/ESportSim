@@ -9,6 +9,8 @@ namespace ESP
         public GlobalControl GC;
         public ThreadControl TC;
         public LevelControl LC;
+        public ConversationControl CVC;
+        public ConversationContentRenderer CVCR;
         public UIControl UIC;
         public SubUIControl SUIC;
         public ButtonControl BC;
@@ -23,6 +25,7 @@ namespace ESP
             SubUIControl.Main = SUIC;
             ButtonControl.Main = BC;
             ADV.Cursor.Main = MainCursor;
+            ConversationContentRenderer.Main = CVCR;
 
             if (!ThreadControl.Main)
             {
@@ -31,6 +34,14 @@ namespace ESP
             }
             else
                 Destroy(TC);
+
+            if (!ConversationControl.Main)
+            {
+                ConversationControl.Main = CVC;
+                DontDestroyOnLoad(CVC.gameObject);
+            }
+            else
+                Destroy(CVC.gameObject);
 
             if (!KeyBase.Main)
             {

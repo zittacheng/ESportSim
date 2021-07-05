@@ -57,7 +57,7 @@ namespace ESP
             {
                 ThreadControl.Main.AddEvent(GetTarget());
                 SubUIControl.Main.CloseWindow();
-                ThreadControl.Main.StartProcess();
+                ThreadControl.Main.ForceProcess();
             }
         }
 

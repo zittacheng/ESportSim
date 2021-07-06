@@ -60,7 +60,10 @@ namespace ESP
             CVOrder = new List<Conversation>();
             List<Conversation> Temp = new List<Conversation>();
             foreach (Conversation CV in Conversations)
-                Temp.Add(CV);
+            {
+                if (CV.Active)
+                    Temp.Add(CV);
+            }
             while (Temp.Count > 0)
             {
                 float Lowest = Mathf.Infinity;

@@ -7,7 +7,7 @@ TextureImporter:
     second: CVP_Reference
   - first:
       213: -7292536693248074931
-    second: CVP_Button
+    second: CVP_Switch
   - first:
       213: -2045405143146049273
     second: CVP_Close
@@ -208,7 +208,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CVP_Button
+      name: CVP_Switch
       rect:
         serializedVersion: 2
         x: 733

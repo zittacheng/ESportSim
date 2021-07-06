@@ -78,21 +78,25 @@ namespace ESP
             for (int i = 0; i < Sentences.Count; i++)
             {
                 GameObject G = null;
+                Sprite icon = null;
                 if (Sentences[i].RenderType == SentenceRenderType.Left)
                 {
                     G = Instantiate(LeftRenderer, SentenceBase.transform);
                     G.transform.localPosition = new Vector3(LeftPosition, G.transform.localPosition.y, G.transform.localPosition.z);
+                    if (Target.GetInfo())
+                        icon = Target.GetInfo().GetIcon();
                 }
                 else if (Sentences[i].RenderType == SentenceRenderType.Right)
                 {
                     G = Instantiate(RightRenderer, SentenceBase.transform);
                     G.transform.localPosition = new Vector3(RightPosition, G.transform.localPosition.y, G.transform.localPosition.z);
+                    icon = ConversationControl.Main.MainIcon;
                 }
                 if (!G)
                     continue;
 
                 SentenceRenderer SR = G.GetComponent<SentenceRenderer>();
-                SR.Render(Sentences[i].GetContent(), Next, out float TempNext);
+                SR.Render(Sentences[i].GetContent(), icon, Next, out float TempNext);
                 SRenderers.Add(SR);
                 Next = TempNext;
                 Next -= RendererDistance;

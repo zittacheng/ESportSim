@@ -11,6 +11,7 @@ namespace ESP
         public GameObject SelectionBase;
         public GameObject EmptyBase;
         public TextMeshPro ContentText;
+        public SpriteRenderer Icon;
         public float MaxRange = -25;
 
         // Start is called before the first frame update
@@ -33,6 +34,7 @@ namespace ESP
                 ActiveBase.SetActive(false);
                 SelectionBase.SetActive(false);
                 ContentText.text = "";
+                Icon.sprite = null;
                 return;
             }
 
@@ -40,6 +42,10 @@ namespace ESP
             ActiveBase.SetActive(ConversationControl.Main.GetCurrentConversation() != GetTarget());
             SelectionBase.SetActive(!ActiveBase.activeSelf);
             ContentText.text = GetTarget().GetLastContent();
+            if (!GetTarget().GetInfo())
+                Icon.sprite = null;
+            else
+                Icon.sprite = GetTarget().GetInfo().GetIcon();
         }
 
         public Conversation GetTarget()

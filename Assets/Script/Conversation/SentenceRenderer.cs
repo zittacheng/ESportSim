@@ -8,6 +8,7 @@ namespace ESP
     public class SentenceRenderer : MonoBehaviour {
         public UIPanel Panel;
         public TextMeshPro Text;
+        public SpriteRenderer Icon;
         public bool RightAlign;
 
         // Start is called before the first frame update
@@ -22,7 +23,7 @@ namespace ESP
 
         }
 
-        public void Render(string Content, float PositionY, out float NextPositionY)
+        public void Render(string Content, Sprite sprite, float PositionY, out float NextPositionY)
         {
             transform.localPosition = new Vector3(transform.localPosition.x, PositionY, transform.localPosition.z);
 
@@ -41,6 +42,8 @@ namespace ESP
 
             Panel.Render(Left, Right, Up, Down);
             NextPositionY = PositionY - Height;
+
+            Icon.sprite = sprite;
         }
     }
 }

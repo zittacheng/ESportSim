@@ -10,6 +10,7 @@ namespace ESP
         [HideInInspector] public string LastContent;
         [HideInInspector] public int LastSentenceCount;
         [HideInInspector] public bool Active;
+        [HideInInspector] public ConversationInfo Info;
         public List<Sentence> Sentences;
         public List<ConversationChoice> Choices;
 
@@ -92,6 +93,14 @@ namespace ESP
         public string GetLastContent()
         {
             return LastContent;
+        }
+
+        public ConversationInfo GetInfo()
+        {
+            if (Info)
+                return Info;
+            Info = GetComponent<ConversationInfo>();
+            return Info;
         }
 
         //----------------------------------------------------- KeyBase -----------------------------------------------------

@@ -6,6 +6,7 @@ namespace ESP
 {
     public class ConversationControl : MonoBehaviour {
         public static ConversationControl Main;
+        public Sprite MainIcon;
         public List<Conversation> Conversations;
         public Conversation TempConversation;
         public Conversation CurrentConversation;

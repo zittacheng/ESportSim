@@ -11,6 +11,7 @@ namespace ESP
         public LevelControl LC;
         public ConversationControl CVC;
         public ConversationContentRenderer CVCR;
+        public DialogueControl DC;
         public UIControl UIC;
         public SubUIControl SUIC;
         public ButtonControl BC;
@@ -42,6 +43,14 @@ namespace ESP
             }
             else
                 Destroy(CVC.gameObject);
+
+            if (!DialogueControl.Main)
+            {
+                DialogueControl.Main = DC;
+                DontDestroyOnLoad(DC.gameObject);
+            }
+            else
+                Destroy(DC.gameObject);
 
             if (!KeyBase.Main)
             {

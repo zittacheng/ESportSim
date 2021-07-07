@@ -16,7 +16,7 @@ namespace ADV
         // Update is called once per frame
         void Update()
         {
-            AnimBase.SetActive(DialogueControl.Main.GetCurrentDialogue() && !DialogueControl.Main.InProcess);
+            AnimBase.SetActive(DialogueControl.Main.GetCurrentDialogue() && DialogueControl.Main.GetCurrentDialogue().GetDefaultChoice() && !DialogueControl.Main.InProcess);
         }
     }
 }

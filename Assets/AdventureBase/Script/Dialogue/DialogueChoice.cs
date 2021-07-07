@@ -29,5 +29,10 @@ namespace ADV
         {
 
         }
+
+        public string GetContent()
+        {
+            return Content;
+        }
     }
 }

@@ -37,5 +37,12 @@ namespace ADV
         {
             return DefaultChoice;
         }
+
+        public DialogueChoice GetChoice(int Index)
+        {
+            if (AddChoices.Count <= Index)
+                return null;
+            return AddChoices[Index];
+        }
     }
 }

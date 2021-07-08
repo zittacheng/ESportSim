@@ -3374,13 +3374,12 @@ MonoBehaviour:
   - {fileID: 406539463}
   - {fileID: 1216140102}
   ItemPositions:
-  - {x: 3.9, y: -26}
-  - {x: 12.3, y: -26}
-  - {x: 20.7, y: -26}
-  - {x: 29.1, y: -26}
-  - {x: 37.5, y: -26}
-  - {x: 45.9, y: -26}
-  - {x: 54.3, y: -26}
+  - {x: 7.05, y: -26.16}
+  - {x: 15.87, y: -26.16}
+  - {x: 24.69, y: -26.16}
+  - {x: 33.51, y: -26.16}
+  - {x: 42.33, y: -26.16}
+  - {x: 51.15, y: -26.16}
   IndexRange: {x: 0, y: 0}
   StartIndex: 0
 --- !u!1001 &464123245
@@ -8489,6 +8488,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7812323728880223813, guid: 26a8457b344557a408cac2a70bbc1f0a, type: 3}
+    - target: {fileID: 3546773044405575682, guid: f2a2b1eff5906334c82b655d6f7374b1, type: 3}
+      propertyPath: m_fontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546773044405575682, guid: f2a2b1eff5906334c82b655d6f7374b1, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290965233
+      objectReference: {fileID: 0}
     - target: {fileID: 8253580600478138014, guid: f2a2b1eff5906334c82b655d6f7374b1, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -9233,6 +9240,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Position: {x: 0, y: 0}
   SelectingButtons: []
+  LastSelectingButtons: []
+  SelectionDelay: 0
 --- !u!4 &1503543353
 Transform:
   m_ObjectHideFlags: 0
@@ -12235,6 +12244,8 @@ MonoBehaviour:
   - {x: 22.5, y: 19.5}
   - {x: 31.5, y: 5}
   - {x: 40.5, y: -9.5}
+  BuyButton: {fileID: 1626433137}
+  SellButton: {fileID: 14346479}
 --- !u!114 &2036960503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12894,6 +12905,10 @@ PrefabInstance:
     - target: {fileID: 3546773044405575682, guid: f2a2b1eff5906334c82b655d6f7374b1, type: 3}
       propertyPath: m_text
       value: Archer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546773044405575682, guid: f2a2b1eff5906334c82b655d6f7374b1, type: 3}
+      propertyPath: m_fontSize
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8253580600478138014, guid: f2a2b1eff5906334c82b655d6f7374b1, type: 3}
       propertyPath: m_Layer

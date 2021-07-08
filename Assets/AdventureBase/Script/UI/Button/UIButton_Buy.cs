@@ -11,17 +11,17 @@ namespace ADV
         {
             if (!CombatControl.Main.SelectintGroup)
             {
-                if (Buy && CanSwitch() && CombatControl.Main.MCGroup.CanSwitch(CombatControl.Main.SelectingSwitch.Key))
+                if (CanSwitch() && CombatControl.Main.MCGroup.CanSwitch(CombatControl.Main.SelectingSwitch.Key))
                 {
                     UndoControl.Main.NewUnit(null, null, 0, CombatControl.Main.GetCurrentMC().GetInfo().GetID());
                     CombatControl.Main.MCGroup.SwitchCard(CombatControl.Main.SelectingSwitch.Key);
                 }
-                else if (Buy && CanBuy())
+                else if (CanBuy())
                 {
                     UndoControl.Main.NewUnit(null, CombatControl.Main.SelectingItem.gameObject, CombatControl.Main.SelectingItem.GetKey("Cost"), "");
                     CombatControl.Main.AddItem(CombatControl.Main.SelectingItem.gameObject, -CombatControl.Main.SelectingItem.GetKey("Cost"), CombatControl.Main.MCGroup);
                 }
-                else if (!Buy && CanSell())
+                else if (CanSell())
                 {
                     UndoControl.Main.NewUnit(CombatControl.Main.SelectingItem.gameObject, null, -CombatControl.Main.SelectingItem.GetKey("Cost") * 0.4f, "");
                     CombatControl.Main.RemoveItem(CombatControl.Main.SelectingItem.gameObject, CombatControl.Main.SelectingItem.GetKey("Cost") * 0.4f, CombatControl.Main.MCGroup);
@@ -33,11 +33,11 @@ namespace ADV
                 AIControl_Friendly AF = (AIControl_Friendly)CG.GetAIControl();
                 if (!AF)
                     return;
-                if (Buy && CanSwitch(CG) && CG.CanSwitch(CombatControl.Main.SelectingSwitch.Key))
+                if (CanSwitch(CG) && CG.CanSwitch(CombatControl.Main.SelectingSwitch.Key))
                     AF.ForceSwitch(CombatControl.Main.SelectingSwitch.Key, out _);
-                else if (Buy && CanBuy(CG))
+                else if (CanBuy(CG))
                     AF.ForceBuy(CombatControl.Main.SelectingItem.gameObject, out _);
-                else if (!Buy && CanSell(CG))
+                else if (CanSell(CG))
                     AF.ForceSell(CombatControl.Main.SelectingItem.gameObject, out _);
             }
             base.MouseDownEffect();
@@ -45,6 +45,8 @@ namespace ADV
 
         public bool CanBuy()
         {
+            if (!Buy)
+                return false;
             if (!CombatControl.Main.Waiting)
                 return false;
             Mark_Skill S = CombatControl.Main.SelectingItem;
@@ -55,6 +57,8 @@ namespace ADV
 
         public bool CanSell()
         {
+            if (Buy)
+                return false;
             if (!CombatControl.Main.Waiting)
                 return false;
             Mark_Skill S = CombatControl.Main.SelectingItem;
@@ -63,6 +67,8 @@ namespace ADV
 
         public bool CanSwitch()
         {
+            if (!Buy)
+                return false;
             if (!CombatControl.Main.Waiting)
                 return false;
             return CombatControl.Main.SelectingSwitch && CombatControl.Main.GetCurrentMC().GetInfo().GetID() != CombatControl.Main.SelectingSwitch.Key;
@@ -70,6 +76,10 @@ namespace ADV
 
         public bool CanBuy(CardGroup CG)
         {
+            if (!Buy)
+                return false;
+            if (!CG)
+                return CanBuy();
             if (!CombatControl.Main.Waiting)
                 return false;
             AIControl_Friendly AI = (AIControl_Friendly)CG.GetAIControl();
@@ -83,6 +93,10 @@ namespace ADV
 
         public bool CanSell(CardGroup CG)
         {
+            if (Buy)
+                return false;
+            if (!CG)
+                return CanSell();
             if (!CombatControl.Main.Waiting)
                 return false;
             AIControl_Friendly AI = (AIControl_Friendly)CG.GetAIControl();
@@ -94,6 +108,10 @@ namespace ADV
 
         public bool CanSwitch(CardGroup CG)
         {
+            if (!Buy)
+                return false;
+            if (!CG)
+                return CanSwitch();
             if (!CombatControl.Main.Waiting)
                 return false;
             AIControl_Friendly AI = (AIControl_Friendly)CG.GetAIControl();

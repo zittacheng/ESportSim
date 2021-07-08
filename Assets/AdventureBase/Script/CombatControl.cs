@@ -62,7 +62,7 @@ namespace ADV
         // Update is called once per frame
         void Update()
         {
-            if (Waiting)
+            if (Waiting && HoldingCard)
                 PartyListUpdate();
             AggroUpdate();
         }

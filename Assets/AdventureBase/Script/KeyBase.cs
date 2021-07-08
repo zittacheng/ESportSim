@@ -91,5 +91,22 @@ namespace ADV
         {
             return Key + "[" + Value;
         }
+
+        public void CommonKeys()
+        {
+            // "Time": (Legacy) Max time for each turn
+            // "Coin": Current coin
+            // "Energy": Current energy
+            // "MaxEnergy": Max energy for each turn
+            
+            // "StreamPoint": (Legacy) Current stream ability point
+            // "GamePoint": (Legacy) Current gameplay ability point
+            // "Level": Current level
+            // "Exp": Current exp
+
+            // "[Hero]Level": Current level for the hero
+            // "[Character]Value": Current SAT value for the character
+            // "[Upgrade]Unlocked": Whether the upgrade is unlocked
+        }
     }
 }

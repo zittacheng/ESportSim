@@ -61,5 +61,10 @@ namespace ADV
             foreach (ButtonEffect BE in ExitEffects)
                 BE.Effect();
         }
+
+        public virtual void DoubleClickEffect()
+        {
+
+        }
     }
 }

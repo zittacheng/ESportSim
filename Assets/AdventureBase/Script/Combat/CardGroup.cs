@@ -67,6 +67,68 @@ namespace ADV
             if (!HI)
                 return;
             HI.SwitchHero(GetCurrentCard());
+            if (this != CombatControl.Main.MCGroup)
+                StartCoroutine(SwitchPosition(GetCurrentCard().GetKey("Role")));
+        }
+
+        public IEnumerator SwitchPosition(float Role)
+        {
+            yield return new WaitForSeconds(Random.Range(0.01f, 0.2f));
+            //yield return 0;
+            if (GetCurrentCard().Side == 1)
+            {
+                if (Role == 1)
+                {
+                    Card C = GetCurrentCard();
+                    int I = CombatControl.Main.EnemyCards.IndexOf(C);
+                    while (I != 0 && I != -1 && CombatControl.Main.EnemyCards[I - 1].GetKey("Role") > 1)
+                    {
+                        Card T = CombatControl.Main.EnemyCards[I - 1];
+                        CombatControl.Main.EnemyCards[I - 1] = C;
+                        CombatControl.Main.EnemyCards[I] = T;
+                        I = CombatControl.Main.EnemyCards.IndexOf(C);
+                    }
+                }
+                else
+                {
+                    Card C = GetCurrentCard();
+                    int I = CombatControl.Main.EnemyCards.IndexOf(C);
+                    while (I != CombatControl.Main.EnemyCards.Count - 1 && I != -1 && CombatControl.Main.EnemyCards[I + 1].GetKey("Role") < Role)
+                    {
+                        Card T = CombatControl.Main.EnemyCards[I + 1];
+                        CombatControl.Main.EnemyCards[I + 1] = C;
+                        CombatControl.Main.EnemyCards[I] = T;
+                        I = CombatControl.Main.EnemyCards.IndexOf(C);
+                    }
+                }
+            }
+            else if (GetCurrentCard().Side == 0)
+            {
+                if (Role == 1)
+                {
+                    Card C = GetCurrentCard();
+                    int I = CombatControl.Main.FriendlyCards.IndexOf(C);
+                    while (I != 0 && I != -1 && CombatControl.Main.FriendlyCards[I - 1].GetKey("Role") > 1)
+                    {
+                        Card T = CombatControl.Main.FriendlyCards[I - 1];
+                        CombatControl.Main.FriendlyCards[I - 1] = C;
+                        CombatControl.Main.FriendlyCards[I] = T;
+                        I = CombatControl.Main.FriendlyCards.IndexOf(C);
+                    }
+                }
+                else
+                {
+                    Card C = GetCurrentCard();
+                    int I = CombatControl.Main.FriendlyCards.IndexOf(C);
+                    while (I != CombatControl.Main.FriendlyCards.Count - 1 && I != -1 && CombatControl.Main.FriendlyCards[I + 1].GetKey("Role") < Role)
+                    {
+                        Card T = CombatControl.Main.FriendlyCards[I + 1];
+                        CombatControl.Main.FriendlyCards[I + 1] = C;
+                        CombatControl.Main.FriendlyCards[I] = T;
+                        I = CombatControl.Main.FriendlyCards.IndexOf(C);
+                    }
+                }
+            }
         }
 
         public void SwitchCard_Legacy(string Key)

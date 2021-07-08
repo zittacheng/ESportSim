@@ -9,6 +9,8 @@ namespace ADV
         public DescriptionPanel ItemPanel;
         public List<Vector2> FriendlySlotPositions;
         public List<Vector2> EnemySlotPositions;
+        public UIButton_Buy BuyButton;
+        public UIButton_Buy SellButton;
 
         // Start is called before the first frame update
         void Start()

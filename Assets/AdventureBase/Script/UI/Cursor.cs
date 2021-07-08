@@ -9,6 +9,8 @@ namespace ADV
         public static Cursor Main;
         public Vector2 Position;
         public List<UIButton> SelectingButtons;
+        public List<UIButton> LastSelectingButtons;
+        [HideInInspector] public float SelectionDelay;
 
         public void Awake()
         {
@@ -34,8 +36,23 @@ namespace ADV
 
         public void Interact()
         {
+            if (LastSelectingButtons.Count > 0)
+            {
+                for (int i = SelectingButtons.Count - 1; i >= 0; i--)
+                {
+                    if (LastSelectingButtons.Contains(SelectingButtons[i]))
+                        SelectingButtons[i].DoubleClickEffect();
+                }
+                LastSelectingButtons.Clear();
+            }
+
             for (int i = SelectingButtons.Count - 1; i >= 0; i--)
+            {
                 SelectingButtons[i].MouseDownEffect();
+                LastSelectingButtons.Add(SelectingButtons[i]);
+            }
+            if (LastSelectingButtons.Count > 0)
+                SelectionDelay = 0.25f;
         }
 
         public void UnInteract()
@@ -71,6 +88,15 @@ namespace ADV
                     break;
                 }
             }
+
+            if (SelectionDelay > 0)
+            {
+                SelectionDelay -= Time.deltaTime;
+                if (SelectionDelay <= 0)
+                    LastSelectingButtons.Clear();
+            }
+            else
+                SelectionDelay = 0;
         }
 
         public Vector2 GetPosition()

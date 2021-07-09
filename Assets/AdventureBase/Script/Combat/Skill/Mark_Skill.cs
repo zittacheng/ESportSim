@@ -242,6 +242,13 @@ namespace ADV
             base.TimePassed(Value);
         }
 
+        public override float PassValue(string Key, float Value)
+        {
+            if (GetKey("BasicSkill") == 1 && Key == "AttackSpeed" && GetKey("CoolDown") > 0)
+                return Value * (1 / GetKey("CoolDown"));
+            return base.PassValue(Key, Value);
+        }
+
         public override bool Active()
         {
             return CanUse();
@@ -277,6 +284,7 @@ namespace ADV
             // "StartOfCombat": Whether the skill should be used at the start of combat
             // "EndOfCombat": Whether the skill should be used at the end of combat
             // "IgnoreDeath": Whether the skill can be used on dead target
+            // "BasicSkill": Whether the skill is the auto attack skill
             base.CommonKeys();
         }
     }

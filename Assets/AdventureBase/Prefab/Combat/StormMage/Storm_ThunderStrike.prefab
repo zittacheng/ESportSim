@@ -134,6 +134,7 @@ MonoBehaviour:
   - MainSkill[1
   - Auto[1
   - ManaCost[1
+  - ActiveSkill[1
 --- !u!1 &7854502139769471356
 GameObject:
   m_ObjectHideFlags: 0

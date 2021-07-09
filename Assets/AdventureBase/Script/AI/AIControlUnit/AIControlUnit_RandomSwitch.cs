@@ -19,7 +19,8 @@ namespace ADV
                     foreach (string s in Keys)
                         if (Source.CanSwitch(s))
                             NewKeys.Add(s);
-                    AC.Switch(NewKeys[Random.Range(0, NewKeys.Count)]);
+                    if (NewKeys.Count > 0)
+                        AC.Switch(NewKeys[Random.Range(0, NewKeys.Count)]);
                 }
             }
             base.Execute(Source, Victory);

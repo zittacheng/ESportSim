@@ -10,6 +10,7 @@ namespace ADV
         {
             if (!Target || (GetKey("CombatActive") > 0 && !Target.CombatActive()))
                 return;
+            Target.ChangeLife(-Target.GetLife());
             Target.Death();
             base.EndEffect();
         }

@@ -262,7 +262,7 @@ namespace ADV
                 Result = -1;
                 return true;
             }
-            else if (CurrentTime >= 240f)
+            else if (CurrentTime >= 150f)
             {
                 Result = 0;
                 return true;

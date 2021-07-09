@@ -9,6 +9,7 @@ namespace ADV
         public DialogueChoice DefaultChoice;
         public List<DialogueChoice> AddChoices;
         [HideInInspector] public List<DialogueUnit> Units;
+        [HideInInspector] public DialogueInfo Info;
 
         public void Awake()
         {
@@ -43,6 +44,13 @@ namespace ADV
             if (AddChoices.Count <= Index)
                 return null;
             return AddChoices[Index];
+        }
+
+        public DialogueInfo GetInfo()
+        {
+            if (!Info)
+                Info = GetComponent<DialogueInfo>();
+            return Info;
         }
     }
 }

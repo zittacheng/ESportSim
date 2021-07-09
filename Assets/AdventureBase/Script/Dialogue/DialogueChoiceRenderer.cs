@@ -13,6 +13,11 @@ namespace ADV
         public int Index;
         public bool MouseOn;
 
+        public void OnEnable()
+        {
+            Render();
+        }
+
         // Start is called before the first frame update
         void Start()
         {

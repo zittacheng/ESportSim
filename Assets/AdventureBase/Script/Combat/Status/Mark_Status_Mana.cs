@@ -20,6 +20,8 @@ namespace ADV
         {
             if (Key == "Mana")
                 return GetKey("Mana") / GetKey("MaxMana");
+            if (Key == "MaxMana")
+                return GetKey("MaxMana");
             else if (Key == "ManaChange")
             {
                 ChangeKey("Mana", Value * GetKey("MaxMana"));

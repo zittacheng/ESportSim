@@ -2346,8 +2346,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41.2, y: -33.17}
-  m_SizeDelta: {x: 2, y: 5}
+  m_AnchoredPosition: {x: -40.9589, y: -33.17}
+  m_SizeDelta: {x: 2.4821, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &277647903
 MonoBehaviour:
@@ -2396,12 +2396,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.2
+  m_fontSize: 22
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 25
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -7137,8 +7137,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28, y: -33.17}
-  m_SizeDelta: {x: 2.2716, y: 5}
+  m_AnchoredPosition: {x: -27.740402, y: -33.17}
+  m_SizeDelta: {x: 2.7908, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1113961966
 MonoBehaviour:
@@ -7187,12 +7187,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21
+  m_fontSize: 22
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 25
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -10030,8 +10030,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34.5, y: -33.17}
-  m_SizeDelta: {x: 2.2414, y: 5}
+  m_AnchoredPosition: {x: -34.221863, y: -33.17}
+  m_SizeDelta: {x: 2.7977, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1641838191
 MonoBehaviour:
@@ -10080,12 +10080,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.7
+  m_fontSize: 22
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 25
+  m_fontSizeMax: 22
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512

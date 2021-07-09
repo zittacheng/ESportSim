@@ -685,6 +685,7 @@ MonoBehaviour:
   - CoolDown[1.8
   - GCD[1.8
   - ASCD[1
+  - BasicSkill[1
 --- !u!114 &934917366257813044
 MonoBehaviour:
   m_ObjectHideFlags: 0

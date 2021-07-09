@@ -226,6 +226,7 @@ MonoBehaviour:
   - Auto[1
   - CoolDown[1.4
   - ASCD[1
+  - BasicSkill[1
 --- !u!1 &3133034055059732834
 GameObject:
   m_ObjectHideFlags: 0

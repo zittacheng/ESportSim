@@ -17,6 +17,10 @@ namespace ESP
         public UIWindow_Result W_Result;
         public UIWindow_Result W_HeroResult;
         public UIWindow_Result W_GameResult;
+        [Space]
+        public Animator UIMask;
+        public Location CurrentLocation;
+        public bool InTransit;
 
         public void AddButton(UIButton B)
         {
@@ -50,6 +54,8 @@ namespace ESP
 
         public UIWindow ActiveWindow(UIWindow W)
         {
+            if (InTransit)
+                return W;
             W.transform.position = new Vector3(WindowPosition.x, WindowPosition.y, W.transform.position.z);
             CurrentWindow = W;
             W.OnOpen();
@@ -75,10 +81,54 @@ namespace ESP
 
         public void CloseWindow()
         {
-            if (!CurrentWindow)
+            if (!CurrentWindow || InTransit)
                 return;
             CurrentWindow.transform.position = new Vector3(0, -100, CurrentWindow.transform.position.z);
             CurrentWindow = null;
         }
+
+        public void MoveToShp()
+        {
+            if (InTransit || CurrentLocation == Location.Shop)
+                return;
+            CurrentLocation = Location.Shop;
+            InTransit = true;
+            StartCoroutine("MoveToShopIE");
+        }
+
+        public IEnumerator MoveToShopIE()
+        {
+            UIMask.SetBool("Active", true);
+            yield return new WaitForSeconds(0.52f);
+            Camera.main.transform.position = new Vector3(-300, 0, -10);
+            yield return new WaitForSeconds(0.2f);
+            UIMask.SetBool("Active", false);
+            InTransit = false;
+        }
+
+        public void MoveBack()
+        {
+            if (InTransit || CurrentLocation == Location.Common)
+                return;
+            CurrentLocation = Location.Common;
+            InTransit = true;
+            StartCoroutine("MoveBackIE");
+        }
+
+        public IEnumerator MoveBackIE()
+        {
+            UIMask.SetBool("Active", true);
+            yield return new WaitForSeconds(0.52f);
+            Camera.main.transform.position = new Vector3(0, 0, -10);
+            yield return new WaitForSeconds(0.2f);
+            UIMask.SetBool("Active", false);
+            InTransit = false;
+        }
+    }
+
+    public enum Location
+    {
+        Common,
+        Shop
     }
 }

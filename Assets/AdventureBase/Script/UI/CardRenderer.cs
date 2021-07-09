@@ -223,6 +223,8 @@ namespace ADV
 
         public string StatToText(float Stat)
         {
+            if (Stat == 0)
+                return "0.0";
             float Temp = ((int)(Stat / 0.1f)) / 10f + 0.1f;
             if (Temp < 10 && Temp % 1 == 0)
                 return Temp + ".0";

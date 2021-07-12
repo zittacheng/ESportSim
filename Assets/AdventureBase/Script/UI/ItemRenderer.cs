@@ -186,6 +186,8 @@ namespace ADV
 
         public override void DoubleClickEffect()
         {
+            CombatControl.Main.SelectingItem = GetItem().GetComponent<Mark_Skill>();
+            CombatControl.Main.SelectingItemRenderer = this;
             CardGroup CG = CombatControl.Main.SelectintGroup;
             UIButton_Buy B = UIControl.Main.BuyButton;
             if (B.CanBuy(CG) || B.CanSell(CG) || B.CanSwitch(CG))

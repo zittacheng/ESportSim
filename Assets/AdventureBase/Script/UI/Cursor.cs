@@ -36,18 +36,24 @@ namespace ADV
 
         public void Interact()
         {
+            List<UIButton> LastButtons = new List<UIButton>();
             if (LastSelectingButtons.Count > 0)
             {
                 for (int i = SelectingButtons.Count - 1; i >= 0; i--)
                 {
                     if (LastSelectingButtons.Contains(SelectingButtons[i]))
+                    {
                         SelectingButtons[i].DoubleClickEffect();
+                        LastButtons.Add(SelectingButtons[i]);
+                    }
                 }
                 LastSelectingButtons.Clear();
             }
 
             for (int i = SelectingButtons.Count - 1; i >= 0; i--)
             {
+                if (LastButtons.Contains(SelectingButtons[i]))
+                    continue;
                 SelectingButtons[i].MouseDownEffect();
                 LastSelectingButtons.Add(SelectingButtons[i]);
             }

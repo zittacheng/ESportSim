@@ -235,6 +235,7 @@ MonoBehaviour:
   - Shield[0
   - MaxLifeRate[0.1
   - AbilityPowerScaling[1
+  - Support[1
 --- !u!1 &4442666193229954515
 GameObject:
   m_ObjectHideFlags: 0

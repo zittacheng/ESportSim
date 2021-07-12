@@ -117,8 +117,7 @@ namespace ADV
             AIControl_Friendly AI = (AIControl_Friendly)CG.GetAIControl();
             if (!AI || !AI.CanSwitch)
                 return false;
-            Card C = CombatControl.Main.SelectingCard;
-            return C && CG.GetCurrentCard() != C;
+            return CombatControl.Main.SelectingSwitch;
         }
     }
 }

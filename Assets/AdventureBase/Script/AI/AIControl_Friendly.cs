@@ -32,7 +32,7 @@ namespace ADV
 
         public float GetDeniedRate()
         {
-            return 1f;
+            return 0f;
         }
 
         public void ForceSwitch(string Key, out bool Denied)

@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace ADV
 {
-    public class Mark_Status_AblityPower : Mark_Status {
+    public class Mark_Status_AbilityPower : Mark_Status {
         public List<string> RequiredKeys;
 
         public override void OutputSignal(Signal S)
         {
-            if (S.GetKey("AbilityPowerScaling") == 1 && S.Target && S.Source && S.Source.GetSide() == S.Target.GetSide() && Trigger(S))
+            if (S.GetKey("AbilityPowerScaling") == 1 && Trigger(S))
             {
                 if (S.HasKey("Shield"))
                     S.SetKey("Shield", S.GetKey("Shield") * GetKey("PowerMod"));
@@ -19,6 +19,14 @@ namespace ADV
                     d *= GetKey("PowerMod");
                     S.SetKey("DamageMod", 1 + d);
                 }
+                if (S.HasKey("SpeedMod"))
+                {
+                    float d = S.GetKey("SpeedMod") - 1;
+                    d *= GetKey("PowerMod");
+                    S.SetKey("SpeedMod", 1 + d);
+                }
+                if (S.HasKey("Damage"))
+                    S.SetKey("Damage", S.GetKey("Damage") * GetKey("PowerMod"));
                 if (S.HasKey("Heal"))
                     S.SetKey("Heal", S.GetKey("Heal") * GetKey("PowerMod"));
                 if (S.HasKey("HealScale"))

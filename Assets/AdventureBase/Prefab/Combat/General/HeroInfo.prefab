@@ -247,7 +247,7 @@ MonoBehaviour:
   HeroKey: Assassin
   Role: 2
   MaxLife: 180
-  MaxMana: 16
+  MaxMana: 18
   BaseDamage: 6
   SkillPrefabs:
   - {fileID: 2082819345655060567, guid: 3cc630c8a7a6db34aadeeee8e539b849, type: 3}
@@ -408,7 +408,7 @@ MonoBehaviour:
   HeroKey: HealerII
   Role: 3
   MaxLife: 200
-  MaxMana: 15
+  MaxMana: 8
   BaseDamage: 8
   SkillPrefabs:
   - {fileID: 1310520441963826179, guid: e57c6b67947c3044f845aa3ebccf7ea2, type: 3}

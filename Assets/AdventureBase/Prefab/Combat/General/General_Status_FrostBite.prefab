@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6383692661951056280
+--- !u!1 &8915818370517147131
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3461154491556971405}
-  - component: {fileID: 6996933164320864617}
-  - component: {fileID: 4671064703813069996}
-  - component: {fileID: 6800585325354476686}
+  - component: {fileID: 2654124316633064908}
+  - component: {fileID: 1307333644251273129}
+  - component: {fileID: 8248826994922335157}
+  - component: {fileID: 1222234848099330948}
   m_Layer: 0
-  m_Name: Protector_Status_Passage
+  m_Name: General_Status_FrostBite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3461154491556971405
+--- !u!4 &2654124316633064908
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6383692661951056280}
+  m_GameObject: {fileID: 8915818370517147131}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,32 +33,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6996933164320864617
+--- !u!114 &1307333644251273129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6383692661951056280}
+  m_GameObject: {fileID: 8915818370517147131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10ed74c0b08ded349a6e5b98a9e8bb71, type: 3}
+  m_Script: {fileID: 11500000, guid: 07c976c0194413d40ad44345155bce45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KB: {fileID: 4671064703813069996}
+  KB: {fileID: 8248826994922335157}
   Info: {fileID: 0}
   Source: {fileID: 0}
-  RequiredKeys: []
-  AvoidedKeys:
-  - Real
-  SourceConditions: []
---- !u!114 &4671064703813069996
+--- !u!114 &8248826994922335157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6383692661951056280}
+  m_GameObject: {fileID: 8915818370517147131}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
@@ -67,22 +63,23 @@ MonoBehaviour:
   Keys:
   - Render[1
   - Duration[5
-  - DamageMod[0.6
-  - Buff[1
---- !u!114 &6800585325354476686
+  - SpeedMod[0.8
+  - RecoveryMod[0.8
+  - Debuff[1
+--- !u!114 &1222234848099330948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6383692661951056280}
+  m_GameObject: {fileID: 8915818370517147131}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50aeef807b653a342aa4307f8c082a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 
-  Name: Protector_Status_Passage
-  RenderName: + Passage
+  Name: General_Status_FrostBite
+  RenderName: '-  Frostbite'
   Description: 
   Icon: {fileID: 0}

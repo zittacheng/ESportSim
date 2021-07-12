@@ -127,7 +127,9 @@ MonoBehaviour:
   - RDR[1
   - MainHit[1
   - AbilityHit[1
-  - ProcChance[0.25
+  - ProcChance[1
+  - AbilityPowerScaling[1
+  - Horn[1
 --- !u!1 &5840808676731986485
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +181,7 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
+  InheritKeys: []
   Signals:
   - {fileID: 3129822142211168903}
   - {fileID: 7192242663733606046}

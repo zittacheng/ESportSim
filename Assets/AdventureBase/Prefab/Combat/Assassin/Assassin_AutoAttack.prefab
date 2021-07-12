@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Auto[1
-  - CoolDown[0.7
+  - CoolDown[0.8
   - ASCD[1
   - BasicSkill[1
 --- !u!1 &2243585769269404468

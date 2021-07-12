@@ -118,7 +118,8 @@ MonoBehaviour:
   KB: {fileID: 3920416910641601532}
   Info: {fileID: 0}
   Source: {fileID: 0}
-  RequiredKeys: []
+  RequiredKeys:
+  - Support
   AvoidedKeys: []
   SourceConditions: []
   TargetConditions: []

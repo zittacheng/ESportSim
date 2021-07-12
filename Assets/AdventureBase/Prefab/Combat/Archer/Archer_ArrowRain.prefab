@@ -160,6 +160,8 @@ MonoBehaviour:
   - SubHit[1
   - AbilityHit[1
   - ProcChance[1
+  - AbilityPowerScaling[1
+  - Horn[1
 --- !u!1 &1730750456890107833
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +464,8 @@ MonoBehaviour:
   - MainHit[1
   - AbilityHit[1
   - ProcChance[1
+  - AbilityPowerScaling[1
+  - Horn[1
 --- !u!1 &4241054313584567538
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +594,7 @@ MonoBehaviour:
   Keys:
   - Target[0
   - ManaChange[-1
+  - UseMainSkill[1
 --- !u!1 &4590389753989659651
 GameObject:
   m_ObjectHideFlags: 0

@@ -209,6 +209,7 @@ MonoBehaviour:
   Keys:
   - Target[0
   - ManaChange[-1
+  - UseMainSkill[1
 --- !u!1 &8030137170227943138
 GameObject:
   m_ObjectHideFlags: 0

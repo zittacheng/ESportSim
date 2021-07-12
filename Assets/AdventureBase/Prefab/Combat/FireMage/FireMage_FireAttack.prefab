@@ -306,8 +306,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2694600528975093874, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
+      propertyPath: Keys.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694600528975093874, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
       propertyPath: Keys.Array.data[2]
       value: Damage[2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694600528975093874, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
+      propertyPath: Keys.Array.data[7]
+      value: AbilityPowerScaling[1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694600528975093874, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
+      propertyPath: Keys.Array.data[8]
+      value: Horn[1
       objectReference: {fileID: 0}
     - target: {fileID: 5445824766774192401, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
       propertyPath: Signals.Array.size
@@ -390,8 +402,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6859586011269005177, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
+      propertyPath: Keys.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859586011269005177, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
       propertyPath: Keys.Array.data[2]
       value: Damage[2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859586011269005177, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
+      propertyPath: Keys.Array.data[7]
+      value: AbilityPowerScaling[1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859586011269005177, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
+      propertyPath: Keys.Array.data[8]
+      value: Horn[1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}

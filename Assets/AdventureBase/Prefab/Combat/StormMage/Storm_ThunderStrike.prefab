@@ -274,6 +274,7 @@ MonoBehaviour:
   Keys:
   - Target[0
   - ManaChange[-1
+  - UseMainSkill[1
 --- !u!1001 &310323214655061803
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,9 @@ namespace ADV
         {
             if (!Target)
                 return;
+            Mark_Status E = Target.GetStatus(EffectPrefab.GetComponent<Mark_Status>().GetID());
+            if (E)
+                return;
             Target.AddStatus(MarkPrefab.GetComponent<Mark_Status>(), new List<string>());
             Mark_Status M = Target.GetStatus(MarkPrefab.GetComponent<Mark_Status>().GetID());
             if (!M)

@@ -52,9 +52,9 @@ namespace ADV
 
             for (int i = SelectingButtons.Count - 1; i >= 0; i--)
             {
+                SelectingButtons[i].MouseDownEffect();
                 if (LastButtons.Contains(SelectingButtons[i]))
                     continue;
-                SelectingButtons[i].MouseDownEffect();
                 LastSelectingButtons.Add(SelectingButtons[i]);
             }
             if (LastSelectingButtons.Count > 0)

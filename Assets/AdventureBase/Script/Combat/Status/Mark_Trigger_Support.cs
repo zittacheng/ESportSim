@@ -8,7 +8,7 @@ namespace ADV
 
         public override void OutputSignal(Signal S)
         {
-            if (S.GetKey("AbilityPowerScaling") == 1 && S.Target && S.Source && S.Source.GetSide() == S.Target.GetSide())
+            if (S.GetKey("AbilityPowerScaling") == 1 && S.Target && S.Source && S.Source.GetSide() == S.Target.GetSide() && Pass(S))
                 TryTrigger(S.Target, 1, new List<string>());
             base.OutputSignal(S);
         }

@@ -976,6 +976,8 @@ namespace ADV
 
         public Mark_Status AddStatus(Mark_Status M, List<string> AddKeys)
         {
+            if (!M)
+                return null;
             GameObject G = Instantiate(M.gameObject);
             G.transform.parent = transform;
             Mark_Status S = G.GetComponent<Mark_Status>();

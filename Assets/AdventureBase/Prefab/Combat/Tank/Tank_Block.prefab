@@ -338,6 +338,7 @@ MonoBehaviour:
   - MaxLifeRate[0.1
   - AbilityPowerScaling[1
   - Support[1
+  - Horn[1
 --- !u!1 &5983484175624343455
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +402,7 @@ MonoBehaviour:
   Keys:
   - Target[0
   - ManaChange[-1
+  - UseMainSkill[1
 --- !u!1 &6041152374066572954
 GameObject:
   m_ObjectHideFlags: 0

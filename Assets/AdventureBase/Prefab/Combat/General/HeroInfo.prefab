@@ -357,8 +357,8 @@ MonoBehaviour:
   MaxMana: 4
   BaseDamage: 10
   SkillPrefabs:
-  - {fileID: 6201478761380047384, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
   - {fileID: 6441293287966430658, guid: 5a55e687e07f2564dbfcf9e211097f87, type: 3}
+  - {fileID: 6201478761380047384, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
   - {fileID: 8030137170227943138, guid: 91e9a46e4cfa0d249a5f86b6c55d4514, type: 3}
   StatusPrefabs: []
 --- !u!1 &5440376580506867611

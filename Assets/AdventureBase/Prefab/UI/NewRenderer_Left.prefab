@@ -1391,7 +1391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2348670391605126229
 Transform:
   m_ObjectHideFlags: 0
@@ -1400,7 +1400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4958724547069367561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.9, y: 5, z: 0}
+  m_LocalPosition: {x: 7.22, y: -0.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1680030018364830511}
@@ -1423,8 +1423,8 @@ MonoBehaviour:
   UpEffects: []
   EnterEffects: []
   ExitEffects: []
-  CursorRangeX: {x: -3.5, y: 3.5}
-  CursorRangeY: {x: -2.8, y: 2.8}
+  CursorRangeX: {x: -13.5, y: 13.5}
+  CursorRangeY: {x: -5.5, y: 5.5}
   CR: {fileID: 4067304564556569859}
   Selection: {fileID: 5223709299720186793}
 --- !u!1 &5091504296254339211

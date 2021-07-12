@@ -47,6 +47,8 @@ MonoBehaviour:
   KB: {fileID: 4676093650580717748}
   Info: {fileID: 0}
   Source: {fileID: 0}
+  RequiredKeys:
+  - Support
 --- !u!114 &4676093650580717748
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -96,13 +96,22 @@ namespace ADV
 
         public override void DoubleClickEffect()
         {
+            CombatControl.Main.SelectingCard = GetTarget();
+            CombatControl.Main.SelectingSwitch = this;
             CardGroup CG = CombatControl.Main.SelectintGroup;
+
             UIButton_Buy B = UIControl.Main.BuyButton;
             if (B.CanBuy(CG) || B.CanSell(CG) || B.CanSwitch(CG))
+            {
                 B.MouseDownEffect();
+            }
+
             B = UIControl.Main.SellButton;
             if (B.CanBuy(CG) || B.CanSell(CG) || B.CanSwitch(CG))
+            {
                 B.MouseDownEffect();
+            }
+
             base.DoubleClickEffect();
         }
     }

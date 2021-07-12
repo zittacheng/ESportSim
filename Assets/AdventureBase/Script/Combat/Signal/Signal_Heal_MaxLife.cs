@@ -8,13 +8,17 @@ namespace ADV
 
         public override float GetHealValue(float Base)
         {
-            return base.GetHealValue(Base) + Source.GetMaxLife() * GetKey("MaxLifeRate") + Source.GetLife() * GetKey("LifeRate");
+            float a = 1;
+            if (HasKey("HealScale"))
+                a = GetKey("HealScale");
+            return base.GetHealValue(Base) + Source.GetMaxLife() * GetKey("MaxLifeRate") + Source.GetLife() * GetKey("LifeRate") * a;
         }
 
         public override void CommonKeys()
         {
             // "MaxLifeRate": Amount of max life add to heal value
             // "LifeRate": Amount of life add to heal value
+            // "HealScale": Add heal scaling
             base.CommonKeys();
         }
     }

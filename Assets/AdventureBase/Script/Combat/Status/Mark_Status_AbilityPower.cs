@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ADV
 {
-    public class Mark_Status_SupportPower : Mark_Status {
+    public class Mark_Status_AblityPower : Mark_Status {
         public List<string> RequiredKeys;
 
         public override void OutputSignal(Signal S)

@@ -50,7 +50,9 @@ MonoBehaviour:
   Info: {fileID: 0}
   Source: {fileID: 0}
   Target: {fileID: 0}
-  InheritKeys: []
+  InheritKeys:
+  - SpeedMod
+  - DamageMod
   StatusPrefabs:
   - {fileID: 8873397056660641391}
   - {fileID: 7431749406852917271}
@@ -68,6 +70,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Target[1
+  - DamageMod[1.8
+  - SpeedMod[1.25
+  - AbilityPowerScaling[1
+  - Horn[1
 --- !u!1 &1572249242476802719
 GameObject:
   m_ObjectHideFlags: 0

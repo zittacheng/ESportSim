@@ -353,8 +353,8 @@ MonoBehaviour:
   Scaling: 0
   HeroKey: FireMage
   Role: 2
-  MaxLife: 225
-  MaxMana: 4
+  MaxLife: 150
+  MaxMana: 20
   BaseDamage: 10
   SkillPrefabs:
   - {fileID: 6441293287966430658, guid: 5a55e687e07f2564dbfcf9e211097f87, type: 3}

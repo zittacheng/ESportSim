@@ -162,7 +162,7 @@ MonoBehaviour:
   Keys:
   - Target[1
   - Shield[0
-  - MaxLifeRate[0.2
+  - MaxLifeRate[0.3
   - ShieldMod[0
   - ModChange[1
 --- !u!1 &2551488005918077612

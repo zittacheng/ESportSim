@@ -92,6 +92,69 @@ MonoBehaviour:
   - Size[1.2
   - Time[0.25
   - ParticleScale[1.5
+--- !u!1 &2889835299414468159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3082738765862499076}
+  - component: {fileID: 7810514236230159613}
+  - component: {fileID: 700207027389593589}
+  m_Layer: 0
+  m_Name: AttackSignal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3082738765862499076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2889835299414468159}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2936274018777498118}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7810514236230159613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2889835299414468159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed7530b51014f448938f49d87e40aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KB: {fileID: 700207027389593589}
+  Info: {fileID: 0}
+  Source: {fileID: 0}
+  Target: {fileID: 0}
+--- !u!114 &700207027389593589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2889835299414468159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Keys:
+  - Target[0
+  - OnAutoAttack[1
 --- !u!1 &2936274018722891885
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +247,7 @@ Transform:
   - {fileID: 2936274018722891874}
   - {fileID: 2893430749012324813}
   - {fileID: 5892907667491328034}
+  - {fileID: 3082738765862499076}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -205,6 +269,7 @@ MonoBehaviour:
   MainSignals:
   - {fileID: 8849621879436109797}
   - {fileID: 2071021334458977182}
+  - {fileID: 2889835299414468159}
   Targetings:
   - {fileID: 2936274018722891885}
   Conditions: []

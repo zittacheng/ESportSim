@@ -203,7 +203,7 @@ MonoBehaviour:
   - Item[1
   - Count[1
   - Consumed[1
-  - Cost[10
+  - Cost[8
 --- !u!114 &6807392005408261520
 MonoBehaviour:
   m_ObjectHideFlags: 0

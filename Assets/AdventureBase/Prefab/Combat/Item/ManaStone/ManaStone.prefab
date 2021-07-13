@@ -135,7 +135,7 @@ MonoBehaviour:
   - RecoveryMod[0.2
   - Item[1
   - Count[1
-  - Cost[30
+  - Cost[20
 --- !u!114 &9141202851424813068
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -74,7 +74,7 @@ MonoBehaviour:
   - CanStack[1
   - Item[1
   - Count[1
-  - Cost[50
+  - Cost[20
 --- !u!114 &3880118397018471076
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: 
   Name: Item_Flashlight
-  RenderName: Irradiant Flashlight
+  RenderName: Irradiant Mace
   Description: Description
   Icon: {fileID: 4337684191699249041, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1001 &2624859565816484949

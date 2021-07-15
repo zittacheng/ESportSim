@@ -159,7 +159,8 @@ MonoBehaviour:
   Key: 
   Name: Item_LightningRod
   RenderName: Lightning Rod
-  Description: Description
+  Description: Normal attacks have a 20% chance of triggering a group attack,  all
+    enemy heroes will receive damage equal to 70% of your damage.
   Icon: {fileID: -7573354855677281409, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1 &4038134380275391982
 GameObject:

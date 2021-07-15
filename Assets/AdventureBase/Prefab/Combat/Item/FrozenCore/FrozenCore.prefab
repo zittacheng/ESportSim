@@ -218,8 +218,12 @@ MonoBehaviour:
   Key: 
   Name: Item_FrozenCore
   RenderName: Frozen Sheath
-  Description: Description
+  Description: When dealling damage, apply a layer of ice mark to the target. When
+    the mark reaches 5, apply frostbite to the target for 5 seconds. The ice mark
+    does not stack when in the frostbite state.
   Icon: {fileID: -2821042892349479055, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips:
+  - Frosbite
 --- !u!1001 &3182098911763239874
 PrefabInstance:
   m_ObjectHideFlags: 0

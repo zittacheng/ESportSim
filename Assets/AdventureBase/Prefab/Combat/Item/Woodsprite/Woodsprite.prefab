@@ -218,8 +218,11 @@ MonoBehaviour:
   Key: 
   Name: Item_Woodsprite
   RenderName: Ancient Woodsprite
-  Description: Description
+  Description: Whenever a non-enhanceing ability is applied to a friendly champion,
+    apply blessed to the champion for 5 seconds
   Icon: {fileID: 4337684191699249041, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips:
+  - Blessed
 --- !u!1001 &2011298844882935319
 PrefabInstance:
   m_ObjectHideFlags: 0

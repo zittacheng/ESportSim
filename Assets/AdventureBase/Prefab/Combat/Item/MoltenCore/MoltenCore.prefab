@@ -151,8 +151,12 @@ MonoBehaviour:
   Key: 
   Name: Item_MoltenCore
   RenderName: Molten Sheath
-  Description: Description
+  Description: Normal attack applies a layer of flame mark to the target. When the
+    mark reaches 5, apply Burning state to the target for 3 seconds. The flame mark
+    does not stack in the burning state.
   Icon: {fileID: 2029542551908640097, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips:
+  - Burning
 --- !u!1 &4171548468293020353
 GameObject:
   m_ObjectHideFlags: 0

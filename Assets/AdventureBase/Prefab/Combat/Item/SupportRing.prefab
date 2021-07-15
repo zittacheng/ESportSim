@@ -214,7 +214,8 @@ MonoBehaviour:
   Key: 
   Name: Item_SupportRing
   RenderName: Support Ring
-  Description: Description
+  Description: The effect of non-enhancive active abilities applied to your heroes
+    will increase by 40%
   Icon: {fileID: -5971942374765049077, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1 &3123716715179575102
 GameObject:

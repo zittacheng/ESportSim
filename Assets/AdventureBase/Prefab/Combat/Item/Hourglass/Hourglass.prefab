@@ -218,8 +218,10 @@ MonoBehaviour:
   Key: 
   Name: Item_Hourglass
   RenderName: Hourglass
-  Description: Description
+  Description: When the champion HP is 1, gain invincibility for 5 seconds
   Icon: {fileID: -2064859774160998932, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips:
+  - Invincibility
 --- !u!1001 &2662175716698302414
 PrefabInstance:
   m_ObjectHideFlags: 0

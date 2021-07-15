@@ -11,6 +11,10 @@ namespace ADV
         public GameObject AnimBase;
         public TextMeshPro NameText;
         public TextMeshPro DescriptionText;
+        public GameObject ToolTipBase;
+        public Vector3 ToolTipPosition_Left;
+        public Vector3 ToolTipPosition_Right;
+        public List<ToolTipRenderer> ToolTips;
 
         // Start is called before the first frame update
         void Start()
@@ -56,6 +60,40 @@ namespace ADV
             transform.position = new Vector3(Center.x, Center.y, transform.position.z);
             NameText.text = MInfo.GetName();
             Panel.Render(Center.x - 8, Center.x + 8, Center.y + Height * 0.5f, Center.y - Height * 0.5f);
+
+            if (Direction == PanelDirection.Left)
+                ToolTipRender(ToolTipDirection.Left, MInfo);
+            else
+                ToolTipRender(ToolTipDirection.Right, MInfo);
+        }
+
+        public void ToolTipRender(ToolTipDirection Direction, MarkInfo MInfo)
+        {
+            float Height = 0;
+            
+            foreach (ToolTipRenderer TTR in ToolTips)
+            {
+                if (!MInfo.ToolTips.Contains(TTR.Key))
+                    TTR.gameObject.SetActive(false);
+            }
+
+            foreach (string s in MInfo.ToolTips)
+            {
+                foreach (ToolTipRenderer TTR in ToolTips)
+                {
+                    if (TTR.Key == s)
+                    {
+                        TTR.gameObject.SetActive(true);
+                        TTR.transform.localPosition = new Vector3(TTR.transform.localPosition.x, -Height, TTR.transform.localPosition.z);
+                        Height += TTR.Height;
+                    }
+                }
+            }
+
+            if (Direction == ToolTipDirection.Left)
+                ToolTipBase.transform.localPosition = ToolTipPosition_Left;
+            else if (Direction == ToolTipDirection.Right)
+                ToolTipBase.transform.localPosition = ToolTipPosition_Right;
         }
     }
 
@@ -64,5 +102,11 @@ namespace ADV
         Left,
         Right,
         Up
+    }
+
+    public enum ToolTipDirection
+    {
+        Left,
+        Right
     }
 }

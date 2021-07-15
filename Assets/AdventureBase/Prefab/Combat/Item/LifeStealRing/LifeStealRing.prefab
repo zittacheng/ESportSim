@@ -218,8 +218,10 @@ MonoBehaviour:
   Key: 
   Name: Item_LifeStealRing
   RenderName: Leeching Sheath
-  Description: Description
+  Description: Add 20% life steal to all damage dealt
   Icon: {fileID: 1801263428120863714, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips:
+  - LifeSteal
 --- !u!1001 &9011839211907753741
 PrefabInstance:
   m_ObjectHideFlags: 0

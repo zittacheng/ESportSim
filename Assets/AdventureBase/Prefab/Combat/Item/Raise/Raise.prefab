@@ -80,6 +80,7 @@ MonoBehaviour:
   RenderName: '-  Raising'
   Description: 
   Icon: {fileID: 0}
+  ToolTips: []
 --- !u!1 &1156616576845331293
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,8 +301,13 @@ MonoBehaviour:
   Key: 
   Name: Item_Raise
   RenderName: Necromancy Ring
-  Description: Description
+  Description: "Whenever a team champion dies, channel for 5s. After the channel
+    is completed, the teammate will be resurrected. After the resurrection, the teammate\u2019s
+    HP will restore by 50%, the mana amount will be 0, all buffs and debuffs will
+    be removed."
   Icon: {fileID: -2821042892349479055, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips:
+  - Channel
 --- !u!1 &1839146593340440450
 GameObject:
   m_ObjectHideFlags: 0

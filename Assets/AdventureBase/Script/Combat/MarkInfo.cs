@@ -7,6 +7,7 @@ namespace ADV
     public class MarkInfo : TextInfo {
         [TextArea] public string Description;
         public Sprite Icon;
+        public List<string> ToolTips;
 
         // Start is called before the first frame update
         void Start()

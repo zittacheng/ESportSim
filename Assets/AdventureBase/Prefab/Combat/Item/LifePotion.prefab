@@ -355,7 +355,8 @@ MonoBehaviour:
   Key: 
   Name: Item_LifePotion
   RenderName: Recovery Potion
-  Description: Description
+  Description: When the HP is less than 30%, immediately restores 30% of maximum
+    HP
   Icon: {fileID: 4639506938558671751, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1 &8136487416909133632
 GameObject:

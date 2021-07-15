@@ -158,7 +158,8 @@ MonoBehaviour:
   Key: 
   Name: Item_Guillotine
   RenderName: Old Guillotine
-  Description: Description
+  Description: When an attack is dealt on an enemy champion and the thier HP is less
+    than 10%, the enemy champion will die directly
   Icon: {fileID: -3694533877916086887, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1 &5155911324903518156
 GameObject:

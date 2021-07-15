@@ -219,8 +219,11 @@ MonoBehaviour:
   Key: 
   Name: Item_NewArmorPlate
   RenderName: New Armor Plate
-  Description: Description
+  Description: When the HP is less than 50%, immediately obtain an armor equivalent
+    to 30% of maximum HP
   Icon: {fileID: -488721925442295091, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips:
+  - Armor
 --- !u!1 &6807392005454684842
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,3 +377,4 @@ MonoBehaviour:
   RenderName: + Armor
   Description: 
   Icon: {fileID: 0}
+  ToolTips: []

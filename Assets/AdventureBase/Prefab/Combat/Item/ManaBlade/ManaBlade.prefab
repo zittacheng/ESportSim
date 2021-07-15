@@ -151,7 +151,7 @@ MonoBehaviour:
   Key: 
   Name: Item_ManaBlade
   RenderName: Celestial Sheath
-  Description: Description
+  Description: Normal attacks have 20% chance of restoring 20% of max mana.
   Icon: {fileID: -7855203551248514480, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
 --- !u!1 &4255389618680282204
 GameObject:

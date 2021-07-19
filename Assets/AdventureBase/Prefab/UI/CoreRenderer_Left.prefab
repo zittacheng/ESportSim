@@ -52,6 +52,7 @@ MonoBehaviour:
   NameText: {fileID: 0}
   LifeRenderDirection: 0
   LifeBar: {fileID: 1077419798976556191}
+  LifeBarScale: {fileID: 0}
   DamageBar: {fileID: 0}
   DamageBarDelay: 0
   ShieldBar: {fileID: 0}
@@ -167,7 +168,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -56599821
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 3865025708896016688, guid: d8ecfa66795b1a846a2974653c7a60e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -256,8 +257,8 @@ SpriteMask:
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: -56599821
   m_BackSortingLayerID: -56599821
-  m_FrontSortingLayer: 1
-  m_BackSortingLayer: 1
+  m_FrontSortingLayer: -1
+  m_BackSortingLayer: -1
   m_FrontSortingOrder: 1
   m_BackSortingOrder: -1
   m_IsCustomRangeActive: 1
@@ -331,9 +332,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -56599821
+  m_SortingLayer: -1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 4901792799079561603, guid: d8ecfa66795b1a846a2974653c7a60e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

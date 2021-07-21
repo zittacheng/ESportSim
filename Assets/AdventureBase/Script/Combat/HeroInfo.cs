@@ -12,6 +12,7 @@ namespace ADV
         public float MaxLife;
         public float MaxMana;
         public float BaseDamage;
+        public float Speed;
         public float Size = 2;
         public GameObject Targeting;
         public List<GameObject> SkillPrefabs;
@@ -79,6 +80,8 @@ namespace ADV
 
             if (Targeting)
                 Target.ChangeTargeting(Targeting.GetComponent<Targeting>());
+            if (Target.movement)
+                Target.movement.SetKey("Speed", Speed);
             Target.SetKey("Size", Size);
         }
     }

@@ -85,9 +85,15 @@ namespace ADV
         public void PositionReset()
         {
             for (int i = 0; i < FriendlyCards.Count; i++)
+            {
                 FriendlyCards[i].SetPosition(FriendlyPositions[i]);
+                FriendlyCards[i].SetDirection(new Vector2(1, 0));
+            }
             for (int i = 0; i < EnemyCards.Count; i++)
+            {
                 EnemyCards[i].SetPosition(EnemyPositions[i]);
+                EnemyCards[i].SetDirection(new Vector2(-1, 0));
+            }
         }
 
         public void PartyListUpdate()

@@ -468,6 +468,7 @@ MonoBehaviour:
   - CoolDown[1.2
   - ASCD[1
   - BasicSkill[1
+  - AutoAttackRange[63
 --- !u!1 &9099198495013366842
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9099198495013366837}
-  - component: {fileID: 1616866373623836375}
+  - component: {fileID: 4777878897114221135}
   - component: {fileID: 9099198495013366839}
   m_Layer: 0
   m_Name: Targeting
@@ -500,7 +501,7 @@ Transform:
   m_Father: {fileID: 9099198494967899729}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1616866373623836375
+--- !u!114 &4777878897114221135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -509,7 +510,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9099198495013366842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 786d322eb16213a479d0676111600746, type: 3}
+  m_Script: {fileID: 11500000, guid: d54ebd33410d4c34a8ecee002a0d4b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 9099198495013366839}
@@ -527,4 +528,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Keys: []
+  Keys:
+  - Range[64

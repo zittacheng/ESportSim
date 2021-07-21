@@ -49,6 +49,7 @@ MonoBehaviour:
   MaxLife: 150
   MaxMana: 10
   BaseDamage: 8
+  Speed: 0
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
@@ -104,6 +105,7 @@ MonoBehaviour:
   MaxLife: 180
   MaxMana: 10
   BaseDamage: 18
+  Speed: 8
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
@@ -159,6 +161,7 @@ MonoBehaviour:
   MaxLife: 225
   MaxMana: 10
   BaseDamage: 10
+  Speed: 8
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
@@ -255,6 +258,7 @@ MonoBehaviour:
   MaxLife: 180
   MaxMana: 18
   BaseDamage: 6
+  Speed: 8
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
@@ -310,6 +314,7 @@ MonoBehaviour:
   MaxLife: 300
   MaxMana: 5
   BaseDamage: 8
+  Speed: 7
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
@@ -366,6 +371,7 @@ MonoBehaviour:
   MaxLife: 150
   MaxMana: 20
   BaseDamage: 10
+  Speed: 6
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
@@ -422,6 +428,7 @@ MonoBehaviour:
   MaxLife: 200
   MaxMana: 8
   BaseDamage: 8
+  Speed: 6
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
@@ -477,12 +484,12 @@ MonoBehaviour:
   MaxLife: 300
   MaxMana: 4
   BaseDamage: 8
+  Speed: 7
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
   - {fileID: 6813880737445857639, guid: ebada3e6fb70f2849a42c9193b602adb, type: 3}
   - {fileID: 6020289358846528179, guid: 59bb6e22666a070439a8f70cc280826a, type: 3}
-  - {fileID: 4059318798756482038, guid: df106d33f12c7a74289e06bfe306d507, type: 3}
   StatusPrefabs: []
 --- !u!1 &7600238813687412649
 GameObject:
@@ -533,6 +540,7 @@ MonoBehaviour:
   MaxLife: 200
   MaxMana: 8
   BaseDamage: 6
+  Speed: 7
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
@@ -589,6 +597,7 @@ MonoBehaviour:
   MaxLife: 150
   MaxMana: 45
   BaseDamage: 15
+  Speed: 6
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
@@ -644,6 +653,7 @@ MonoBehaviour:
   MaxLife: 200
   MaxMana: 15
   BaseDamage: 8
+  Speed: 6
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:

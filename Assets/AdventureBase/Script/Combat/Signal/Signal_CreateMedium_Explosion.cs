@@ -12,10 +12,15 @@ namespace ADV
         {
             GameObject G = Instantiate(MediumPrefab);
             Medium M = G.GetComponent<Medium>();
-            if (GetKey("LockTarget") != 0 && Target)
+            if (GetKey("LockTarget") == 1 && Target)
             {
                 M.SetKey("PositionX", Target.GetPosition().x);
                 M.SetKey("PositionY", Target.GetPosition().y);
+            }
+            else if (GetKey("LockSource") == 1 && Source)
+            {
+                M.SetKey("PositionX", Source.GetPosition().x);
+                M.SetKey("PositionY", Source.GetPosition().y);
             }
             else
             {
@@ -36,7 +41,8 @@ namespace ADV
         public override void CommonKeys()
         {
             // "Range": Range of the created Medium explosion
-            // "LockTarget": Whether follow the target's current position
+            // "LockTarget": Whether to follow the target's current position
+            // "LockSource": Whether to follow the source's position instead of the target's
             base.CommonKeys();
         }
     }

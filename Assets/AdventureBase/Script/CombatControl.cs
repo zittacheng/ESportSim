@@ -25,6 +25,8 @@ namespace ADV
         [Space]
         public CardGroup MCGroup;
         public List<CardGroup> Groups;
+        public List<Vector2> FriendlyPositions;
+        public List<Vector2> EnemyPositions;
         [Space]
         public List<Card> Cores;
         public List<Card> FriendlyCards;
@@ -55,6 +57,7 @@ namespace ADV
         {
             DefaultLevel = KeyBase.Main.GetKey("Level");
             GroupIni();
+            PositionReset();
             // Temp
             EndOfCombatAIProcess(0);
         }
@@ -73,16 +76,18 @@ namespace ADV
             {
                 Groups[i].Ini();
                 if (Groups[i].Side == 0)
-                {
                     FriendlyCards.Add(Groups[i].GetCurrentCard());
-                    Groups[i].GetCurrentCard().GetAnim().ForcePosition(UIControl.Main.GetFriendlySlotPosition(FriendlyCards.IndexOf(Groups[i].GetCurrentCard())));
-                }
                 else if (Groups[i].Side == 1)
-                {
                     EnemyCards.Add(Groups[i].GetCurrentCard());
-                    Groups[i].GetCurrentCard().GetAnim().ForcePosition(UIControl.Main.GetEnemySlotPosition(EnemyCards.IndexOf(Groups[i].GetCurrentCard())));
-                }
             }
+        }
+
+        public void PositionReset()
+        {
+            for (int i = 0; i < FriendlyCards.Count; i++)
+                FriendlyCards[i].SetPosition(FriendlyPositions[i]);
+            for (int i = 0; i < EnemyCards.Count; i++)
+                EnemyCards[i].SetPosition(EnemyPositions[i]);
         }
 
         public void PartyListUpdate()
@@ -204,6 +209,9 @@ namespace ADV
             // Coin && AI
             EndOfCombatCoinChange();
             EndOfCombatAIProcess(Result);
+
+            // Position
+            PositionReset();
         }
 
         public void EndOfCombatCoinChange()

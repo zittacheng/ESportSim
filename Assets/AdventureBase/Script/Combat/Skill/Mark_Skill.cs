@@ -246,6 +246,8 @@ namespace ADV
         {
             if (GetKey("BasicSkill") == 1 && Key == "AttackSpeed" && GetKey("CoolDown") > 0)
                 return Value * (1 / GetKey("CoolDown"));
+            if (Key == "AutoAttackRange" && HasKey("AutoAttackRange"))
+                return GetKey("AutoAttackRange");
             return base.PassValue(Key, Value);
         }
 
@@ -285,6 +287,7 @@ namespace ADV
             // "EndOfCombat": Whether the skill should be used at the end of combat
             // "IgnoreDeath": Whether the skill can be used on dead target
             // "BasicSkill": Whether the skill is the auto attack skill
+            // "AutoAttackRange": Auto attack range
             base.CommonKeys();
         }
     }

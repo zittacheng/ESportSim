@@ -28,12 +28,8 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1751504212642397397, guid: 15fac57be78d37d4388580773e345feb, type: 3}
-      propertyPath: IniSkills.Array.size
+      propertyPath: IniDefaults.Array.size
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1751504212642397397, guid: 15fac57be78d37d4388580773e345feb, type: 3}
-      propertyPath: IniStatus.Array.size
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1751504212642397402, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: m_Name

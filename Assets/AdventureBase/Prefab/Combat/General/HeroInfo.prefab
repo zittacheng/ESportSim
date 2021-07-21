@@ -595,7 +595,7 @@ MonoBehaviour:
   HeroKey: StormMage
   Role: 2
   MaxLife: 150
-  MaxMana: 45
+  MaxMana: 30
   BaseDamage: 15
   Speed: 6
   Size: 6
@@ -658,6 +658,5 @@ MonoBehaviour:
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
   - {fileID: 1310520441963826179, guid: e57c6b67947c3044f845aa3ebccf7ea2, type: 3}
-  - {fileID: 7581098848965138371, guid: 99cbbbe117c33b64bb1b8ebff9fb76c4, type: 3}
   - {fileID: 8664919224328996716, guid: bfebb51e44391144f9530695393eabb6, type: 3}
   StatusPrefabs: []

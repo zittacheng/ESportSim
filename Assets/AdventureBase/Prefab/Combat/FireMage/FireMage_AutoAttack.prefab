@@ -65,6 +65,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Target[1
+  - LockSource[1
+  - Range[50
 --- !u!1 &2436259780747574919
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6201478761333989499}
-  - component: {fileID: 224189960282107166}
+  - component: {fileID: 5335931354181851540}
   - component: {fileID: 6201478761333989497}
   m_Layer: 0
   m_Name: Targeting
@@ -646,7 +648,7 @@ Transform:
   m_Father: {fileID: 6201478761380047391}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &224189960282107166
+--- !u!114 &5335931354181851540
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -655,7 +657,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6201478761333989492}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdb1098b248101b45a20815e22cce921, type: 3}
+  m_Script: {fileID: 11500000, guid: d54ebd33410d4c34a8ecee002a0d4b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 6201478761333989497}
@@ -673,7 +675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Keys: []
+  Keys:
+  - Range[46
 --- !u!1 &6201478761380047384
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +754,7 @@ MonoBehaviour:
   - GCD[1.8
   - ASCD[1
   - BasicSkill[1
+  - AutoAttackRange[45
 --- !u!114 &934917366257813044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +772,7 @@ MonoBehaviour:
   RenderName: 
   Description: 
   Icon: {fileID: 0}
+  ToolTips: []
 --- !u!1 &7928045455527414110
 GameObject:
   m_ObjectHideFlags: 0

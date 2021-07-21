@@ -10,6 +10,7 @@ namespace ADV
 
         public override void EndEffect()
         {
+            print("asd");
             List<string> AddKeys = new List<string>();
             foreach (string s in InheritKeys)
                 if (HasKey(s))

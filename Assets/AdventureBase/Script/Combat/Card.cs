@@ -122,7 +122,18 @@ namespace ADV
         // Update is called once per frame
         public void Update()
         {
-            CombatUpdate(CombatControl.Main.CombatTime());
+            float a = CombatControl.Main.CombatTime();
+            if (a <= 5)
+                CombatUpdate(a);
+            else
+            {
+                float b = a % 5;
+                int c = (int)a / 5;
+                for (int i = 0; i < c; i++)
+                    CombatUpdate(5);
+                if (b != 0)
+                    CombatUpdate(b);
+            }
             UpdateRenderSkills();
         }
 
@@ -445,7 +456,7 @@ namespace ADV
             Targeting T = targeting;
             if (CurrentTarget)
             {
-                if (!CurrentTarget.CardActive() || !T.CheckTarget(this, CurrentTarget))
+                if (!CurrentTarget.CardActive() || (!T.CheckTarget(this, CurrentTarget) && PassValue("TargetLock", 0) == 0))
                     CurrentTarget = null;
             }
             else

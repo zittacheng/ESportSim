@@ -106,12 +106,16 @@ namespace ADV
         {
             if (IgnorePositionChange)
                 return;
-            transform.position = new Vector3(Value.x, Value.y, transform.position.z);
+            transform.position = new Vector3(Value.x, Value.y, Value.y * 0.05f);
         }
 
         public void SetDirection(Vector2 Value)
         {
             TargetDirection = Value;
+            if (Value.x < 0)
+                Pivot.transform.localScale = new Vector3(-1, 1, 1);
+            else if (Value.x > 0)
+                Pivot.transform.localScale = new Vector3(1, 1, 1);
         }
 
         public void RotationUpdate()

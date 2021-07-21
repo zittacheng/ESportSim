@@ -20,7 +20,8 @@ namespace ADV
             Vector2 Target = new Vector2(GetKey("TargetPositionX"), GetKey("TargetPositionY"));
             Vector2 Ori = new Vector2(GetKey("OriPositionX"), GetKey("OriPositionY"));
             Source.SetPosition(Ori + (Target - Ori) * S);
-            Source.LookAt(Target);
+            if ((Source.GetPosition() - Target).magnitude > 1)
+                Source.LookAt(Target);
             if (S >= 0.999f)
                 Source.RemoveMovement(this);
             base.TimePassed(Value);

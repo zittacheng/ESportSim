@@ -37,6 +37,8 @@ namespace ADV
                 Card C = CombatControl.Main.GetCards()[i];
                 if (!C || !C.CombatActive())
                     continue;
+                if (Source.GetKey("Role") == 0 && C.GetKey("Role") != 0 && C.GetSide() != Source.GetSide())
+                    continue;
                 float a = (C.GetPosition() - Source.GetPosition()).magnitude;
                 float b = C.GetKey("Size") + Source.GetKey("Size");
                 if (a < b)

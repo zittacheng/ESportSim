@@ -11,11 +11,6 @@ namespace ADV
             base.TimePassed(Value);
         }
 
-        public virtual void UpdatePosition(Vector2 Position)
-        {
-            Source.transform.position = new Vector3(Position.x, Position.y, Source.transform.position.z);
-        }
-
         public virtual void Stop()
         {
 

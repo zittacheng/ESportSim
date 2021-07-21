@@ -29,7 +29,7 @@ namespace ADV
         {
             if (!CombatControl.Main.Waiting && CombatControl.Main.HoldingCard == Source)
                 MouseUp();
-
+            /*
             if (CombatControl.Main.HoldingCard == Source)
             {
                 ForcePosition(Cursor.Main.GetPosition());
@@ -67,7 +67,7 @@ namespace ADV
                     SetMovement(UIControl.Main.GetEnemySlotPosition(CombatControl.Main.EnemyCards.IndexOf(Source)), 0.1f);
                 else
                     ForcePosition(new Vector2(-300, -300));
-            }
+            }*/
         }
 
         public void MouseDown()

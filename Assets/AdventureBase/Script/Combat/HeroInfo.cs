@@ -12,6 +12,8 @@ namespace ADV
         public float MaxLife;
         public float MaxMana;
         public float BaseDamage;
+        public float Size = 2;
+        public GameObject Targeting;
         public List<GameObject> SkillPrefabs;
         public List<GameObject> StatusPrefabs;
 
@@ -74,6 +76,10 @@ namespace ADV
                 Mark_Status S = G.GetComponent<Mark_Status>();
                 Target.AddStatus(S);
             }
+
+            if (Targeting)
+                Target.ChangeTargeting(Targeting.GetComponent<Targeting>());
+            Target.SetKey("Size", Size);
         }
     }
 

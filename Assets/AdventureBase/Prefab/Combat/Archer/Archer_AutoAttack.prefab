@@ -77,7 +77,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1114703784626192529}
-  - component: {fileID: 8174841762568436495}
+  - component: {fileID: 8247452673021088613}
   - component: {fileID: 1114703784626192531}
   m_Layer: 0
   m_Name: Targeting
@@ -100,7 +100,7 @@ Transform:
   m_Father: {fileID: 1114703784706263797}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8174841762568436495
+--- !u!114 &8247452673021088613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1114703784626192542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdb1098b248101b45a20815e22cce921, type: 3}
+  m_Script: {fileID: 11500000, guid: d54ebd33410d4c34a8ecee002a0d4b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 1114703784626192531}
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - TargetEnemies[1
+  - Range[61
 --- !u!1 &1114703784706263794
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +207,7 @@ MonoBehaviour:
   - CoolDown[1
   - ASCD[1
   - BasicSkill[1
+  - AutoAttackRange[60
 --- !u!114 &5434134348447895725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +225,7 @@ MonoBehaviour:
   RenderName: 
   Description: 
   Icon: {fileID: 0}
+  ToolTips: []
 --- !u!1 &3830010394898983429
 GameObject:
   m_ObjectHideFlags: 0

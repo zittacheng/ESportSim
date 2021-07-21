@@ -17,14 +17,14 @@ namespace ADV
         [HideInInspector] public bool AlreadyDead;
         [Space]
         public Vector2 Position;
-        [HideInInspector] public Vector2 Direction = new Vector2(0.01f, 1f);
+        public Vector2 Direction = new Vector2(0.01f, 1f);
         public Card CurrentTarget;
         [HideInInspector] public Mark_Skill CurrentCast;
         [HideInInspector] public Card CastTarget;
         [HideInInspector] public Vector2 CastPosition;
         [Space]
         public GameObject IniTargeting;
-        [HideInInspector] public GameObject IniMovement;
+        public GameObject IniMovement;
         [HideInInspector] public List<GameObject> CollisionPoints;
         [HideInInspector] public GameObject TargetingTrigger;
         [HideInInspector] public Movement movement;
@@ -34,6 +34,7 @@ namespace ADV
         [HideInInspector] public Mark targetingTrigger;
         [HideInInspector] public PathFinder PF;
         [Space]
+        public List<GameObject> IniDefaults;
         public List<GameObject> IniSkills;
         public List<GameObject> IniStatus;
         public Mark KeyMark;
@@ -49,6 +50,11 @@ namespace ADV
         public void Awake()
         {
             Skills = new List<Mark_Skill>();
+            for (int i = 0; i < IniDefaults.Count; i++)
+            {
+                if (IniDefaults[i] && IniDefaults[i].GetComponent<Mark_Skill>())
+                    Skills.Add(IniDefaults[i].GetComponent<Mark_Skill>());
+            }
             for (int i = 0; i < IniSkills.Count; i++)
             {
                 if (IniSkills[i])
@@ -63,6 +69,11 @@ namespace ADV
             }
 
             Status = new List<Mark_Status>();
+            for (int i = 0; i < IniDefaults.Count; i++)
+            {
+                if (IniDefaults[i] && IniDefaults[i].GetComponent<Mark_Status>())
+                    Status.Add(IniDefaults[i].GetComponent<Mark_Status>());
+            }
             for (int i = 0; i < IniStatus.Count; i++)
             {
                 if (IniStatus[i])
@@ -439,12 +450,12 @@ namespace ADV
             }
             else
             {
-                if (TargetingDelay > 0 || (targetingTrigger && targetingTrigger.GetKey("CCD") > 0))
+                /*if (TargetingDelay > 0 || (targetingTrigger && targetingTrigger.GetKey("CCD") > 0))
                 {
                     TargetingDelay -= Value;
                     return;
                 }
-                TargetingDelay = 0.15f;
+                TargetingDelay = 0.15f;*/
                 CurrentTarget = T.FindTarget(this);
             }
         }
@@ -721,7 +732,8 @@ namespace ADV
 
         public float GetRange(float BaseRange)
         {
-            return PassValue("Range", BaseRange);
+            return 999;
+            //return PassValue("Range", BaseRange);
         }
 
         public float GetSpeed(float BaseSpeed)
@@ -1032,6 +1044,15 @@ namespace ADV
                     targetingTrigger = TargetingTrigger.GetComponent<Mark>();
             }
             return targeting;
+        }
+
+        public void ChangeTargeting(Targeting T)
+        {
+            if (targeting)
+                Destroy(targeting.gameObject);
+            GameObject G = Instantiate(T.gameObject, transform);
+            targeting = G.GetComponent<Targeting>();
+            targeting.Source = this;
         }
 
         public Movement GetMovement()

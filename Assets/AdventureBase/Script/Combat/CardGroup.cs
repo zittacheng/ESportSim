@@ -153,9 +153,9 @@ namespace ADV
                 CombatControl.Main.EnemyCards[Index] = C;
             Ori.GetAnim().ForcePosition(C.GetPosition());
             if (Side == 0)
-                C.GetAnim().ForcePosition(UIControl.Main.GetFriendlySlotPosition(Index));
+                C.GetAnim().ForcePosition(CombatControl.Main.GetFriendlyPosition(Index));
             else if (Side == 1)
-                C.GetAnim().ForcePosition(UIControl.Main.GetEnemySlotPosition(Index));
+                C.GetAnim().ForcePosition(CombatControl.Main.GetEnemyPosition(Index));
         }
 
         public Card GetCard(string Key)

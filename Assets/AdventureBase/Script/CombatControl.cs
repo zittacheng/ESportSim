@@ -96,6 +96,20 @@ namespace ADV
             }
         }
 
+        public Vector2 GetFriendlyPosition(int Index)
+        {
+            if (Index >= FriendlyPositions.Count)
+                Index = FriendlyPositions.Count - 1;
+            return FriendlyPositions[Index];
+        }
+
+        public Vector2 GetEnemyPosition(int Index)
+        {
+            if (Index >= EnemyPositions.Count)
+                Index = EnemyPositions.Count - 1;
+            return EnemyPositions[Index];
+        }
+
         public void PartyListUpdate()
         {
             List<Card> TempI = new List<Card>();

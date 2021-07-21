@@ -29,7 +29,9 @@ namespace ADV
         {
             if (!CombatControl.Main.Waiting && CombatControl.Main.HoldingCard == Source)
                 MouseUp();
-            /*
+
+            if (!CombatControl.Main.Waiting)
+                return;
             if (CombatControl.Main.HoldingCard == Source)
             {
                 ForcePosition(Cursor.Main.GetPosition());
@@ -56,7 +58,7 @@ namespace ADV
                 if (CombatControl.Main.FriendlyCards.Contains(Source))
                 {
                     if (CombatControl.Main.HoldingCard != Source)
-                        SetMovement(UIControl.Main.GetFriendlySlotPosition(CombatControl.Main.FriendlyCards.IndexOf(Source)), 0.1f);
+                        SetMovement(CombatControl.Main.FriendlyPositions[CombatControl.Main.FriendlyCards.IndexOf(Source)], 0.1f);
                 }
                 else
                     ForcePosition(new Vector2(-300, -300));
@@ -64,10 +66,10 @@ namespace ADV
             else if (Source.GetSide() == 1 && Source.GetGroup())
             {
                 if (CombatControl.Main.EnemyCards.Contains(Source))
-                    SetMovement(UIControl.Main.GetEnemySlotPosition(CombatControl.Main.EnemyCards.IndexOf(Source)), 0.1f);
+                    SetMovement(CombatControl.Main.EnemyPositions[CombatControl.Main.EnemyCards.IndexOf(Source)], 0.1f);
                 else
                     ForcePosition(new Vector2(-300, -300));
-            }*/
+            }
         }
 
         public void MouseDown()

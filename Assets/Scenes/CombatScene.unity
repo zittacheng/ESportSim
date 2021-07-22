@@ -5179,11 +5179,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6510252280891904041, guid: 51367168c8dc8c94797db21b92ccb881, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6510252280891904041, guid: 51367168c8dc8c94797db21b92ccb881, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 6510252280891904041, guid: 51367168c8dc8c94797db21b92ccb881, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13194,14 +13194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemPanel: {fileID: 890143590}
-  FriendlySlotPositions:
-  - {x: -22.5, y: 20}
-  - {x: -31.5, y: 5.5}
-  - {x: -40.5, y: -9}
-  EnemySlotPositions:
-  - {x: -38, y: 19}
-  - {x: -47, y: 4.5}
-  - {x: 40.5, y: -10}
   BuyButton: {fileID: 1626433137}
   SellButton: {fileID: 14346479}
 --- !u!114 &2036960503
@@ -14543,11 +14535,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6510252280891904041, guid: 51367168c8dc8c94797db21b92ccb881, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6510252280891904041, guid: 51367168c8dc8c94797db21b92ccb881, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 6510252280891904041, guid: 51367168c8dc8c94797db21b92ccb881, type: 3}
       propertyPath: m_LocalPosition.z

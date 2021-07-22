@@ -487,6 +487,7 @@ MonoBehaviour:
   - Warrior
   - StormMage
   - FireMage
+  - Tank
 --- !u!1 &969786570944203765
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +561,7 @@ MonoBehaviour:
   - Warrior
   - StormMage
   - FireMage
+  - Tank
 --- !u!1 &1122513471327215025
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +648,7 @@ MonoBehaviour:
   - Warrior
   - StormMage
   - FireMage
+  - Tank
 --- !u!1 &1164565451388938273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,6 +1244,7 @@ MonoBehaviour:
   - Warrior
   - StormMage
   - FireMage
+  - Tank
 --- !u!1 &3648589055885437611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1448,7 @@ MonoBehaviour:
   - Warrior
   - StormMage
   - FireMage
+  - Tank
 --- !u!1 &4262358616985560848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,6 +2945,7 @@ MonoBehaviour:
   - Warrior
   - StormMage
   - FireMage
+  - Tank
 --- !u!1 &8618758670930891621
 GameObject:
   m_ObjectHideFlags: 0

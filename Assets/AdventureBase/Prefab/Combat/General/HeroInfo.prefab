@@ -538,16 +538,15 @@ MonoBehaviour:
   HeroKey: Tank
   Role: 1
   MaxLife: 200
-  MaxMana: 8
+  MaxMana: 18
   BaseDamage: 6
   Speed: 7
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
   - {fileID: 1385262713847904442, guid: 11073a49f38f20c42bfeb20a8ff5a344, type: 3}
-  - {fileID: 4427448403399022496, guid: 1c890d0051801e74c8412c842ad10c3b, type: 3}
-  StatusPrefabs:
-  - {fileID: 7899868299452530553, guid: 18aa8daa80c2bbf4a85cbabfaf586f5a, type: 3}
+  - {fileID: 352748544695765758, guid: afb0e7bf1ca4afc4496e082f7eaf351b, type: 3}
+  StatusPrefabs: []
 --- !u!1 &8731227442661269151
 GameObject:
   m_ObjectHideFlags: 0

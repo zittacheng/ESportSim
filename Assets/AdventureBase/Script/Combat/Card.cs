@@ -33,6 +33,7 @@ namespace ADV
         [HideInInspector] public float TargetingDelay;
         [HideInInspector] public Mark targetingTrigger;
         [HideInInspector] public PathFinder PF;
+        [HideInInspector] public Card SourceCard;
         [Space]
         public List<GameObject> IniDefaults;
         public List<GameObject> IniSkills;

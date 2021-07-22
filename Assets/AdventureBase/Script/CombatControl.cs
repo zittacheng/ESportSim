@@ -166,6 +166,11 @@ namespace ADV
             SelectintGroup = null;
 
             // Ini CardList
+            for (int i = Cards.Count - 1; i >= 0; i--)
+            {
+                if (!FriendlyCards.Contains(Cards[i]) && !EnemyCards.Contains(Cards[i]))
+                    Destroy(Cards[i].gameObject, 5);
+            }
             Cards.Clear();
             foreach (Card C in FriendlyCards)
                 Cards.Add(C);
@@ -329,7 +334,10 @@ namespace ADV
         {
             for (int i = Cards.Count - 1; i >= 0; i--)
             {
-                Cards[i].Revive();
+                if (FriendlyCards.Contains(Cards[i]) || EnemyCards.Contains(Cards[i]))
+                    Cards[i].Revive();
+                else
+                    Cards[i].Death();
             }
         }
 

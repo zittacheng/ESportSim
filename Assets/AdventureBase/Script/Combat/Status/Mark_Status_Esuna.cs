@@ -14,7 +14,7 @@ namespace ADV
         {
             for (int i = Source.Status.Count - 1; i >= 0; i--)
             {
-                if (Source.Status[i] && PassStatus(Source.Status[i]))
+                if (i < Source.Status.Count && Source.Status[i] && PassStatus(Source.Status[i]))
                 {
                     OnTrigger(Source, new List<string>());
                     Source.RemoveStatus(this);

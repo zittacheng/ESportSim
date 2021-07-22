@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2244086693820325018}
-  - component: {fileID: 2858523366866761005}
+  - component: {fileID: 3328203624129925121}
   - component: {fileID: 6010031640539614869}
   m_Layer: 0
   m_Name: Damage
@@ -124,7 +124,7 @@ Transform:
   m_Father: {fileID: 4686751705540941485}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2858523366866761005
+--- !u!114 &3328203624129925121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 796926386141145594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6db3a64fdd40542b7d798c032e2594, type: 3}
+  m_Script: {fileID: 11500000, guid: 543fa0f78689aba4e872314c69550e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 6010031640539614869}
@@ -157,6 +157,7 @@ MonoBehaviour:
   - BaseScaling[1
   - Damage[3
   - RDR[0.5
+  - ShieldScaling[1.15
   - SubHit[1
   - AbilityHit[1
   - ProcChance[1
@@ -407,7 +408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7593077922269694084}
-  - component: {fileID: 2276787220154852736}
+  - component: {fileID: 8146081847704992837}
   - component: {fileID: 2968129622727086494}
   m_Layer: 0
   m_Name: Damage
@@ -430,7 +431,7 @@ Transform:
   m_Father: {fileID: 5849455553503333863}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2276787220154852736
+--- !u!114 &8146081847704992837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -439,7 +440,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2582712600694144924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6db3a64fdd40542b7d798c032e2594, type: 3}
+  m_Script: {fileID: 11500000, guid: 543fa0f78689aba4e872314c69550e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 2968129622727086494}
@@ -463,6 +464,7 @@ MonoBehaviour:
   - BaseScaling[1
   - Damage[3
   - RDR[0.5
+  - ShieldScaling[1.15
   - MainHit[1
   - AbilityHit[1
   - ProcChance[1

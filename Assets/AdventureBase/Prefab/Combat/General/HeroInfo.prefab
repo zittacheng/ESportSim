@@ -312,7 +312,7 @@ MonoBehaviour:
   HeroKey: Bruiser
   Role: 1
   MaxLife: 300
-  MaxMana: 5
+  MaxMana: 6
   BaseDamage: 8
   Speed: 7
   Size: 6
@@ -482,7 +482,7 @@ MonoBehaviour:
   HeroKey: Warrior
   Role: 1
   MaxLife: 300
-  MaxMana: 4
+  MaxMana: 8
   BaseDamage: 8
   Speed: 7
   Size: 6

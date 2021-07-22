@@ -633,7 +633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3552540868099345175}
-  - component: {fileID: 5999397606946514714}
+  - component: {fileID: 4994999011713377850}
   - component: {fileID: 8150894177041240589}
   m_Layer: 0
   m_Name: Heal
@@ -656,7 +656,7 @@ Transform:
   m_Father: {fileID: 2611655718215132564}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5999397606946514714
+--- !u!114 &4994999011713377850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8933596117408234511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 792e5dda82192a945852b3d6b7e2ee17, type: 3}
+  m_Script: {fileID: 11500000, guid: 34733c2c32b706d4086034641a4a664e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 8150894177041240589}
@@ -686,9 +686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Target[1
-  - BaseScaling[1
-  - Heal[10
-  - RHR[0.1
+  - LostLifeRate[0.5
   - AbilityPowerScaling[1
   - Support[1
   - Horn[1

@@ -13,7 +13,7 @@ namespace ADV
         {
             Source = S;
             Target = T;
-            if (Target)
+            if (Target && GetKey("IgnoreTargetPosition") == 0)
             {
                 SetKey("PositionX", Target.GetPosition().x);
                 SetKey("PositionY", Target.GetPosition().y);

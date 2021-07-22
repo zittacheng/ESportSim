@@ -21,6 +21,7 @@ namespace ADV
             {
                 M.SetKey("PositionX", Source.GetPosition().x);
                 M.SetKey("PositionY", Source.GetPosition().y);
+                M.SetKey("IgnoreTargetPosition", 1);
             }
             else
             {

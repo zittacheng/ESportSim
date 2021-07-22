@@ -11,7 +11,7 @@ namespace ADV
             float a = 1;
             if (HasKey("HealScale"))
                 a = GetKey("HealScale");
-            return (base.GetHealValue(Base) + (Source.GetMaxLife() - Source.GetLife()) * GetKey("LostLifeRate")) * a;
+            return (base.GetHealValue(Base) + (Target.GetMaxLife() - Target.GetLife()) * GetKey("LostLifeRate")) * a;
         }
 
         public override void CommonKeys()

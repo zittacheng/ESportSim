@@ -11,7 +11,7 @@ namespace ADV
             if (Key == "Stunned")
                 return 1;
             if (Key == "Speed")
-                return 0.0001f;
+                return 0;
             if (Key == "ManaRecovery")
                 return 0;
             return base.PassValue(Key, Value);

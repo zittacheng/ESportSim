@@ -2721,7 +2721,6 @@ GameObject:
   - component: {fileID: 4033712553070184287}
   - component: {fileID: 5652993486986341769}
   - component: {fileID: 5148496348014212904}
-  - component: {fileID: 6616877632537982832}
   m_Layer: 0
   m_Name: AttackLock
   m_TagString: Untagged
@@ -2774,24 +2773,6 @@ MonoBehaviour:
   - Render[0
   - SpeedMod[0
   - Duration[0.5
---- !u!114 &6616877632537982832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7044904467903992070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50aeef807b653a342aa4307f8c082a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Key: 
-  Name: Tank_Status_AttackLock
-  RenderName: 
-  Description: 
-  Icon: {fileID: 0}
-  ToolTips: []
 --- !u!1 &7091959540469519571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,7 +2951,6 @@ GameObject:
   - component: {fileID: 5461798681982277235}
   - component: {fileID: 2464480602476529432}
   - component: {fileID: 6392215516066660559}
-  - component: {fileID: 4911690409957459837}
   m_Layer: 0
   m_Name: ManaLock
   m_TagString: Untagged
@@ -3023,24 +3003,6 @@ MonoBehaviour:
   - Render[0
   - RecoveryMod[0
   - Duration[0.5
---- !u!114 &4911690409957459837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7547216995263163534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50aeef807b653a342aa4307f8c082a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Key: 
-  Name: Tank_Status_ManaLock
-  RenderName: 
-  Description: 
-  Icon: {fileID: 0}
-  ToolTips: []
 --- !u!1 &7646679764051609792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,6 +3143,7 @@ MonoBehaviour:
   CurrentValue: 0
   Mask: {fileID: 4412575246981465271}
   MaskRange: {x: 0.27, y: 8.04}
+  ScalingMode: 0
 --- !u!1 &8187558968453538719
 GameObject:
   m_ObjectHideFlags: 0
@@ -3496,6 +3459,7 @@ MonoBehaviour:
   CurrentValue: 0
   Mask: {fileID: 6204190382047200525}
   MaskRange: {x: 0.27, y: 8.04}
+  ScalingMode: 0
 --- !u!1 &8546284781059276649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3538,7 +3502,6 @@ GameObject:
   - component: {fileID: 9207776638782569583}
   - component: {fileID: 4819268476215671375}
   - component: {fileID: 8728444521997304899}
-  - component: {fileID: 7974726904873546886}
   m_Layer: 0
   m_Name: SpeedLock
   m_TagString: Untagged
@@ -3589,26 +3552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[0
-  - SpeedMod[0.001
-  - Duration[1
---- !u!114 &7974726904873546886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8618484995086305948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50aeef807b653a342aa4307f8c082a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Key: 
-  Name: Tank_Status_SpeedLock
-  RenderName: 
-  Description: 
-  Icon: {fileID: 0}
-  ToolTips: []
+  - SpeedMod[0
+  - Duration[0.5
 --- !u!1001 &5954694600896309221
 PrefabInstance:
   m_ObjectHideFlags: 0

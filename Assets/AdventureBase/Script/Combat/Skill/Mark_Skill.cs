@@ -234,7 +234,7 @@ namespace ADV
         {
             if (HasKey("CoolDown"))
             {
-                if (GetKey("ASCD") != 0)
+                if (GetKey("ASCD") == 1)
                     ChangeKey("CCD", -Value * Source.GetAttackSpeedScale());
                 else
                     ChangeKey("CCD", -Value);
@@ -244,7 +244,9 @@ namespace ADV
 
         public override float PassValue(string Key, float Value)
         {
-            if (GetKey("BasicSkill") == 1 && Key == "AttackSpeed" && GetKey("CoolDown") > 0)
+            /*if (GetKey("BasicSkill") == 1 && Key == "AttackSpeed" && GetKey("CoolDown") > 0)
+                return Value * (1 / GetKey("CoolDown"));*/
+            if (GetKey("BasicSkill") == 1 && Key == "RenderingAttackSpeed" && GetKey("CoolDown") > 0)
                 return Value * (1 / GetKey("CoolDown"));
             if (Key == "AutoAttackRange" && HasKey("AutoAttackRange"))
                 return GetKey("AutoAttackRange");

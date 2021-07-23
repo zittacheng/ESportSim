@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8303901384516015363
 MonoBehaviour:
@@ -49,7 +49,7 @@ MonoBehaviour:
   MaxLife: 150
   MaxMana: 10
   BaseDamage: 8
-  Speed: 0
+  Speed: 8
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
@@ -200,7 +200,6 @@ Transform:
   - {fileID: 5307154407162713370}
   - {fileID: 1302562236395116799}
   - {fileID: 4086443400974060313}
-  - {fileID: 6247779387392216399}
   - {fileID: 4549636597109555071}
   - {fileID: 2162363018254759547}
   - {fileID: 5901973397690644759}
@@ -351,7 +350,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7342228183472137833
 MonoBehaviour:
@@ -377,63 +376,6 @@ MonoBehaviour:
   SkillPrefabs:
   - {fileID: 6441293287966430658, guid: 5a55e687e07f2564dbfcf9e211097f87, type: 3}
   - {fileID: 6201478761380047384, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
-  - {fileID: 8030137170227943138, guid: 91e9a46e4cfa0d249a5f86b6c55d4514, type: 3}
-  StatusPrefabs: []
---- !u!1 &5440376580506867611
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6247779387392216399}
-  - component: {fileID: 7458941790918751470}
-  m_Layer: 0
-  m_Name: HealerII
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6247779387392216399
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5440376580506867611}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7458941790918751470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5440376580506867611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Scaling: 0
-  HeroKey: HealerII
-  Role: 3
-  MaxLife: 200
-  MaxMana: 8
-  BaseDamage: 8
-  Speed: 6
-  Size: 6
-  Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
-  SkillPrefabs:
-  - {fileID: 1310520441963826179, guid: e57c6b67947c3044f845aa3ebccf7ea2, type: 3}
-  - {fileID: 7925353887012193907, guid: f9275c4a877f8644cb2fca10ecf983d3, type: 3}
   StatusPrefabs: []
 --- !u!1 &5887619888747559942
 GameObject:
@@ -464,7 +406,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1642911136428247785
 MonoBehaviour:
@@ -520,7 +462,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7993680742129145920
 MonoBehaviour:
@@ -576,7 +518,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1404351376454715895
 MonoBehaviour:

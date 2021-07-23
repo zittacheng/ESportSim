@@ -195,7 +195,7 @@ namespace ADV
                 DamageText.text = StatToText(GetTarget().GetBaseDamage());
 
             if (AttackSpeedText)
-                AttackSpeedText.text = StatToText(GetTarget().PassValue("AttackSpeed", 1));
+                AttackSpeedText.text = StatToText(GetTarget().PassValue("RenderingAttackSpeed", 1));
 
             if (RecoverySpeedText)
                 RecoverySpeedText.text = StatToText(GetTarget().PassValue("ManaRecovery", 1) * (1 / GetTarget().PassValue("MaxMana", 0)));

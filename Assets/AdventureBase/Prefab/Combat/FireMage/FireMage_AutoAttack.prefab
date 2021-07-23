@@ -751,10 +751,10 @@ MonoBehaviour:
   Keys:
   - Auto[1
   - CoolDown[1.8
-  - GCD[1.8
   - ASCD[1
   - BasicSkill[1
   - AutoAttackRange[45
+  - Print[1
 --- !u!114 &934917366257813044
 MonoBehaviour:
   m_ObjectHideFlags: 0

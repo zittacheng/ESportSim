@@ -2024,7 +2024,7 @@ GameObject:
   - component: {fileID: 8891831684832240166}
   - component: {fileID: 73584375837480258}
   m_Layer: 0
-  m_Name: HealerII
+  m_Name: Protector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Source: {fileID: 7453983540479597272}
   AnimBase: {fileID: 6660258720390843325}
-  Key: HealerII
+  Key: Protector
 --- !u!1 &4695336178698048347
 GameObject:
   m_ObjectHideFlags: 0

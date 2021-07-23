@@ -8,7 +8,7 @@ namespace ADV
 
         public override float PassValue(string Key, float Value)
         {
-            if (Key == "AttackSpeed")
+            if (Key == "AttackSpeed" || Key == "RenderingAttackSpeed")
                 return Value * GetFinalMod();
             return base.PassValue(Key, Value);
         }

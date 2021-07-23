@@ -92,8 +92,8 @@ MonoBehaviour:
   Key: 
   Name: Item_ArmorPlate
   RenderName: Rusted Armor Plate
-  Description: Add an armor equivalent to 30% of the maximum of HP, refreshed at
-    the beginning of each round
+  Description: At the start of each round, Gain Armor equals to 30% (+30%) of max
+    HP
   Icon: {fileID: -488721925442295091, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
   ToolTips:
   - Armor

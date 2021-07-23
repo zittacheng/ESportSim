@@ -219,8 +219,8 @@ MonoBehaviour:
   Key: 
   Name: Item_Flashlight
   RenderName: Irradiant Mace
-  Description: Normal attacks have a 10% chance to stun the opponent hero for 2 seconds
-  Icon: {fileID: 4337684191699249041, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  Description: Auto attacks have a 10% (+2%) chance to Stun the target for 2s (+1s)
+  Icon: {fileID: -7573354855677281409, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
   ToolTips:
   - Stunned
 --- !u!1001 &2624859565816484949

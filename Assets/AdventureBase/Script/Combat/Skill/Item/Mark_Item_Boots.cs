@@ -4,22 +4,19 @@ using UnityEngine;
 
 namespace ADV
 {
-    public class Mark_Status_Stunned : Mark_Status {
+    public class Mark_Item_Boots : Mark_Skill {
 
         public override float PassValue(string Key, float Value)
         {
-            if (Key == "Stunned")
-                return 1;
             if (Key == "Speed")
-                return 0.0001f;
-            if (Key == "ManaRecovery")
-                return 0;
+                return Value * (1 + GetKey("BaseSpeedMod") + GetKey("SpeedMod") * GetKey("Count"));
             return base.PassValue(Key, Value);
         }
 
         public override void CommonKeys()
         {
-            // "Stunned": Whether the source is stunned
+            // "BaseSpeedMod": Base movement speed mod
+            // "SpeedMod": Movement speed mod per stack
             base.CommonKeys();
         }
     }

@@ -334,10 +334,10 @@ namespace ADV
         {
             for (int i = Cards.Count - 1; i >= 0; i--)
             {
-                if (FriendlyCards.Contains(Cards[i]) || EnemyCards.Contains(Cards[i]))
-                    Cards[i].Revive();
-                else
+                if (Cards[i].GetKey("TempCard") == 1)
                     Cards[i].Death();
+                else
+                    Cards[i].Revive();
             }
         }
 

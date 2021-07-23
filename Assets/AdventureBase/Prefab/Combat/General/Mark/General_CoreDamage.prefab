@@ -166,6 +166,7 @@ MonoBehaviour:
   Keys:
   - EndOfCombat[1
   - General[1
+  - IgnoreGCD[1
 --- !u!114 &4136790305562048619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +184,7 @@ MonoBehaviour:
   RenderName: 
   Description: 
   Icon: {fileID: 0}
+  ToolTips: []
 --- !u!1 &3243162097571514641
 GameObject:
   m_ObjectHideFlags: 0

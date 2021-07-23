@@ -151,5 +151,6 @@ MonoBehaviour:
   Key: 
   Name: Item_ManaStone
   RenderName: Blue Tearstone Ring
-  Description: The amount of mana restore increased by 30%
+  Description: Increase Mana Reocvery by 30% (+20%)
   Icon: {fileID: -5971942374765049077, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips: []

@@ -63,7 +63,7 @@ namespace ADV
 
             if (Direction == PanelDirection.Left)
                 ToolTipRender(ToolTipDirection.Left, MInfo);
-            else if (Center.x >= 42f)
+            else if (Center.x >= 62f)
                 ToolTipRender(ToolTipDirection.Left, MInfo);
             else
                 ToolTipRender(ToolTipDirection.Right, MInfo);

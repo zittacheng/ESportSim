@@ -1615,17 +1615,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5571234113013978483}
     m_Modifications:
+    - target: {fileID: 966295903100768687, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.6000004
+      objectReference: {fileID: 0}
     - target: {fileID: 2761845900526334070, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5500011
+      value: -0.29999924
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280402600639251909, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8000002
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
-      value: The minimum HP is locked to a value, during which it can be recovered.
+      value: Invulnerable to all damage
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_fontSize
-      value: 12
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079771210517069980, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.6000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223551662134336405, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.8000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276426596954393513, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5306652342555929130, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.8000002
       objectReference: {fileID: 0}
     - target: {fileID: 5484951114337101023, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
@@ -1641,7 +1669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.4
+      value: -24
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1675,13 +1703,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.6000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779106007361232435, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.8000002
+      objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Key
       value: Invincibility
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Height
-      value: 10.9
+      value: 8.3
       objectReference: {fileID: 0}
     - target: {fileID: 9112616540972285316, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_Name
@@ -1718,31 +1754,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 966295903100768687, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.6
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 2761845900526334070, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3000002
+      value: -0.79999924
       objectReference: {fileID: 0}
     - target: {fileID: 3280402600639251909, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.8
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
-      value: Restores HP equal to n% of attack damage
+      value: When dealing damage, heal based on the amount of damage dealt
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_fontSize
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4079771210517069980, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.8
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.6
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1750,15 +1786,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5223551662134336405, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 5276426596954393513, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.8
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 5306652342555929130, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 5484951114337101023, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
@@ -1774,7 +1810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.8
+      value: -8.2
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1810,7 +1846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.6
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1818,7 +1854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7779106007361232435, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Key
@@ -1826,7 +1862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Height
-      value: 8.2
+      value: 9.3
       objectReference: {fileID: 0}
     - target: {fileID: 9112616540972285316, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_Name
@@ -1863,31 +1899,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 966295903100768687, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.5999985
+      value: 3.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 2761845900526334070, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.80000305
+      value: 0.70000076
       objectReference: {fileID: 0}
     - target: {fileID: 3280402600639251909, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2999992
+      value: -1.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
-      value: Receive 3 points of healing per second while in Blessed state
+      value: Heal for 3 HP per second
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_fontSize
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4079771210517069980, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2999992
+      value: -1.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.5999985
+      value: 3.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1895,15 +1935,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5223551662134336405, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2999992
+      value: 1.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 5276426596954393513, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2999992
+      value: -1.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 5306652342555929130, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2999992
+      value: 1.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 5484951114337101023, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
@@ -1919,7 +1959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -77.5
+      value: -56.7
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1955,7 +1995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.5999985
+      value: 3.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1963,7 +2003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7779106007361232435, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2999992
+      value: 1.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Key
@@ -1971,7 +2011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Height
-      value: 9.3
+      value: 6.3
       objectReference: {fileID: 0}
     - target: {fileID: 9112616540972285316, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_Name
@@ -2008,43 +2048,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 966295903100768687, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.099995
+      value: 5.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 2761845900526334070, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5499954
+      value: -0.29999924
       objectReference: {fileID: 0}
     - target: {fileID: 3280402600639251909, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.0499973
+      value: -2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
-      value: Vulnerable status will increase their received damage by 20% each time
+      value: Increase damage taken by 20%
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_fontSize
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4079771210517069980, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.0499973
+      value: -2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.099995
+      value: 5.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 5223551662134336405, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.0499973
+      value: 2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 5276426596954393513, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.0499973
+      value: -2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 5306652342555929130, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.0499973
+      value: 2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 5484951114337101023, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
@@ -2060,7 +2100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -66.7
+      value: -48.4
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2096,11 +2136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.099995
+      value: 5.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 7779106007361232435, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.0499973
+      value: 2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Key
@@ -2108,7 +2148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Height
-      value: 10.8
+      value: 8.3
       objectReference: {fileID: 0}
     - target: {fileID: 9112616540972285316, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_Name
@@ -2145,31 +2185,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 966295903100768687, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.5999985
+      value: 5.0999985
       objectReference: {fileID: 0}
     - target: {fileID: 2761845900526334070, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7999954
+      value: -0.05000305
       objectReference: {fileID: 0}
     - target: {fileID: 3280402600639251909, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2999992
+      value: -2.5499992
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
-      value: Take 6 damage per second while in Burning state
+      value: Take 6 damage per second
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_fontSize
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4079771210517069980, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2999992
+      value: -2.5499992
       objectReference: {fileID: 0}
     - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.5999985
+      value: 5.0999985
       objectReference: {fileID: 0}
     - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2177,15 +2225,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5223551662134336405, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2999992
+      value: 2.5499992
       objectReference: {fileID: 0}
     - target: {fileID: 5276426596954393513, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2999992
+      value: -2.5499992
       objectReference: {fileID: 0}
     - target: {fileID: 5306652342555929130, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2999992
+      value: 2.5499992
       objectReference: {fileID: 0}
     - target: {fileID: 5484951114337101023, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
@@ -2201,7 +2249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -97.6
+      value: -72
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2237,7 +2285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.5999985
+      value: 5.0999985
       objectReference: {fileID: 0}
     - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2245,7 +2293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7779106007361232435, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2999992
+      value: 2.5499992
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Key
@@ -2253,7 +2301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Height
-      value: 9.4
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 9112616540972285316, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_Name
@@ -2290,32 +2338,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 966295903100768687, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 12.599998
+      value: 5.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 2761845900526334070, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.7999992
+      value: -0.29999924
       objectReference: {fileID: 0}
     - target: {fileID: 3280402600639251909, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.299999
+      value: -2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
-      value: interrupt attack/use ability, during which you can receive damage, be
-        recovered and restore mana. Can be interrupted by Stunned effect.
+      value: Cannot move, attack or use abilities
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_fontSize
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4079771210517069980, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.299999
+      value: -2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 12.599998
+      value: 5.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2323,15 +2370,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5223551662134336405, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.299999
+      value: 2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 5276426596954393513, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.299999
+      value: -2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 5306652342555929130, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.299999
+      value: 2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 5484951114337101023, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
@@ -2347,7 +2394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -51.5
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2383,7 +2430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 12.599998
+      value: 5.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2391,7 +2438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7779106007361232435, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.299999
+      value: 2.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Key
@@ -2399,7 +2446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Height
-      value: 15.2
+      value: 8.4
       objectReference: {fileID: 0}
     - target: {fileID: 9112616540972285316, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_Name
@@ -2434,14 +2481,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5571234113013978483}
     m_Modifications:
+    - target: {fileID: 966295903100768687, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.425
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761845900526334070, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.21250033
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280402600639251909, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7125
+      objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
-      value: After receiving the attack, the armor value will be deducted first,
-        but it cannot be recovered
+      value: Reduce damage taken by a fixed amount
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_fontSize
-      value: 12
+      value: 13.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079771210517069980, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.425
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223551662134336405, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.7125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276426596954393513, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5306652342555929130, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.7125
       objectReference: {fileID: 0}
     - target: {fileID: 5484951114337101023, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
@@ -2491,13 +2569,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.425
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779106007361232435, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.7125
+      objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Key
       value: Armor
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Height
-      value: 10.8
+      value: 8.2
       objectReference: {fileID: 0}
     - target: {fileID: 9112616540972285316, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_Name
@@ -2534,44 +2620,51 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 966295903100768687, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 9.599998
+      value: 5.0625
       objectReference: {fileID: 0}
     - target: {fileID: 2761845900526334070, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.2999992
+      value: -0.03125
       objectReference: {fileID: 0}
     - target: {fileID: 3280402600639251909, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.799999
+      value: -2.53125
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
-      value: interrupt attack/use ability/restore mana, during which you can receive
-        damage and be recovered
+      value: Cannot move, attack, gain mana or use abilities
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_fontSize
-      value: 12
+      value: 11.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4079771210517069980, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.799999
+      value: -2.53125
       objectReference: {fileID: 0}
     - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 9.599998
+      value: 5.0625
       objectReference: {fileID: 0}
     - target: {fileID: 5223551662134336405, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.799999
+      value: 2.53125
       objectReference: {fileID: 0}
     - target: {fileID: 5276426596954393513, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.799999
+      value: -2.53125
       objectReference: {fileID: 0}
     - target: {fileID: 5306652342555929130, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.799999
+      value: 2.53125
       objectReference: {fileID: 0}
     - target: {fileID: 5484951114337101023, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
@@ -2587,7 +2680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -39.3
+      value: -32.3
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2623,11 +2716,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 9.599998
+      value: 5.0625
       objectReference: {fileID: 0}
     - target: {fileID: 7779106007361232435, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.799999
+      value: 2.53125
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Key
@@ -2635,7 +2728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Height
-      value: 12.2
+      value: 7.7
       objectReference: {fileID: 0}
     - target: {fileID: 9112616540972285316, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_Name
@@ -2670,14 +2763,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5571234113013978483}
     m_Modifications:
+    - target: {fileID: 966295903100768687, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.2250023
+      objectReference: {fileID: 0}
+    - target: {fileID: 2761845900526334070, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6124954
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280402600639251909, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.1125011
+      objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
-      value: When Frosbite, the mana restore and attack speed slows down to 80% of
-        the original.
+      value: Reduce mana recovery, attack speed and movement speed by 20%
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_fontSize
-      value: 12
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079771210517069980, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.1125011
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.2250023
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223551662134336405, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1125011
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276426596954393513, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.1125011
+      objectReference: {fileID: 0}
+    - target: {fileID: 5306652342555929130, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1125011
       objectReference: {fileID: 0}
     - target: {fileID: 5484951114337101023, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
@@ -2693,7 +2821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -86.8
+      value: -63
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2727,13 +2855,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.2250023
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779106007361232435, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1125011
+      objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Key
       value: Frosbite
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Height
-      value: 10.8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9112616540972285316, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_Name
@@ -2770,47 +2906,51 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 966295903100768687, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.6000013
+      value: 3.7250004
       objectReference: {fileID: 0}
     - target: {fileID: 2761845900526334070, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.80000114
+      value: 0.63749886
       objectReference: {fileID: 0}
     - target: {fileID: 3280402600639251909, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3000007
+      value: -1.8625002
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
-      value: The damage taken each time is reduced to n% of the original damage
+      value: Reduce damage taken
       objectReference: {fileID: 0}
     - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_fontSize
-      value: 12
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933394074576464312, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4079771210517069980, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3000007
+      value: -1.8625002
       objectReference: {fileID: 0}
     - target: {fileID: 4188046431492277095, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.6000013
+      value: 3.7250004
       objectReference: {fileID: 0}
     - target: {fileID: 5223551662134336405, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3000007
+      value: 1.8625002
       objectReference: {fileID: 0}
     - target: {fileID: 5276426596954393513, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3000007
+      value: -1.8625002
       objectReference: {fileID: 0}
     - target: {fileID: 5306652342555929130, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3000007
+      value: 1.8625002
       objectReference: {fileID: 0}
     - target: {fileID: 5484951114337101023, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_text
-      value: 'Damage Reduce:'
+      value: 'Damage Reduction:'
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_RootOrder
@@ -2822,7 +2962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19
+      value: -17.5
       objectReference: {fileID: 0}
     - target: {fileID: 6004227740547787811, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2858,23 +2998,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758313018502584357, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.6000013
+      value: 3.7250004
       objectReference: {fileID: 0}
     - target: {fileID: 7779106007361232435, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3000007
+      value: 1.8625002
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Key
-      value: DamageReduce
+      value: DamageReduction
       objectReference: {fileID: 0}
     - target: {fileID: 8038501960781228314, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: Height
-      value: 9.4
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 9112616540972285316, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_Name
-      value: TooltipRenderer_DamageReduce
+      value: TooltipRenderer_DamageReduction
       objectReference: {fileID: 0}
     - target: {fileID: 9112616540972285316, guid: d99e7e1763df25b4f82cde90403a70ec, type: 3}
       propertyPath: m_IsActive

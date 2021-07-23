@@ -30,7 +30,6 @@ namespace ADV
             float Right = Text.textBounds.max.x;
             float Down = Text.textBounds.min.y;
             float Up = Text.textBounds.max.y;
-            print(Up + "     " + Down);
             Vector2 Center = new Vector2(0, Down + (Up - Down) * 0.5f + Text.transform.localPosition.y);
             Panel.transform.localPosition = new Vector3(0, Text.transform.localPosition.y);
             Panel.Render_Local(Center.x - Length, Center.x + Length, Up + RenderHeight.y, Down - RenderHeight.x);

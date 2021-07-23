@@ -19,6 +19,8 @@ namespace ADV
                     continue;
                 if (Cards[i].GetKey("Untargeted") == 1)
                     continue;
+                if (Cards[i].GetKey("TempCard") == 1)
+                    continue;
                 float a = Cards[i].GetAggro();
                 if (a > Aggro)
                 {

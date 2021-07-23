@@ -213,10 +213,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: 
   Name: Item_SupportRing
-  RenderName: Support Ring
-  Description: The effect of non-enhancive active abilities applied to your heroes
-    will increase by 40%
+  RenderName: Rejuvenation Stone
+  Description: Increase the effect of non-enhancing support abilities by 40%
   Icon: {fileID: -5971942374765049077, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips: []
 --- !u!1 &3123716715179575102
 GameObject:
   m_ObjectHideFlags: 0

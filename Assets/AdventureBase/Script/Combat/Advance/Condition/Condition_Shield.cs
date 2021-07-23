@@ -8,7 +8,16 @@ namespace ADV
 
         public override bool Pass(Card Source)
         {
-            return Source.PassValue("Shield", 0) > 0;
+            if (GetKey("Empty") == 0)
+                return Source.PassValue("Shield", 0) > 0;
+            else
+                return Source.PassValue("Shield", 0) <= 0;
+        }
+
+        public override void CommonKeys()
+        {
+            // "Empty": Whether to pass when the card has no shield
+            base.CommonKeys();
         }
     }
 }

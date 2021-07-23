@@ -14,7 +14,8 @@ namespace ADV
             Vector2 New = Source.GetPosition();
 
             // Movement
-            if (Source.GetTarget())
+            float S = GetSpeed();
+            if (Source.GetTarget() && S > 0)
             {
                 Source.LookAt(Source.GetTarget().GetPosition());
                 float StopRange = Source.PassValue("AutoAttackRange");
@@ -22,7 +23,7 @@ namespace ADV
                 Vector2 Ori = Source.GetPosition();
                 if ((T - Ori).magnitude > StopRange)
                 {
-                    float D = GetSpeed() * Value;
+                    float D = S * Value;
                     if ((T - Ori).magnitude <= D + StopRange)
                         D = (T - Ori).magnitude - StopRange;
                     New = Ori + (T - Ori).normalized * D;

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4509641676433096566}
-  - component: {fileID: 6125036270843374515}
+  - component: {fileID: 3091327922821510010}
   - component: {fileID: 6275753458752881350}
   - component: {fileID: 64345576379717079}
   m_Layer: 0
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 8849655447247001134}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6125036270843374515
+--- !u!114 &3091327922821510010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 712271280979833058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c854af631b20694fb1e6b1be6dcb792, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ba5cacf2c562554ca98b4da60c4ae06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 6275753458752881350}
@@ -111,7 +111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4332717269551652523}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7369825944741951524
 MonoBehaviour:
@@ -301,10 +301,8 @@ MonoBehaviour:
   Key: 
   Name: Item_Raise
   RenderName: Necromancy Ring
-  Description: "Whenever a team champion dies, channel for 5s. After the channel
-    is completed, the teammate will be resurrected. After the resurrection, the teammate\u2019s
-    HP will restore by 50%, the mana amount will be 0, all buffs and debuffs will
-    be removed."
+  Description: When a friendly hero died, Channel for 5s and resurrects them (once
+    per round)
   Icon: {fileID: -2821042892349479055, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
   ToolTips:
   - Channel
@@ -317,7 +315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4332717269551652523}
-  - component: {fileID: 4688740676574433081}
+  - component: {fileID: 134566852587548998}
   - component: {fileID: 98786150376468559}
   m_Layer: 0
   m_Name: Medium
@@ -337,11 +335,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1152645035002676506}
   - {fileID: 5607087437679074156}
   m_Father: {fileID: 6969689899476783007}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4688740676574433081
+--- !u!114 &134566852587548998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -350,7 +349,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1839146593340440450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b82226d985f8fdd46af9ccb311403e87, type: 3}
+  m_Script: {fileID: 11500000, guid: f0daed2d3a4ec82488b144f3c5f1a4b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 98786150376468559}
@@ -362,6 +361,8 @@ MonoBehaviour:
   - TriggerValue
   Signals:
   - {fileID: 1156616576845331293}
+  Conditions:
+  - {fileID: 8728651503388680094}
 --- !u!114 &98786150376468559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,3 +510,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Target[0
+--- !u!1 &8728651503388680094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1152645035002676506}
+  - component: {fileID: 8875003034311118295}
+  - component: {fileID: 7596169958744929847}
+  m_Layer: 0
+  m_Name: Condition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1152645035002676506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728651503388680094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4332717269551652523}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8875003034311118295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728651503388680094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e204d87a5c3cea746805f1dc52976d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KB: {fileID: 7596169958744929847}
+  Info: {fileID: 0}
+  Source: {fileID: 0}
+--- !u!114 &7596169958744929847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728651503388680094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Keys: []

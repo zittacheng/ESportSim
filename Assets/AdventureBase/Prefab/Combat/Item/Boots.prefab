@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3880118397018471072
+--- !u!1 &9176212899950989603
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,60 +8,60 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3880118397018471079}
-  - component: {fileID: 6641702599406315581}
-  - component: {fileID: 3880118397018471078}
-  - component: {fileID: 3880118397018471076}
+  - component: {fileID: 9176212899950989604}
+  - component: {fileID: 5956914847383228334}
+  - component: {fileID: 9176212899950989605}
+  - component: {fileID: 9176212899950989607}
   m_Layer: 0
-  m_Name: Syringe
+  m_Name: Boots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3880118397018471079
+--- !u!4 &9176212899950989604
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3880118397018471072}
+  m_GameObject: {fileID: 9176212899950989603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3880118397237840419}
+  - {fileID: 9176212900698661280}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6641702599406315581
+--- !u!114 &5956914847383228334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3880118397018471072}
+  m_GameObject: {fileID: 9176212899950989603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017f9426e8ea7ee4a86195eec5cd0ce8, type: 3}
+  m_Script: {fileID: 11500000, guid: e359444e8f635554e9d9d4d55882ed5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KB: {fileID: 3880118397018471078}
-  Info: {fileID: 3880118397018471076}
+  KB: {fileID: 9176212899950989605}
+  Info: {fileID: 0}
   Source: {fileID: 0}
   MainSignals: []
   Targetings:
-  - {fileID: 3880118397237840428}
+  - {fileID: 9176212900698661295}
   Conditions: []
   Tars: []
   Cons: []
---- !u!114 &3880118397018471078
+--- !u!114 &9176212899950989605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3880118397018471072}
+  m_GameObject: {fileID: 9176212899950989603}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
@@ -70,30 +70,31 @@ MonoBehaviour:
   Keys:
   - Render[1
   - General[1
-  - AttackSpeedMod[0.2
+  - BaseSpeedMod[0.1
+  - SpeedMod[0.1
   - CanStack[1
   - Item[1
   - Count[1
   - Cost[20
---- !u!114 &3880118397018471076
+--- !u!114 &9176212899950989607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3880118397018471072}
+  m_GameObject: {fileID: 9176212899950989603}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50aeef807b653a342aa4307f8c082a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 
-  Name: Item_Syringe
-  RenderName: Soldier's Syringe
-  Description: Increase Attack Speed by 20% (+20%)
+  Name: Item_Booots
+  RenderName: Soldier's Boots
+  Description: Increase Movement Speed by 20% (+10%)
   Icon: {fileID: 4337684191699249041, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
   ToolTips: []
---- !u!1 &3880118397237840428
+--- !u!1 &9176212900698661295
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,9 +102,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3880118397237840419}
-  - component: {fileID: 3880118397237840417}
-  - component: {fileID: 3880118397237840418}
+  - component: {fileID: 9176212900698661280}
+  - component: {fileID: 9176212900698661282}
+  - component: {fileID: 9176212900698661281}
   m_Layer: 0
   m_Name: Targeting
   m_TagString: Untagged
@@ -111,42 +112,42 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3880118397237840419
+--- !u!4 &9176212900698661280
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3880118397237840428}
+  m_GameObject: {fileID: 9176212900698661295}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3880118397018471079}
+  m_Father: {fileID: 9176212899950989604}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3880118397237840417
+--- !u!114 &9176212900698661282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3880118397237840428}
+  m_GameObject: {fileID: 9176212900698661295}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed6b5a4659c94d542b11be823b4399fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KB: {fileID: 3880118397237840418}
+  KB: {fileID: 9176212900698661281}
   Info: {fileID: 0}
   Source: {fileID: 0}
---- !u!114 &3880118397237840418
+--- !u!114 &9176212900698661281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3880118397237840428}
+  m_GameObject: {fileID: 9176212900698661295}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}

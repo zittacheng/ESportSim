@@ -63,6 +63,67 @@ MonoBehaviour:
   - Positive[1
   - MinLifeRate[0
   - MaxLifeRate[0.5
+--- !u!1 &6326933276555068567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6173996082098373456}
+  - component: {fileID: 8225674560330062220}
+  - component: {fileID: 5006565970764022981}
+  m_Layer: 0
+  m_Name: ConditionII
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6173996082098373456
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6326933276555068567}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6807392005408261523}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8225674560330062220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6326933276555068567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78964473b88830b4185331d155da43b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KB: {fileID: 5006565970764022981}
+  Info: {fileID: 0}
+  Source: {fileID: 0}
+--- !u!114 &5006565970764022981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6326933276555068567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Keys:
+  - Empty[1
 --- !u!1 &6807392004656215320
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +217,7 @@ Transform:
   - {fileID: 6807392004656215319}
   - {fileID: 6807392005454684841}
   - {fileID: 19631616699403659}
+  - {fileID: 6173996082098373456}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -180,6 +242,7 @@ MonoBehaviour:
   - {fileID: 6807392004656215320}
   Conditions:
   - {fileID: 2752082541662469253}
+  - {fileID: 6326933276555068567}
   Tars: []
   Cons: []
 --- !u!114 &6807392005408261522
@@ -204,6 +267,7 @@ MonoBehaviour:
   - Count[1
   - Consumed[1
   - Cost[8
+  - CoolDown[0.2
 --- !u!114 &6807392005408261520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,8 +283,7 @@ MonoBehaviour:
   Key: 
   Name: Item_NewArmorPlate
   RenderName: New Armor Plate
-  Description: When the HP is less than 50%, immediately obtain an armor equivalent
-    to 30% of maximum HP
+  Description: When HP falls below 50%, gain Armor equals to 30% of max HP
   Icon: {fileID: -488721925442295091, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
   ToolTips:
   - Armor

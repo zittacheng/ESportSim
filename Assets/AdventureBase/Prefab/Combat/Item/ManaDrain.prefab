@@ -151,9 +151,9 @@ MonoBehaviour:
   Key: 
   Name: Item_ManaDrain
   RenderName: Silent Sheath
-  Description: "Every damage dealt, deduct the enemy\u2019s mana equal to the attacker
-    attack power"
+  Description: When dealing damage, drain equals amount of mana
   Icon: {fileID: 2029542551908640097, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips: []
 --- !u!1 &3022775752159787997
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,3 +300,4 @@ MonoBehaviour:
   RenderName: 
   Description: 
   Icon: {fileID: 0}
+  ToolTips: []

@@ -17,6 +17,8 @@ namespace ADV
                 return Value * GetSpeedMod();
             if (Key == "ManaRecovery")
                 return Value * GetManaMod();
+            if (Key == "Speed")
+                return Value * GetMovementMod();
             return base.PassValue(Key, Value);
         }
 
@@ -32,10 +34,17 @@ namespace ADV
             return a;
         }
 
+        public float GetMovementMod()
+        {
+            float a = GetKey("MovementSpeedMod");
+            return a;
+        }
+
         public override void CommonKeys()
         {
             // "SpeedMod": Attack speed multiply rate
             // "RecoveryMod": Mana recovery change
+            // "MovementSpeedMod": Movement speed change
             base.CommonKeys();
         }
     }

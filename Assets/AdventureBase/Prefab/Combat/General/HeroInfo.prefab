@@ -481,7 +481,7 @@ MonoBehaviour:
   Scaling: 0
   HeroKey: Warrior
   Role: 1
-  MaxLife: 300
+  MaxLife: 225
   MaxMana: 8
   BaseDamage: 8
   Speed: 7
@@ -537,7 +537,7 @@ MonoBehaviour:
   Scaling: 0
   HeroKey: Tank
   Role: 1
-  MaxLife: 200
+  MaxLife: 300
   MaxMana: 18
   BaseDamage: 6
   Speed: 7

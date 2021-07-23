@@ -65,6 +65,7 @@ MonoBehaviour:
   - Duration[5
   - SpeedMod[0.8
   - RecoveryMod[0.8
+  - MovementSpeedMod[0.8
   - Debuff[1
 --- !u!114 &1222234848099330948
 MonoBehaviour:
@@ -83,3 +84,4 @@ MonoBehaviour:
   RenderName: '-  Frostbite'
   Description: 
   Icon: {fileID: 0}
+  ToolTips: []

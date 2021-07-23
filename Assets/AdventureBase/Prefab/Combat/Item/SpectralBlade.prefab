@@ -149,6 +149,7 @@ MonoBehaviour:
   Key: 
   Name: Item_SpectralBlade
   RenderName: Spectral Dagger
-  Description: When the HP is lower than 50%, every 5% of HP lost, the attack speed
-    increases by 10%
+  Description: While HP is below 50%, increase Attack Speed by 0% - 50%, base on
+    the amount of HP lost
   Icon: {fileID: -7855203551248514480, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips: []

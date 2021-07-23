@@ -283,10 +283,10 @@ MonoBehaviour:
   Key: 
   Name: Item_WarHorn
   RenderName: War Horn
-  Description: When using ablity, the effect of the ability is increased by 1.5 times
-    (the debuff and passive abilities are not affected), and the champion moves to
-    the 1st position.
+  Description: When using abilities, increase their effects by 50%, and increase
+    Movement Speed by 20% for 5s
   Icon: {fileID: -5971942374765049077, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  ToolTips: []
 --- !u!1001 &9131485320396054246
 PrefabInstance:
   m_ObjectHideFlags: 0

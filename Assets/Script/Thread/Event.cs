@@ -9,6 +9,7 @@ namespace ESP
         [HideInInspector] public KeyBase KB;
         public string Name;
         public string DisplayName;
+        public Sprite ThreadSpriteOverride;
         [Space]
         public List<GameObject> Steps;
         public EventStep CurrentStep;

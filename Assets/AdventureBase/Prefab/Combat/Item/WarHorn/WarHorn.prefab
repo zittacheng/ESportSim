@@ -285,7 +285,7 @@ MonoBehaviour:
   RenderName: War Horn
   Description: When using abilities, increase their effects by 50%, and increase
     Movement Speed by 20% for 5s
-  Icon: {fileID: -5971942374765049077, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  Icon: {fileID: -2659717543803416626, guid: 01c1f318fccb24440a197c400aec4b57, type: 3}
   ToolTips: []
 --- !u!1001 &9131485320396054246
 PrefabInstance:

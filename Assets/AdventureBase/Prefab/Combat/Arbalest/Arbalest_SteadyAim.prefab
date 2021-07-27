@@ -617,6 +617,7 @@ MonoBehaviour:
   RenderName: + Steady Aim
   Description: 
   Icon: {fileID: 0}
+  ToolTips: []
 --- !u!1 &8873397056660641391
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Render[1
+  - Render[0
   - Duration[6
   - SpeedMod[1.25
 --- !u!114 &5815180872502152494
@@ -698,3 +699,4 @@ MonoBehaviour:
   RenderName: + Steady Aim
   Description: 
   Icon: {fileID: 0}
+  ToolTips: []

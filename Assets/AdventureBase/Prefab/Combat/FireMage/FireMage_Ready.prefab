@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Render[1
+  - Render[0
   - Buff[1
 --- !u!114 &1438897807535974578
 MonoBehaviour:
@@ -80,6 +80,7 @@ MonoBehaviour:
   RenderName: + Focused
   Description: 
   Icon: {fileID: 0}
+  ToolTips: []
 --- !u!1 &5989877705274393310
 GameObject:
   m_ObjectHideFlags: 0

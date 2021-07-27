@@ -187,6 +187,7 @@ MonoBehaviour:
   TargetingDelay: 0
   targetingTrigger: {fileID: 0}
   PF: {fileID: 0}
+  SourceCard: {fileID: 0}
   IniDefaults:
   - {fileID: 1751504212433822322}
   - {fileID: 6861979109098594906}
@@ -432,7 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Render[1
+  - Render[0
   - Permanent[1
   - Mana[0
   - MaxMana[10

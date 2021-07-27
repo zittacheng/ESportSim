@@ -353,6 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - DamageMod[0.5
+  - ActiveRender[1
 --- !u!114 &5564235328059110306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,8 +367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 
-  Name: Item_Status_Syringe
+  Name: Item_Status_SpectralAmulet
   RenderName: 
   Description: 
-  Icon: {fileID: 0}
+  Icon: {fileID: -1984196147997904684, guid: ce101c02f4fc84646ac8fdc60dbb1ccc, type: 3}
   ToolTips: []

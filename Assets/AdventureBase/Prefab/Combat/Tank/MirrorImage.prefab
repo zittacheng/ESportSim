@@ -1111,6 +1111,7 @@ MonoBehaviour:
   Index: 0
   DefaultTarget: {fileID: 5399188121365125936}
   Follow: 0
+  MainCard: 0
   AnimBase: {fileID: 1453164279663895612}
   NameText: {fileID: 0}
   LifeRenderDirection: 0
@@ -3563,11 +3564,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1751504212178917840, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 1751504212178917840, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 1751504212433822317, guid: 15fac57be78d37d4388580773e345feb, type: 3}
       propertyPath: Keys.Array.size

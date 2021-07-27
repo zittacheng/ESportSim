@@ -336,8 +336,8 @@ MonoBehaviour:
   UpEffects: []
   EnterEffects: []
   ExitEffects: []
-  CursorRangeX: {x: -0.9, y: 0.9}
-  CursorRangeY: {x: -0.9, y: 0.9}
+  CursorRangeX: {x: -1.3, y: 1.3}
+  CursorRangeY: {x: -1.3, y: 1.3}
   CR: {fileID: 0}
   ItemPrefab: {fileID: 0}
   Index: 1

@@ -1008,6 +1008,8 @@ namespace ADV
             S.Source = this;
             foreach (string s in AddKeys)
                 S.SetKey(KeyBase.Translate(s, out float v), v);
+            if (S.HasKey("Duration"))
+                S.SetKey("OriDuration", S.GetKey("Duration"));
             if (S.GetInfo() && !S.HasKey("IgnoreStack"))
             {
                 for (int i = Status.Count - 1; i >= 0; i--)

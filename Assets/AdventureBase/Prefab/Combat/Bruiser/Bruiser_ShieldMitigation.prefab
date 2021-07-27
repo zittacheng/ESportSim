@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4812545666154495599}
   - component: {fileID: 3419905059020761033}
   - component: {fileID: 2339489234496405860}
+  - component: {fileID: 5757853108799172562}
   m_Layer: 0
   m_Name: Bruiser_ShieldMitigation
   m_TagString: Untagged
@@ -67,6 +68,25 @@ MonoBehaviour:
   Keys:
   - Permanent[1
   - DamageMod[0.8
+  - ActiveRender[1
+--- !u!114 &5757853108799172562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3419905059020761038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50aeef807b653a342aa4307f8c082a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  Name: Bruiser_Status_ShieldMitigation
+  RenderName: + Blocking
+  Description: 
+  Icon: {fileID: -1984196147997904684, guid: ce101c02f4fc84646ac8fdc60dbb1ccc, type: 3}
+  ToolTips: []
 --- !u!1 &4815484711056818203
 GameObject:
   m_ObjectHideFlags: 0

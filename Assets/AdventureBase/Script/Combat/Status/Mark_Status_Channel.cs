@@ -12,6 +12,8 @@ namespace ADV
                 return 1;
             if (Key == "Channel")
                 return 1;
+            if (Key == "Speed")
+                return 0;
             return base.PassValue(Key, Value);
         }
 

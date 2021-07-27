@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Render[1
+  - Render[0
   - Buff[1
 --- !u!114 &978816910255799253
 MonoBehaviour:

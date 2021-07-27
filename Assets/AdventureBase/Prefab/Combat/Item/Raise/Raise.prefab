@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[1
-  - Duration[5
+  - Duration[5.5
 --- !u!114 &64345576379717079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,9 +77,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: 
   Name: Item_Status_Raising
-  RenderName: '-  Raising'
+  RenderName: + Raising
   Description: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 5631982575383100717, guid: ce101c02f4fc84646ac8fdc60dbb1ccc, type: 3}
   ToolTips: []
 --- !u!1 &1156616576845331293
 GameObject:

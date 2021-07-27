@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Render[1
+  - Render[0
   - Stack[1
   - Debuff[1
 --- !u!114 &4387727553055653237
@@ -81,3 +81,4 @@ MonoBehaviour:
   RenderName: '-  Freezing'
   Description: 
   Icon: {fileID: 0}
+  ToolTips: []

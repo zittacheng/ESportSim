@@ -83,5 +83,5 @@ MonoBehaviour:
   Name: General_Status_FrostBite
   RenderName: '-  Frostbite'
   Description: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 7586897737082373429, guid: ce101c02f4fc84646ac8fdc60dbb1ccc, type: 3}
   ToolTips: []

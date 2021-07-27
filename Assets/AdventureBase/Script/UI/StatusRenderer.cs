@@ -8,7 +8,9 @@ namespace ADV
 {
     public class StatusRenderer : MonoBehaviour {
         public GameObject AnimBase;
+        public SpriteRenderer SR;
         public TextMeshPro Text;
+        public Image DurationMask;
         public int Index;
         public Mark_Status Target;
 
@@ -26,22 +28,44 @@ namespace ADV
             if (Target)
             {
                 AnimBase.SetActive(true);
-                Text.text = Target.GetName();
+                string Name = Target.GetName();
                 if (Target.HasKey("Energy"))
-                    Text.text += " (" + Target.GetKey("Energy") + ")";
+                    Name += " (" + Target.GetKey("Energy") + ")";
                 if (Target.HasKey("Shield"))
-                    Text.text += " (" + (int)Target.GetKey("Shield") + ")";
+                    Name += " (" + (int)Target.GetKey("Shield") + ")";
                 if (Target.HasKey("Stack"))
-                    Text.text += " (x" + Target.GetKey("Stack") + ")";
+                    Name += " (x" + Target.GetKey("Stack") + ")";
                 if (Target.HasKey("Duration"))
-                    Text.text += " [" + (int)Target.GetKey("Duration") + "]";
+                    Name += " [" + (int)Target.GetKey("Duration") + "]";
                 if (Target.HasKey("Mana") && Target.HasKey("MaxMana"))
-                    Text.text += " " + (int)(Target.PassValue("Mana", 1) * 100) + "%";
+                    Name += " " + (int)(Target.PassValue("Mana", 1) * 100) + "%";
+
+                if (Text)
+                    Text.text = Name;
+
+                if (DurationMask)
+                {
+                    if (!Target.HasKey("OriDuration") || Target.GetKey("OriDuration") <= 0)
+                        DurationMask.gameObject.SetActive(false);
+                    else
+                    {
+                        DurationMask.gameObject.SetActive(true);
+                        DurationMask.fillAmount = (Target.GetKey("Duration") / Target.GetKey("OriDuration"));
+                    }
+                }
+
+                if (SR)
+                    SR.sprite = Target.GetIcon();
             }
             else
             {
                 AnimBase.SetActive(false);
-                Text.text = "";
+                if (Text)
+                    Text.text = "";
+                if (DurationMask)
+                    DurationMask.gameObject.SetActive(false);
+                if (SR)
+                    SR.sprite = null;
             }
         }
     }

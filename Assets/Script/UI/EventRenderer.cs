@@ -25,7 +25,7 @@ namespace ESP
             Render();
         }
 
-        public void Render()
+        public virtual void Render()
         {
             if (!GetTarget())
             {

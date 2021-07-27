@@ -217,10 +217,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: 
   Name: Item_FrozenCore
-  RenderName: Frozen Sheath
+  RenderName: Frozen Core
   Description: Auto attacks will apply frost marks to the target; 5 stacks of frost
     marks will apply Frostbite to the target for 5s
-  Icon: {fileID: -2821042892349479055, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  Icon: {fileID: 9117769750045769685, guid: 1814330c3acda344e842da7b4662ab2d, type: 3}
   ToolTips:
   - Frosbite
 --- !u!1001 &3182098911763239874

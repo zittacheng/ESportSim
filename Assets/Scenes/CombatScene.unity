@@ -6473,6 +6473,7 @@ MonoBehaviour:
   CurrentValue: 0
   Mask: {fileID: 1681787562}
   MaskRange: {x: 0.27, y: 8.04}
+  ScalingMode: 0
 --- !u!1 &879477577
 GameObject:
   m_ObjectHideFlags: 0
@@ -11234,6 +11235,7 @@ MonoBehaviour:
   CurrentValue: 0
   Mask: {fileID: 247247563}
   MaskRange: {x: 0.27, y: 8.04}
+  ScalingMode: 0
 --- !u!1 &1681787562
 GameObject:
   m_ObjectHideFlags: 0
@@ -13282,6 +13284,8 @@ MonoBehaviour:
   - {fileID: 741767409}
   - {fileID: 552257292}
   - {fileID: 2047057458}
+  - {fileID: 2105626191}
+  - {fileID: 1518168403}
   - {fileID: 11828095}
   - {fileID: 248367407}
   - {fileID: 561213407}
@@ -13289,8 +13293,6 @@ MonoBehaviour:
   - {fileID: 2133612063}
   - {fileID: 1079048795}
   - {fileID: 359195756}
-  - {fileID: 2105626191}
-  - {fileID: 1518168403}
   ItemPositions:
   - {x: 7.05, y: -26.16}
   - {x: 13.35, y: -26.16}

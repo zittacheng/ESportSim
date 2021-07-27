@@ -1202,6 +1202,7 @@ MonoBehaviour:
   Index: 0
   DefaultTarget: {fileID: 7453983540479597272}
   Follow: 0
+  MainCard: 1
   AnimBase: {fileID: 1453164280347798658}
   NameText: {fileID: 0}
   LifeRenderDirection: 0

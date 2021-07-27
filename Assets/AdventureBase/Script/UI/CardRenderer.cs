@@ -11,6 +11,7 @@ namespace ADV
         public int Index;
         public Card DefaultTarget;
         public bool Follow;
+        public bool MainCard;
         public GameObject AnimBase;
         public TextMeshPro NameText;
         public int LifeRenderDirection;
@@ -54,7 +55,11 @@ namespace ADV
         public Card GetTarget()
         {
             if (DefaultTarget)
+            {
+                if (MainCard && !CombatControl.Main.FriendlyCards.Contains(DefaultTarget) && !CombatControl.Main.EnemyCards.Contains(DefaultTarget))
+                    return null;
                 return DefaultTarget;
+            }
             if (Side == 0 && CombatControl.Main.FriendlyCards.Count > Index)
                 return CombatControl.Main.FriendlyCards[Index];
             else if (Side == 1 && CombatControl.Main.EnemyCards.Count > Index)

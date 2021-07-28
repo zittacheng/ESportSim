@@ -11,6 +11,8 @@ namespace ADV
 
         public override void Update()
         {
+            if (!Source)
+                return;
             if (GetKey("ActiveRender") == 1)
             {
                 bool T = true;

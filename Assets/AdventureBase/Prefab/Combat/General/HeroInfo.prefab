@@ -85,7 +85,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7287644909693216273
 MonoBehaviour:
@@ -102,10 +102,10 @@ MonoBehaviour:
   Scaling: 0
   HeroKey: Arbalest
   Role: 2
-  MaxLife: 180
+  MaxLife: 185
   MaxMana: 10
   BaseDamage: 18
-  Speed: 8
+  Speed: 10
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
   SkillPrefabs:
@@ -141,7 +141,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &517064631259703923
 MonoBehaviour:
@@ -195,8 +195,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4775830000604040073}
   - {fileID: 6053687224098578395}
+  - {fileID: 4775830000604040073}
   - {fileID: 5307154407162713370}
   - {fileID: 1302562236395116799}
   - {fileID: 4086443400974060313}

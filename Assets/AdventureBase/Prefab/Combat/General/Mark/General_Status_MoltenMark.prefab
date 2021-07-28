@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: 
   Name: General_Status_MoltenMark
-  RenderName: '-  Molten'
+  RenderName: Molten
   Description: 
   Icon: {fileID: 0}
   ToolTips: []

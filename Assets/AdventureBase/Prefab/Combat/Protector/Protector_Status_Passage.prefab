@@ -83,7 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: 
   Name: Protector_Status_Passage
-  RenderName: + Passage
-  Description: 
+  RenderName: Passage
+  Description: Reduce damage taken by 40%
   Icon: {fileID: -1984196147997904684, guid: ce101c02f4fc84646ac8fdc60dbb1ccc, type: 3}
   ToolTips: []

@@ -113,6 +113,14 @@ namespace ADV
 
             if (EmptySprite)
                 EmptySprite.gameObject.SetActive(false);
+
+            if (PDirection != PanelDirection.Up)
+            {
+                if (transform.position.x < 55f)
+                    PDirection = PanelDirection.Right;
+                else
+                    PDirection = PanelDirection.Left;
+            }
         }
 
         public bool CanInteract()
@@ -174,7 +182,7 @@ namespace ADV
                 return;
             }
 
-            UIControl.Main.ItemPanel.Render(PanelPivot.transform.position, PDirection, S.GetInfo());
+            UIControl.Main.ItemPanel.Render(PanelPivot, PDirection, S.GetInfo());
             base.MouseEnterEffect();
         }
 

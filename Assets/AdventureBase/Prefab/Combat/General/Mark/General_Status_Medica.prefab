@@ -79,7 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: 
   Name: Healer_Status_Medica
-  RenderName: + Medica
-  Description: 
+  RenderName: Blessed
+  Description: Heal for 3 HP per second
   Icon: {fileID: 5479007284458773500, guid: ce101c02f4fc84646ac8fdc60dbb1ccc, type: 3}
   ToolTips: []

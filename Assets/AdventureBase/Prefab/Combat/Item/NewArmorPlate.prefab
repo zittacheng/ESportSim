@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Render[1
+  - Render[0
   - Shield[0
   - Buff[1
 --- !u!114 &6807392006186436501

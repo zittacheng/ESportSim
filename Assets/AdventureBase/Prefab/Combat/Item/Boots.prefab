@@ -92,7 +92,7 @@ MonoBehaviour:
   Name: Item_Booots
   RenderName: Soldier's Boots
   Description: Increase Movement Speed by 20% (+10%)
-  Icon: {fileID: 4337684191699249041, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  Icon: {fileID: 1397826464765070086, guid: 6ebef130c595ced41bb3abb62d7cafae, type: 3}
   ToolTips: []
 --- !u!1 &9176212900698661295
 GameObject:

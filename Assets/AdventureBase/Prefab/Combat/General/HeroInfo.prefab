@@ -593,7 +593,7 @@ MonoBehaviour:
   Role: 3
   MaxLife: 200
   MaxMana: 15
-  BaseDamage: 8
+  BaseDamage: 5
   Speed: 6
   Size: 6
   Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}

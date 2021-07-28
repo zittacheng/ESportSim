@@ -35,7 +35,7 @@ namespace ESP
                 Choices[i].TimePassed();
         }
 
-        public bool Active (Conversation CV)
+        public bool Active(Conversation CV)
         {
             bool Temp = true;
             foreach (ConversationCondition CC in Conditions)

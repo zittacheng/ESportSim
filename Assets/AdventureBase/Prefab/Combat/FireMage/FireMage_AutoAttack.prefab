@@ -750,7 +750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Auto[1
-  - CoolDown[1.8
+  - CoolDown[1.5
   - ASCD[1
   - BasicSkill[1
   - AutoAttackRange[45

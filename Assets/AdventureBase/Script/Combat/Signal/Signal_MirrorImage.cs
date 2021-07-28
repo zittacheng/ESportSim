@@ -14,7 +14,10 @@ namespace ADV
             C.SourceCard = Source;
             C.SetPosition(Source.GetPosition() + Random.Range(GetKey("MinRange"), GetKey("MaxRange")) * Source.GetDirection().normalized);
             C.Side = Source.GetSide();
-            C.SetMaxLife((Source.GetMaxLife() - Source.GetLife()));
+            float l = Source.GetMaxLife() - Source.GetLife();
+            if (l < Source.GetMaxLife() * 0.05f)
+                l = Source.GetMaxLife() * 0.05f;
+            C.SetMaxLife(l);
             C.Life = C.MaxLife;
             C.SetDirection(Source.GetDirection());
             CombatControl.Main.AddCard(C);

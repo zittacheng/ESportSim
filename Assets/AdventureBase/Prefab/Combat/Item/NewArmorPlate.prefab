@@ -284,7 +284,7 @@ MonoBehaviour:
   Name: Item_NewArmorPlate
   RenderName: New Armor Plate
   Description: When HP falls below 50%, gain Armor equals to 30% of max HP
-  Icon: {fileID: -488721925442295091, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  Icon: {fileID: 8787774628009813152, guid: 6ebef130c595ced41bb3abb62d7cafae, type: 3}
   ToolTips:
   - Armor
 --- !u!1 &6807392005454684842

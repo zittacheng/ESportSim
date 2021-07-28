@@ -33,7 +33,7 @@ namespace ADV
             AnimBase.SetActive(Value);
         }
 
-        public void Render(Vector2 Pivot, PanelDirection Direction, MarkInfo MInfo)
+        public void Render(Vector3 Pivot, PanelDirection Direction, MarkInfo MInfo)
         {
             if (!MInfo)
             {
@@ -96,6 +96,14 @@ namespace ADV
                 ToolTipBase.transform.localPosition = ToolTipPosition_Left;
             else if (Direction == ToolTipDirection.Right)
                 ToolTipBase.transform.localPosition = ToolTipPosition_Right;
+
+            transform.parent = null;
+        }
+
+        public void Render(GameObject Pivot, PanelDirection Direction, MarkInfo MInfo)
+        {
+            Render(Pivot.transform.position, Direction, MInfo);
+            transform.parent = Pivot.transform;
         }
     }
 

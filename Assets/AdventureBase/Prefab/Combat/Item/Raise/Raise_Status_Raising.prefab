@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6316667337006156554
+--- !u!1 &8782833266514914774
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 632561034239996733}
-  - component: {fileID: 3890786632111909018}
-  - component: {fileID: 6803723641339821380}
-  - component: {fileID: 4387727553055653237}
+  - component: {fileID: 5662693311074165314}
+  - component: {fileID: 6549923774393527886}
+  - component: {fileID: 2816841190500737010}
+  - component: {fileID: 8134630484981450979}
   m_Layer: 0
-  m_Name: General_Status_FreezingMark
+  m_Name: Raise_Status_Raising
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &632561034239996733
+--- !u!4 &5662693311074165314
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6316667337006156554}
+  m_GameObject: {fileID: 8782833266514914774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,52 +33,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3890786632111909018
+--- !u!114 &6549923774393527886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6316667337006156554}
+  m_GameObject: {fileID: 8782833266514914774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3068704590da084b922da8ad990800d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ba5cacf2c562554ca98b4da60c4ae06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KB: {fileID: 6803723641339821380}
+  KB: {fileID: 2816841190500737010}
   Info: {fileID: 0}
   Source: {fileID: 0}
---- !u!114 &6803723641339821380
+--- !u!114 &2816841190500737010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6316667337006156554}
+  m_GameObject: {fileID: 8782833266514914774}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a633e0759bedc534ab833bc63a16cbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Render[0
-  - Stack[1
-  - Debuff[1
---- !u!114 &4387727553055653237
+  - Render[1
+  - Duration[5.5
+--- !u!114 &8134630484981450979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6316667337006156554}
+  m_GameObject: {fileID: 8782833266514914774}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50aeef807b653a342aa4307f8c082a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 
-  Name: General_Status_FreezingMark
-  RenderName: Freezing
-  Description: 
-  Icon: {fileID: 0}
+  Name: Raise_Status_Raising
+  RenderName: Raising
+  Description: Cannot move, attack or use abilities
+  Icon: {fileID: 5631982575383100717, guid: ce101c02f4fc84646ac8fdc60dbb1ccc, type: 3}
   ToolTips: []

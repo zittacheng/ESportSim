@@ -234,12 +234,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59fe1b10abc1cc4e8047c6e9a8d9806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Effects: []
+  UpEffects: []
+  EnterEffects: []
+  ExitEffects: []
+  CursorRangeX: {x: -0.95, y: 0.95}
+  CursorRangeY: {x: -0.95, y: 0.95}
   AnimBase: {fileID: 2450783632604631978}
   SR: {fileID: 5762449484709705991}
   Text: {fileID: 0}
   DurationMask: {fileID: 8354631870400986455}
   Index: 0
   Target: {fileID: 0}
+  PDirection: 0
 --- !u!1 &8148688499841632757
 GameObject:
   m_ObjectHideFlags: 0

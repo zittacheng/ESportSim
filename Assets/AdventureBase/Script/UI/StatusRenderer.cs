@@ -6,13 +6,14 @@ using TMPro;
 
 namespace ADV
 {
-    public class StatusRenderer : MonoBehaviour {
+    public class StatusRenderer : UIButton_Square {
         public GameObject AnimBase;
         public SpriteRenderer SR;
         public TextMeshPro Text;
         public Image DurationMask;
         public int Index;
         public Mark_Status Target;
+        public PanelDirection PDirection;
 
         public void RealUpdate(Card T)
         {
@@ -20,7 +21,16 @@ namespace ADV
                 Target = T.GetStatus(Index);
             else
                 Target = null;
+            
             Render();
+
+            if (PDirection != PanelDirection.Up)
+            {
+                if (transform.position.x < 55f)
+                    PDirection = PanelDirection.Right;
+                else
+                    PDirection = PanelDirection.Left;
+            }
         }
 
         public void Render()
@@ -67,6 +77,30 @@ namespace ADV
                 if (SR)
                     SR.sprite = null;
             }
+        }
+
+        public override void MouseEnterEffect()
+        {
+            if (!Target)
+            {
+                UIControl.Main.ItemPanel.Render(new Vector2(), 0, null);
+                return;
+            }
+            Mark_Status S = Target.GetComponent<Mark_Status>();
+            if (!S || !S.GetInfo())
+            {
+                UIControl.Main.ItemPanel.Render(new Vector2(), 0, null);
+                return;
+            }
+
+            UIControl.Main.ItemPanel.Render(gameObject, PDirection, S.GetInfo());
+            base.MouseEnterEffect();
+        }
+
+        public override void MouseExitEffect()
+        {
+            UIControl.Main.ItemPanel.Render(new Vector2(), 0, null);
+            base.MouseExitEffect();
         }
     }
 }

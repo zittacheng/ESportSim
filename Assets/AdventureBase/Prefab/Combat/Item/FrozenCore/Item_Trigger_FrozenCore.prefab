@@ -254,7 +254,7 @@ MonoBehaviour:
   RequiredKeys:
   - AutoAttackHit
   AvoidedKeys:
-  - MoltenCore
+  - FrozenCore
   SourceConditions: []
   TargetConditions: []
   MainSignals:
@@ -286,10 +286,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 
-  Name: Item_Trigger_MoltenCore_I
+  Name: Item_Trigger_FrozenCore_I
   RenderName: 
   Description: Description
   Icon: {fileID: 0}
+  ToolTips: []
 --- !u!1001 &749604804276776369
 PrefabInstance:
   m_ObjectHideFlags: 0

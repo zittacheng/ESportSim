@@ -21,19 +21,22 @@ namespace ADV
 
         public virtual float GetChance()
         {
-            float a = 1;
+            float a = GetKey("Chance");
             return a;
         }
 
         public virtual bool Pass(Signal S)
         {
             bool T = true;
+            if (Random.Range(0.01f, 0.99f) > GetChance())
+                T = false;
             return T;
         }
 
         public override void CommonKeys()
         {
             // "DrainMod": Drain value scaling
+            // "Chance": Trigger chance
             base.CommonKeys();
         }
     }

@@ -283,6 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - DrainMod[2
+  - Chance[0.5
 --- !u!114 &5533673490845194867
 MonoBehaviour:
   m_ObjectHideFlags: 0

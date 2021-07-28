@@ -9,7 +9,7 @@ namespace ADV
         public List<string> AvoidedKeys;
         public List<GameObject> SourceConditions;
 
-        public override void TimePassed(float Value)
+        public override void Update()
         {
             if (GetKey("ActiveRender") == 1)
             {
@@ -30,6 +30,11 @@ namespace ADV
                     Source.UpdateRenderStatus();
                 }
             }
+            base.Update();
+        }
+
+        public override void TimePassed(float Value)
+        {
             base.TimePassed(Value);
         }
 

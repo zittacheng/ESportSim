@@ -62,7 +62,7 @@ namespace ADV
             if (!CombatControl.Main.Waiting)
                 return false;
             Mark_Skill S = CombatControl.Main.SelectingItem;
-            return S && S.Source && S.Source == CombatControl.Main.GetCurrentMC() && S.GetKey("Count") > 0;
+            return S && S.Source && S.Source == CombatControl.Main.GetCurrentMC() && CombatControl.Main.GetCurrentMC().Skills.Contains(S) && S.GetKey("Count") > 0;
         }
 
         public bool CanSwitch()
@@ -103,7 +103,7 @@ namespace ADV
             if (!AI || !AI.CanSell)
                 return false;
             Mark_Skill S = CombatControl.Main.SelectingItem;
-            return S && S.Source && S.Source == CG.GetCurrentCard() && S.GetKey("Count") > 0;
+            return S && S.Source && S.Source == CG.GetCurrentCard() && CG.GetCurrentCard().Skills.Contains(S) && S.GetKey("Count") > 0;
         }
 
         public bool CanSwitch(CardGroup CG)

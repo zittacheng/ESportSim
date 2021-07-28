@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5208004357265310805}
-  - component: {fileID: 2638621552276162750}
+  - component: {fileID: 4899179311254959222}
   - component: {fileID: 736091444917418380}
   m_Layer: 0
   m_Name: Signal_Death
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 4364255767912452061}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2638621552276162750
+--- !u!114 &4899179311254959222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 571672786901781636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a85a20b06adbc14bbd4e5ae1848630f, type: 3}
+  m_Script: {fileID: 11500000, guid: db6db3a64fdd40542b7d798c032e2594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   KB: {fileID: 736091444917418380}
@@ -63,6 +63,8 @@ MonoBehaviour:
   Keys:
   - Target[1
   - CombatActive[1
+  - Damage[9999
+  - Real[1
 --- !u!1 &1779933273326888251
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,6 +154,7 @@ MonoBehaviour:
   RenderName: 
   Description: Description
   Icon: {fileID: 0}
+  ToolTips: []
 --- !u!1 &1816606566844051188
 GameObject:
   m_ObjectHideFlags: 0

@@ -363,7 +363,7 @@ MonoBehaviour:
   Name: Item_Fruit
   RenderName: Foreign Fruit
   Description: Cleanse 1 stack of debuff
-  Icon: {fileID: 4639506938558671751, guid: 39102f92b8807304989dc06a1bf86073, type: 3}
+  Icon: {fileID: 6391393172987228855, guid: 6ebef130c595ced41bb3abb62d7cafae, type: 3}
   ToolTips: []
 --- !u!1 &8960626685225898924
 GameObject:

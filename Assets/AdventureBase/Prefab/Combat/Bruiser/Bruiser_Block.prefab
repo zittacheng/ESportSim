@@ -303,7 +303,7 @@ MonoBehaviour:
   Keys:
   - Target[1
   - Shield[0
-  - MaxLifeRate[0.3
+  - MaxLifeRate[0.2
   - AbilityPowerScaling[1
   - Support[1
   - Horn[1

@@ -7,7 +7,6 @@ namespace ESP
 {
     public class SubUIControl : MonoBehaviour {
         public static SubUIControl Main;
-        [HideInInspector] public List<UIButton> Buttons;
         public Vector2 WindowPosition;
         public UIWindow CurrentWindow;
         [Space]
@@ -21,12 +20,6 @@ namespace ESP
         public Animator UIMask;
         public Location CurrentLocation;
         public bool InTransit;
-
-        public void AddButton(UIButton B)
-        {
-            if (!Buttons.Contains(B))
-                Buttons.Add(B);
-        }
 
         // Start is called before the first frame update
         void Start()

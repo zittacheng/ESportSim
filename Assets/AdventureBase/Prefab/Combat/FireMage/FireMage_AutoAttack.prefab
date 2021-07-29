@@ -66,7 +66,7 @@ MonoBehaviour:
   Keys:
   - Target[1
   - LockSource[1
-  - Range[55
+  - Range[36
 --- !u!1 &2436259780747574919
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keys:
-  - Range[46
+  - Range[31
 --- !u!1 &6201478761380047384
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,7 +753,7 @@ MonoBehaviour:
   - CoolDown[1.5
   - ASCD[1
   - BasicSkill[1
-  - AutoAttackRange[45
+  - AutoAttackRange[30
   - Print[1
 --- !u!114 &934917366257813044
 MonoBehaviour:

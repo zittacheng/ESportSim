@@ -21,6 +21,7 @@ namespace ADV
         public SwitchRenderer SelectingSwitch;
         public Mark SelectingMark;
         public CardGroup SelectintGroup;
+        public GameObject DestroyBase;
         [HideInInspector] public Vector2 SelectingPosition;
         [Space]
         public CardGroup MCGroup;

@@ -5648,7 +5648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846205777b5fac4419db8d53223836c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Buttons: []
   WindowPosition: {x: 5, y: 0}
   CurrentWindow: {fileID: 0}
   W_Day: {fileID: 2000105331}
@@ -20053,6 +20052,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 420140503}
     m_Modifications:
+    - target: {fileID: 5510326494683318486, guid: 76d702761a8679e4ab8632086d446b2b, type: 3}
+      propertyPath: ThreadSpriteOverride
+      value: 
+      objectReference: {fileID: 5391955945395475665, guid: 01c1f318fccb24440a197c400aec4b57, type: 3}
     - target: {fileID: 5510326494683318487, guid: 76d702761a8679e4ab8632086d446b2b, type: 3}
       propertyPath: m_RootOrder
       value: 4

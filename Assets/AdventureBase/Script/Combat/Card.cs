@@ -910,7 +910,9 @@ namespace ADV
             if (Index < 0 || Index >= Skills.Count)
                 return;
             if (Skills[Index])
-                Destroy(Skills[Index].gameObject, 1f);
+                Skills[Index].transform.parent = CombatControl.Main.DestroyBase.transform;
+            /*if (Skills[Index])
+                Destroy(Skills[Index].gameObject, 1f);*/
             Skills[Index] = null;
             UpdateRenderSkills();
         }

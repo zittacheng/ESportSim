@@ -1162,6 +1162,7 @@ MonoBehaviour:
   Index: 0
   DefaultTarget: {fileID: 0}
   Follow: 1
+  MainCard: 0
   AnimBase: {fileID: 4665995105114051989}
   NameText: {fileID: 0}
   LifeRenderDirection: -1
@@ -1376,6 +1377,7 @@ MonoBehaviour:
   CurrentValue: 0
   Mask: {fileID: 6171289503425511336}
   MaskRange: {x: 0.27, y: 8.04}
+  ScalingMode: 0
 --- !u!1 &4824173789660971957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,7 +2281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6171289503147034981
 Transform:
   m_ObjectHideFlags: 0
@@ -2733,6 +2735,7 @@ MonoBehaviour:
   CurrentValue: 0
   Mask: {fileID: 6171289503973104027}
   MaskRange: {x: 0.27, y: 8.04}
+  ScalingMode: 0
 --- !u!1 &6171289503741184051
 GameObject:
   m_ObjectHideFlags: 0

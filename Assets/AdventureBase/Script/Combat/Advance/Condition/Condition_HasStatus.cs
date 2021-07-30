@@ -10,17 +10,24 @@ namespace ADV
 
         public override bool Pass(Card Source)
         {
+            bool Found = GetKey("Reverse") == 0;
             for (int i = Source.Status.Count - 1; i >= 0; i--)
             {
                 if (!Source.Status[i])
                     continue;
                 Mark_Status MS = Source.Status[i];
                 if (StatusKey != "" && MS.GetID() == StatusKey)
-                    return true;
+                    return Found;
                 if (RequiredKey != "" && MS.GetKey(RequiredKey) > 0)
-                    return true;
+                    return Found;
             }
-            return false;
+            return !Found;
+        }
+
+        public override void CommonKeys()
+        {
+            // "Reverse": Whether to pass when there is no status
+            base.CommonKeys();
         }
     }
 }

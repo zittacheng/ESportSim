@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8303901384516015363
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scaling: 0
+  Scaling: 1
   HeroKey: Protector
   Role: 3
   MaxLife: 150
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scaling: 0
+  Scaling: 1
   HeroKey: Arbalest
   Role: 2
   MaxLife: 185
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scaling: 0
+  Scaling: 1
   HeroKey: Archer
   Role: 2
   MaxLife: 225
@@ -197,6 +197,7 @@ Transform:
   m_Children:
   - {fileID: 6053687224098578395}
   - {fileID: 4775830000604040073}
+  - {fileID: 3848599825554624120}
   - {fileID: 5307154407162713370}
   - {fileID: 1302562236395116799}
   - {fileID: 4086443400974060313}
@@ -237,7 +238,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &268282683285544933
 MonoBehaviour:
@@ -251,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scaling: 0
+  Scaling: 1
   HeroKey: Assassin
   Role: 2
   MaxLife: 180
@@ -293,7 +294,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3825331883415121979
 MonoBehaviour:
@@ -307,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scaling: 0
+  Scaling: 1
   HeroKey: Bruiser
   Role: 1
   MaxLife: 300
@@ -350,7 +351,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7342228183472137833
 MonoBehaviour:
@@ -364,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scaling: 0
+  Scaling: 1
   HeroKey: FireMage
   Role: 2
   MaxLife: 150
@@ -376,6 +377,62 @@ MonoBehaviour:
   SkillPrefabs:
   - {fileID: 6441293287966430658, guid: 5a55e687e07f2564dbfcf9e211097f87, type: 3}
   - {fileID: 6201478761380047384, guid: fcc799bb4766d914fb9315fba37546bc, type: 3}
+  StatusPrefabs: []
+--- !u!1 &4948993048703265970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3848599825554624120}
+  - component: {fileID: 4224337885466658673}
+  m_Layer: 0
+  m_Name: Artificer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3848599825554624120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4948993048703265970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4224337885466658673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4948993048703265970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 1
+  HeroKey: Artificer
+  Role: 3
+  MaxLife: 165
+  MaxMana: 12
+  BaseDamage: 7
+  Speed: 6
+  Size: 6
+  Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
+  SkillPrefabs:
+  - {fileID: 1286896844761764729, guid: 5e0d58d686ba4124a9d5f609795382cd, type: 3}
+  - {fileID: 3658833249994445662, guid: 2ff368f706fced1498a07dfcb46f847a, type: 3}
   StatusPrefabs: []
 --- !u!1 &5887619888747559942
 GameObject:
@@ -406,7 +463,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1642911136428247785
 MonoBehaviour:
@@ -420,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scaling: 0
+  Scaling: 1
   HeroKey: Warrior
   Role: 1
   MaxLife: 225
@@ -462,7 +519,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7993680742129145920
 MonoBehaviour:
@@ -476,7 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scaling: 0
+  Scaling: 1
   HeroKey: Tank
   Role: 1
   MaxLife: 300
@@ -518,7 +575,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1404351376454715895
 MonoBehaviour:
@@ -532,7 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scaling: 0
+  Scaling: 1
   HeroKey: StormMage
   Role: 2
   MaxLife: 150
@@ -574,7 +631,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5965827645600187590}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7182454426969553164
 MonoBehaviour:
@@ -588,7 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scaling: 0
+  Scaling: 1
   HeroKey: Healer
   Role: 3
   MaxLife: 200

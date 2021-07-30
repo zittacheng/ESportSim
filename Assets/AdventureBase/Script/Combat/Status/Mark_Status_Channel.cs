@@ -14,6 +14,8 @@ namespace ADV
                 return 1;
             if (Key == "Speed")
                 return 0;
+            if (Key == "ManaRecovery")
+                return GetKey("ManaRecovery");
             return base.PassValue(Key, Value);
         }
 
@@ -31,6 +33,7 @@ namespace ADV
         {
             // "Stunned": Whether the source is stunned
             // "Channel": Whether the source is channeling
+            // "ManaRecovery": Override mana recovery speed
             base.CommonKeys();
         }
     }

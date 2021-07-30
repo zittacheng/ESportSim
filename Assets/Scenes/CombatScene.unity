@@ -4660,7 +4660,7 @@ MonoBehaviour:
   DeathCards: []
   Mediums: []
   DefaultLevel: 1
-  EndGame: 0
+  EndGame: 1
 --- !u!114 &541633404
 MonoBehaviour:
   m_ObjectHideFlags: 0

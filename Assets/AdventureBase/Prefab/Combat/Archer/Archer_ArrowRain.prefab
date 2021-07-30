@@ -157,7 +157,7 @@ MonoBehaviour:
   - BaseScaling[1
   - Damage[3
   - RDR[0.5
-  - ShieldScaling[1.15
+  - ShieldScaling[1
   - SubHit[1
   - AbilityHit[1
   - ProcChance[1
@@ -464,7 +464,7 @@ MonoBehaviour:
   - BaseScaling[1
   - Damage[3
   - RDR[0.5
-  - ShieldScaling[1.15
+  - ShieldScaling[1
   - MainHit[1
   - AbilityHit[1
   - ProcChance[1

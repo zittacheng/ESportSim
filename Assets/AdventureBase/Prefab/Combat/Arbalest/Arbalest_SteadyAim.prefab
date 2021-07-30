@@ -70,8 +70,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Target[1
-  - DamageMod[1.8
-  - SpeedMod[1.25
+  - DamageMod[1.5
+  - SpeedMod[1.8
   - AbilityPowerScaling[1
   - Horn[1
 --- !u!1 &1572249242476802719
@@ -599,7 +599,7 @@ MonoBehaviour:
   Keys:
   - Render[0
   - Duration[6
-  - DamageMod[1.8
+  - DamageMod[1.5
 --- !u!114 &8906669286896294365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,7 +681,7 @@ MonoBehaviour:
   Keys:
   - Render[0
   - Duration[6
-  - SpeedMod[1.25
+  - SpeedMod[1.8
 --- !u!114 &5815180872502152494
 MonoBehaviour:
   m_ObjectHideFlags: 0

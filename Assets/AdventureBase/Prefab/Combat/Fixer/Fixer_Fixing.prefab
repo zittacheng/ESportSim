@@ -393,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - RecoveryMod[0
-  - Duration[6
+  - Duration[5
 --- !u!1 &2713053202947395432
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[0
-  - Duration[6
+  - Duration[5
   - DamageMod[1.5
 --- !u!114 &5645377391740072439
 MonoBehaviour:
@@ -677,4 +677,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Keys:
   - Render[0
-  - Duration[6
+  - Duration[5

@@ -8,6 +8,8 @@ namespace ADV
 
         public override void EndEffect()
         {
+            if (Target.PassValue("TauntResisit") == 1)
+                return;
             base.EndEffect();
             Target.CurrentTarget = Source;
         }

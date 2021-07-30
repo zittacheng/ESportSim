@@ -248,7 +248,7 @@ namespace ADV
                 return Value * (1 / GetKey("CoolDown"));*/
             if (GetKey("BasicSkill") == 1 && Key == "RenderingAttackSpeed" && GetKey("CoolDown") > 0)
                 return Value * (1 / GetKey("CoolDown"));
-            if (Key == "AutoAttackRange" && HasKey("AutoAttackRange"))
+            if (Key == "AutoAttackRange" && HasKey("AutoAttackRange") && ConditionPass())
                 return GetKey("AutoAttackRange");
             return base.PassValue(Key, Value);
         }

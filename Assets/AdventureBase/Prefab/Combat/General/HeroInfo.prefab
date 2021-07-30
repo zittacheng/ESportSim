@@ -206,6 +206,7 @@ Transform:
   - {fileID: 5901973397690644759}
   - {fileID: 4751699210901255399}
   - {fileID: 5110608932119546342}
+  - {fileID: 4618813926002578664}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -545,6 +546,63 @@ MonoBehaviour:
   SkillPrefabs:
   - {fileID: 1385262713847904442, guid: 11073a49f38f20c42bfeb20a8ff5a344, type: 3}
   - {fileID: 352748544695765758, guid: afb0e7bf1ca4afc4496e082f7eaf351b, type: 3}
+  StatusPrefabs: []
+--- !u!1 &8607706271535366989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4618813926002578664}
+  - component: {fileID: 2133966770345765229}
+  m_Layer: 0
+  m_Name: Fixer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4618813926002578664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8607706271535366989}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965827645600187590}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2133966770345765229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8607706271535366989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b1a040a5a165543acb20e199428b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scaling: 1
+  HeroKey: Fixer
+  Role: 2
+  MaxLife: 150
+  MaxMana: 9
+  BaseDamage: 12
+  Speed: 12
+  Size: 6
+  Targeting: {fileID: 3480244932898623448, guid: 0ed12cbd6e3213643b2754a3d9688854, type: 3}
+  SkillPrefabs:
+  - {fileID: 5454584471848911345, guid: 892294f75023470449333edd2fb1a597, type: 3}
+  - {fileID: 7038392680761038166, guid: 9ab1b435af34f9844a59822200c26aed, type: 3}
+  - {fileID: 1870725301254429524, guid: 8428fc961f4430643887e763db1473d3, type: 3}
   StatusPrefabs: []
 --- !u!1 &8731227442661269151
 GameObject:

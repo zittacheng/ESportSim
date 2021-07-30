@@ -25,6 +25,12 @@ namespace ADV
                     d *= GetKey("PowerMod");
                     S.SetKey("SpeedMod", 1 + d);
                 }
+                if (S.HasKey("RecoveryMod"))
+                {
+                    float d = S.GetKey("RecoveryMod") - 1;
+                    d *= GetKey("PowerMod");
+                    S.SetKey("RecoveryMod", 1 + d);
+                }
                 if (S.HasKey("Damage"))
                     S.SetKey("Damage", S.GetKey("Damage") * GetKey("PowerMod"));
                 if (S.HasKey("Heal"))
